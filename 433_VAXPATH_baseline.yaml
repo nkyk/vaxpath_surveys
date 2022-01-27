@@ -165,9 +165,9 @@ questions:
     type: monthyear
     max:
       month:
-        value: CURRENT_MONTH
+        value: 01
       year:
-        value: CURRENT_YEAR
+        value: 2004
     db_write:
       table: AdditionalAppColumn
       column: age
@@ -1183,15 +1183,8 @@ questions:
       En quina data li van posar la primera vacuna contra la COVID-19 de Pfizer-BioNTech? <br> Si no ho sap, indiqui la data més aproximada possible
     type: date
     page_number: 25
-    max:
+    max: 
       value: CURRENT_DATE
-    skip:
-      label: Uncertain
-      label_de: überspringen
-      label_it: Salta
-      label_es: Saltar
-      label_ca: Omet
-      value: skip
   pt_t0_vi1_VACCCENTER:
     conditions: 
       - question: pt_t0_vi1_VACCDOSE
@@ -1215,7 +1208,7 @@ questions:
     label_es: Proporcione el número de lote de la vacuna
     label_ca: "Indiqui el número de lot de la vacuna"
     type: text
-    regex: "^[a-zA-Z]{2}[0-9]{4}$"
+    regex: \A[a-zA-Z0-9]{6}\z
     skip:
       label: Skip
       label_de: Überspringen
@@ -1262,8 +1255,7 @@ questions:
     label_es: Número de teléfono, indique por favor el codigo de país
     label_ca: Número de telèfon, indiqui si us plau el codi de país
     type: text
-    regex: "\\A(\\+?\\d{1,4}[\\s.-]?)?\\(?\\d{3}\\)?[\\s.-]?\\d{3}[\\s.-]?\\d{4}\\z"
-    default_value: "{{User.primary_contact_number}}"
+    regex: "\\A(\\+?\\d{1,2}[\\s.-]?)?\\(?\\d{3}\\)?[\\s.-]?\\d{3}[\\s.-]?\\d{4}\\z"
     page_number: 26
     db_write:
       table: User
@@ -1276,10 +1268,9 @@ questions:
     label_ca: Correu electrònic
     type: text
     regex: "\\A[\\w+\\-.]+@[a-z\\d\\-]+(\\.[a-z\\d\\-]+)*\\.[a-z]+\\z"
-    default_value: "{{User.email}}"
     page_number: 26
     db_write:
-      table: AdditionalAppColumn
+      table: User
       column: email
   pt_t0_ci1_2NDCONTACT:
     label: "Secondary contact name"
@@ -1327,7 +1318,7 @@ questions:
     label_es: Número de teléfono o móvil de contacto secundario, indique por favor el codigo de país
     label_ca: Telèfon fix o mòbil de la persona de contacte secundària, indiqui si us plau el codi de país
     type: text
-    regex: "\\A(\\+?\\d{1,4}[\\s.-]?)?\\(?\\d{3}\\)?[\\s.-]?\\d{3}[\\s.-]?\\d{4}\\z"
+    regex: "\\A(\\+?\\d{1,2}[\\s.-]?)?\\(?\\d{3}\\)?[\\s.-]?\\d{3}[\\s.-]?\\d{4}\\z"
     page_number: 27
     db_write:
       table: AdditionalAppColumn
@@ -1366,7 +1357,7 @@ questions:
     label_es: "Número de teléfono del médico de atención primaria, indique por favor el codigo de país"
     label_ca: "Número de telèfon del metge d’atenció primària, indiqui si us plau el codi de país"
     type: text
-    regex: "\\A(\\+?\\d{1,4}[\\s.-]?)?\\(?\\d{3}\\)?[\\s.-]?\\d{3}[\\s.-]?\\d{4}\\z"
+    regex: "\\A(\\+?\\d{1,2}[\\s.-]?)?\\(?\\d{3}\\)?[\\s.-]?\\d{3}[\\s.-]?\\d{4}\\z"
     skip:
       label: skip
       label_de: Überspringen
