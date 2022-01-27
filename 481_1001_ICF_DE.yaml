@@ -15,6 +15,8 @@ questions:
     page_number: 2
     type: econsent
     required_questions: "first_name,last_name"
+    trigger:
+      type: signature_required
   pt_t0_COUNT_SIG:
     page_number: 2
     label: "Gegenzeichnung des Hauptermittlers"
