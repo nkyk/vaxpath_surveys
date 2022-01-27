@@ -14,6 +14,7 @@ questions:
   pt_t0_PATIENT_SIG:
     page_number: 2
     type: econsent
+    hsc_consent: true
     required_questions: "first_name,last_name"
     trigger:
       type: signature_required
