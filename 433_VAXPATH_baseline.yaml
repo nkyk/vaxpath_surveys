@@ -1256,7 +1256,7 @@ questions:
     label_ca: Número de telèfon, indiqui si us plau el codi de país
     type: text
     default_value: "{{User.primary_contact_number}}"
-    regex: "\\A(\\+?\\d{1,4}[\\s.-]?)?\\(?\\d{3}\\)?[\\s.-]?\\d{3}[\\s.-]?\\d{4}\\z"
+    regex: "\\A(\\+?\\d{1,4}[\\s.-]?)?\\(?\\d{3}\\)?[\\s.-]?\\d{3}[\\s.-]?\\d{5}\\z"
     page_number: 26
     db_write:
       table: User
