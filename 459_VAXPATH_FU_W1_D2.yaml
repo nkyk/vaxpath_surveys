@@ -4302,9 +4302,6 @@ questions:
     page_number: 38
     max:
       value: CURRENT_DATE
-    db_write:
-      table: AdditionalAppColumn
-      column: vaccdate2
   pt_t1_fu_OTHERVACCDAT_GSK:
     conditions:
       - question: pt_t1_fu_OTHERVACCNAME
