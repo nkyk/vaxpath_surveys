@@ -7,13 +7,7 @@ header: "Sponsor: Pfizer, Study Name: VaxPath, Sponsor Study Number: C4591010, P
 size: large 
 page_titles:
 admin_emails:
-  - Anke.Bross@quintiles.com
-  - antonio.stefanov@quintiles.com
-  - martina.paciarotti@iqvia.com
-  - andja.gvozdenovic-tomasevski@iqvia.com
-  - anacarolina.silva@quintiles.com
-  - denitza.christova@iqvia.com
-  - jared@selfcarecatalysts.com
+- VAXPATH@iqvia.com
 questions: 
   pt_t1_fu_UNPLANTXT:
     label: "This form should only be used for unplanned medical care which you have not reported in a previous survey. Unplanned medical care includes any non-routine medical care."
