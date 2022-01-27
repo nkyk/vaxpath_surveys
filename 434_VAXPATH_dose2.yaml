@@ -374,12 +374,11 @@ questions:
     other_label_es: "Otra"
     other_label_ca: "Un altre (especifiqui’l)"
   pt_t1_mh2_COVSYMP:
-    label: Did you experience any of the following symptoms in the 3 days after vaccination?  (Check all that apply)
-    label_de: Haben Sie innerhalb von 3 Tagen nach der Impfung eines der folgenden Symptome verspürt? (Kreuzen Sie alles an, was zutrifft)
-    label_it: Ha manifestato uno dei seguenti sintomi nei 3 giorni successivi alla vaccinazione?  (Indicare tutte le voci pertinenti)
-    label_es: ¿Experimentó alguno de los siguientes síntomas en los 3 días posteriores a la vacunación?  (marque todo lo que corresponda)
-    label_ca: ha tingut algun dels símptomes següents durant els 3 dies posteriors a la vacunació?  (Marqui totes les opcions que calgui)
-    type: checkbox
+    label: Did you experience any of the following symptoms in the 3 days before vaccination? (Check all that apply)
+    label_de: Haben Sie innerhalb von 3 Tagen vor der Impfung eines der folgenden Symptome verspürt? (Kreuzen Sie alles an, was zutrifft)
+    label_it: Ha manifestato uno dei seguenti sintomi nei 3 giorni precedenti la vaccinazione? (Indicare tutte le voci pertinenti)
+    label_es: ¿Experimentó alguno de los siguientes síntomas en los 3 días anteriores a la vacunación? (Marque todo lo que corresponda)
+    label_ca: Ha tingut algun dels símptomes següents durant els 3 dies anteriors a la vacunació?  (Marqui totes les opcions que calgui)
     page_number: 40
     choices: 
       - value: pt_t1_mh2_COVSYMP_pain
