@@ -20,8 +20,8 @@ questions:
     label: "Do you have anything you want to change or report from the options below? If there is nothing to change or report please select 'None' and click Next to complete the questionnaire."
     label_de: "Möchten Sie etwas von den unten aufgeführten Optionen ändern oder melden? Wenn es nichts zu ändern oder zu melden gibt, wählen Sie bitte 'Keine' und klicken Sie auf Weiter, um um den Fragebogen auszufüllen."
     label_it: "Hai qualcosa che desideri modificare o segnalare dalle opzioni seguenti? Se non c'è nulla da cambiare o segnalare, selezionare 'Nessuno' e fare clic su Avanti per completare il questionario." 
-    label_es: "¿Tiene algo que desee cambiar o informar de las opciones a continuación? Si no hay nada que cambiar o informar, seleccione 'Ninguno' y haga clic en Siguiente para completar el cuestionario."
-    label_ca: "Teniu alguna cosa que vulgueu canviar o informar de les opcions següents? Si no hi ha res que canviar o informar, seleccioneu 'Cap' i feu clic a Següent per completar el qüestionari."
+    label_es: "¿Hay algo que desee cambiar o notificar en las opciones a continuación? Si no hay nada que cambiar o notificar, seleccione 'Nada' y haga clic en 'Siguiente' para finalizar el cuestionario."
+    label_ca: "Hi ha alguna cosa que vulgui modificar o notificar de les opcions següents? Si no ha de modificar ni notificar res, seleccioni 'Res' i faci clic a 'Següent' per emplenar el qüestionari."
     type: checkbox
     page_number: 1
     choices:
@@ -287,6 +287,13 @@ questions:
     label_es: Nombre del médico de atención primaria (para el seguimiento de seguridad)
     label_ca: Nom del metge d’atenció primària (per al seguiment de la seguretat)
     type: text
+    skip:
+      label: skip
+      label_de: Überspringen
+      label_it: Saltare
+      label_es: Saltar
+      label_ca: Omet
+      value: skip
     default_survey_reference: VAXPATH_dose2
     default_question_keyword: pt_t1_ci2_PCPNAME
     page_number: 5
@@ -3242,10 +3249,10 @@ questions:
         label_es: "No"
   pt_t1_fu_OTHERDXNUM:
     label: "How many other diagnoses that have not been previously mentioned did you receive?"
-    label_ca: "Quants altres diagnòstics que no s’han esmentat anteriorment van rebre?"
+    label_ca: "Quants diagnòstics addicionals que no s’havien esmentat prèviament ha rebut?"
     label_de: "Wie viele andere, bisher nicht erwähnte Diagnosen haben Sie erhalten?"
     label_it: "Quante altre diagnosi che non sono state menzionate in precedenza hai ricevuto?"
-    label_es: "¿Cuántos otros diagnósticos que no se han mencionado anteriormente recibió?"
+    label_es: "¿Cuántos diagnósticos recibió que no se hayan mencionado anteriormente?"
     safety_alert_question: true
     page_number: 32
     type: range
@@ -3292,7 +3299,7 @@ questions:
         operation: greater_than
         value: 0
     label: "What was the outcome of your medical care for the first diagnosis?"
-    label_ca: "Quin va ser el resultat de la vostra atenció mèdica per al primer diagnòstic?"
+    label_ca: "Quin va ser el resultat de la seva atenció mèdica pel primer diagnòstic?"
     label_de: "Welches Ergebnis hatte Ihre medizinische Versorgung bei der ersten Diagnose?"
     label_it: "Qual è stato l'esito delle tue cure mediche per la prima diagnosi?"
     label_es: "¿Cuál fue el resultado de su atención médica para el primer diagnóstico?"
@@ -3355,7 +3362,7 @@ questions:
         operation: greater_than
         value: 1
     label: "What was the outcome of your medical care for the second diagnosis?"
-    label_ca: "Quin va ser el resultat de la vostra atenció mèdica per al segon diagnòstic?"
+    label_ca: "Quin va ser el resultat de la seva atenció mèdica pel segon diagnòstic?"
     label_de: "Welches Ergebnis hatte Ihre medizinische Versorgung bei der zweiten Diagnose?"
     label_it: "Qual è stato l'esito delle tue cure mediche per la seconda diagnosi?"
     label_es: "¿Cuál fue el resultado de su atención médica para el segundo diagnóstico?"
@@ -3418,7 +3425,7 @@ questions:
         operation: greater_than
         value: 2
     label: "What was the outcome of your medical care for the third diagnosis?"
-    label_ca: "Quin va ser el resultat de la vostra atenció mèdica per al tercer diagnòstic?"
+    label_ca: "Quin va ser el resultat de la seva atenció mèdica pel tercer diagnòstic?"
     label_de: "Welches Ergebnis hatte Ihre medizinische Versorgung bei der dritten Diagnose?"
     label_it: "Qual è stato l'esito delle tue cure mediche per la terza diagnosi?"
     label_es: "¿Cuál fue el resultado de su atención médica para el tercer diagnóstico?"
@@ -3542,10 +3549,10 @@ questions:
         operation: equal
         value: "2"
     label: "On what date did you receive your AstraZeneca vaccine dose?"
-    label_ca: "En quina data va rebre l'altra dosi de la vacuna Astrazeneca COVID-19?"
+    label_ca: "Quin dia va rebre la seva dosi de la vacuna d’AstraZeneca?"
     label_de: "An welchem Tag haben Sie Ihre Impfstoffdosis von AstraZeneca erhalten?"
     label_it: "In che data ha ricevuto la Sua dose di vaccino Astrazeneca COVID-19"
-    label_es: "¿En qué fecha recibió su AstraZeneca dosis de la vacuna contra la COVID-19?"
+    label_es: "¿En qué fecha recibió su dosis de la vacuna de AstraZeneca?"
     type: date
     page_number: 38
     max:
@@ -3556,10 +3563,10 @@ questions:
         operation: equal
         value: "3"
     label: "On what date did you receive your Johnson & Johnson vaccine dose?"
-    label_ca: "En quina data va rebre l'altra dosi de la vacuna Johnson & Johnson COVID-19?"
+    label_ca: "Quin dia va rebre la seva dosi de la vacuna de Johnson & Johnson?"
     label_de: "An welchem Tag haben Sie Ihre Impfstoffdosis von Johnson & Johnson erhalten?"
     label_it: "In che data ha ricevuto la Sua dose di vaccino Johnson & Johnson COVID-19"
-    label_es: "¿En qué fecha recibió su Johnson & Johnson dosis de la vacuna contra la COVID-19?"
+    label_es: "¿En qué fecha recibió su dosis de la vacuna de Johnson & Johnson?"
     type: date
     page_number: 38
     max:
@@ -3570,10 +3577,10 @@ questions:
         operation: equal
         value: "4"
     label: "On what date did you receive your Moderna vaccine dose?"
-    label_ca: "En quina data va rebre l'altra dosi de la vacuna Moderna COVID-19?"
+    label_ca: "Quin dia va rebre la seva dosi de la vacuna de Moderna?"
     label_de: "An welchem Tag haben Sie Ihre Impfstoffdosis von Moderna erhalten?"
     label_it: "In che data ha ricevuto la Sua dose di vaccino Moderna COVID-19"
-    label_es: "¿En qué fecha recibió su Moderna dosis de la vacuna contra la COVID-19?"
+    label_es: "¿En qué fecha recibió su dosis de la vacuna de Moderna?"
     type: date
     page_number: 38
     max:
@@ -3584,10 +3591,10 @@ questions:
         operation: equal
         value: "5"
     label: "On what date did you receive your Novavax vaccine dose?"
-    label_ca: "En quina data va rebre l'altra dosi de la vacuna Novavax COVID-19?"
+    label_ca: "Quin dia va rebre la seva dosi de la vacuna de Novavax?"
     label_de: "An welchem Tag haben Sie Ihre Impfstoffdosis von Novavax erhalten?"
     label_it: "In che data ha ricevuto la Sua dose di vaccino Novavax COVID-19"
-    label_es: "¿En qué fecha recibió su Novavax dosis de la vacuna contra la COVID-19"
+    label_es: "¿En qué fecha recibió su dosis de la vacuna de Novavax?"
     type: date
     page_number: 38
     max:
@@ -3598,10 +3605,10 @@ questions:
         operation: equal
         value: "1"
     label: "On what date did you receive your Pfizer-BioNTech vaccine dose?"
-    label_ca: "En quina data va rebre l'altra dosi de la vacuna Pfizer-BioNTech COVID-19?"
+    label_ca: "Quin dia va rebre la seva dosi de la vacuna de Pfizer-BioNTech?"
     label_de: "An welchem Tag haben Sie Ihre Impfstoffdosis von Pfizer-BioNTech erhalten?"
     label_it: "In che data ha ricevuto la Sua dose di vaccino Pfizer-BioNTech COVID-19"
-    label_es: "¿En qué fecha recibió su Pfizer-BioNTech dosis de la vacuna contra la COVID-19"
+    label_es: "¿En qué fecha recibió su dosis de la vacuna de Pfizer-BioNTech?"
     type: date
     page_number: 38
     max:
@@ -3612,10 +3619,10 @@ questions:
         operation: equal
         value: "6"
     label: "On what date did you receive your Sanofi and GlaxoSmithKline vaccine dose?"
-    label_ca: "En quina data va rebre l'altra dosi de la vacuna Sanofi and GlaxoSmithKline COVID-19?"
+    label_ca: "Quin dia va rebre la seva dosi de la vacuna de Sanofi i GlaxoSmithKline?"
     label_de: "An welchem Tag haben Sie Ihre Impfstoffdosis von Sanofi und GlaxoSmithKline erhalten?"
     label_it: "In che data ha ricevuto la Sua dose di vaccino Sanofi e GlaxoSmithKline COVID-19"
-    label_es: "¿En qué fecha recibió su Sanofi y GlaxoSmithKline dosis de la vacuna contra la COVID-19"
+    label_es: "¿En qué fecha recibió su dosis de la vacuna de Sanofi y GlaxoSmithKline?"
     type: date
     page_number: 38
     max:
@@ -3626,7 +3633,7 @@ questions:
         operation: equal
         value: "7"
     label: "On what date did you receive your other Covid-19 vaccine dose?"
-    label_ca: "En quina data va rebre l’altra dosi de la vacuna de la COVID-19?"
+    label_ca: "Quin dia va rebre l’altra dosi de la vacuna de la COVID-19?"
     label_de: "An welchem Tag haben Sie Ihre zweite Covid-19-Impfdosis erhalten?"
     label_it: "In che data ha ricevuto la Sua altra dose di vaccino anti-Covid-19?"
     label_es: "¿En qué fecha recibió su otra dosis de la vacuna contra la COVID-19?"
@@ -3636,16 +3643,16 @@ questions:
       value: CURRENT_DATE
   q_end:
     label: This is the end of the questionnaire. If you need to fill in missing details, please close the questionnaire using the [x] at the top right and you can revisit the questionnaire at a later time. Otherwise, if you wish to submit a completed questionnaire, select the option below and press 'NEXT'.
-    label_ca: "Aquest és el final del qüestionari. Si heu d'emplenar les dades que falten, tanqueu el qüestionari amb la x [que hi ha a la part superior dreta] i podreu tornar a visitar el qüestionari més endavant. En cas contrari, si voleu enviar un qüestionari completat, seleccioneu l'opció següent i premeu 'SEGÜENT'."
+    label_ca: "Ha arribat al final del qüestionari. Si ha d’introduir informació pendent, premi el símbol [x] a dalt a la dreta per tancar el qüestionari i tornar-hi a accedir més tard. Si no és el cas i vol enviar el qüestionari emplenat, seleccioni l’opció a continuació i premi 'SEGÜENT'."
     label_de: Dies ist das Ende des Fragebogens. Wenn Sie fehlende Angaben ergänzen müssen, schließen Sie den Fragebogen bitte mit dem [x] oben rechts und Sie können den Fragebogen zu einem späteren Zeitpunkt erneut aufrufen. Wenn Sie andernfalls einen ausgefüllten Fragebogen einreichen möchten, wählen Sie die unten stehende Option und drücken Sie 'WEITER'.
     label_it: Questa è la fine del questionario. Se avete bisogno di compilare i dettagli mancanti, chiudete il questionario utilizzando la [x] in alto a destra e potrete rivisitare il questionario in un secondo momento. In caso contrario, se si desidera inviare un questionario compilato, selezionare l'opzione qui sotto e premere 'AVANTI'.
-    label_es: Este es el final del cuestionario. Si necesita completar los detalles que faltan, cierre el cuestionario usando la [x] en la parte superior derecha y podrá volver a revisar el cuestionario más adelante. De lo contrario, si desea enviar un cuestionario completado, seleccione la opción a continuación y pulse 'SIGUIENTE'.
+    label_es: Este es el final del cuestionario. Si necesita rellenar los detalles que faltan, cierre el cuestionario utilizando la [x] de la esquina superior derecha y puede volver a consultar el cuestionario más adelante. En caso contrario, si desea enviar un cuestionario cumplimentado, seleccione la opción a continuación y pulse 'SIGUIENTE'.
     type: radio
     page_number: 40
     choices:
       - value: q_end_confirm
         label: "I confirm that these are my final answers"
-        label_ca: "Confirmo que aquestes són les meves respostes finals"
+        label_ca: "Confirmo que aquestes són les meves respostes definitives"
         label_de: "Ich bestätige, dass dies meine endgültigen Antworten sind"
         label_it: "Confermo che queste sono le mie risposte finali"
-        label_es: "Confirmo que estas son mis respuestas finales"
+        label_es: "Confirmo que estas son mis respuestas definitivas"
