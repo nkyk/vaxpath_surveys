@@ -157,7 +157,7 @@ questions:
     label_es: Proporcione el número de lote de la vacuna
     label_ca: Indiqui el número de lot de la vacuna
     type: text
-    regex: ^[a-zA-Z]{2}[0-9]{4}$
+    regex: \A[a-zA-Z0-9]{6,7}\z
     skip:
       label: Skip
       label_de: Überspringen
