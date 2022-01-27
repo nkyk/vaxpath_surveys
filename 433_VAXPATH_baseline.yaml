@@ -1255,6 +1255,7 @@ questions:
     label_es: Número de teléfono, indique por favor el codigo de país
     label_ca: Número de telèfon, indiqui si us plau el codi de país
     type: text
+    default_value: "{{User.primary_contact_number}}"
     regex: "\\A(\\+?\\d{1,2}[\\s.-]?)?\\(?\\d{3}\\)?[\\s.-]?\\d{3}[\\s.-]?\\d{4}\\z"
     page_number: 26
     db_write:
@@ -1267,6 +1268,7 @@ questions:
     label_es: Dirección de correo electrónico
     label_ca: Correu electrònic
     type: text
+    default_value: "{{User.email}}"
     regex: "\\A[\\w+\\-.]+@[a-z\\d\\-]+(\\.[a-z\\d\\-]+)*\\.[a-z]+\\z"
     page_number: 26
     db_write:
