@@ -288,7 +288,7 @@ questions:
         label_ca: "Caucásico"
       - value: pt_t0_dem_RACE_Decline
         label: "Decline to answer"
-        label_de: "Möchte nicht Anttworten"
+        label_de: "Möchte nicht Antworten"
         label_it: "Preferisco non rispondere"
         label_es: "Prefiero No contestar"
         label_ca: "Prefiero No contestar"
