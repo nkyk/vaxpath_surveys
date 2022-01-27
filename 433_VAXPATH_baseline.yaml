@@ -297,7 +297,7 @@ questions:
     other_label_it: "Altro"
     other_label_de: "Andere"
     other_label_es: "Otro"
-    other_label_ca: "Otro"
+    other_label_ca: "Altres"
     validation:
       - exclusive: pt_t0_dem_RACE_Decline
   pt_t0_dem_OCCUP:
