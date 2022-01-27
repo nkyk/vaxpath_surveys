@@ -1258,11 +1258,11 @@ questions:
         label_es: "Otra"
         label_ca: "Altres"
   pt_t0_ci1_PHONENUM:
-    label: "Telephone or cellphone number"
-    label_de: Telefonnummer
-    label_it: Numero di telefono
-    label_es: Número de teléfono
-    label_ca: Número de telèfon
+    label: "Telephone or cellphone number, including the country code"
+    label_de: Telefonnummer, Bitte geben Sie die Landesvorwahl ein
+    label_it: Numero di telefono, per favore indicare il prefisso del paese 
+    label_es: Número de teléfono, indique por favor el codigo de pais 
+    label_ca: Número de telèfon, indiqui si us plau el codi de pais
     type: text
     regex: "\\A(\\+?\\d{1,2}[\\s.-]?)?\\(?\\d{3}\\)?[\\s.-]?\\d{3}[\\s.-]?\\d{4}\\z"
     page_number: 26
@@ -1322,10 +1322,10 @@ questions:
     page_number: 27
   pt_t0_ci1_2NDCONTACTPHONE:
     label: "Secondary contact telephone or cellphone number"
-    label_de: Telefonnummer oder Handynummer der zweiten Kontaktperson
-    label_it: Numero di telefono o di cellulare del recapito secondario
-    label_es: Número de teléfono o móvil de contacto secundario
-    label_ca: Telèfon fix o mòbil de la persona de contacte secundària
+    label_de: Telefonnummer oder Handynummer der zweiten Kontaktperson, Bitte geben Sie die Landesvorwahl ein 
+    label_it: Numero di telefono o di cellulare del recapito secondario, per favore indicare il prefisso del paese
+    label_es: Número de teléfono o móvil de contacto secundario, indique por favor el codigo de pais
+    label_ca: Telèfon fix o mòbil de la persona de contacte secundària, indiqui si us plau el codi de pais
     type: text
     regex: "\\A(\\+?\\d{1,2}[\\s.-]?)?\\(?\\d{3}\\)?[\\s.-]?\\d{3}[\\s.-]?\\d{4}\\z"
     page_number: 27
@@ -1361,10 +1361,10 @@ questions:
       column: primary_care_physician_name
   pt_t0_ci1_PCPCONTACTPHONE:
     label: "Primary care physician phone number"
-    label_de: "Telefonnummer des Hausarztes"
-    label_it: "Numero di telefono del medico di base"
-    label_es: "Número de teléfono del médico de atención primaria"
-    label_ca: "Número de telèfon del metge d’atenció primària"
+    label_de: "Telefonnummer des Hausarztes, Bitte geben Sie die Landesvorwahl ein"
+    label_it: "Numero di telefono del medico di base, per favore indicare il prefisso del paese"
+    label_es: "Número de teléfono del médico de atención primaria, indique por favor el codigo de pais"
+    label_ca: "Número de telèfon del metge d’atenció primària, indiqui si us plau el codi de pais"
     type: text
     regex: "\\A(\\+?\\d{1,2}[\\s.-]?)?\\(?\\d{3}\\)?[\\s.-]?\\d{3}[\\s.-]?\\d{4}\\z"
     skip:
