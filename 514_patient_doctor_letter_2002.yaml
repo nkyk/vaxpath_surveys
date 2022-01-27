@@ -1,1 +1,8 @@
 title: LETTERA INFORMATIVA PER IL MEDICO DI FAMIGLIA DEL PARTECIPANTE ALLO STUDIO
+
+
+questions:
+  q1:
+    label: |
+      <a href="https://health-storylines-public-files.s3.ca-central-1.amazonaws.com/Pfizer+PASS+C4591010_GP+Letter_Master_ENG_v1.0_FINAL_03Jun2021_San+Martino.docx" target="_blank">Haga clic aquí para descargar la carta</a>
+    type: blank
