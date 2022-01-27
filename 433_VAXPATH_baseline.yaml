@@ -1185,8 +1185,6 @@ questions:
     page_number: 25
     max:
       value: CURRENT_DATE
-    min: 
-      value: 5_DAYS_BEFORE
   pt_t0_vi1_VACCCENTER:
     conditions: 
       - question: pt_t0_vi1_VACCDOSE
