@@ -1186,7 +1186,7 @@ questions:
     max:
       value: CURRENT_DATE
     min: 
-      value: "2020-12-01"
+      value: 5_DAYS_BEFORE
     skip:
       label: Uncertain
       label_de: überspringen
