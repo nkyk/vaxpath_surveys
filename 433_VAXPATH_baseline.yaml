@@ -1187,13 +1187,6 @@ questions:
       value: CURRENT_DATE
     min: 
       value: 5_DAYS_BEFORE
-    skip:
-      label: Uncertain
-      label_de: überspringen
-      label_it: Salta
-      label_es: Saltar
-      label_ca: Omet
-      value: skip
   pt_t0_vi1_VACCCENTER:
     conditions: 
       - question: pt_t0_vi1_VACCDOSE
