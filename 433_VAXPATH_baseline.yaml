@@ -241,7 +241,7 @@ questions:
     label_es: ¿Cuál es su país de origen? 
     label_ca: Quin és el seu país d’origen? 
     type: list
-    list_id: 13
+    list_id: 7
     list_id_de: "8"
     list_id_it: "9"
     list_id_es: "10"
@@ -308,7 +308,7 @@ questions:
     label_ca: Quina és la seva ocupació principal actualment?
     type: list
     page_number: 5
-    list_id: 6
+    list_id: 5
     list_id_de: 13
     list_id_it: 14
     list_id_es: 15
