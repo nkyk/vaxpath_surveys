@@ -643,8 +643,8 @@ questions:
     label: "Telephone or cellphone number"
     label_de: Telefon- oder Handynummer, Bitte geben Sie die Landesvorwahl ein
     label_it: Numero di telefono o cellulare, per favore indicare il prefisso del paese
-    label_es: Número de teléfono o móvil, indique por favor el codigo de pais
-    label_ca: Número de telèfon fix o mòbil, indiqui si us plau el codi de pai
+    label_es: Número de teléfono o móvil, indique por favor el codigo de país
+    label_ca: Número de telèfon fix o mòbil, indiqui si us plau el codi de país
     type: text
     regex: "\\A(\\+?\\d{1,2}[\\s.-]?)?\\(?\\d{3}\\)?[\\s.-]?\\d{3}[\\s.-]?\\d{4}\\z"
     default_survey_reference: VAXPATH_BASELINE
@@ -716,8 +716,8 @@ questions:
     label: "Secondary contact telephone or cellphone number"
     label_de: Telefonnummer oder Handynummer der zweiten Kontaktperson, Bitte geben Sie die Landesvorwahl ein 
     label_it: Numero di telefono o di cellulare del recapito secondario, per favore indicare il prefisso del paese
-    label_es: Número de teléfono o móvil de contacto secundario, indique por favor el codigo de pais
-    label_ca: Telèfon fix o mòbil de la persona de contacte secundària, indiqui si us plau el codi de pai
+    label_es: Número de teléfono o móvil de contacto secundario, indique por favor el codigo de país
+    label_ca: Telèfon fix o mòbil de la persona de contacte secundària, indiqui si us plau el codi de país
     type: text
     default_survey_reference: VAXPATH_BASELINE
     default_question_keyword: pt_t0_ci1_2NDCONTACTPHONE
@@ -778,8 +778,8 @@ questions:
     label: "Primary care physician phone number"
     label_de: "Telefonnummer des Hausarztes, Bitte geben Sie die Landesvorwahl ein"
     label_it: "Numero di telefono del medico di base, per favore indicare il prefisso del paese"
-    label_es: "Número de teléfono del médico de atención primaria, indique por favor el codigo de pais"
-    label_ca: "Número de telèfon del metge d’atenció primària, indiqui si us plau el codi de pai"
+    label_es: "Número de teléfono del médico de atención primaria, indique por favor el codigo de país"
+    label_ca: "Número de telèfon del metge d’atenció primària, indiqui si us plau el codi de país"
     type: text
     regex: "\\A(\\+?\\d{1,2}[\\s.-]?)?\\(?\\d{3}\\)?[\\s.-]?\\d{3}[\\s.-]?\\d{4}\\z"
     default_survey_reference: VAXPATH_BASELINE
