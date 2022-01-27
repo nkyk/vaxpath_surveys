@@ -115,7 +115,7 @@ questions:
       - value: pt_t1_vi2_VACCDOSE_notPfizer
         label: "I did not get a Pfizer-BioNTech COVID-19 vaccination"
         label_de: "Ich habe keinen COVID-19-Impfstoff von Pfizer-BioNTech"
-        label_it: "Non ho ricevuto un vaccino Pfizer-BioNTech anti-Covid-19"
+        label_it: "Non ho ricevuto il vaccino Pfizer-BioNTech anti-Covid-19"
         label_es: "No he recibido una vacuna de Pfizer-BioNTech contra la COVID-19"
         label_ca: "No em van posar la vacuna contra la COVID-19 de Pfizer-BioNTech"
   pt_t1_vi2_VACCDOSE_DATE:
@@ -141,7 +141,7 @@ questions:
         value: pt_t1_vi2_VACCDOSE_Yes
     label: "At which center were you vaccinated?"
     label_de: In welchem Zentrum wurden Sie geimpft?
-    label_it: In quale centro è stato vaccinato?
+    label_it: In quale centro è stato/a vaccinato/a?
     label_es: ¿En qué centro se vacunó?
     label_ca: A quin centre es va vacunar?
     type: text
@@ -310,7 +310,7 @@ questions:
       - value: pt_t1_mh2_VACCINETYPE_Meningococcal
         label: "Meningococcal"
         label_de: "Meningokokken"
-        label_it: "Meningococ"
+        label_it: "Meningococcico"
         label_es: "Meningocócica"
         label_ca: "Meningococ"
       - value: pt_t1_mh2_VACCINETYPE_Pertussis
@@ -855,13 +855,13 @@ questions:
       - value: "2"
         label: "Web/app-based questionnaire"
         label_de: "Web-/App-basierter Fragebogen"
-        label_it: "Questionario basato su web/applicazione"
+        label_it: "Tramite web/applicazione"
         label_es: "Cuestionario basado en web/aplicación"
         label_ca: "Qüestionari a través de web o aplicació"
       - value: "3"
         label: "Do not contact me anymore"
         label_de: "Kontaktieren Sie mich nicht mehr"
-        label_it: "Non mi contatti più"
+        label_it: "Non desidero essere più contattato"
         label_es: "No volver a ponerse en contacto conmigo"
         label_ca: "No em torneu a contactar"
     db_write:
@@ -870,7 +870,7 @@ questions:
   q_end:
     label: This is the end of the questionnaire. If you need to fill in missing details, please close the questionnaire using the [x] at the top right and you can revisit the questionnaire at a later time. Otherwise, if you wish to submit a completed questionnaire, select the option below and press 'NEXT'.
     label_de: Dies ist das Ende des Fragebogens. Wenn Sie fehlende Angaben ergänzen müssen, schließen Sie den Fragebogen bitte mit dem [x] oben rechts und Sie können den Fragebogen zu einem späteren Zeitpunkt erneut aufrufen. Wenn Sie andernfalls einen ausgefüllten Fragebogen einreichen möchten, wählen Sie die unten stehende Option und drücken Sie 'WEITER'.
-    label_it: "Questa è la fine del questionario. Se avete bisogno di compilare i dettagli mancanti, chiudete il questionario utilizzando la [x] in alto a destra e potrete rivisitare il questionario in un secondo momento. In caso contrario, se si desidera inviare un questionario compilato, selezionare l'opzione qui sotto e premere 'AVANTI'."
+    label_it: "Fine del questionario. Se ha bisogno di compilare i dettagli mancanti, chiuda il questionario utilizzando la [x] in alto a destra e potrà riprendere il questionario in un secondo momento. In caso contrario, se desidera inviare il questionario compilato, selezioni l'opzione qui sotto e prema 'AVANTI'."
     label_es: "Este es el final del cuestionario. Si necesita completar los detalles que faltan, cierre el cuestionario usando la [x] en la parte superior derecha y podrá volver a revisar el cuestionario más adelante. De lo contrario, si desea enviar un cuestionario completo, seleccione la opción a continuación y pulse 'SIGUIENTE'."
     label_ca: "Ha arribat al final del qüestionari. Si ha d’introduir informació pendent, premi el símbol [x] a dalt a la dreta per tancar el qüestionari i tornar-hi a accedir més tard. Si no és el cas i vol enviar el qüestionari emplenat, seleccioni l’opció a continuació i premi 'SEGÜENT'."
     type: radio
