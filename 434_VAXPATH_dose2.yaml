@@ -380,6 +380,7 @@ questions:
     label_es: ¿Experimentó alguno de los siguientes síntomas en los 3 días anteriores a la vacunación? (Marque todo lo que corresponda)
     label_ca: Ha tingut algun dels símptomes següents durant els 3 dies anteriors a la vacunació?  (Marqui totes les opcions que calgui)
     page_number: 40
+    type: checkbox
     choices: 
       - value: pt_t1_mh2_COVSYMP_pain
         label: "Arthralgia/joint pain"
