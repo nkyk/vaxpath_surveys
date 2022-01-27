@@ -4342,9 +4342,6 @@ questions:
       value: CURRENT_DATE
   pt_t1_fu_PREGCHECK:
     conditions: 
-      - question: VAXPATH_BASELINE.pt_t0_dem_SEX
-        operation: equal
-        value: pt_t0_dem_SEX_Female
       - table: AdditionalAppColumn
         column: pregnancy_status
         operation: not_equal
@@ -4354,6 +4351,9 @@ questions:
         condition_operator: or
         operation: not_equal
         value: pt_t2_preg_PREGCONF_no
+      - question: VAXPATH_BASELINE.pt_t0_dem_SEX
+        operation: equal
+        value: pt_t0_dem_SEX_Female
     db_write:
       table: AdditionalAppColumn
       column: pregnancy_status
