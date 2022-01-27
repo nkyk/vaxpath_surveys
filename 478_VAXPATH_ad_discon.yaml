@@ -104,3 +104,7 @@ questions:
         label_ca: "Confirmo que aquestes són les meves respostes finals"
         label_it: "Confermo che queste sono le mie risposte finali"
         label_es: "Confirmo que estas son mis respuestas finales"
+    db_write:
+      table: AdditionalAppColumn
+      column: subject_status
+      column_value: "Discontinued"
