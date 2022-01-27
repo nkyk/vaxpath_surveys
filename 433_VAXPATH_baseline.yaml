@@ -301,11 +301,11 @@ questions:
     label_ca: Quina és la seva ocupació principal actualment?
     type: list
     page_number: 5
-    list_id: 6
-    list_id_de: 16
-    list_id_it: 17
+    list_id: 5
+    list_id_de: 13
+    list_id_it: 14
     list_id_es: 15
-    list_id_ca: 14
+    list_id_ca: 12
     page_number: 5
   pt_t0_dem_OCCUP_1:
     conditions: 
