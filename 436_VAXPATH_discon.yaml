@@ -14,36 +14,35 @@ questions:
     label_es: "Motivo de la retirada"
     type: radio
     choices:
-    - value: 1  
-      label:  "Takes too much time"
-      label_de: "Zu zeitaufwendig"
-      label_ca: "Demana massa temps"
-      label_it: "Richiede troppo tempo"
-      label_es: "Tarda demasiado tiempo"
-    - value: 2  
-      label:  "Too many calls from the call center"
-      label_de: "Zu viele Anrufe vom Callcenter"
-      label_ca: "Massa trucades del centre d’atenció telefònica"
-      label_it: "Troppe chiamate dal call center"
-      label_es: "Demasiadas llamadas del centro de llamadas"
-    - value: 3
-      label:  "Not interested any more"
-      label_de: "Nicht mehr interessiert"
-      label_ca: "Ja no hi tinc interès"
-      label_it: "Non più interessato"
-      label_es: "Ya no está interesado"
-    other:
-        other: true
-        other_label: "Please specify other values"
-        other_label_it: "Altro"
-        other_label_de: "Andere Ethnie"
-        other_label_es: "Otro"
-        other_label_ca: "Un altre (especifiqui’l)"
+      - value: 1  
+        label:  "Takes too much time"
+        label_de: "Zu zeitaufwendig"
+        label_ca: "Demana massa temps"
+        label_it: "Richiede troppo tempo"
+        label_es: "Tarda demasiado tiempo"
+      - value: 2  
+        label:  "Too many calls from the call center"
+        label_de: "Zu viele Anrufe vom Callcenter"
+        label_ca: "Massa trucades del centre d’atenció telefònica"
+        label_it: "Troppe chiamate dal call center"
+        label_es: "Demasiadas llamadas del centro de llamadas"
+      - value: 3
+        label:  "Not interested any more"
+        label_de: "Nicht mehr interessiert"
+        label_ca: "Ja no hi tinc interès"
+        label_it: "Non più interessato"
+        label_es: "Ya no está interesado"
+    other: true
+    other_label: "Please specify other values"
+    other_label_it: "Altro"
+    other_label_de: "Andere Ethnie"
+    other_label_es: "Otro"
+    other_label_ca: "Un altre (especifiqui’l)"
   q_end: 
     label:  "This is the end of the questionnaire. If you need to fill in missing details, please close the questionnaire using the [x] at the top right and you can revisit the questionnaire at a later time. Otherwise, if you wish to submit a completed questionnaire, select the option below and press 'NEXT'."
     label_de: "Das ist das Ende des Fragebogens. Wenn Sie fehlende Daten ausfüllen müssen, schließen Sie bitte den Fragebogen mit dem [x] oben rechts und Sie können den Fragebogen zu einem späteren Zeitpunkt erneut aufrufen. Andernfalls, wenn Sie einen ausgefüllten Fragebogen einreichen möchten, wählen Sie die Option unten und drücken Sie 'NÄCHSTE'."
     label_ca: "Aquest és el final del qüestionari. Si heu d'emplenar les dades que falten, tanqueu el qüestionari amb la x [que hi ha a la part superior dreta] i podreu tornar a visitar el qüestionari més endavant. En cas contrari, si voleu enviar un qüestionari completat, seleccioneu l'opció següent i premeu 'SEGÜENT'."
-    label_it: "Fine del questionario. Se ha bisogno di compilare i dettagli mancanti, chiuda il questionario utilizzando la [x] in alto a destra e potr riprendere il questionario in un secondo momento. In caso contrario, se desidera inviare il questionario compilato, selezionare l'opzione qui sotto e premere 'AVANTI'."
+    label_it: "Fine del questionario. Se ha bisogno di compilare i dettagli mancanti, chiuda il questionario utilizzando la [x] in alto a destra e potrà riprendere il questionario in un secondo momento. In caso contrario, se desidera inviare il questionario compilato, selezioni l'opzione qui sotto e prema 'AVANTI'."
     label_es: Este es el final del cuestionario. Si necesita completar los detalles que faltan, cierre el cuestionario usando la [x] en la parte superior derecha y podrá volver a revisar el cuestionario más adelante. De lo contrario, si desea enviar un cuestionario completo, seleccione la opción a continuación y pulse 'SIGUIENTE'.
     type: radio
     choices:
