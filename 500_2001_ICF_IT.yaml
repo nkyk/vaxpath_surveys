@@ -3,6 +3,7 @@ size: large
 questions:
   pt_t0_STUDY_INFO:
     page_number: 1
+    hsc_consent: true
     type: econsent
     required_questions: "first_name,last_name"
     label:
