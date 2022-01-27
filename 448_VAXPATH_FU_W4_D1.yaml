@@ -1,0 +1,3682 @@
+title: Follow-up 
+title_ca: "Seguiment"
+title_de: "Nachsorge"
+title_it: "Seguito"
+title_es: "Seguimiento"
+header: "Sponsor: Pfizer, Study Name: VaxPath, Sponsor Study Number: C4591010, Protocol Version: 1, CRF Version: Version 2"
+size: large 
+page_titles:
+admin_emails:
+  - janie.gous@iqvia.com
+  - anke.bross@iqvia.com
+  - chandni.thakur@quintiles.com
+  - begona.gonzalez@quintiles.com
+  - theresa.roy@quintiles.com
+  - jared@selfcarecatalysts.com
+  - jacob@selfcarecatalysts.com
+  - shameni@selfcarecatalysts.com
+questions: 
+  pt_t1_fu_CHECKPOINT:
+    label: "Do you have anything you want to change or report from the options below? If there is nothing to change or report please select 'None' and click Next to complete the questionnaire."
+    label_de: "Möchten Sie etwas von den unten aufgeführten Optionen ändern oder melden? Wenn es nichts zu ändern oder zu melden gibt, wählen Sie bitte 'Keine' und klicken Sie auf Weiter, um um den Fragebogen auszufüllen."
+    label_it: "Hai qualcosa che desideri modificare o segnalare dalle opzioni seguenti? Se non c'è nulla da cambiare o segnalare, selezionare 'Nessuno' e fare clic su Avanti per completare il questionario." 
+    label_es: "¿Tiene algo que desee cambiar o informar de las opciones a continuación? Si no hay nada que cambiar o informar, seleccione 'Ninguno' y haga clic en Siguiente para completar el cuestionario."
+    label_ca: "Teniu alguna cosa que vulgueu canviar o informar de les opcions següents? Si no hi ha res que canviar o informar, seleccioneu 'Cap' i feu clic a Següent per completar el qüestionari."
+    type: checkbox
+    page_number: 1
+    choices:
+      - value: pt_t1_fu_CNTCTINFO_PART
+        label: "My contact information has changed"
+        label_de: "Meine Kontaktdaten haben sich geändert"
+        label_it: "Le mie informazioni di contatto sono cambiate"
+        label_es: "Mi información de contacto ha cambiado" 
+        label_ca: "La meva informació de contacte ha canviat" 
+      - value: pt_t1_fu_CNTCTINFO_HCP
+        label: "My Health Care Provider information has changed"
+        label_ca: "La informació del meu proveïdor d’atenció mèdica ha canviat"
+        label_de: "Die Informationen meines Gesundheitsdienstleisters haben sich geändert"
+        label_it: "Le informazioni sul mio fornitore di assistenza sanitaria sono cambiate" 
+        label_es: "La información de mi proveedor de atención médica ha cambiado" 
+      - value: pt_t1_fu_UNPLNEDMEDCARE
+        label: "I would like to report an Unplanned Medical Care Event"
+        label_ca: "M’agradaria informar d’un esdeveniment d’atenció mèdica no planificat"
+        label_de: "Ich möchte ein ungeplantes medizinisches Ereignis melden report" 
+        label_it: "Vorrei segnalare un evento di assistenza medica non pianificato"
+        label_es: "Me gustaría informar un evento de atención médica no planificado" 
+      - value: pt_t1_fu_NONE
+        label: "None"
+        label_ca: "Cap de les anteriors no és certa"
+        label_de: "Keines der oben genannten ist wahr"
+        label_it: "Nessuna delle precedenti è vera" 
+        label_es: "Ninguna de las anteriores son ciertas" 
+    validation:
+      - exclusive: pt_t1_fu_NONE
+    trigger:
+      type: safety_alert
+      value: pt_t1_fu_UNPLNEDMEDCARE
+      operation: contains
+  pt_t2_preg_PREGCONF:
+    label: You previously confirmed that you were pregnant. Are you still pregnant?
+    label_de: Sie haben bereits bestätigt, dass Sie schwanger sind. Sind Sie immer noch schwanger?
+    label_it: Hai già confermato di essere incinta. Sei ancora incinta?
+    label_es: Anteriormente confirmó que estaba embarazada. ¿Sigue embarazada?
+    label_ca: Anteriorment va confirmar que estava embarassada. Encara està embarassada?
+    conditions: 
+      - table: AdditionalAppColumn
+        column: pregnancy_status
+        condition_operator: or
+        operation: equal
+        value: "pt_t2_preg_PREGCONF_yes"
+      - table: AdditionalAppColumn
+        column: pregnancy_status
+        condition_operator: or
+        operation: equal
+        value: "pt_t1_preg_PREGCONF_yes"
+      - table: AdditionalAppColumn
+        column: pregnancy_status
+        condition_operator: or
+        operation: equal
+        value: "pt_t0_mh1_PREG_yes"
+      - table: AdditionalAppColumn
+        column: pregnancy_status
+        condition_operator: or
+        operation: equal
+        value: "pt_t1_mh1_PREG_yes"
+    db_write:
+      table: AdditionalAppColumn
+      column: pregnancy_status
+    page_number: 2
+    type: radio
+    choices: 
+      - value: pt_t2_preg_PREGCONF_yes
+        label: "Yes"
+        label_de: "Ja"
+        label_it: "Sì"
+        label_es: "Sí"
+        label_ca: "Sí"
+      - value: pt_t2_preg_PREGCONF_no
+        label: "No"
+        label_de: "Nein"
+        label_it: "No"
+        label_es: "No"
+        label_ca: "No"
+  pt_t2_preg_POUTCOME:
+    label: What was your pregnancy outcome?
+    label_de: Was war der Ausgang Ihrer Schwangerschaft?
+    label_it: Qual è stato l’esito della Sua gravidanza?
+    label_es: ¿Cuál fue el desenlace de su embarazo?
+    label_ca: Quin va ser el desenllaç de l'embaràs?
+    type: radio
+    conditions: 
+      - question: pt_t2_preg_PREGCONF
+        operation: equal
+        value: pt_t2_preg_PREGCONF_no
+    page_number: 3
+    choices: 
+      - value: livebirth
+        label: "Live birth"
+        label_de: "Lebendgeburt"
+        label_it: "Nascita in vita"
+        label_es: "Nacimiento vivo"
+        label_ca: "Naixement de bebè viu"
+      - value: ectopic
+        label: "Ectopic pregnancy (a pregnancy outside the uterus)"
+        label_de: "Eileiterschwangerschaft (eine Schwangerschaft außerhalb der Gebärmutter)"
+        label_it: "Gravidanza ectopica (una gravidanza al di fuori dell’utero)"
+        label_es: "Embarazo ectópico (embarazo fuera del útero)"
+        label_ca: "Embaràs ectòpic (embaràs fora de l’úter)"
+      - value: termination
+        label: "Elective or therapeutic termination"
+        label_de: "Selbstgewählter oder therapeutischer Schwangerschaftsabbruch"
+        label_it: "Interruzione elettiva o terapeutica"
+        label_es: "Finalización programada o terapéutica"
+        label_ca: "Interrupció de l’embaràs electiva o terapèutica"
+      - value: molar
+        label: "Molar pregnancy (a non-viable fertilized egg implants in the uterus)"
+        label_de: "Molenschwangerschaft (nicht lebensfähige, befruchtete Eizelle nistet sich in der Gebärmutter ein)"
+        label_it: "Gravidanza molare (impianti di ovuli fecondati non vitali nell’utero)"
+        label_es: "Embarazo molar (implantes de óvulos fertilizados no viables en el útero)"
+        label_ca: "Embaràs molar (implantació no viable d’òvul fecundat a l’úter)"
+      - value: abortion
+        label: "Spontaneous abortion (miscarriage), <=20 gestational weeks"
+        label_de: "Spontaner Abort (Fehlgeburt), ≤20. Schwangerschaftswoche"
+        label_it: "Aborto spontaneo, ≤20 settimane gestazionali"
+        label_es: "Aborto espontáneo, <=20 semanas de gestación"
+        label_ca: "Avortament espontani (interrupció involuntària), <=20 setmanes de gestació"
+      - value: Stillbirth
+        label: "Stillbirth (>20 gestational weeks)"
+        label_de: "Stillgeburt (>20.Schwangerschaftswoche)"
+        label_it: "Nato morto (>20 settimane gestazionali)"
+        label_es: "Mortinato (>20 semanas de gestación)"
+        label_ca: "Naixement de fetus mort (>20 setmanes de gestació)"
+  pt_t2_preg_OUTCOME_DATE:
+    label: Date of pregnancy outcome
+    label_de: Datum des Schwangerschaftsausgangs
+    label_it: Data dell’esito della gravidanza
+    label_es: Fecha del desenlace del embarazo
+    label_ca: Data de desenllaç de l’embaràs
+    type: date
+    conditions: 
+      - question: pt_t2_preg_PREGCONF
+        operation: equal
+        value: pt_t2_preg_PREGCONF_no
+    page_number: 3
+    max: 
+      value: CURRENT_DATE
+  pt_t2_preg_GESTAGE:
+    label: Gestational age at pregnancy outcome (weeks)
+    label_de: Gestationsalter bei Schwangerschaftsausgang (Wochen)
+    label_it: Età gestazionale all’esito della gravidanza (settimane)
+    label_es: Edad gestacional en el momento del desenlace del embarazo (semanas)
+    label_ca: Edat gestacional en el moment del desenllaç de l’embaràs (setmanes)
+    type: number
+    conditions: 
+      - question: pt_t2_preg_PREGCONF
+        operation: equal
+        value: pt_t2_preg_PREGCONF_no
+    page_number: 3
+    min:
+      value: 1
+    max: 
+      value: 42 
+  pt_t2_ci2_PHONENUM:
+    conditions:
+      - question: pt_t1_fu_CHECKPOINT
+        operation: contains
+        value: pt_t1_fu_CNTCTINFO_PART
+    label: "Telephone or cellphone number"
+    label_de: Telefon- oder Handynummer
+    label_it: Numero di telefono o cellulare
+    label_es: Número de teléfono o móvil
+    label_ca: Número de telèfon fix o mòbil
+    type: text
+    regex: "\\A(\\+?\\d{1,2}[\\s.-]?)?\\(?\\d{3}\\)?[\\s.-]?\\d{3}[\\s.-]?\\d{4}\\z"
+    default_survey_reference: VAXPATH_dose2
+    default_question_keyword: pt_t1_ci2_PHONENUM
+    page_number: 4
+    db_write:
+      table: User
+      column: primary_contact_number
+  pt_t2_ci2_EMAIL:
+    conditions:
+      - question: pt_t1_fu_CHECKPOINT
+        operation: contains
+        value: pt_t1_fu_CNTCTINFO_PART
+    label: "Email address"
+    label_de: E-Mail-Adresse
+    label_it: Indirizzo e-mail
+    label_es: Dirección de correo electrónico
+    label_ca: Número de telèfon fix o mòbil
+    type: text
+    regex: "\\A[\\w+\\-.]+@[a-z\\d\\-]+(\\.[a-z\\d\\-]+)*\\.[a-z]+\\z"
+    default_survey_reference: VAXPATH_dose2
+    default_question_keyword: pt_t1_ci2_EMAIL
+    page_number: 4
+    db_write:
+      table: User
+      column: email
+  pt_t2_ci2_2NDCONTACT:
+    conditions:
+      - question: pt_t1_fu_CHECKPOINT
+        operation: contains
+        value: pt_t1_fu_CNTCTINFO_PART
+    label: "Secondary contact name"
+    label_de: Name der zweiten Kontaktperson
+    label_it: Recapito secondario
+    label_es: Nombre de contacto secundario
+    label_ca: Nom de la persona de contacte secundària
+    type: text
+    default_survey_reference: VAXPATH_dose2
+    default_question_keyword: pt_t1_ci2_2NDCONTACT
+    page_number: 4
+    db_write:
+      table: AdditionalAppColumn
+      secondary_table: AdditionalContact
+      column: alternate_contact_name
+  pt_t2_ci2_2NDCONTACTEMAIL:
+    conditions:
+      - question: pt_t1_fu_CHECKPOINT
+        operation: contains
+        value: pt_t1_fu_CNTCTINFO_PART
+    label: "Secondary contact email address"
+    label_de: E-Mail der zweiten Kontaktperson
+    label_it: Indirizzo e-mail del recapito secondario
+    label_es: Dirección de correo electrónico de contacto secundario
+    label_ca: Adreça de correu electrònic de la persona de contacte secundària
+    type: text
+    regex: "\\A[\\w+\\-.]+@[a-z\\d\\-]+(\\.[a-z\\d\\-]+)*\\.[a-z]+\\z"
+    default_survey_reference: VAXPATH_dose2
+    default_question_keyword: pt_t1_ci2_2NDCONTACTEMAIL
+    page_number: 4
+    db_write:
+      table: AdditionalAppColumn
+      secondary_table: AdditionalContact
+      column: alternate_contact_email
+  pt_t2_ci2_2NDCONTACTPHONE:
+    conditions:
+      - question: pt_t1_fu_CHECKPOINT
+        operation: contains
+        value: pt_t1_fu_CNTCTINFO_PART
+    label: "Secondary contact telephone or cellphone number"
+    label_de: Telefonnummer oder Handynummer der zweiten Kontaktperson
+    label_it: Numero di telefono o di cellulare del recapito secondario
+    label_es: Número de teléfono o móvil de contacto secundario
+    label_ca: Telèfon fix o mòbil de la persona de contacte secundària
+    type: text
+    default_survey_reference: VAXPATH_dose2
+    default_question_keyword: pt_t1_ci2_2NDCONTACTPHONE
+    regex: "\\A(\\+?\\d{1,2}[\\s.-]?)?\\(?\\d{3}\\)?[\\s.-]?\\d{3}[\\s.-]?\\d{4}\\z"
+    page_number: 4
+    db_write:
+      table: AdditionalAppColumn
+      secondary_table: AdditionalContact
+      column: alternate_contact_phone
+  pt_t2_ci2_PCPNAME:
+    conditions:
+      - question: pt_t1_fu_CHECKPOINT
+        operation: contains
+        value: pt_t1_fu_CNTCTINFO_HCP
+    label: "Primary care physician name (for safety follow up)"
+    label_de: Name des Hausarztes (zur Sicherheit Nachbeobachtung)"
+    label_it: Nome del medico di base (per il follow-up di sicurezza)
+    label_es: Nombre del médico de atención primaria (para el seguimiento de seguridad)
+    label_ca: Nom del metge d’atenció primària (per al seguiment de la seguretat)
+    type: text
+    default_survey_reference: VAXPATH_dose2
+    default_question_keyword: pt_t1_ci2_PCPNAME
+    page_number: 5
+    db_write:
+      table: AdditionalAppColumn
+      secondary_table: HealthCareProviderInformation
+      column: primary_care_physician_name
+  pt_t2_ci2_PCPCONTACTPHONE:
+    conditions:
+      - question: pt_t1_fu_CHECKPOINT
+        operation: contains
+        value: pt_t1_fu_CNTCTINFO_HCP
+    label: "Primary care physician phone number"
+    label_de: "Telefonnummer des Hausarztes"
+    label_it: "Numero di telefono del medico di base"
+    label_es: "Número de teléfono del médico de atención primaria O"
+    label_ca: "Número de telèfon del metge d’atenció primària"
+    type: text
+    regex: "\\A(\\+?\\d{1,2}[\\s.-]?)?\\(?\\d{3}\\)?[\\s.-]?\\d{3}[\\s.-]?\\d{4}\\z"
+    skip:
+      label: Skip
+      label_de: überspringen
+      label_it: Saltare
+      label_es: Saltar
+      label_ca: Omet
+      value: skip
+    page_number: 5
+    db_write:
+      table: AdditionalAppColumn
+      secondary_table: HealthCareProviderInformation
+      column: primary_care_physician_phone
+  pt_t2_ci2_PCPCONTACTEMAIL:
+    conditions:
+      - question: pt_t1_fu_CHECKPOINT
+        operation: contains
+        value: pt_t1_fu_CNTCTINFO_HCP
+    label: "Primary care physician email"
+    label_de: "E-Mail-Adresse des Hausarztes"
+    label_it: "E-mail del medico di base"
+    label_es: "Correo electrónico del médico de atención primaria"
+    label_ca: "Correu electrònic del metge d’atenció primària"
+    type: text
+    regex: "\\A[\\w+\\-.]+@[a-z\\d\\-]+(\\.[a-z\\d\\-]+)*\\.[a-z]+\\z"
+    skip:
+      label: Skip
+      label_de: überspringen
+      label_it: Saltare
+      label_es: Saltar
+      label_ca: Omet
+      value: skip
+    page_number: 5
+    db_write:
+      table: AdditionalAppColumn
+      secondary_table: HealthCareProviderInformation
+      column: primary_care_physician_email
+  pt_t2_ci2_CONTACTPREFCHANGE:
+    label: "Would you like to change your preferred follow-up method?"
+    label_de: Möchten Sie Ihre bevorzugte Methode zur Nachbeobachtung ändern?
+    label_it: Desidera modificare il Suo metodo di follow-up preferito?
+    label_es: ¿Le gustaría cambiar su método de seguimiento preferido?
+    label_ca: Desitja canviar el seu mètode de seguiment preferit?
+    type: radio
+    page_number: 6
+    choices:
+      - value: pt_t2_ci2_CONTACTPREFCHANGE_Yes
+        label: "Yes"
+        label_de: "Ja"
+        label_it: "Sì"
+        label_es: "Sí"
+        label_ca: "Sí" 
+      - value: pt_t2_ci2_CONTACTPREFCHANGE_No
+        label: "No"
+        label_de: "Nein"
+        label_it: "No"
+        label_es: "No"
+        label_ca: "No"
+  pt_t2_ci2_CONTACTPREF:
+    conditions:
+      - question: pt_t2_ci2_CONTACTPREFCHANGE
+        operation: equal
+        value: pt_t2_ci2_CONTACTPREFCHANGE_Yes
+    label: "How would you like us to contact you for follow up questionnaires?"
+    label_de: Wie möchten Sie, dass wir Sie für zum ausfüllen der Fragebögen kontaktieren?
+    label_it: Come desidera essere contattato per i questionari di follow-up? 
+    label_es: ¿Cómo desea que nos pongamos en contacto con usted para realizar cuestionarios de seguimiento? 
+    label_ca: Com preferiria que ens poséssim en contacte amb vostè per als qüestionaris de seguiment?
+    type: radio
+    page_number: 7
+    choices:
+      - value: "1"
+        label: "Telephone interview"
+        label_de: "Telefon-Interview"
+        label_it: "Colloquio telefonico"
+        label_es: "Entrevista telefónica"
+        label_ca: "Entrevista telefònica" 
+      - value: "2"
+        label: "Web/app-based questionnaire"
+        label_de: "Web-/App-basierter Fragebogen"
+        label_it: "Questionario basato su web/applicazione"
+        label_es: "Cuestionario basado en web/aplicación"
+        label_ca: "Qüestionari a través de web o aplicació"
+      - value: "3"
+        label: "Do not contact me anymore"
+        label_de: "Kontaktieren Sie mich nicht mehr"
+        label_it: "Non mi contatti più"
+        label_es: "No volver a ponerse en contacto conmigo"
+        label_ca: "No em torneu a contactar"
+    db_write:
+      table: AdditionalAppColumn
+      column: discon_status
+  pt_t1_fu_UNPLANTXT:
+    label: "This form should only be used for unplanned medical care which you have not reported in a previous survey. Unplanned medical care includes any non-routine medical care."
+    label_de: "Dieses Formular sollte nur für ungeplante medizinische Behandlungen verwendet werden, die Sie nicht in einer früheren Umfrage gemeldet haben. Die ungeplante medizinische Versorgung umfasst jede nicht routinemäßige medizinische Versorgung."
+    label_it: "Questo modulo deve essere utilizzato solo per cure mediche non pianificate che non hai segnalato in un sondaggio precedente. L'assistenza medica non pianificata include qualsiasi assistenza medica non di routine."
+    label_es: "Este formulario solo debe usarse para atención médica no planificada que no haya informado en una encuesta anterior. La atención médica no planificada incluye cualquier atención médica que no sea de rutina."
+    label_ca: "Aquest formulari només s’ha d’utilitzar per a atenció mèdica no planificada que no s’ha informat en una enquesta anterior. L’atenció mèdica no planificada inclou qualsevol assistència mèdica no rutinària."
+    type: blank
+    page_number: 8
+    conditions:
+      - question: pt_t1_fu_CHECKPOINT
+        operation: contains
+        value: pt_t1_fu_UNPLNEDMEDCARE
+  pt_t1_fu_UNPLANCARE:
+    safety_alert_question: true
+    conditions:
+      - question: pt_t1_fu_CHECKPOINT
+        operation: contains
+        value: pt_t1_fu_UNPLNEDMEDCARE
+    label: "Have you had to see a medical provider for something unexpected (like non-routine or unplanned medical care)?"
+    label_de: Mussten Sie wegen etwas Unerwarteten (wie einer ungeplanten medizinischen Versorgung) eine Fachperson aus dem Gesundheitswesen aufsuchen?
+    label_it: Ha dovuto consultare un operatore sanitario per qualcosa di inatteso (come cure mediche non programmate)?
+    label_es: ¿Ha tenido que acudir a un médico por algo inesperado (como atención médica no programada)?
+    label_ca: Li ha fet falta visitar un professional sanitari per algun motiu imprevist (com ara atenció mèdica no programada)?
+    type: radio
+    page_number: 8
+    choices:
+      - value: pt_t1_fu_UNPLANCARE_yes
+        label: "Yes"
+        label_de: "Ja"
+        label_it: "Sì"
+        label_es: "Sí"
+        label_ca: "Sí"
+      - value: pt_t1_fu_UNPLANCARE_no
+        label: "No"
+        label_de: "Nein"
+        label_it: "No"
+        label_es: "No"
+        label_ca: "No"
+  pt_t1_fu_VISITFACILITY:
+    safety_alert_question: true
+    conditions:
+      - question: pt_t1_fu_CHECKPOINT
+        operation: contains
+        value: pt_t1_fu_UNPLNEDMEDCARE
+    label: "Which type of facility did you visit for your unplanned medical care?"
+    label_de: "Welche Art von Versorgungseinrichtung haben Sie für Ihre ungeplante medizinische Versorgung aufgesucht?"
+    label_it: "Che tipo di struttura ha visitato per le sue cure mediche non programmate??"
+    label_es: "¿Qué tipo de centro visitó por su atención médica no programada?"
+    label_ca: "Quin tipus d'instal·lació va visitar per rebre l’atenció mèdica no programada?"
+    type: checkbox
+    page_number: 9
+    choices:
+      - value: pt_t1_fu_VISITFACILITY_1
+        label: "Primary care physician / general practitioner"
+        label_de: "Hausarzt / Allgemeinmediziner"
+        label_it: "Medico di base/medico curante"
+        label_es: "Nombre del médico de atención primaria (para el seguimiento de seguridad)"
+        label_ca: "Metge d’atenció primària/metge de capçalera"
+      - value: pt_t1_fu_VISITFACILITY_2
+        label: Tele-health
+        label_ca: "Telemedicina"
+        label_de: "Telemedizin"
+        label_it: "Telemedicina"
+        label_es: "Telemedicina"
+      - value: pt_t1_fu_VISITFACILITY_3
+        label: Urgent care
+        label_ca: "Atenció d’urgència"
+        label_de: "Notfallversorgung"
+        label_it: "Cure urgenti"
+        label_es: "Atención urgente"
+      - value: pt_t1_fu_VISITFACILITY_4
+        label: Emergency department
+        label_ca: "Servei d’urgències"
+        label_de: "Notaufnahme"
+        label_it: "Pronto Soccorso"
+        label_es: "Urgencias"
+      - value: pt_t1_fu_VISITFACILITY_5
+        label: Hospital (inpatient)
+        label_ca: "Hospital (ingrés hospitalari)"
+        label_de: "Krankenhaus (stationär)"
+        label_it: "Ospedale (ricovero)"
+        label_es: "Hospital (paciente hospitalizado)"
+      - value: pt_t1_fu_VISITFACILITY_6
+        label: Hospital (outpatient)
+        label_ca: "Hospital (ambulatori)"
+        label_de: "Krankenhaus (ambulant)"
+        label_it: "Ospedale (ambulatorio)"
+        label_es: "Hospital (paciente ambulatorio)"
+      - value: pt_t1_fu_VISITFACILITY_7
+        label: Intensive Care Unit or High Dependency Unit
+        label_ca: "Unitat de cures intensives o unitat d’alta dependència"
+        label_de: "Intensivstation oder Intensivüberwachungspflege"
+        label_it: "Unità di terapia intensiva o unità ad alta dipendenza"
+        label_es: "Unidad de cuidados intensivos o unidad de alta dependencia"
+  pt_t1_fu_VISITPURPOSE:
+    safety_alert_question: true
+    conditions:
+      - question: pt_t1_fu_CHECKPOINT
+        operation: contains
+        value: pt_t1_fu_UNPLNEDMEDCARE
+    label: "What was the main purpose of your unplanned medical care visit?"
+    label_ca: "Quin era el propòsit principal de la vostra visita mèdica no planificada?"
+    label_de: "Was war der Hauptgrund für Ihren ungeplanten Arztbesuch?"
+    label_it: "Qual era lo scopo principale della Sua visita per le cure mediche non programmate?"
+    label_es: "¿Cuál fue el objetivo principal de su visita de atención médica no programada?"
+    type: checkbox
+    page_number: 9
+    choices:
+      - value: pt_t1_fu_VISITPURPOSE_1
+        label: I experienced new symptoms and was diagnosed with a new health problem for the first time
+        label_ca: Vaig experimentar símptomes nous i em van diagnosticar per primera vegada un nou problema de salut
+        label_de: Ich hatte neue Symptome und bei mir wurde zum ersten Mal ein neues Gesundheitsproblem diagnostiziert
+        label_it: Ho manifestato nuovi sintomi e mi è stato diagnosticato un nuovo problema di salute per la prima volta 
+        label_es: Experimenté síntomas nuevos y me diagnosticaron un nuevo problema de salud por primera vez 
+      - value: pt_t1_fu_VISITPURPOSE_2
+        label: I experienced new or worsening symptoms for a condition I had previously seen a doctor for
+        label_ca: Vaig experimentar símptomes nous o empitjoradors per una afecció per la qual havia vist prèviament un metge
+        label_de: Bei mir sind neue oder sich verschlechternde Symptome bei einer Erkrankung aufgetreten, deretwegen ich zuvor einen Arzt aufgesucht hatte
+        label_it: Ho manifestato sintomi nuovi o in peggioramento per una condizione per la quale avevo precedentemente consultato un medico
+        label_es: Experimenté síntomas nuevos o que empeoraban por una afección para la que había visitado anteriormente a un médico
+      - value: pt_t1_fu_VISITPURPOSE_3
+        label: I had an accident and/or injury
+        label_ca: Vaig tenir un accident i / o una lesió
+        label_de: Ich hatte einen Unfall und/oder hatte mich verletzt
+        label_it: Ho avuto un incidente e/o una lesione
+        label_es: Tuve un accidente y/o lesión
+      - value: pt_t1_fu_VISITPURPOSE_other
+        label: Other
+        label_ca: Altres
+        label_de: Anderer Zweck
+        label_it: Altro
+        label_es: Otra
+  pt_t1_fu_VISITSTDAT:
+    safety_alert_question: true
+    conditions:
+      - question: pt_t1_fu_CHECKPOINT
+        operation: contains
+        value: pt_t1_fu_UNPLNEDMEDCARE
+    label: What was the date of your unplanned medical care visit? If unsure, please estimate to the best of your ability.
+    label_ca: "En quina data es va fer la visita d’atenció mèdica no programada? Si no ho té clar, indiqui-ho amb la màxima aproximació possible."
+    label_de: "An welchem Tag fand Ihr ungeplannter Besuch zur medizinischen Versorgung statt? Falls Sie sich nicht sicher sind, schätzen Sie bitte nach bestem Wissen und Gewissen)"
+    label_it: "Qual è la data della Sua visita per le cure mediche non programmate?In caso di dubbi, fornisca una stima al meglio delle Sue capacità."
+    label_es: ¿Cuál fue la fecha de su visita de atención médica no programada?
+    type: date
+    page_number: 9
+    max:
+      value: CURRENT_DATE
+  pt_t1_fu_VISITENDDAT:
+    safety_alert_question: true
+    conditions:
+      - question: pt_t1_fu_CHECKPOINT
+        operation: contains
+        value: pt_t1_fu_UNPLNEDMEDCARE
+      - question: pt_t1_fu_VISITSTDAT
+        operation: not_equal
+        value: "2099-10-10"
+    label: "What was the date when the visit ended? E.g. if you were hospitalised, provide the date when you were discharged."
+    label_ca: En quina data va finalitzar la seva visita? ex., si va necessitar ingrés hospitalari, indiqui la data en la qual li van donar l’alta hospitalària.
+    label_de: Wann endete der Besuch (Datum)? Wenn Sie z. B. ins Krankenhaus eingewiesen wurden, geben Sie das Datum der Entlassung an.
+    label_es: ¿En qué fecha finalizó la visita? ej., si fue hospitalizado, indique la fecha en la que recibió el alta.
+    label_it: Qual è stata la data in cui è terminata la visita?Ad esempio, se è stato ricoverato in ospedale, indichi la data in cui è stato dimesso. 
+    type: date
+    page_number: 9
+    min:
+      value: .pt_t1_fu_VISITSTDAT
+    max:
+      value: CURRENT_DATE
+  pt_t1_fu_HCPCHECK:
+    safety_alert_question: true
+    conditions:
+      - question: pt_t1_fu_CHECKPOINT
+        operation: contains
+        value: pt_t1_fu_UNPLNEDMEDCARE
+    label: "Please check if this is the same healthcare provider listed in your profile?"
+    label_ca: "Comprovi si aquest és el mateix professional sanitari indicat en el seu perfil."
+    label_de: Bitte prüfen Sie, ob es sich um denselben Gesundheitsdienstleister handelt, der in Ihrem Profil aufgeführt ist.
+    label_it: Controlli se si tratta dello stesso operatore sanitario indicato nel Suo profilo.
+    label_es: Compruebe si este es el mismo profesional sanitario que aparece en su perfil.
+    type: radio
+    page_number: 10
+    choices:
+      - value: pt_t1_fu_HCPCHECK_yes
+        label: "Yes"
+        label_ca: "Sí"
+        label_de: "Ja"
+        label_it: "Sì"
+        label_es: "Sí"
+      - value: pt_t1_fu_HCPCHECK_no
+        label: "No"
+        label_ca: "No"
+        label_de: "Nein"
+        label_it: "No"
+  pt_t1_fu_HCPNAME:
+    safety_alert_question: true
+    conditions:
+      - question: pt_t1_fu_CHECKPOINT
+        operation: contains
+        value: pt_t1_fu_UNPLNEDMEDCARE
+      - question: pt_t1_fu_HCPCHECK
+        operation: equal
+        value: pt_t1_fu_HCPCHECK_no
+    label: "What was the name of the healthcare provider?"
+    label_ca: "Com es deia el metge?" 
+    label_de: Wie heißt die Fachperson aus dem Gesundheitswesen?
+    label_it: Come si chiamava l’operatore sanitario?
+    label_es: ¿Cuál era el nombre del profesional sanitario?
+    type: text
+    page_number: 11
+  pt_t1_fu_HCPLOCATION:
+    safety_alert_question: true
+    conditions:
+      - question: pt_t1_fu_CHECKPOINT
+        operation: contains
+        value: pt_t1_fu_UNPLNEDMEDCARE
+      - question: pt_t1_fu_HCPCHECK
+        operation: equal
+        value: pt_t1_fu_HCPCHECK_no
+    label: "Location of facility or healthcare provider you visited?"
+    label_ca: "Indiqui la ubicació de les instal·lacions o del professional sanitari que va visitar."
+    label_de: "Standort der von Ihnen besuchten Einrichtung oder des Gesundheitsdienstleisters"
+    label_it: "Posizione della struttura?"
+    label_es: ¿Ubicación del centro o profesional sanitario que visitó?
+    type: text
+    page_number: 11
+    skip:
+      label: "Don't know"
+      label_ca: "No ho sé"
+      label_de: "Weiß nicht"
+      label_it: "Non so"
+      label_es: "No lo sé"
+      value: skip
+  pt_t1_fu_HCPEMAIL:
+    safety_alert_question: true
+    conditions:
+      - question: pt_t1_fu_CHECKPOINT
+        operation: contains
+        value: pt_t1_fu_UNPLNEDMEDCARE
+      - question: pt_t1_fu_HCPCHECK
+        operation: equal
+        value: pt_t1_fu_HCPCHECK_no
+    label: "Email address of facility or healthcare provider you visited?"
+    label_ca: "Indiqui el correu electrònic de les instal·lacions o del professional sanitari que va visitar"
+    label_de: "E-Mail-Adresse der von Ihnen besuchten Einrichtung oder des Gesundheitsdienstleisters"
+    label_it: "Indirizzo e-mail della struttura che ha visitato o dell’operatore sanitario presso cui si è recato?"
+    label_es: "¿Dirección de correo electrónico del centro o profesional sanitario que visitó?"
+    type: text
+    regex: "\\A[\\w+\\-.]+@[a-z\\d\\-]+(\\.[a-z\\d\\-]+)*\\.[a-z]+\\z"
+    page_number: 11
+    skip:
+      label: "Don't know"
+      label_ca: "No no sé"
+      label_de: "Option zur Angabe des Namens im Freitext"
+      label_it: "Non so"
+      label_es: No lo sé
+      value: skip
+  pt_t1_fu_SYMPTOMS:
+    safety_alert_question: true
+    conditions:
+      - question: pt_t1_fu_CHECKPOINT
+        operation: contains
+        value: pt_t1_fu_UNPLNEDMEDCARE
+    label: "Were you seeking medical care for any of the following symptoms"
+    label_ca: "Indiqui si va sol·licitar atenció mèdica per a qualsevol dels símptomes següents" 
+    label_de: "Haben Sie sich wegen eines der nachfolgenden Symptome medizinisch versorgen lassen"
+    label_it: "Stava richiedendo cure mediche per uno qualsiasi dei seguenti sintomi?"
+    label_es: "¿Buscó atención médica para alguno de los siguientes síntomas?"
+    type: checkbox
+    page_number: 12
+    choices:
+      - value: pt_t1_fu_SYMPTOMS_1
+        label:  "Injection site reaction (redness, warmth, pain, itch, hematoma, swelling, induration)"
+        label_ca: "Reacció en el lloc de la injecció (envermelliment, escalfor, dolor, picor, hematoma, inflor, induració)" 
+        label_de: "Reaktion an der Injektionsstelle (Rötung, Wärmegefühl, Schmerzen, Juckreiz, Bluterguss, Schwellung, Verhärtung)" 
+        label_it: "Reazione nel sito di iniezione (arrossamento, calore, dolore, prurito, ematoma, gonfiore, indurimento)"
+        label_es: "Reacción en el lugar de la inyección (enrojecimiento, calor, dolor, picor, hematoma, hinchazón, endurecimiento)"
+      - value: pt_t1_fu_SYMPTOMS_2
+        label:  "Arthralgia/joint pain"
+        label_ca: "Artràlgia/dolor articular"
+        label_de: "Gelenkschmerzen (Arthralgie)"
+        label_it: "Artralgia/dolore articolare"
+        label_es: "Artralgia/dolor articular"
+      - value: pt_t1_fu_SYMPTOMS_3
+        label:  "Cough"
+        label_ca: "Tos"
+        label_de: "Husten"
+        label_it: "Tosse"
+        label_es: "Tos"
+      - value: pt_t1_fu_SYMPTOMS_4
+        label:  "Fatigue"
+        label_ca: "Fatiga"
+        label_de: "Erschöpfung (Fatigue)"
+        label_it: "Affaticamento"
+        label_es: "Fatiga"
+      - value: pt_t1_fu_SYMPTOMS_5
+        label:  "Fever/feverishness or chills"
+        label_ca: "Febre/estat febril o esgarrifaments"
+        label_de: "Fieber/Fieberhaftigkeit oder Schüttelfrost"
+        label_it: "Febbre/stato febbricitante o brividi"
+        label_es: "Fiebre/fiebre o escalofríos"
+      - value: pt_t1_fu_SYMPTOMS_6
+        label:  "Headache"
+        label_ca: "Mal de cap"
+        label_de: "Kopfschmerzen"
+        label_it: "Mal di testa"
+        label_es: "Dolor de cabeza"
+      - value: pt_t1_fu_SYMPTOMS_7
+        label:  "Malaise"
+        label_ca: "Malestar general"
+        label_de: "Allgemeines Unwohlsein"
+        label_it: "Malessere"
+        label_es: Malestar
+      - value: pt_t1_fu_SYMPTOMS_8
+        label:  "Myalgia/muscle pain"
+        label_ca: "Miàlgia/dolor muscular"
+        label_de: "Muskelschmerzen (Myalgie)"
+        label_it: "Mialgia/dolore muscolare"
+        label_es: "Mialgia/dolor muscular"
+      - value: pt_t1_fu_SYMPTOMS_9
+        label:  "Shivering/chills"
+        label_ca: "Calfreds/esgarrifaments"
+        label_de: "Schüttelfrost"
+        label_it: "Brividi/tremiti"
+        label_es: "Escalofríos"
+      - value: pt_t1_fu_SYMPTOMS_10
+        label:  "Vomiting and/or Diarrhea"
+        label_ca: "Vòmits o diarrea"
+        label_de: "Erbrechen und/oder Durchfall"
+        label_it: "Vomito e/o diarrea"
+        label_es: "Vómitos y/o diarrea"
+      - value: pt_t1_fu_SYMPTOMS_NONE
+        label: "None of the above"
+        label_ca: "Cap de les anteriors"
+        label_de: "Keine der obenstehenden Antworten"
+        label_it: "Nessuno dei precedenti"
+        label_es: "Ninguno de las anteriores"
+    validation:
+      - exclusive: pt_t1_fu_SYMPTOMS_NONE
+  pt_t1_fu_DX_CARDIAC:
+    safety_alert_question: true
+    conditions:
+      - question: pt_t1_fu_CHECKPOINT
+        operation: contains
+        value: pt_t1_fu_UNPLNEDMEDCARE
+    label: "Were you diagnosed with any of the following (scroll through the diagnoses listed on all pages):"
+    label_ca: "Indiqui si li van diagnosticar alguna de les coses següents (cal desplaçar-se per les llistes de diagnòstics de totes les pàgines):"
+    label_de: "Wurde bei Ihnen eine der folgenden Diagnosen festgestellt (scrollen Sie durch die auf allen Seiten aufgeführten Diagnosen)?"
+    label_it: "Le è stato diagnosticato uno qualsiasi dei seguenti (scorrere le diagnosi elencate in tutte le pagine):"
+    label_es: "¿Se le diagnosticó alguno de los siguientes? (desplácese por los diagnósticos indicados en todas las páginas)"
+    type: checkbox
+    page_number: 13
+    choices:
+      - value: pt_t1_fu_DX_CARDIAC_AMI
+        label: "Acute myocardial infarction (heart attack)"
+        label_ca: "Infart agut de miocardi (atac de cor)"
+        label_de: "Akuter Myokardinfarkt (Herzinfarkt)"
+        label_it: "Infarto del miocardio acuto (attacco cardiaco)"
+        label_es: "Infarto de miocardio agudo (ataque al corazón)"
+      - value: pt_t1_fu_DX_CARDIAC_CADA
+        label: "Coronary artery disease arrhythmia (abnormal heart rhythm due to coronary artery disease)"
+        label_ca: "Arrítmia per arteriopatia coronària (ritme cardíac anòmal a causa de malaltia de les artèries coronàries)"
+        label_de: "Arrhythmie infolge einer koronaren Arterienkrankheit (abnormer Herzrhythmus infolge einer Erkrankung der Herzkranzgefäße)"
+        label_it: "Aritmia da coronaropatia (ritmo cardiaco anomalo dovuto a coronaropatia)"
+        label_es: "Arritmia de arteriopatía coronaria (ritmo cardíaco anómalo debido a arteriopatía coronaria)"
+      - value: pt_t1_fu_DX_CARDIAC_HF
+        label: "Heart failure and cardiogenic shock"
+        label_ca: "Insuficiència cardíaca i xoc cardiogènic"
+        label_de: "Herzinsuffizienz und kardiogener Schock"
+        label_it: "Insufficienza cardiaca e shock cardiogeno"
+        label_es: "Insuficiencia cardíaca y choque cardiogénico"
+      - value: pt_t1_fu_DX_CARDIAC_MA
+        label: "Microangiopathy (disease of the capillaries (very small blood vessels)"
+        label_ca: "Microangiopatia (malaltia dels capil·lars, que són vasos sanguinis molt petits)"
+        label_de: "Mikroangiopathie (Erkrankung der Kapillaren [sehr kleine Blutgefäße])"
+        label_it: "Microangiopatia (malattia dei capillari [vasi sanguigni molto piccoli])"
+        label_es: "Microangiopatía (enfermedad de los capilares (vasos sanguíneos muy pequeños))"
+      - value: pt_t1_fu_DX_CARDIAC_MyoC
+        label: "Myocarditis (swelling/inflammation of the heart)"
+        label_ca: "Miocarditis (inflor o inflamació del cor)"
+        label_de: "Myokarditis (Schwellung/Entzündung des Herzmuskels)"
+        label_it: "Miocardite (gonfiore/infiammazione del muscolo cardiaco)"
+        label_es: "Miocarditis (hinchazón/inflamación del músculo del corazón)"
+      - value: pt_t1_fu_DX_CARDIAC_PeriC
+        label: "Pericarditis (swelling/inflammation of the membrane around the heart)"
+        label_ca: "Pericarditis (inflor o inflamació de la membrana que recobreix el cor)"
+        label_de: "Perikarditis (Schwellung/Entzündung der das Herz umgebenden Membran)"
+        label_it: "Pericardite (gonfiore/infiammazione della membrana intorno al cuore)"
+        label_es: "Pericarditis (hinchazón/inflamación de la membrana que rodea el corazón)"
+      - value: pt_t1_fu_DX_CARDIAC_CardioM
+        label: "Stress cardiomyopathy (stress-induced damage to the heart)"
+        label_ca: "Cardiomiopatia per estrès (dany al cor induït per estrès)"
+        label_de: "Stress-Kardiomyopathie (Belastungsbedingte Schädigung des Herzens)"
+        label_it: "Cardiomiopatia da stress (danno cardiaco indotto da stress)"
+        label_es: "Miocardiopatía por estrés (daño del corazón inducido por estrés)"
+      - value: pt_t1_fu_DX_CARDIAC_NONE
+        label: "None of the above"
+        label_ca: "Cap de les anteriors"
+        label_de: "Keine der obenstehenden Antworten"
+        label_it: "Nessuno dei suddetti sintomi"
+        label_es: "Ninguno de las anteriores"
+    validation:
+      - exclusive: pt_t1_fu_DX_CARDIAC_NONE
+  pt_t1_fu_DX_COVID:
+    safety_alert_question: true
+    conditions:
+      - question: pt_t1_fu_CHECKPOINT
+        operation: contains
+        value: pt_t1_fu_UNPLNEDMEDCARE
+    label: "Were you diagnosed with any of the following (scroll through the diagnoses listed on all pages):"
+    label_ca: "Indiqui si li van diagnosticar alguna de les coses següents (cal desplaçar-se per les llistes de diagnòstics de totes les pàgines):"
+    label_de: "Wurde bei Ihnen eine der folgenden Diagnosen festgestellt (scrollen Sie durch die auf allen Seiten aufgeführten Diagnosen)?"
+    label_it: "Le è stato diagnosticato uno qualsiasi dei seguenti (scorrere le diagnosi elencate in tutte le pagine):"
+    label_es: "¿Se le diagnosticó alguno de los siguientes? (desplácese por los diagnósticos indicados en todas las páginas)"
+    type: checkbox
+    page_number: 14
+    choices:
+      - value: pt_t1_fu_DX_COVID_AHR
+        label:  "Abnormal heart rhythm (arrythmia)"
+        label_ca: "Ritme cardíac anormal (arrítmia)"
+        label_de: "Abnormer Herzrhythmus (Arrhythmie)"
+        label_it: "Ritmo cardiaco anomalo (aritmia)"
+        label_es: "Ritmo cardíaco anómalo (arritmia)"
+      - value: pt_t1_fu_DX_COVID_AKI
+        label:  "Acute kidney injury (sudden episode only, not including chronic conditions)"
+        label_ca: "Lesió renal aguda (només episodi sobtat, no inclou afeccions cròniques)"
+        label_de: "Akute Nierenschädigung (nur plötzliche Episode, ohne chronische Erkrankungen)"
+        label_it: "Lesione renale acuta (solo episodio improvviso, escluse condizioni croniche)"
+        label_es: "Lesión renal aguda (solo episodio repentino, sin incluir afecciones crónicas)"
+      - value: pt_t1_fu_DX_COVID_ALI
+        label:  "Acute liver injury (sudden episode only, not including chronic conditions)"
+        label_ca: "Lesió hepàtica aguda (només episodi sobtat, no inclou afeccions cròniques)"
+        label_de: "Akute Leberschädigung (nur plötzliche Episode, ohne chronische Erkrankungen)"
+        label_it: "Lesione epatica acuta (solo episodio improvviso, escluse condizioni croniche)"
+        label_es: "Lesión hepática aguda (solo episodio repentino, sin incluir afecciones crónicas)"
+      - value: pt_t1_fu_DX_COVID_AP
+        label:  "Acute pancreatitis (sudden inflammation of the pancreas)"
+        label_ca: "Pancreatitis aguda (inflamació sobtada del pàncrees)"
+        label_de: "Akute Pankreatitis (plötzliche Entzündung der Bauchspeicheldrüse)"
+        label_it: "Pancreatite acuta (infiammazione improvvisa del pancreas)"
+        label_es: "Pancreatitis aguda (inflamación repentina del páncreas)"
+      - value: pt_t1_fu_DX_COVID_ARDS
+        label:  "Acute respiratory distress syndrome"
+        label_ca: "Síndrome de dificultat respiratòria aguda"
+        label_de: "Akutes Lungenversagen (Acute respiratory distress syndrome, ARDS)"
+        label_it: "Sindrome da distress respiratorio acuto"
+        label_es: "Síndrome de dificultad respiratoria aguda"
+      - value: pt_t1_fu_DX_COVID_ANOSMIA
+        label:  "Anosmia (loss of smell), Ageusia (loss of taste)"
+        label_ca: "Anòsmia (pèrdua de l’olfacte), agèusia (pèrdua del gust)]"
+        label_de: "Anosmie (Riechverlust), Ageusie (Geschmacksverlust)"
+        label_it: "Anosmia (perdita dell’olfatto), ageusia (perdita del gusto)"
+        label_es: "Anosmia (pérdida del olfato), ageusia (pérdida del gusto)"
+      - value: pt_t1_fu_DX_COVID_LESIONS
+        label:  "Chilblain-like lesions (painful and itchy swelling on the skin, usually on the hands and feet)"
+        label_ca: "Lesions semblants a penellons (inflor dolorosa de la pell acompanyada de picor, normalment a les mans i als peus)"
+        label_de: "Frostbeulenartige Läsionen (schmerzhafte und juckende Schwellung der Haut, normalerweise an Händen und Füßen)"
+        label_it: "Lesioni simili a geloni (gonfiore doloroso e pruriginoso sulla pelle, solitamente sulle mani e sui piedi)"
+        label_es: "Lesiones similares a sabañones (hinchazón dolorosa y con picor en la piel, normalmente en manos y pies)"
+      - value: pt_t1_fu_DX_COVID_CAD
+        label:  "Coronary artery disease"
+        label_ca: "Arteriopatia coronària"
+        label_de: "Koronararterienerkrankung"
+        label_it: "Coronaropatia"
+        label_es: "Arteriopatía coronaria"
+      - value: pt_t1_fu_DX_COVID_DVT
+        label:  "Deep vein thrombosis (blood clot in a deep vein)"
+        label_ca: "Trombosi venosa profunda (coàgul de sang en una vena profunda)"
+        label_de: "Tiefe Venenthrombose (Blutgerinnsel in einer tiefen Vene)"
+        label_it: "Trombosi venosa profonda (coagulo di sangue in una vena profonda)"
+        label_es: "Trombosis venosa profunda (coágulos de sangre en una vena profunda)"
+      - value: pt_t1_fu_DX_COVID_EM
+        label:  "Erythema multiforme (skin immune reaction)"
+        label_ca: "Eritema multiforme (reacció immunitària de la pell)"
+        label_de: "Erythema multiforme (Immunreaktion der Haut)"
+        label_it: "Eritema multiforme (reazione immunitaria della pelle)"
+        label_es: "Eritema multiforme (reacción inmunitaria cutánea)"
+      - value: pt_t1_fu_DX_COVID_HD
+        label:  "Hemorrhagic disease (bleeding disorder)"
+        label_ca: "Malaltia hemorràgica (trastorn hemorràgic)"
+        label_de: "Hämorrhagische Erkrankung (Blutungsstörung)"
+        label_it: "Malattia emorragica (disturbo emorragico)"
+        label_es: "Enfermedad hemorrágica (trastorno hemorrágico)"
+      - value: pt_t1_fu_DX_COVID_ISCHEMIA
+        label:  "Limb ischemia (reduced blood flow to a limb)"
+        label_ca: "Isquèmia de les extremitats (disminució del flux sanguini en una extremitat)"
+        label_de: "Ischämie der Gliedmaßen (verminderter Blutfluss zu einer Gliedmaße)"
+        label_it: "Ischemia degli arti (riduzione del flusso di sangue a un arto)"
+        label_es: "Isquemia de las extremidades (reducción del flujo sanguíneo a una extremidad)"
+      - value: pt_t1_fu_DX_COVID_PE
+        label:  "Pulmonary embolus/embolism (blood clot on the lung)"
+        label_ca: "Embòlia pulmonar/embolisme (coàgul de sang en un pulmó)"
+        label_de: "Lungenembolie/Embolie (Blutgerinnsel in der Lunge)"
+        label_it: "Embolo polmonare/embolia (coagulo di sangue sul polmone)"
+        label_es: "Embolia pulmonar (coágulo de sangre en el pulmón)"
+      - value: pt_t1_fu_DX_COVID_RHABDO
+        label:  "Rhabdomyolysis"
+        label_ca: "Rabdomiòlisi"
+        label_de: "Rhabdomyolyse"
+        label_it: "Rabdomiolisi"
+        label_es: "Rabdomiólisis"
+      - value: pt_t1_fu_DX_COVID_COVID
+        label:  "Severe COVID-19 disease"
+        label_ca: "Malaltia de la COVID-19 greu"
+        label_de: "Schwere COVID-19-Erkrankung"
+        label_it: "Malattia da COVID-19 grave"
+        label_es: "Enfermedad por COVID-19 grave"
+      - value: pt_t1_fu_DX_COVID_VASCULITIS
+        label:  "Single organ cutaneous vasculitis"
+        label_ca: "Vasculitis cutània en un únic òrgan"
+        label_de: "Kutane Vaskulitis in einem Organ"
+        label_it: "Vasculite cutanea a singolo organo"
+        label_es: "Vasculitis cutánea de órgano único"
+      - value: pt_t1_fu_DX_COVID_STROKE
+        label:  "Stroke"
+        label_ca: "Ictus cerebral"
+        label_de: "Schlaganfall"
+        label_it: "Ictus"
+        label_es: "Accidente cerebrovascular"
+      - value: pt_t1_fu_DX_COVID_THYROID
+        label:  "Subacute thyroiditis (inflammatory disease of the thyroid)"
+        label_ca: "Tiroïditis subaguda (malaltia inflamatòria de la glàndula tiroide)"
+        label_de: "Subakute Thyreoiditis (entzündliche Erkrankung der Schilddrüse)"
+        label_it: "Tiroidite subacuta (malattia infiammatoria della tiroide)"
+        label_es: "Tiroiditis subaguda (enfermedad inflamatoria de la glándula tiroides)"
+      - value: pt_t1_fu_DX_COVID_NONE
+        label: "None of the above"
+        label_ca: "Cap de les anteriors"
+        label_de: "Keine der obenstehenden Antworten"
+        label_it: "Nessuno dei suddetti sintomi"
+        label_es: "Ninguno de las anteriores"
+    validation:
+      - exclusive: pt_t1_fu_DX_COVID_NONE
+  pt_t1_fu_DX_HEMA:
+    safety_alert_question: true
+    conditions:
+      - question: pt_t1_fu_CHECKPOINT
+        operation: contains
+        value: pt_t1_fu_UNPLNEDMEDCARE
+    label: "Were you diagnosed with any of the following (scroll through the diagnoses listed on all pages):"
+    label_ca: "Indiqui si li van diagnosticar alguna de les coses següents (cal desplaçar-se per les llistes de diagnòstics de totes les pàgines):"
+    label_de: "Wurde bei Ihnen eine der folgenden Diagnosen festgestellt (scrollen Sie durch die auf allen Seiten aufgeführten Diagnosen)?"
+    label_it: "Le è stato diagnosticato uno qualsiasi dei seguenti (scorrere le diagnosi elencate in tutte le pagine)"
+    label_es: "¿Se le diagnosticó alguno de los siguientes? (desplácese por los diagnósticos indicados en todas las páginas)"
+    type: checkbox
+    page_number: 15
+    choices:
+      - value: pt_t1_fu_DX_HEMA_coag
+        label: "Coagulation disorder (includes thrombotic disorders, bleeding disorders)"
+        label_ca: "Trastorn de la coagulació (inclou trastorns trombòtics, trastorns hemorràgics)"
+        label_de: "Gerinnungsstörung (einschließlich thrombotischer Störungen, Blutungsstörungen)"
+        label_it: "Disturbo della coagulazione (tra cui disturbi trombotici, disturbi emorragici)"
+        label_es: "Trastorno de coagulación (incluye trastornos trombóticos, trastornos hemorrágicos)"
+      - value: pt_t1_fu_DX_HEMA_DIS
+        label: "Disseminated intravascular coagulation (abnormal blood clotting)"
+        label_ca: "Coagulació intravascular disseminada (anomalia de la coagulació de la sang)"
+        label_de: "Disseminierte intravaskuläre Koagulation (abnorme Blutgerinnung)"
+        label_it: "Coagulazione intravascolare disseminata (coagulazione del sangue anomala)"
+        label_es: "Coagulación intravascular diseminada (coagulación sanguínea anómala)"
+      - value: pt_t1_fu_DX_HEMA_TP
+        label: "Thrombocytopenia (low platelet count)"
+        label_ca: "Trombocitopènia (recompte baix de plaquetes)"
+        label_de: "Thrombozytopenie (niedrige Blutplättchenzahl)"
+      - value: pt_t1_fu_DX_HEMA_NONE
+        label: "None of the above"
+        label_ca: "Cap de les anteriors"
+        label_de: "Keine der obenstehenden Antworten"
+        label_it: "Nessuno dei suddetti sintomi"
+        label_es: "Ninguno de las anteriores"
+    validation:
+      - exclusive: pt_t1_fu_DX_HEMA_NONE
+  pt_t1_fu_DX_IMMUNO:
+    safety_alert_question: true
+    conditions:
+      - question: pt_t1_fu_CHECKPOINT
+        operation: contains
+        value: pt_t1_fu_UNPLNEDMEDCARE
+    label: "Were you diagnosed with any of the following (scroll through the diagnoses listed on all pages):"
+    label_ca: "Indiqui si li van diagnosticar alguna de les coses següents (cal desplaçar-se per les llistes de diagnòstics de totes les pàgines):"
+    label_de: "Wurde bei Ihnen eine der folgenden Diagnosen festgestellt (scrollen Sie durch die auf allen Seiten aufgeführten Diagnosen)?"
+    label_it: "Le è stato diagnosticato uno qualsiasi dei seguenti (scorrere le diagnosi elencate in tutte le pagine)"
+    label_es: "¿Se le diagnosticó alguno de los siguientes? (desplácese por los diagnósticos indicados en todas las páginas)"
+    type: checkbox
+    page_number: 16
+    choices:
+      - value: pt_t1_fu_DX_IMMUNO_ANAPHYLAX
+        label: "Anaphylaxis (life-threatening allergic reaction that requires urgent medical attention)"
+        label_ca: "Anafilaxi (reacció al·lèrgica potencialment mortal que requereix atenció mèdica urgent)" 
+        label_de: "Anaphylaxie (lebensbedrohliche allergische Reaktion, die dringend ärztliche Hilfe erfordert)"
+        label_it: "Anafilassi (reazione allergica potenzialmente letale che richiede cure mediche urgenti)"
+        label_es: "Anafilaxia (reacción alérgica potencialmente mortal que requiere atención médica urgente)"
+      - value: pt_t1_fu_DX_IMMUNO_ARTHRITIS
+        label: "Arthritis and arthralgia (joint pain)"
+        label_ca: "Artritis i artràlgia (dolor articular)"
+        label_de: "Arthritis und Arthralgie (Gelenkschmerzen)"
+        label_it: "Artrite e artralgia (dolore articolare)"
+        label_es: "Artritis y artralgia (dolor articular)"
+      - value: pt_t1_fu_DX_IMMUNO_THYROID
+        label: "Autoimmune thyroiditis (also called chronic lymphocytic thyroiditis, Hashimoto's thyroiditis, or Hashimoto's disease)"
+        label_ca: "Tiroïditis autoimmune (també anomenada tiroïditis limfocítica crònica, tiroïditis de Hashimoto o malaltia de Hashimoto)"
+        label_de: "Autoimmune Thyreoiditis (auch als chronische lymphatische Thyreoiditis, Hashimoto-Thyreoiditis oder Hashimoto-Krankheit bezeichnet)"
+        label_it: "Tiroidite autoimmune (chiamata anche tiroidite linfocitica cronica, tiroidite di Hashimoto o malattia di Hashimoto)"
+        label_es: "Tiroiditis autoinmune (también llamada tiroiditis linfocítica crónica, tiroiditis de Hashimoto o enfermedad de Hashimoto)"
+      - value: pt_t1_fu_DX_IMMUNO_FIBRO
+        label: "Fibromyalgia"
+        label_ca: "Fibromiàlgia"
+        label_de: "Fibromyalgie"
+        label_it: "Fibromialgia"
+        label_es: "Fibromialgia"
+      - value: pt_t1_fu_DX_IMMUNO_KAWASAKI
+        label: "Kawasaki disease"
+        label_ca: "Malaltia de Kawasaki"
+        label_de: "Kawasaki-Krankheit"
+        label_it: "Malattia di Kawasaki"
+        label_es: "Enfermedad de Kawasaki"
+      - value: pt_t1_fu_DX_IMMUNO_MISA
+        label: "Multisystem inflammatory syndrome in adults (MIS-A)"
+        label_ca: "Síndrome inflamatòria multisistèmica en adults (SIM-A)"
+        label_de: "Multisystem-Entzündung bei Erwachsenen (Multisystem Inflammatory Syndrome in Adults, MIS-A)"
+        label_it: "Sindrome infiammatoria multisistemica negli adulti (MIS-A)"
+        label_es: "Síndrome inflamatorio multisistémico en adultos (SIM-A)"
+      - value: pt_t1_fu_DX_IMMUNO_VASCUL
+        label: "Vasculitides (autoimmune disease, characterized by inflammation of blood vessels)"
+        label_ca: "Vasculitis (malaltia autoimmunitària que es caracteritza per la inflamació dels vasos sanguinis)"
+        label_de: "Vaskulitiden (Autoimmunerkrankung, gekennzeichnet durch Entzündung der Blutgefäße)"
+        label_it: "Vasculite (malattia autoimmune, caratterizzata da infiammazione dei vasi sanguigni)"
+        label_es: "Vasculitis (enfermedad autoinmunitaria, caracterizada por la inflamación de los vasos sanguíneos)"
+      - value: pt_t1_fu_DX_IMMUNO_NONE
+        label: "None of the above"
+        label_ca: "Cap de les anteriors"
+        label_de: "Keine der obenstehenden Antworten"
+        label_it: "Nessuno dei suddetti sintomi"
+        label_es: "Ninguno de las anteriores"
+    validation:
+      - exclusive: pt_t1_fu_DX_IMMUNO_NONE
+  pt_t1_fu_DX_NEURO:
+    safety_alert_question: true
+    conditions:
+      - question: pt_t1_fu_CHECKPOINT
+        operation: contains
+        value: pt_t1_fu_UNPLNEDMEDCARE
+    label: "Were you diagnosed with any of the following (scroll through the diagnoses listed on all pages):"
+    label_ca: "Indiqui si li van diagnosticar alguna de les coses següents (cal desplaçar-se per les llistes de diagnòstics de totes les pàgines):"
+    label_de: "Wurde bei Ihnen eine der folgenden Diagnosen festgestellt (scrollen Sie durch die auf allen Seiten aufgeführten Diagnosen)?"
+    label_it: "Le è stato diagnosticato uno qualsiasi dei seguenti (scorrere le diagnosi elencate in tutte le pagine)"
+    label_es: "¿Se le diagnosticó alguno de los siguientes? (desplácese por los diagnósticos indicados en todas las páginas)"
+    type: checkbox
+    page_number: 17
+    choices:
+      - value: pt_t1_fu_DX_NEURO_ADE
+        label: "Acute disseminated encephalomyelitis"
+        label_ca: "Encefalomielitis disseminada aguda" 
+        label_de: "Akute disseminierte Enzephalomyelitis"
+        label_it: "Encefalomielite acuta disseminata"
+        label_es: "Encefalomielitis diseminada aguda"
+      - value: pt_t1_fu_DX_NEURO_AM
+        label: "Aseptic meningitis (inflammation of the linings of the brain / viral meningitis)"
+        label_ca: "Meningitis asèptica (inflamació de les parets del cervell/meningitis vírica)"
+        label_de: "Aseptische Meningitis (Entzündung der Hirnhäute/virale Meningitis)"
+        label_it: "Meningite asettica (infiammazione del rivestimento del cervello/meningite virale)"
+        label_es: "Meningitis aséptica (inflamación de los revestimientos del cerebro/meningitis vírica)"
+      - value: pt_t1_fu_DX_NEURO_PALSY
+        label: "Bell’s palsy"
+        label_ca: "Paràlisi de Bell"
+        label_de: "Bell-Lähmung"
+        label_it: "Paralisi di Bell"
+        label_es: "Parálisis de Bell"
+      - value: pt_t1_fu_DX_NEURO_ENCEPH
+        label: "Encephalitis (inflammation of the brain) / Encephalomyelitis (inflammation of the brain and spinal cord)"
+        label_ca: "Encefalitis (inflamació del cervell)/encefalomielitis (inflamació del cervell i la medul·la espinal)"
+        label_de: "Enzephalitis (Entzündung des Gehirns)/Enzephalomyelitis (Entzündung des Gehirns und Rückenmarks)"
+        label_it: "Encefalite (infiammazione del cervello)/encefalomielite (infiammazione del cervello e del midollo spinale)"
+        label_es: Encefalitis (inflamación del cerebro)/encefalomielitis (inflamación del cerebro y la médula espinal)
+      - value: pt_t1_fu_DX_NEURO_SEIZURE
+        label: "Generalized convulsion/ seizure (fit)"
+        label_ca: "Convulsió/crisi generalitzada (atac)"
+        label_de: "Generalisierte Konvulsion/Krampfanfall (Anfall)"
+        label_it: "Convulsione generalizzata/crisi convulsiva"
+        label_es: "Convulsión/crisis generalizada (ataque)"
+      - value: pt_t1_fu_DX_NEURO_GBS
+        label: "Guillain-Barré Syndrome (GBS)"
+        label_ca: "Síndrome de Guillain-Barré (SGB)"
+        label_de: "Guillain-Barre-Syndrom (GBS)"
+        label_it: "Sindrome di Guillain-Barré (GBS)"
+        label_es: "Síndrome de Guillain-Barré (SGB)"
+      - value: pt_t1_fu_DX_NEURO_MS
+        label: "Multiple sclerosis"
+        label_ca: "Esclerosi múltiple"
+        label_de: "Multiple Sklerose"
+        label_it: "Sclerosi multipla"
+        label_es: "Esclerosis múltiple"
+      - value: pt_t1_fu_DX_NEURO_NEURITIS
+        label: "Optic neuritis (inflammation of the optic nerve)"
+        label_ca: "Neuritis òptica (inflamació del nervi òptic)"
+        label_de: "Optikusneuritis (Entzündung des Sehnervs)"
+        label_it: "Neurite ottica (infiammazione del nervo ottico)"
+        label_es: "Neuritis óptica (inflamación del nervio óptico)"
+      - value: pt_t1_fu_DX_NEURO_DEMYELIN
+        label: "Other acute demyelinating diseases (i.e. other central nervous system (CNS) inflammatory disorder)"
+        label_ca: "Altres malalties desmielinitzants agudes (és a dir, altres trastorns inflamatoris del sistema nerviós central [SNC])"
+        label_de: "Andere akute demyelinisierende Erkrankungen (d. h. andere entzündliche Erkrankung des Zentralnervensystems [ZNS])"
+        label_it: "Altre malattie demielinizzanti acute (ovvero, altre malattie infiammatorie del sistema nervoso centrale [SNC])"
+        label_es: "Otras enfermedades desmielinizantes agudas (es decir, otro trastorno inflamatorio del sistema nervioso central (SNC))"
+      - value: pt_t1_fu_DX_NEURO_TM
+        label: "Transverse myelitis (inflammation of both sides of one section of the spinal cord)"
+        label_ca: "Mielitis transversa (inflamació de tots dos costats d’una secció de la medul·la espinal)"
+        label_de: "Transverse Myelitis (Entzündung beider Seiten eines Abschnitts des Rückenmarks)"
+        label_it: "Mielite trasversa (infiammazione di entrambi i lati di una sezione del midollo spinale)"
+        label_es: "Mielitis transversa (inflamación de ambos lados de una sección de la médula espinal)"
+      - value: pt_t1_fu_DX_NEURO_NONE
+        label: "None of the above"
+        label_ca: "Cap de les anteriors"
+        label_de: "Keine der obenstehenden Antworten"
+        label_it: "Nessuno dei suddetti sintomi"
+        label_es: "Ninguno de las anteriores"
+    validation:
+      - exclusive: pt_t1_fu_DX_NEURO_NONE
+  pt_t1_fu_DX_OTHER:
+    safety_alert_question: true
+    conditions:
+      - question: pt_t1_fu_CHECKPOINT
+        operation: contains
+        value: pt_t1_fu_UNPLNEDMEDCARE
+    label: "Were you diagnosed with any of the following (scroll through the diagnoses listed on all pages):"
+    label_ca: "Indiqui si li van diagnosticar alguna de les coses següents (cal desplaçar-se per les llistes de diagnòstics de totes les pàgines):"
+    label_de: "Wurde bei Ihnen eine der folgenden Diagnosen festgestellt (scrollen Sie durch die auf allen Seiten aufgeführten Diagnosen)?"
+    label_it: "Le è stato diagnosticato uno qualsiasi dei seguenti (scorrere le diagnosi elencate in tutte le pagine)"
+    label_es: "¿Se le diagnosticó alguno de los siguientes? (desplácese por los diagnósticos indicados en todas las páginas)"
+    type: checkbox
+    page_number: 18
+    choices: 
+      - value: pt_t1_fu_DX_OTHER_NARCO
+        label: "Narcolepsy and cataplexy"
+        label_ca: "Narcolèpsia i cataplexia"
+        label_de: "Narkolepsie und Kataplexie"
+        label_it: "Narcolessia e cataplessia"
+        label_es: "Narcolepsia y cataplejía"
+      - value: pt_t1_fu_DX_OTHER_ALLERGY
+        label: "Non-anaphylactic allergic reactions"
+        label_ca: "Reaccions al·lèrgiques no anafilàctiques"
+        label_de: "Nicht-anaphylaktische allergische Reaktionen"
+        label_it: "Reazioni allergiche non anafilattiche"
+        label_es: "Reacciones alérgicas no anafilácticas"
+      - value: pt_t1_fu_DX_OTHER_NONE
+        label: "None of the above"
+        label_ca: "Cap de les anteriors"
+        label_de: "None of the above"
+        label_it: "Nessuno dei suddetti sintomi"
+        label_es: "Ninguno de las anteriores"
+    validation:
+      - exclusive: pt_t1_fu_DX_OTHER_NONE
+  pt_t1_fu_DX_CARDIAC_HA:
+    safety_alert_question: true
+    conditions:
+      - question: pt_t1_fu_DX_CARDIAC
+        operation: contains
+        value: pt_t1_fu_DX_CARDIAC_AMI
+      - question: pt_t1_fu_CHECKPOINT
+        operation: contains
+        value: pt_t1_fu_UNPLNEDMEDCARE   
+    label: "What was the outcome of your medical care for Acute myocardial infarction (heart attack)?"
+    label_ca: "Quin resultat va tenir la seva atenció mèdica?"
+    label_de: "Welches Ergebnis hatte Ihre medizinische Versorgung bei akutem Myokardinfarkt (Herzinfarkt)?"
+    label_it: "Qual è stato l’esito della Sua infarto miocardico acuto?"
+    label_es: "¿Cuál fue el resultado de su Infarto agudo de miocardio"
+    type: radio
+    page_number: 19
+    number_of_columns: 4
+    label_position: top
+    answer_label_position: bottom
+    choices:
+      - value: "1"
+        label: "I recovered fully"
+        label_ca: "Em vaig recuperar del tot" 
+        label_de: "Ich bin vollständig genesen"
+        label_it: "Sono guarito completamente"
+        label_es: "Me he recuperado completamente"
+      - value: "2"
+        label: "I recovered, but with some lasting effects"
+        label_ca: "Em vaig recuperar, però amb alguns efectes persistents"
+        label_de: "Ich bin genesen, aber mit einigen bleibenden Wirkungen"
+        label_it: "Sono guarito, ma con alcuni effetti duraturi"
+        label_es: "Me he recuperado, pero con algunos efectos duraderos"
+      - value: "3"
+        label: "I am recovering"
+        label_ca: "M’estic recuperant" 
+        label_de: "Ich genese aktuell"
+        label_it: "Soffro ancora di sintomi, ma sto migliorando"
+        label_es: "Sigo teniendo síntomas, pero estoy mejorando"
+      - value: "4"
+        label: "My condition and/or symptom is continuing"
+        label_ca: "La meva afecció o els símptomes continuen"
+        label_de: "Meine Erkrankung und/oder mein Symptom hält/halten an"
+        label_it: "La mia condizione e/o i miei sintomi continuano"
+        label_es: "Mi enfermedad y/o síntoma continúa"
+  pt_t1_fu_DX_CARDIAC_CADA:
+    safety_alert_question: true
+    conditions:
+      - question: pt_t1_fu_DX_CARDIAC
+        operation: contains
+        value: pt_t1_fu_DX_CARDIAC_CADA
+      - question: pt_t1_fu_CHECKPOINT
+        operation: contains
+        value: pt_t1_fu_UNPLNEDMEDCARE 
+    label: "What was the outcome of your medical care for Coronary artery disease arrhythmia (abnormal heart rhythm due to coronary artery disease)?"
+    label_ca: "Quin resultat va tenir la seva atenció mèdica?"
+    label_de: "Welches Ergebnis hatte Ihre medizinische Versorgung bei koronarer Herzkrankheit (Herzrhythmusstörungen aufgrund einer koronaren Herzkrankheit)?"
+    label_it: "Qual è stato l’esito della Sua Aritmia malattia coronarica"
+    label_es: "¿Cuál fue el resultado de su Arritmia por enfermedad arterial coronaria"
+    type: radio
+    page_number: 20
+    number_of_columns: 4
+    label_position: top
+    answer_label_position: bottom
+    choices:
+      - value: "1"
+        label: "I recovered fully"
+        label_ca: "Em vaig recuperar del tot"
+        label_de: "Ich bin vollständig genesen"
+        label_it: "Sono guarito completamente"
+        label_es: "Me he recuperado completamente"
+      - value: "2"
+        label: "I recovered, but with some lasting effects"
+        label_ca: "Em vaig recuperar, però amb alguns efectes persistents"
+        label_de: "Ich bin genesen, aber mit einigen bleibenden Wirkungen"
+        label_it: "Sono guarito, ma con alcuni effetti duraturi"
+        label_es: "Me he recuperado, pero con algunos efectos duraderos"
+      - value: "3"
+        label: "I am recovering"
+        label_ca: "M’estic recuperant"
+        label_de: "Ich genese aktuell"
+        label_it: "Soffro ancora di sintomi, ma sto migliorando"
+        label_es: "Sigo teniendo síntomas, pero estoy mejorando"
+      - value: "4"
+        label: "My condition and/or symptom is continuing"
+        label_ca: "La meva afecció o els símptomes continuen"
+        label_de: "Meine Erkrankung und/oder mein Symptom hält/halten an"
+        label_it: "La mia condizione e/o i miei sintomi continuano"
+        label_es: "Mi enfermedad y/o síntoma continúa"
+  pt_t1_fu_DX_CARDIAC_HEARTFAIL:
+    safety_alert_question: true
+    conditions:
+      - question: pt_t1_fu_DX_CARDIAC
+        operation: contains
+        value: pt_t1_fu_DX_CARDIAC_HF
+      - question: pt_t1_fu_CHECKPOINT
+        operation: contains
+        value: pt_t1_fu_UNPLNEDMEDCARE
+    label: "What was the outcome of your medical care for Heart failure and cardiogenic shock?"
+    label_ca: "Quin resultat va tenir la seva atenció mèdica?"
+    label_de: "Welches Ergebnis hatte Ihre medizinische Versorgung bei Herzversagen und kardiogenem Schock?"
+    label_it: "Qual è stato l’esito della Sua Insufficienza cardiaca e shock cardiogenol"
+    label_es: "¿Cuál fue el resultado de su Insuficiencia cardíaca y shock cardiogénico"
+    type: radio
+    page_number: 21
+    number_of_columns: 4
+    label_position: top
+    answer_label_position: bottom
+    choices:
+      - value: "1"
+        label: "I recovered fully"
+        label_ca: "Em vaig recuperar del tot"
+        label_de: "Ich bin vollständig genesen"
+        label_it: "Sono guarito completamente"
+        label_es: "Me he recuperado completamente"
+      - value: "2"
+        label: "I recovered, but with some lasting effects"
+        label_ca: "Em vaig recuperar, però amb alguns efectes persistents"
+        label_de: "Ich bin genesen, aber mit einigen bleibenden Wirkungen"
+        label_it: "Sono guarito, ma con alcuni effetti duraturi"
+        label_es: "Me he recuperado, pero con algunos efectos duraderos"
+      - value: "3"
+        label: "I am recovering"
+        label_ca: "M’estic recuperant"
+        label_de: "Ich genese aktuell"
+        label_it: "Soffro ancora di sintomi, ma sto migliorando"
+        label_es: "Sigo teniendo síntomas, pero estoy mejorando"
+      - value: "4"
+        label: "My condition and/or symptom is continuing"
+        label_ca: "La meva afecció o els símptomes continuen"
+        label_de: "Meine Erkrankung und/oder mein Symptom hält/halten an"
+        label_it: "La mia condizione e/o i miei sintomi continuano"
+        label_es: "Mi enfermedad y/o síntoma continúa"
+  pt_t1_fu_DX_CARDIAC_MICROANG:
+    safety_alert_question: true
+    conditions:
+      - question: pt_t1_fu_DX_CARDIAC
+        operation: contains
+        value: pt_t1_fu_DX_CARDIAC_MA
+      - question: pt_t1_fu_CHECKPOINT
+        operation: contains
+        value: pt_t1_fu_UNPLNEDMEDCARE 
+    label: "What was the outcome of your medical care for Microangiopathy [Disease of the capillaries (very small blood vessels)]?"
+    label_ca: "Quin resultat va tenir la seva atenció mèdica?"
+    label_de: Welches Ergebnis hatte Ihre medizinische Versorgung bei Mikroangiopathie [Erkrankung der Kapillaren (sehr kleine Blutgefäße)]?
+    label_it: Qual è stato l’esito della Sua Microangiopatia [Malattia dei capillari (vasi sanguigni molto piccoli)
+    label_es: ¿Cuál fue el resultado de su Microangiopatía [Enfermedad de los capilares (vasos sanguíneos muy pequeños)
+    type: radio
+    page_number: 22
+    number_of_columns: 4
+    label_position: top
+    answer_label_position: bottom
+    choices:
+      - value: "1"
+        label: "I recovered fully"
+        label_ca: "Em vaig recuperar del tot"
+        label_de: "Ich bin vollständig genesen"
+        label_it: "Sono guarito completamente"
+        label_es: "Me he recuperado completamente"
+      - value: "2"
+        label: "I recovered, but with some lasting effects"
+        label_ca: "Em vaig recuperar, però amb alguns efectes persistents"
+        label_de: "Ich bin genesen, aber mit einigen bleibenden Wirkungen"
+        label_it: "Sono guarito, ma con alcuni effetti duraturi"
+        label_es: "Me he recuperado, pero con algunos efectos duraderos"
+      - value: "3"
+        label: "I am recovering"
+        label_ca: "M’estic recuperant"
+        label_de: "Ich genese aktuell"
+        label_it: "Soffro ancora di sintomi, ma sto migliorando"
+        label_es: "Sigo teniendo síntomas, pero estoy mejorando"
+      - value: "4"
+        label: "My condition and/or symptom is continuing"
+        label_ca: "La meva afecció o els símptomes continuen" 
+        label_de: "Meine Erkrankung und/oder mein Symptom hält/halten an"
+        label_it: "La mia condizione e/o i miei sintomi continuano"
+        label_es: "Mi enfermedad y/o síntoma continúa"
+  pt_t1_fu_DX_CARDIAC_MYOCARD:
+    safety_alert_question: true
+    conditions:
+      - question: pt_t1_fu_DX_CARDIAC
+        operation: contains
+        value: pt_t1_fu_DX_CARDIAC_MyoC
+      - question: pt_t1_fu_CHECKPOINT
+        operation: contains
+        value: pt_t1_fu_UNPLNEDMEDCARE   
+    label: "What was the outcome of your medical care for Myocarditis (swelling/inflammation of the heart)?"
+    label_ca: "Quin resultat va tenir la seva atenció mèdica?"
+    label_de: "Welches Ergebnis hatte Ihre medizinische Versorgung bei Myokarditis (Schwellung/Entzündung des Herzens)?"
+    label_it: "Qual è stato l’esito della Sua Miocardite (gonfiore/ infiammazione del cuore)"
+    label_es: "¿Cuál fue el resultado de su Miocarditis (hinchazón/inflamación del corazón)"
+    type: radio
+    page_number: 23
+    number_of_columns: 4
+    label_position: top
+    answer_label_position: bottom
+    choices:
+      - value: "1"
+        label: "I recovered fully"
+        label_ca: "Em vaig recuperar del tot" 
+        label_de: "Ich bin vollständig genesen"
+        label_it: "Sono guarito completamente"
+        label_es: "Me he recuperado completamente"
+      - value: "2"
+        label: "I recovered, but with some lasting effects"
+        label_ca: "Em vaig recuperar, però amb alguns efectes persistents" 
+        label_de: "Ich bin genesen, aber mit einigen bleibenden Wirkungen"
+        label_it: "Sono guarito, ma con alcuni effetti duraturi"
+        label_es: "Me he recuperado, pero con algunos efectos duraderos"
+      - value: "3"
+        label: "I am recovering"
+        label_ca: "M’estic recuperant"
+        label_de: "Ich genese aktuell"
+        label_it: "Soffro ancora di sintomi, ma sto migliorando"
+        label_es: "Sigo teniendo síntomas, pero estoy mejorando"
+      - value: "4"
+        label: "My condition and/or symptom is continuing"
+        label_ca: "La meva afecció o els símptomes continuen"
+        label_de: "Meine Erkrankung und/oder mein Symptom hält/halten an"
+        label_it: "La mia condizione e/o i miei sintomi continuano"
+        label_es: "Mi enfermedad y/o síntoma continúa"
+  pt_t1_fu_DX_CARDIAC_PERICARD:
+    safety_alert_question: true
+    conditions:
+      - question: pt_t1_fu_DX_CARDIAC
+        operation: contains
+        value: pt_t1_fu_DX_CARDIAC_PeriC
+      - question: pt_t1_fu_CHECKPOINT
+        operation: contains
+        value: pt_t1_fu_UNPLNEDMEDCARE    
+    label: "What was the outcome of your medical care for Pericarditis (swelling/inflammation of the membrane around the heart)?"
+    label_ca: "Quin resultat va tenir la seva atenció mèdica?"
+    label_de: "Welches Ergebnis hatte Ihre medizinische Versorgung bei Perikarditis (Schwellung/Entzündung der Membran um das Herz)?"
+    label_it: "Qual è stato l’esito della Sua Pericardite (gonfiore/ infiammazione della membrana intorno al cuore"
+    label_es: "¿Cuál fue el resultado de su Pericarditis (hinchazón/inflamación de la membrana alrededor del corazón)"
+    type: radio
+    page_number: 24
+    number_of_columns: 4
+    label_position: top
+    answer_label_position: bottom
+    choices:
+      - value: "1"
+        label: "I recovered fully"
+        label_ca: "Em vaig recuperar del tot"
+        label_de: "Ich bin vollständig genesen"
+        label_it: "Sono guarito completamente"
+        label_es: "Me he recuperado completamente"
+      - value: "2"
+        label: "I recovered, but with some lasting effects"
+        label_ca: "Em vaig recuperar, però amb alguns efectes persistents"
+        label_de: "Ich bin genesen, aber mit einigen bleibenden Wirkungen"
+        label_it: "Sono guarito, ma con alcuni effetti duraturi"
+        label_es: "Me he recuperado, pero con algunos efectos duraderos"
+      - value: "3"
+        label: "I am recovering"
+        label_ca: "M’estic recuperant"
+        label_de: "Ich genese aktuell"
+        label_it: "Soffro ancora di sintomi, ma sto migliorando"
+        label_es: "Sigo teniendo síntomas, pero estoy mejorando"
+      - value: "4"
+        label: "My condition and/or symptom is continuing"
+        label_ca: "La meva afecció o els símptomes continuen"
+        label_de: "Meine Erkrankung und/oder mein Symptom hält/halten an"
+        label_it: "La mia condizione e/o i miei sintomi continuano"
+        label_es: "Mi enfermedad y/o síntoma continúa"
+  pt_t1_fu_DX_CARDIAC_STRESSCARD:
+    safety_alert_question: true
+    conditions:
+      - question: pt_t1_fu_DX_CARDIAC
+        operation: contains
+        value: pt_t1_fu_DX_CARDIAC_CardioM
+      - question: pt_t1_fu_CHECKPOINT
+        operation: contains
+        value: pt_t1_fu_UNPLNEDMEDCARE   
+    label: "What was the outcome of your medical care for Stress cardiomyopathy (stress-induced damage to the heart)?"
+    label_ca: "Quin resultat va tenir la seva atenció mèdica?"
+    label_de: "Welches Ergebnis hatte Ihre medizinische Behandlung der Stress-Kardiomyopathie (stressbedingte Schädigung des Herzens)?"
+    label_it: "Qual è stato l’esito della Sua Cardiomiopatia da stress (danni indotti dallo stress al cuore)"
+    label_es: "¿Cuál fue el resultado de su Miocardiopatía por estrés (daño al corazón inducido por estrés)"
+    type: radio
+    page_number: 26
+    number_of_columns: 4
+    label_position: top
+    answer_label_position: bottom
+    choices:
+      - value: "1"
+        label: "I recovered fully"
+        label_ca: "Em vaig recuperar del tot"
+        label_de: "Ich bin vollständig genesen"
+        label_it: "Sono guarito completamente"
+        label_es: "Me he recuperado completamente"
+      - value: "2"
+        label: "I recovered, but with some lasting effects"
+        label_ca: "Em vaig recuperar, però amb alguns efectes persistents"
+        label_de: "Ich bin genesen, aber mit einigen bleibenden Wirkungen"
+        label_it: "Sono guarito, ma con alcuni effetti duraturi"
+        label_es: "Me he recuperado, pero con algunos efectos duraderos"
+      - value: "3"
+        label: "I am recovering"
+        label_ca: "M’estic recuperant"
+        label_de: "Ich genese aktuell"
+        label_it: "Soffro ancora di sintomi, ma sto migliorando"
+        label_es: "Sigo teniendo síntomas, pero estoy mejorando"
+      - value: "4"
+        label: "My condition and/or symptom is continuing"
+        label_ca: "La meva afecció o els símptomes continuen"
+        label_de: "Meine Erkrankung und/oder mein Symptom hält/halten an"
+        label_it: "La mia condizione e/o i miei sintomi continuano"
+        label_es: "Mi enfermedad y/o síntoma continúa"
+  pt_t1_fu_DX_COVID_AHR:
+    safety_alert_question: true
+    conditions:
+      - question: pt_t1_fu_DX_COVID
+        operation: contains
+        value: pt_t1_fu_DX_COVID_AHR
+      - question: pt_t1_fu_CHECKPOINT
+        operation: contains
+        value: pt_t1_fu_UNPLNEDMEDCARE 
+    label: "What was the outcome of your medical care for Abnormal heart rhythm (arrythmia)?"
+    label_ca: "Quin resultat va tenir la seva atenció mèdica?"
+    label_de: "Welches Ergebnis hatte Ihre medizinische Versorgung bei Herzrhythmusstörungen (Arrythmie)?"
+    label_it: "Qual è stato l’esito della Sua Ritmo cardiaco anormale (aritmia)"
+    label_es: "¿Cuál fue el resultado de su Ritmo cardíaco anormal (arritmia)"
+    type: radio
+    page_number: 26
+    number_of_columns: 4
+    label_position: top
+    answer_label_position: bottom
+    choices:
+      - value: "1"
+        label: "I recovered fully"
+        label_ca: "Em vaig recuperar del tot"
+        label_de: "Ich bin vollständig genesen" 
+        label_it: "Sono guarito completamente"
+        label_es: "Me he recuperado completamente"
+      - value: "2"
+        label: "I recovered, but with some lasting effects"
+        label_ca: "Em vaig recuperar, però amb alguns efectes persistents"
+        label_de: "Ich bin genesen, aber mit einigen bleibenden Wirkungen"
+        label_it: "Sono guarito, ma con alcuni effetti duraturi"
+        label_es: "Me he recuperado, pero con algunos efectos duraderos"
+      - value: "3"
+        label: "I am recovering"
+        label_ca: "M’estic recuperant"
+        label_de: "Ich genese aktuell"
+        label_it: "Soffro ancora di sintomi, ma sto migliorando"
+        label_es: "Sigo teniendo síntomas, pero estoy mejorando"
+      - value: "4"
+        label: "My condition and/or symptom is continuing"
+        label_ca: "La meva afecció o els símptomes continuen"
+        label_de: "Meine Erkrankung und/oder mein Symptom hält/halten an"
+        label_it: "La mia condizione e/o i miei sintomi continuano"
+        label_es: "Mi enfermedad y/o síntoma continúa"
+  pt_t1_fu_DX_COVID_AKI:
+    safety_alert_question: true
+    conditions:
+      - question: pt_t1_fu_DX_COVID
+        operation: contains
+        value: pt_t1_fu_DX_COVID_AKI
+      - question: pt_t1_fu_CHECKPOINT
+        operation: contains
+        value: pt_t1_fu_UNPLNEDMEDCARE   
+    label: "What was the outcome of your medical care for Acute kidney injury (sudden episode only, not including chronic conditions)?"
+    label_ca: "Quin resultat va tenir la seva atenció mèdica?"
+    label_de: "Welches Ergebnis hatte Ihre medizinische Versorgung bei akuter Nierenschädigung (nur plötzlicher Vorfall, nicht bei chronischen Erkrankungen)?"
+    label_it: "Qual è stato l’esito della Sua Lesione renale acuta (solo episodio improvviso, escluse le condizioni croniche)"
+    label_es: "¿Cuál fue el resultado de su Lesión renal aguda (solo episodio repentino, sin incluir afecciones crónicas)"
+    type: radio
+    page_number: 26
+    number_of_columns: 4
+    label_position: top
+    answer_label_position: bottom
+    choices:
+      - value: "1"
+        label: "I recovered fully"
+        label_ca: "Em vaig recuperar del tot"
+        label_de: "Ich bin vollständig genesen"
+        label_it: "Sono guarito completamente"
+        label_es: "Me he recuperado completamente"
+      - value: "2"
+        label: "I recovered, but with some lasting effects"
+        label_ca: "Em vaig recuperar, però amb alguns efectes persistents"
+        label_de: "Ich bin genesen, aber mit einigen bleibenden Wirkungen"
+        label_it: "Sono guarito, ma con alcuni effetti duraturi"
+        label_es: "Me he recuperado, pero con algunos efectos duraderos"
+      - value: "3"
+        label: "I am recovering"
+        label_ca: "M’estic recuperant"
+        label_de: "Ich genese aktuell"
+        label_it: "Soffro ancora di sintomi, ma sto migliorando"
+        label_es: "Sigo teniendo síntomas, pero estoy mejorando"
+      - value: "4"
+        label: "My condition and/or symptom is continuing"
+        label_ca: "La meva afecció o els símptomes continuen"
+        label_de: "Meine Erkrankung und/oder mein Symptom hält/halten an"
+        label_it: "La mia condizione e/o i miei sintomi continuano"
+        label_es: "Mi enfermedad y/o síntoma continúa"
+  pt_t1_fu_DX_COVID_ALI:
+    safety_alert_question: true
+    conditions:
+      - question: pt_t1_fu_DX_COVID
+        operation: contains
+        value: pt_t1_fu_DX_COVID_ALI
+      - question: pt_t1_fu_CHECKPOINT
+        operation: contains
+        value: pt_t1_fu_UNPLNEDMEDCARE 
+    label: "What was the outcome of your medical care for Acute liver injury (sudden episode only, not including chronic conditions)?"
+    label_ca: "Quin resultat va tenir la seva atenció mèdica?"
+    label_de: "Welches Ergebnis hatte Ihre medizinische Versorgung bei akuter Leberschädigung (nur bei plötzlichem Auftreten, nicht bei chronischen Erkrankungen)?"
+    label_it: "Qual è stato l’esito della Sua Lesioni epatiche acute (solo episodio improvviso, escluse le condizioni croniche)"
+    label_es: "¿Cuál fue el resultado de su Lesión hepática aguda (solo episodio repentino, sin incluir afecciones crónicas)"
+    type: radio
+    page_number: 26
+    number_of_columns: 4
+    label_position: top
+    answer_label_position: bottom
+    choices:
+      - value: "1"
+        label: "I recovered fully"
+        label_ca: "Em vaig recuperar del tot"
+        label_de: "Ich bin vollständig genesen"
+        label_it: "Sono guarito completamente"
+        label_es: "Me he recuperado completamente"
+      - value: "2"
+        label: "I recovered, but with some lasting effects"
+        label_ca: "Em vaig recuperar, però amb alguns efectes persistents" 
+        label_de: "Ich bin genesen, aber mit einigen bleibenden Wirkungen"
+        label_it: "Sono guarito, ma con alcuni effetti duraturi"
+        label_es: "Me he recuperado, pero con algunos efectos duraderos"
+      - value: "3"
+        label: "I am recovering"
+        label_ca: "M’estic recuperant"
+        label_de: "Ich genese aktuell"
+        label_it: "Soffro ancora di sintomi, ma sto migliorando"
+        label_es: "Sigo teniendo síntomas, pero estoy mejorando"
+      - value: "4"
+        label: "My condition and/or symptom is continuing"
+        label_ca: "La meva afecció o els símptomes continuen"
+        label_de: "Meine Erkrankung und/oder mein Symptom hält/halten an"
+        label_it: "La mia condizione e/o i miei sintomi continuano"
+        label_es: "Mi enfermedad y/o síntoma continúa"
+  pt_t1_fu_DX_COVID_AP:
+    safety_alert_question: true
+    conditions:
+      - question: pt_t1_fu_DX_COVID
+        operation: contains
+        value: pt_t1_fu_DX_COVID_AP
+      - question: pt_t1_fu_CHECKPOINT
+        operation: contains
+        value: pt_t1_fu_UNPLNEDMEDCARE   
+    label: "What was the outcome of your medical care for Acute pancreatitis (sudden inflammation of the pancreas)?"
+    label_ca: "Quin resultat va tenir la seva atenció mèdica?"
+    label_de: "Welches Ergebnis hatte Ihre medizinische Versorgung bei akuter Pankreatitis (plötzliche Entzündung der Bauchspeicheldrüse)?"
+    label_it: "Qual è stato l’esito della Sua Pancreatite acuta (infiammazione improvvisa del pancreas)"
+    label_es: "¿Cuál fue el resultado de su Pancreatitis aguda (inflamación repentina del páncreas)"
+    type: radio
+    page_number: 26
+    number_of_columns: 4
+    label_position: top
+    answer_label_position: bottom
+    choices:
+      - value: "1"
+        label: "I recovered fully"
+        label_ca: "Em vaig recuperar del tot" 
+        label_de: "Ich bin vollständig genesen"
+        label_it: "Sono guarito completamente"
+        label_es: "Me he recuperado completamente"
+      - value: "2"
+        label: "I recovered, but with some lasting effects"
+        label_ca: "Em vaig recuperar, però amb alguns efectes persistents"
+        label_de: "Ich bin genesen, aber mit einigen bleibenden Wirkungen"
+        label_it: "Sono guarito, ma con alcuni effetti duraturi"
+        label_es: "Me he recuperado, pero con algunos efectos duraderos"
+      - value: "3"
+        label: "I am recovering"
+        label_ca: "M’estic recuperant"
+        label_de: "Ich genese aktuell"
+        label_it: "Soffro ancora di sintomi, ma sto migliorando"
+        label_es: "Sigo teniendo síntomas, pero estoy mejorando"
+      - value: "4"
+        label: "My condition and/or symptom is continuing"
+        label_ca: "La meva afecció o els símptomes continuen"
+        label_de: "Meine Erkrankung und/oder mein Symptom hält/halten an"
+        label_it: "La mia condizione e/o i miei sintomi continuano"
+        label_es: "Mi enfermedad y/o síntoma continúa"
+  pt_t1_fu_DX_COVID_ARDS:
+    safety_alert_question: true
+    conditions:
+      - question: pt_t1_fu_DX_COVID
+        operation: contains
+        value: pt_t1_fu_DX_COVID_ARDS
+      - question: pt_t1_fu_CHECKPOINT
+        operation: contains
+        value: pt_t1_fu_UNPLNEDMEDCARE   
+    label: "What was the outcome of your medical care for Acute respiratory distress syndrome?"
+    label_ca: "Quin resultat va tenir la seva atenció mèdica?"
+    label_de: "Welches Ergebnis hatte Ihre medizinische Behandlung des akuten Atemnotsyndroms?"
+    label_it: "Qual è stato l’esito della Sua Sindrome da distress respiratorio acuto"
+    label_es: "¿Cuál fue el resultado de su Síndrome de distrés respiratorio agudo"
+    type: radio
+    page_number: 26
+    number_of_columns: 4
+    label_position: top
+    answer_label_position: bottom
+    choices:
+      - value: "1"
+        label: "I recovered fully"
+        label_ca: "Em vaig recuperar del tot"
+        label_de: "Ich bin vollständig genesen"
+        label_it: "Sono guarito completamente"
+        label_es: "Me he recuperado completamente"
+      - value: "2"
+        label: "I recovered, but with some lasting effects"
+        label_ca: "Em vaig recuperar, però amb alguns efectes persistents"
+        label_de: "Ich bin genesen, aber mit einigen bleibenden Wirkungen"
+        label_it: "Sono guarito, ma con alcuni effetti duraturi"
+        label_es: "Me he recuperado, pero con algunos efectos duraderos"
+      - value: "3"
+        label: "I am recovering"
+        label_ca: "M’estic recuperant"
+        label_de: "Ich genese aktuell"
+        label_it: "Soffro ancora di sintomi, ma sto migliorando"
+        label_es: "Sigo teniendo síntomas, pero estoy mejorando"
+      - value: "4"
+        label: "My condition and/or symptom is continuing"
+        label_ca: "La meva afecció o els símptomes continuen"
+        label_de: "Meine Erkrankung und/oder mein Symptom hält/halten an"
+        label_it: "La mia condizione e/o i miei sintomi continuano"
+        label_es: "Mi enfermedad y/o síntoma continúa"
+  pt_t1_fu_DX_COVID_ANOSAGEU:
+    safety_alert_question: true
+    conditions:
+      - question: pt_t1_fu_DX_COVID
+        operation: contains
+        value: pt_t1_fu_DX_COVID_ANOSMIA
+      - question: pt_t1_fu_CHECKPOINT
+        operation: contains
+        value: pt_t1_fu_UNPLNEDMEDCARE   
+    label: "What was the outcome of your medical care for Anosmia (loss of smell), Ageusia (loss of taste)?"
+    label_ca: "Quin resultat va tenir la seva atenció mèdica?"
+    label_de: "Welches war das Ergebnis Ihrer medizinischen Behandlung bei Anosmie (Geruchsverlust), Ageusie (Geschmacksverlust)?"
+    label_it: "Qual è stato l’esito della Sua Anosmia (perdita di odore), Ageusia (perdita di gusto)"
+    label_es: "¿Cuál fue el resultado de su Anosmia (pérdida del olfato), Ageusia (pérdida del gusto)"
+    type: radio
+    page_number: 26
+    number_of_columns: 4
+    label_position: top
+    answer_label_position: bottom
+    choices:
+      - value: "1"
+        label: "I recovered fully"
+        label_ca: "Em vaig recuperar del tot" 
+        label_de: "Ich bin vollständig genesen"
+        label_it: "Sono guarito completamente"
+        label_es: "Me he recuperado completamente"
+      - value: "2"
+        label: "I recovered, but with some lasting effects"
+        label_ca: "Em vaig recuperar, però amb alguns efectes persistents"
+        label_de: "Ich bin genesen, aber mit einigen bleibenden Wirkungen"
+        label_it: "Sono guarito, ma con alcuni effetti duraturi"
+        label_es: "Me he recuperado, pero con algunos efectos duraderos"
+      - value: "3"
+        label: "I am recovering"
+        label_ca: "M’estic recuperant"
+        label_de: "Ich genese aktuell"
+        label_it: "Soffro ancora di sintomi, ma sto migliorando"
+        label_es: "Sigo teniendo síntomas, pero estoy mejorando"
+      - value: "4"
+        label: "My condition and/or symptom is continuing"
+        label_ca: "La meva afecció o els símptomes continuen"
+        label_de: "Meine Erkrankung und/oder mein Symptom hält/halten an"
+        label_it: "La mia condizione e/o i miei sintomi continuano"
+        label_es: "Mi enfermedad y/o síntoma continúa"
+  pt_t1_fu_DX_COVID_CHILBLAIN:
+    safety_alert_question: true
+    conditions:
+      - question: pt_t1_fu_DX_COVID
+        operation: contains
+        value: pt_t1_fu_DX_COVID_LESIONS
+      - question: pt_t1_fu_CHECKPOINT
+        operation: contains
+        value: pt_t1_fu_UNPLNEDMEDCARE   
+    label: "What was the outcome of your medical care for Chilblain-like lesions (painful and itchy swelling on the skin, usually on the hands and feet)?"
+    label_ca: "Quin resultat va tenir la seva atenció mèdica?"
+    label_de: Welches Ergebnis hatte Ihre medizinische Behandlung von Chilblain-ähnlichen Läsionen (schmerzhafte und juckende Schwellungen der Haut, meist an Händen und Füßen)?
+    label_it: "Qual è stato l’esito della Sua Chilblain-come lesioni (doloroso e prurito gonfiore sulla pelle, di solito sulle mani e piedi)"
+    label_es: "¿Cuál fue el resultado de su Lesiones similares a la chilblaina (inflamación dolorosa y con picazón en la piel, generalmente en las manos y los pies)"
+    type: radio
+    page_number: 26
+    number_of_columns: 4
+    label_position: top
+    answer_label_position: bottom
+    choices:
+      - value: "1"
+        label: "I recovered fully"
+        label_ca: "Em vaig recuperar del tot"
+        label_de: "Ich bin vollständig genesen"
+        label_it: "Sono guarito completamente"
+        label_es: "Me he recuperado completamente"
+      - value: "2"
+        label: "I recovered, but with some lasting effects"
+        label_ca: "Em vaig recuperar, però amb alguns efectes persistents"
+        label_de: "Ich bin genesen, aber mit einigen bleibenden Wirkungen"
+        label_it: "Sono guarito, ma con alcuni effetti duraturi"
+        label_es: "Me he recuperado, pero con algunos efectos duraderos"
+      - value: "3"
+        label: "I am recovering"
+        label_ca: "M’estic recuperant"
+        label_de: "Ich genese aktuell"
+        label_it: "Soffro ancora di sintomi, ma sto migliorando"
+        label_es: "Sigo teniendo síntomas, pero estoy mejorando"
+      - value: "4"
+        label: "My condition and/or symptom is continuing"
+        label_ca: "La meva afecció o els símptomes continuen"
+        label_de: "Meine Erkrankung und/oder mein Symptom hält/halten an" 
+        label_it: "La mia condizione e/o i miei sintomi continuano"
+        label_es: "Mi enfermedad y/o síntoma continúa"
+  pt_t1_fu_DX_COVID_CADCOVID:
+    safety_alert_question: true
+    conditions:
+      - question: pt_t1_fu_DX_COVID
+        operation: contains
+        value: pt_t1_fu_DX_COVID_CAD
+      - question: pt_t1_fu_CHECKPOINT
+        operation: contains
+        value: pt_t1_fu_UNPLNEDMEDCARE  
+    label: "What was the outcome of your medical care for Coronary artery disease?"
+    label_ca: "Quin resultat va tenir la seva atenció mèdica?"
+    label_de: "Welches Ergebnis hatte Ihre medizinische Versorgung bei koronarer Herzkrankheit?"
+    label_it: "Qual è stato l’esito della Sua cure mediche per la malattia coronarica"
+    label_es: "¿Cuál fue el resultado de su atención médica para la enfermedad coronaria"
+    type: radio
+    page_number: 26
+    number_of_columns: 4
+    label_position: top
+    answer_label_position: bottom
+    choices:
+      - value: "1"
+        label: "I recovered fully"
+        label_ca: "Em vaig recuperar del tot"
+        label_de: "Ich bin vollständig genesen"
+        label_it: "Sono guarito completamente"
+        label_es: "Me he recuperado completamente"
+      - value: "2"
+        label: "I recovered, but with some lasting effects"
+        label_ca: "Em vaig recuperar, però amb alguns efectes persistents"
+        label_de: "Ich bin genesen, aber mit einigen bleibenden Wirkungen"
+        label_it: "Sono guarito, ma con alcuni effetti duraturi"
+        label_es: "Me he recuperado, pero con algunos efectos duraderos"
+      - value: "3"
+        label: "I am recovering"
+        label_ca: "M’estic recuperant"
+        label_de: "Ich genese aktuell"
+        label_it: "Soffro ancora di sintomi, ma sto migliorando"
+        label_es: "Sigo teniendo síntomas, pero estoy mejorando"
+      - value: "4"
+        label: "My condition and/or symptom is continuing"
+        label_ca: "La meva afecció o els símptomes continuen"
+        label_de: "Meine Erkrankung und/oder mein Symptom hält/halten an"
+        label_it: "La mia condizione e/o i miei sintomi continuano"
+        label_es: "Mi enfermedad y/o síntoma continúa"
+  pt_t1_fu_DX_COVID_DVT:
+    safety_alert_question: true
+    conditions:
+      - question: pt_t1_fu_DX_COVID
+        operation: contains
+        value: pt_t1_fu_DX_COVID_DVT
+      - question: pt_t1_fu_CHECKPOINT
+        operation: contains
+        value: pt_t1_fu_UNPLNEDMEDCARE    
+    label: "What was the outcome of your medical care for Deep vein thrombosis (blood clot in a deep vein)?"
+    label_ca: "Quin resultat va tenir la seva atenció mèdica?"
+    label_de: "Welches Ergebnis hatte Ihre medizinische Versorgung bei einer tiefen Venenthrombose (Blutgerinnsel in einer tiefen Vene)?"
+    label_it: "Qual è stato l’esito della Sua Trombosi venosa profonda (coagulo di sangue in una vena profonda)"
+    label_es: "¿Cuál fue el resultado de su Trombosis venosa profunda (coágulo de sangre en una vena profunda)"
+    type: radio
+    page_number: 26
+    number_of_columns: 4
+    label_position: top
+    answer_label_position: bottom
+    choices:
+      - value: "1"
+        label: "I recovered fully"
+        label_ca: "Em vaig recuperar del tot"
+        label_de: "Ich bin vollständig genesen"
+        label_it: "Sono guarito completamente"
+        label_es: "Me he recuperado completamente"
+      - value: "2"
+        label: "I recovered, but with some lasting effects"
+        label_ca: "Em vaig recuperar, però amb alguns efectes persistents"
+        label_de: "Ich bin genesen, aber mit einigen bleibenden Wirkungen"
+        label_it: "Sono guarito, ma con alcuni effetti duraturi"
+        label_es: "Me he recuperado, pero con algunos efectos duraderos"
+      - value: "3"
+        label: "I am recovering"
+        label_ca: "M’estic recuperant"
+        label_de: "Ich genese aktuell"
+        label_it: "Soffro ancora di sintomi, ma sto migliorando"
+        label_es: "Sigo teniendo síntomas, pero estoy mejorando"
+      - value: "4"
+        label: "My condition and/or symptom is continuing"
+        label_ca: "La meva afecció o els símptomes continuen"
+        label_de: "Meine Erkrankung und/oder mein Symptom hält/halten an"
+        label_it: "La mia condizione e/o i miei sintomi continuano"
+        label_es: "Mi enfermedad y/o síntoma continúa"
+  pt_t1_fu_DX_COVID_ERYM:
+    safety_alert_question: true
+    conditions:
+      - question: pt_t1_fu_DX_COVID
+        operation: contains
+        value: pt_t1_fu_DX_COVID_EM
+      - question: pt_t1_fu_CHECKPOINT
+        operation: contains
+        value: pt_t1_fu_UNPLNEDMEDCARE 
+    label: "What was the outcome of your medical care for Erythema multiforme (skin immune reaction)?"
+    label_ca: "Quin resultat va tenir la seva atenció mèdica?"
+    label_de: "Welches Ergebnis hatte Ihre medizinische Versorgung bei Erythema multiforme (Immunreaktion der Haut)?"
+    label_it: "Eritema multiforme (reazione immunitaria della pelle)"
+    label_es: "¿Cuál fue el resultado de su Eritema multiforme (reacción inmunitaria de la piel)"
+    type: radio
+    page_number: 26
+    number_of_columns: 4
+    label_position: top
+    answer_label_position: bottom
+    choices:
+      - value: "1"
+        label: "I recovered fully"
+        label_ca: "Em vaig recuperar del tot"
+        label_de: "Ich bin vollständig genesen"
+        label_it: "Sono guarito completamente"
+        label_es: "Me he recuperado completamente"
+      - value: "2"
+        label: "I recovered, but with some lasting effects"
+        label_ca: "Em vaig recuperar, però amb alguns efectes persistents"
+        label_de: "Ich bin genesen, aber mit einigen bleibenden Wirkungen"
+        label_it: "Sono guarito, ma con alcuni effetti duraturi"
+        label_es: "Me he recuperado, pero con algunos efectos duraderos"
+      - value: "3"
+        label: "I am recovering"
+        label_ca: "M’estic recuperant"
+        label_de: "Ich genese aktuell"
+        label_it: "Soffro ancora di sintomi, ma sto migliorando"
+        label_es: "Sigo teniendo síntomas, pero estoy mejorando"
+      - value: "4"
+        label: "My condition and/or symptom is continuing"
+        label_ca: "La meva afecció o els símptomes continuen"
+        label_de: "Meine Erkrankung und/oder mein Symptom hält/halten an"
+        label_it: "La mia condizione e/o i miei sintomi continuano"
+        label_es: "Mi enfermedad y/o síntoma continúa"
+  pt_t1_fu_DX_COVID_HEMORRD:
+    safety_alert_question: true
+    conditions:
+      - question: pt_t1_fu_DX_COVID
+        operation: contains
+        value: pt_t1_fu_DX_COVID_HD
+      - question: pt_t1_fu_CHECKPOINT
+        operation: contains
+        value: pt_t1_fu_UNPLNEDMEDCARE   
+    label: "What was the outcome of your medical care for Hemorrhagic disease (bleeding disorder)?"
+    label_ca: "Quin resultat va tenir la seva atenció mèdica?"
+    label_de: "Welches Ergebnis hatte Ihre medizinische Versorgung bei einer hämorrhagischen Erkrankung (Blutungsstörung)?"
+    label_it: "Qual è stato l’esito della Sua Malattia emorragica (malattia emorragica)"
+    label_es: "¿Cuál fue el resultado de su Enfermedad hemorrágica (trastorno hemorrágico)"
+    type: radio
+    page_number: 26
+    number_of_columns: 4
+    label_position: top
+    answer_label_position: bottom
+    choices:
+      - value: "1"
+        label: "I recovered fully"
+        label_ca: "Em vaig recuperar del tot"
+        label_de: "Ich bin vollständig genesen"
+        label_it: "Sono guarito completamente"
+        label_es: "Me he recuperado completamente"
+      - value: "2"
+        label: "I recovered, but with some lasting effects"
+        label_ca: "Em vaig recuperar, però amb alguns efectes persistents"
+        label_de: "Ich bin genesen, aber mit einigen bleibenden Wirkungen"
+        label_it: "Sono guarito, ma con alcuni effetti duraturi"
+        label_es: "Me he recuperado, pero con algunos efectos duraderos"
+      - value: "3"
+        label: "I am recovering"
+        label_ca: "M’estic recuperant"
+        label_de: "Ich genese aktuell"
+        label_it: "Soffro ancora di sintomi, ma sto migliorando"
+        label_es: "Sigo teniendo síntomas, pero estoy mejorando"
+      - value: "4"
+        label: "My condition and/or symptom is continuing"
+        label_ca: "La meva afecció o els símptomes continuen"
+        label_de: "Meine Erkrankung und/oder mein Symptom hält/halten an"
+        label_it: "La mia condizione e/o i miei sintomi continuano"
+        label_es: "Mi enfermedad y/o síntoma continúa"
+  pt_t1_fu_DX_COVID_LIMBISCH:
+    safety_alert_question: true
+    conditions:
+      - question: pt_t1_fu_DX_COVID
+        operation: contains
+        value: pt_t1_fu_DX_COVID_ISCHEMIA
+      - question: pt_t1_fu_CHECKPOINT
+        operation: contains
+        value: pt_t1_fu_UNPLNEDMEDCARE  
+    label: "What was the outcome of your medical care for Limb ischemia (reduced blood flow to a limb)?"
+    label_ca: "Quin resultat va tenir la seva atenció mèdica?"
+    label_de: "Welches Ergebnis hatte Ihre medizinische Versorgung bei Gliedmaßenischämie (verminderter Blutfluss in einer Gliedmaße)?"
+    label_it: "Qual è stato l’esito della Sua Ischemia degli arti (ridotto flusso di sangue ad un arto)"
+    label_es: "¿Cuál fue el resultado de su Isquemia del miembro (disminución del flujo sanguíneo a un miembro"
+    type: radio
+    page_number: 26
+    number_of_columns: 4
+    label_position: top
+    answer_label_position: bottom
+    choices:
+      - value: "1"
+        label: "I recovered fully"
+        label_ca: "Em vaig recuperar del tot"
+        label_de: "Ich bin vollständig genesen"
+        label_it: "Sono guarito completamente"
+        label_es: "Me he recuperado completamente"
+      - value: "2"
+        label: "I recovered, but with some lasting effects"
+        label_ca: "Em vaig recuperar, però amb alguns efectes persistents"
+        label_de: "Ich bin genesen, aber mit einigen bleibenden Wirkungen"
+        label_it: "Sono guarito, ma con alcuni effetti duraturi"
+        label_es: "Me he recuperado, pero con algunos efectos duraderos"
+      - value: "3"
+        label: "I am recovering"
+        label_ca: "M’estic recuperant"
+        label_de: "Ich genese aktuell"
+        label_it: "Soffro ancora di sintomi, ma sto migliorando"
+        label_es: "Sigo teniendo síntomas, pero estoy mejorando"
+      - value: "4"
+        label: "My condition and/or symptom is continuing"
+        label_ca: "La meva afecció o els símptomes continuen"
+        label_de: "Meine Erkrankung und/oder mein Symptom hält/halten an"
+        label_it: "La mia condizione e/o i miei sintomi continuano"
+        label_es: "Mi enfermedad y/o síntoma continúa"
+  pt_t1_fu_DX_COVID_PULMEMBOL:
+    safety_alert_question: true
+    conditions:
+      - question: pt_t1_fu_DX_COVID
+        operation: contains
+        value: pt_t1_fu_DX_COVID_PE
+      - question: pt_t1_fu_CHECKPOINT
+        operation: contains
+        value: pt_t1_fu_UNPLNEDMEDCARE
+    label: "What was the outcome of your medical care for Pulmonary embolus/embolism (blood clot on the lung)?"
+    label_ca: "Quin resultat va tenir la seva atenció mèdica?"
+    label_de: "Welches Ergebnis hatte Ihre medizinische Versorgung bei Lungenembolie (Blutgerinnsel in der Lunge)?"
+    label_it: "Qual è stato l’esito della Sua assistenza medica per embolo/embolia polmonare (coagulo di sangue sul polmone)"
+    label_es: "¿Cuál fue el resultado de su atención médica para Émbolo pulmonar/embolia (coágulo de sangre en el pulmón)"
+    type: radio
+    page_number: 26
+    number_of_columns: 4
+    label_position: top
+    answer_label_position: bottom
+    choices:
+      - value: "1"
+        label: "I recovered fully"
+        label_ca: "Em vaig recuperar del tot"
+        label_de: "Ich bin vollständig genesen"
+        label_it: "Sono guarito completamente"
+        label_es: "Me he recuperado completamente"
+      - value: "2"
+        label: "I recovered, but with some lasting effects"
+        label_ca: "Em vaig recuperar, però amb alguns efectes persistents"
+        label_de: "Ich bin genesen, aber mit einigen bleibenden Wirkungen"
+        label_it: "Sono guarito, ma con alcuni effetti duraturi"
+        label_es: "Me he recuperado, pero con algunos efectos duraderos"
+      - value: "3"
+        label: "I am recovering"
+        label_ca: "M’estic recuperant"
+        label_de: "Ich genese aktuell"
+        label_it: "Soffro ancora di sintomi, ma sto migliorando"
+        label_es: "Sigo teniendo síntomas, pero estoy mejorando"
+      - value: "4"
+        label: "My condition and/or symptom is continuing"
+        label_ca: "La meva afecció o els símptomes continuen"
+        label_de: "Meine Erkrankung und/oder mein Symptom hält/halten an"
+        label_it: "La mia condizione e/o i miei sintomi continuano"
+        label_es: "Mi enfermedad y/o síntoma continúa"
+  pt_t1_fu_DX_COVID_RHABD:
+    safety_alert_question: true
+    conditions:
+      - question: pt_t1_fu_DX_COVID
+        operation: contains
+        value: pt_t1_fu_DX_COVID_RHABDO
+      - question: pt_t1_fu_CHECKPOINT
+        operation: contains
+        value: pt_t1_fu_UNPLNEDMEDCARE  
+    label: "What was the outcome of your medical care for Rhabdomyolysis?"
+    label_ca: "Quin resultat va tenir la seva atenció mèdica?"
+    label_de: "Welches Ergebnis hatte Ihre medizinische Behandlung der Rhabdomyolyse?"
+    label_it: "Qual è stato l’esito della Sua cure mediche per rabdomiolisi?"
+    label_es: "¿Cuál fue el resultado de su atención médica para la Rabdomiólisis"
+    type: radio
+    page_number: 26
+    number_of_columns: 4
+    label_position: top
+    answer_label_position: bottom
+    choices:
+      - value: "1"
+        label: "I recovered fully"
+        label_ca: "Em vaig recuperar del tot"
+        label_de: "Ich bin vollständig genesen"
+        label_it: "Sono guarito completamente"
+        label_es: "Me he recuperado completamente"
+      - value: "2"
+        label: "I recovered, but with some lasting effects"
+        label_ca: "Em vaig recuperar, però amb alguns efectes persistents"
+        label_de: "Ich bin genesen, aber mit einigen bleibenden Wirkungen"
+        label_it: "Sono guarito, ma con alcuni effetti duraturi"
+        label_es: "Me he recuperado, pero con algunos efectos duraderos"
+      - value: "3"
+        label: "I am recovering"
+        label_ca: "M’estic recuperant"
+        label_de: "Ich genese aktuell"
+        label_it: "Soffro ancora di sintomi, ma sto migliorando"
+        label_es: "Sigo teniendo síntomas, pero estoy mejorando"
+      - value: "4"
+        label: "My condition and/or symptom is continuing"
+        label_ca: "La meva afecció o els símptomes continuen"
+        label_de: "Meine Erkrankung und/oder mein Symptom hält/halten an"
+        label_it: "La mia condizione e/o i miei sintomi continuano"
+        label_es: "Mi enfermedad y/o síntoma continúa"
+  pt_t1_fu_DX_COVID_SEVERECOV:
+    safety_alert_question: true
+    conditions:
+      - question: pt_t1_fu_DX_COVID
+        operation: contains
+        value: pt_t1_fu_DX_COVID_COVID
+      - question: pt_t1_fu_CHECKPOINT
+        operation: contains
+        value: pt_t1_fu_UNPLNEDMEDCARE   
+    label: "What was the outcome of your medical care for Severe COVID-19 disease?"
+    label_ca: "Quin resultat va tenir la seva atenció mèdica?"
+    label_de: "Welches Ergebnis hatte Ihre medizinische Behandlung der schweren COVID-19-Krankheit?"
+    label_it: "Qual è stato l’esito della Sua cure mediche per la malattia grave COVID-19?"
+    label_es: "¿Cuál fue el resultado de su atención médica para la enfermedad grave COVID-19?"
+    type: radio
+    page_number: 26
+    number_of_columns: 4
+    label_position: top
+    answer_label_position: bottom
+    choices:
+      - value: "1"
+        label: "I recovered fully"
+        label_ca: "Em vaig recuperar del tot"
+        label_de: "Ich bin vollständig genesen"
+        label_it: "Sono guarito completamente"
+        label_es: "Me he recuperado completamente"
+      - value: "2"
+        label: "I recovered, but with some lasting effects"
+        label_ca: "Em vaig recuperar, però amb alguns efectes persistents"
+        label_de: "Ich bin genesen, aber mit einigen bleibenden Wirkungen"
+        label_it: "Sono guarito, ma con alcuni effetti duraturi"
+        label_es: "Me he recuperado, pero con algunos efectos duraderos"
+      - value: "3"
+        label: "I am recovering"
+        label_ca: "M’estic recuperant"
+        label_de: "Ich genese aktuell"
+        label_it: "Soffro ancora di sintomi, ma sto migliorando"
+        label_es: "Sigo teniendo síntomas, pero estoy mejorando"
+      - value: "4"
+        label: "My condition and/or symptom is continuing"
+        label_ca: "La meva afecció o els símptomes continuen"
+        label_de: "Meine Erkrankung und/oder mein Symptom hält/halten an"
+        label_it: "La mia condizione e/o i miei sintomi continuano"
+        label_es: "Mi enfermedad y/o síntoma continúa"
+  pt_t1_fu_DX_COVID_SOCV:
+    safety_alert_question: true
+    conditions:
+      - question: pt_t1_fu_DX_COVID
+        operation: contains
+        value: pt_t1_fu_DX_COVID_VASCULITIS
+      - question: pt_t1_fu_CHECKPOINT
+        operation: contains
+        value: pt_t1_fu_UNPLNEDMEDCARE   
+    label: "What was the outcome of your medical care for Single organ cutaneous vasculitis?"
+    label_ca: "Quin resultat va tenir la seva atenció mèdica?"
+    label_de: "Welches Ergebnis hatte Ihre medizinische Versorgung bei kutaner Vaskulitis der einzelnen Organe?"
+    label_it: "Qual è stato l’esito della Sua cure mediche per la vasculite cutanea monoorgano?"
+    label_es: "¿Cuál fue el resultado de su atención médica para la vasculitis cutánea de un solo órgano?"
+    type: radio
+    page_number: 26
+    number_of_columns: 4
+    label_position: top
+    answer_label_position: bottom
+    choices:
+      - value: "1"
+        label: "I recovered fully"
+        label_ca: "Em vaig recuperar del tot"
+        label_de: "Ich bin vollständig genesen"
+        label_it: "Sono guarito completamente"
+        label_es: "Me he recuperado completamente"
+      - value: "2"
+        label: "I recovered, but with some lasting effects"
+        label_ca: "Em vaig recuperar, però amb alguns efectes persistents"
+        label_de: "Ich bin genesen, aber mit einigen bleibenden Wirkungen" 
+        label_it: "Sono guarito, ma con alcuni effetti duraturi"
+        label_es: "Me he recuperado, pero con algunos efectos duraderos"
+      - value: "3"
+        label: "I am recovering"
+        label_ca: "M’estic recuperant"
+        label_de: "Ich genese aktuell"
+        label_it: "Soffro ancora di sintomi, ma sto migliorando"
+        label_es: "Sigo teniendo síntomas, pero estoy mejorando"
+      - value: "4"
+        label: "My condition and/or symptom is continuing"
+        label_ca: "La meva afecció o els símptomes continuen"
+        label_de: "Meine Erkrankung und/oder mein Symptom hält/halten an"
+        label_it: "La mia condizione e/o i miei sintomi continuano"
+        label_es: "Mi enfermedad y/o síntoma continúa"
+  pt_t1_fu_DX_COVID_STROKE:
+    safety_alert_question: true
+    conditions:
+      - question: pt_t1_fu_DX_COVID
+        operation: contains
+        value: pt_t1_fu_DX_COVID_STROKE
+      - question: pt_t1_fu_CHECKPOINT
+        operation: contains
+        value: pt_t1_fu_UNPLNEDMEDCARE 
+    label: "What was the outcome of your medical care for Stroke?"
+    label_ca: "Quin resultat va tenir la seva atenció mèdica?"
+    label_de: "Welches Ergebnis hatte Ihre medizinische Versorgung bei Schlaganfall?"
+    label_it: "Qual è stato l’esito della Sua Cure mediche per Stroke?"
+    label_es: "¿Cuál fue el resultado de su ¿Atención médica para Stroke?"
+    type: radio
+    page_number: 26
+    number_of_columns: 4
+    label_position: top
+    answer_label_position: bottom
+    choices:
+      - value: "1"
+        label: "I recovered fully"
+        label_ca: "Em vaig recuperar del tot"
+        label_de: "Ich bin vollständig genesen"
+        label_it: "Sono guarito completamente"
+        label_es: "Me he recuperado completamente"
+      - value: "2"
+        label: "I recovered, but with some lasting effects"
+        label_ca: "Em vaig recuperar, però amb alguns efectes persistents"
+        label_de: "Ich bin genesen, aber mit einigen bleibenden Wirkungen"
+        label_it: "Sono guarito, ma con alcuni effetti duraturi"
+        label_es: "Me he recuperado, pero con algunos efectos duraderos"
+      - value: "3"
+        label: "I am recovering"
+        label_ca: "M’estic recuperant"
+        label_de: "Ich genese aktuell"
+        label_it: "Soffro ancora di sintomi, ma sto migliorando"
+        label_es: "Sigo teniendo síntomas, pero estoy mejorando"
+      - value: "4"
+        label: "My condition and/or symptom is continuing"
+        label_ca: "La meva afecció o els símptomes continuen"
+        label_de: "Meine Erkrankung und/oder mein Symptom hält/halten an"
+        label_it: "La mia condizione e/o i miei sintomi continuano"
+        label_es: "Mi enfermedad y/o síntoma continúa"
+  pt_t1_fu_DX_COVID_SUBTHYR:
+    safety_alert_question: true
+    conditions:
+      - question: pt_t1_fu_DX_COVID
+        operation: contains
+        value: pt_t1_fu_DX_COVID_THYROID
+      - question: pt_t1_fu_CHECKPOINT
+        operation: contains
+        value: pt_t1_fu_UNPLNEDMEDCARE  
+    label: "What was the outcome of your medical care for Subacute thyroiditis (inflammatory disease of the thyroid)?"
+    label_ca: "Quin resultat va tenir la seva atenció mèdica?"
+    label_de: Welches Ergebnis hatte Ihre medizinische Versorgung bei subakuter Thyreoiditis (entzündliche Erkrankung der Schilddrüse)?
+    label_it: "Qual è stato l’esito della Sua Tiroidite subacute (malattia infiammatoria della tiroide)?"
+    label_es: "¿Cuál fue el resultado de su ¿Tiroiditis subaguda (enfermedad inflamatoria de la tiroides)?"
+    type: radio
+    page_number: 26
+    number_of_columns: 4
+    label_position: top
+    answer_label_position: bottom
+    choices:
+      - value: "1"
+        label: "I recovered fully"
+        label_ca: "Em vaig recuperar del tot"
+        label_de: "Ich bin vollständig genesen"
+        label_it: "Sono guarito completamente"
+        label_es: "Me he recuperado completamente"
+      - value: "2"
+        label: "I recovered, but with some lasting effects"
+        label_ca: "Em vaig recuperar, però amb alguns efectes persistents"
+        label_de: "Ich bin genesen, aber mit einigen bleibenden Wirkungen"
+        label_it: "Sono guarito, ma con alcuni effetti duraturi"
+        label_es: "Me he recuperado, pero con algunos efectos duraderos"
+      - value: "3"
+        label: "I am recovering"
+        label_ca: "M’estic recuperant"
+        label_de: "Ich genese aktuell"
+        label_it: "Soffro ancora di sintomi, ma sto migliorando"
+        label_es: "Sigo teniendo síntomas, pero estoy mejorando"
+      - value: "4"
+        label: "My condition and/or symptom is continuing"
+        label_ca: "La meva afecció o els símptomes continuen"
+        label_de: "Meine Erkrankung und/oder mein Symptom hält/halten an"
+        label_it: "La mia condizione e/o i miei sintomi continuano"
+        label_es: "Mi enfermedad y/o síntoma continúa"
+  pt_t1_fu_DX_HEMA_COAGDIS:
+    safety_alert_question: true
+    conditions:
+      - question: pt_t1_fu_DX_HEMA
+        operation: contains
+        value: pt_t1_fu_DX_HEMA_coag
+      - question: pt_t1_fu_CHECKPOINT
+        operation: contains
+        value: pt_t1_fu_UNPLNEDMEDCARE
+    label: "What was the outcome of your medical care for Coagulation disorder (includes thrombotic disorders, bleeding disorders)?"
+    label_ca: "Quin resultat va tenir la seva atenció mèdica?"
+    label_de: "Welches Ergebnis hatte die medizinische Behandlung Ihrer Gerinnungsstörung (einschließlich thrombotischer Störungen, Blutungsstörungen)?"
+    label_it: "Qual è stato l’esito della Sua assistenza medica per il disturbo della coagulazione (include disturbi trombotici, disturbi del sanguinamento)?"
+    label_es: "¿Cuál fue el resultado de su atención médica para el trastorno de coagulación (incluye trastornos trombóticos, trastornos hemorrágicos)?"
+    type: radio
+    page_number: 27
+    number_of_columns: 4
+    label_position: top
+    answer_label_position: bottom
+    choices:
+      - value: "1"
+        label: "I recovered fully"
+        label_ca: "Em vaig recuperar del tot"
+        label_de: "Ich bin vollständig genesen"
+        label_it: "Sono guarito completamente"
+        label_es: "Me he recuperado completamente"
+      - value: "2"
+        label: "I recovered, but with some lasting effects"
+        label_ca: "Em vaig recuperar, però amb alguns efectes persistents"
+        label_de: "Ich bin genesen, aber mit einigen bleibenden Wirkungen"
+        label_it: "Sono guarito, ma con alcuni effetti duraturi"
+        label_es: "Me he recuperado, pero con algunos efectos duraderos"
+      - value: "3"
+        label: "I am recovering"
+        label_ca: "M’estic recuperant"
+        label_de: "Ich genese aktuell"
+        label_it: "Soffro ancora di sintomi, ma sto migliorando"
+        label_es: "Sigo teniendo síntomas, pero estoy mejorando"
+      - value: "4"
+        label: "My condition and/or symptom is continuing"
+        label_ca: "La meva afecció o els símptomes continuen"
+        label_de: "Meine Erkrankung und/oder mein Symptom hält/halten an" 
+        label_it: "La mia condizione e/o i miei sintomi continuano"
+        label_es: "Mi enfermedad y/o síntoma continúa"
+  pt_t1_fu_DX_HEMA_DIC:
+    safety_alert_question: true
+    conditions:
+      - question: pt_t1_fu_DX_HEMA
+        operation: contains
+        value: pt_t1_fu_DX_HEMA_DIS
+      - question: pt_t1_fu_CHECKPOINT
+        operation: contains
+        value: pt_t1_fu_UNPLNEDMEDCARE   
+    label: "What was the outcome of your medical care for Disseminated intravascular coagulation (abnormal blood clotting)?"
+    label_ca: "Quin resultat va tenir la seva atenció mèdica?"
+    label_de: "Welches Ergebnis hatte Ihre medizinische Versorgung bei disseminierter intravaskulärer Koagulation (abnorme Blutgerinnung)?"
+    label_it: "Qual è stato l’esito della Sua cure mediche per coagulazione intravascolare disseminata (coagulazione anomala del sangue)"
+    label_es: "¿Cuál fue el resultado de su Coagulación intravascular diseminada (coagulación sanguínea anormal)"
+    type: radio
+    page_number: 27
+    number_of_columns: 4
+    label_position: top
+    answer_label_position: bottom
+    choices:
+      - value: "1"
+        label: "I recovered fully"
+        label_ca: "Em vaig recuperar del tot"
+        label_de: "Ich bin vollständig genesen"
+        label_it: "Sono guarito completamente"
+        label_es: "Me he recuperado completamente"
+      - value: "2"
+        label: "I recovered, but with some lasting effects"
+        label_ca: "Em vaig recuperar, però amb alguns efectes persistents"
+        label_de: "Ich bin genesen, aber mit einigen bleibenden Wirkungen"
+        label_it: "Sono guarito, ma con alcuni effetti duraturi"
+        label_es: "Me he recuperado, pero con algunos efectos duraderos"
+      - value: "3"
+        label: "I am recovering"
+        label_ca: "M’estic recuperant"
+        label_de: "Ich genese aktuell"
+        label_it: "Soffro ancora di sintomi, ma sto migliorando"
+        label_es: "Sigo teniendo síntomas, pero estoy mejorando"
+      - value: "4"
+        label: "My condition and/or symptom is continuing"
+        label_ca: "La meva afecció o els símptomes continuen"
+        label_de: "Meine Erkrankung und/oder mein Symptom hält/halten an" 
+        label_it: "La mia condizione e/o i miei sintomi continuano"
+        label_es: "Mi enfermedad y/o síntoma continúa"
+  pt_t1_fu_DX_HEMA_THROMB:
+    safety_alert_question: true
+    conditions:
+      - question: pt_t1_fu_DX_HEMA
+        operation: contains
+        value: pt_t1_fu_DX_HEMA_TP
+      - question: pt_t1_fu_CHECKPOINT
+        operation: contains
+        value: pt_t1_fu_UNPLNEDMEDCARE  
+    label: "What was the outcome of your medical care for Thrombocytopenia (low platelet count)?"
+    label_ca: "Quin resultat va tenir la seva atenció mèdica?"
+    label_de: "Welches Ergebnis hatte Ihre medizinische Versorgung bei Thrombozytopenie (niedrige Thrombozytenzahl)?"
+    label_it: "Qual è stato l’esito della Sua cure mediche per trombocitopenia (basso numero di piastrine)?"
+    label_es: "¿Cuál fue el resultado de su atención médica para la trombocitopenia (bajo conteo de plaquetas)?"
+    type: radio
+    page_number: 27
+    number_of_columns: 4
+    label_position: top
+    answer_label_position: bottom
+    choices:
+      - value: "1"
+        label: "I recovered fully"
+        label_ca: "Em vaig recuperar del tot"
+        label_de: "Ich bin vollständig genesen"
+        label_it: "Sono guarito completamente"
+        label_es: "Me he recuperado completamente"
+      - value: "2"
+        label: "I recovered, but with some lasting effects"
+        label_ca: "Em vaig recuperar, però amb alguns efectes persistents"
+        label_de: "Ich bin genesen, aber mit einigen bleibenden Wirkungen"
+        label_it: "Sono guarito, ma con alcuni effetti duraturi"
+        label_es: "Me he recuperado, pero con algunos efectos duraderos"
+      - value: "3"
+        label: "I am recovering"
+        label_ca: "M’estic recuperant"
+        label_de: "Ich genese aktuell"
+        label_it: "Soffro ancora di sintomi, ma sto migliorando"
+        label_es: "Sigo teniendo síntomas, pero estoy mejorando"
+      - value: "4"
+        label: "My condition and/or symptom is continuing"
+        label_ca: "La meva afecció o els símptomes continuen"
+        label_de: "Meine Erkrankung und/oder mein Symptom hält/halten an" 
+        label_it: "La mia condizione e/o i miei sintomi continuano"
+        label_es: "Mi enfermedad y/o síntoma continúa"
+  pt_t1_fu_DX_IMMUNO_ANAPHYLAX:
+    safety_alert_question: true
+    conditions:
+      - question: pt_t1_fu_DX_IMMUNO
+        operation: contains
+        value: pt_t1_fu_DX_IMMUNO_ANAPHYLAX
+      - question: pt_t1_fu_CHECKPOINT
+        operation: contains
+        value: pt_t1_fu_UNPLNEDMEDCARE
+    label: "What was the outcome of your medical care for Anaphylaxis (life-threatening allergic reaction that requires urgent medical attention)?"
+    label_ca: "Quin resultat va tenir la seva atenció mèdica?"
+    label_de: "Welches Ergebnis hatte Ihre medizinische Versorgung bei Anaphylaxie (lebensbedrohliche allergische Reaktion, die dringend ärztliche Hilfe erfordert)?"
+    label_it: "Qual è stato l’esito della Sua Anafilassi (minaccia di vita reazione allergica che richiede urgente assistenza medica)?"
+    label_es: ¿Cuál fue el resultado de su ¿Anafilaxia (reacción alérgica potencialmente mortal que requiere atención médica urgente)?
+    type: radio
+    page_number: 28
+    number_of_columns: 4
+    label_position: top
+    answer_label_position: bottom
+    choices:
+      - value: "1"
+        label: "I recovered fully"
+        label_ca: "Em vaig recuperar del tot"
+        label_de: "Ich bin vollständig genesen"
+        label_it: "Sono guarito completamente"
+        label_es: "Me he recuperado completamente"
+      - value: "2"
+        label: "I recovered, but with some lasting effects"
+        label_ca: "Em vaig recuperar, però amb alguns efectes persistents"
+        label_de: "Ich bin genesen, aber mit einigen bleibenden Wirkungen"
+        label_it: "Sono guarito, ma con alcuni effetti duraturi"
+        label_es: "Me he recuperado, pero con algunos efectos duraderos"
+      - value: "3"
+        label: "I am recovering"
+        label_ca: "M’estic recuperant"
+        label_de: "Ich genese aktuell"
+        label_it: "Soffro ancora di sintomi, ma sto migliorando"
+        label_es: "Sigo teniendo síntomas, pero estoy mejorando"
+      - value: "4"
+        label: "My condition and/or symptom is continuing"
+        label_ca: "La meva afecció o els símptomes continuen"
+        label_de: "Meine Erkrankung und/oder mein Symptom hält/halten an" 
+        label_it: "La mia condizione e/o i miei sintomi continuano"
+        label_es: "Mi enfermedad y/o síntoma continúa"
+  pt_t1_fu_DX_IMMUNO_ARTHRITIS:
+    safety_alert_question: true
+    conditions:
+      - question: pt_t1_fu_DX_IMMUNO
+        operation: contains
+        value: pt_t1_fu_DX_IMMUNO_ARTHRITIS
+      - question: pt_t1_fu_CHECKPOINT
+        operation: contains
+        value: pt_t1_fu_UNPLNEDMEDCARE
+    label: "What was the outcome of your medical care for Arthritis and arthralgia (joint pain)?"
+    label_ca: "Quin resultat va tenir la seva atenció mèdica?"
+    label_de: "Welches Ergebnis hatte Ihre medizinische Versorgung bei Arthritis und Arthralgie (Gelenkschmerzen)?"
+    label_it: "Qual è stato l’esito della Sua cure mediche per l'artrite e l'artralgia (dolori articolari)?"
+    label_es: "¿Cuál fue el resultado de su atención médica para la artritis y la artralgia (dolor en las articulaciones)?"
+    type: radio
+    page_number: 28
+    number_of_columns: 4
+    label_position: top
+    answer_label_position: bottom
+    choices:
+      - value: "1"
+        label: "I recovered fully"
+        label_ca: "Em vaig recuperar del tot"
+        label_de: "Ich bin vollständig genesen"
+        label_it: "Sono guarito completamente"
+        label_es: "Me he recuperado completamente"
+      - value: "2"
+        label: "I recovered, but with some lasting effects"
+        label_ca: "Em vaig recuperar, però amb alguns efectes persistents"
+        label_de: "Ich bin genesen, aber mit einigen bleibenden Wirkungen"
+        label_it: "Sono guarito, ma con alcuni effetti duraturi"
+        label_es: "Me he recuperado, pero con algunos efectos duraderos"
+      - value: "3"
+        label: "I am recovering"
+        label_ca: "M’estic recuperant"
+        label_de: "Ich genese aktuell"
+        label_it: "Soffro ancora di sintomi, ma sto migliorando"
+        label_es: "Sigo teniendo síntomas, pero estoy mejorando"
+      - value: "4"
+        label: "My condition and/or symptom is continuing"
+        label_ca: "La meva afecció o els símptomes continuen"
+        label_de: "Meine Erkrankung und/oder mein Symptom hält/halten an" 
+        label_it: "La mia condizione e/o i miei sintomi continuano"
+        label_es: "Mi enfermedad y/o síntoma continúa"
+  pt_t1_fu_DX_IMMUNO_AITHYR:
+    safety_alert_question: true
+    conditions:
+      - question: pt_t1_fu_DX_IMMUNO
+        operation: contains
+        value: pt_t1_fu_DX_IMMUNO_THYROID
+      - question: pt_t1_fu_CHECKPOINT
+        operation: contains
+        value: pt_t1_fu_UNPLNEDMEDCARE  
+    label: "What was the outcome of your medical care for Autoimmune thyroiditis (also called chronic lymphocytic thyroiditis, Hashimoto's thyroiditis, or Hashimoto's disease)?"
+    label_ca: "Quin resultat va tenir la seva atenció mèdica?"
+    label_de: "Welches Ergebnis hatte Ihre medizinische Behandlung der Autoimmunthyreoiditis (auch chronische lymphozytäre Thyreoiditis, Hashimoto-Thyreoiditis oder Hashimoto-Krankheit genannt)?"
+    label_it: "Qual è stato l’esito della Sua Tiroidite autoimmune (detta anche tiroidite linfocitaria cronica, tiroidite di Hashimoto o malattia di Hashimoto)?"
+    label_es: "¿Cuál fue el resultado de su ¿Tiroiditis autoinmune (también llamada tiroiditis linfocítica crónica, tiroiditis de Hashimoto o enfermedad de Hashimoto)?"
+    type: radio
+    page_number: 28
+    number_of_columns: 4
+    label_position: top
+    answer_label_position: bottom
+    choices:
+      - value: "1"
+        label: "I recovered fully"
+        label_ca: "Em vaig recuperar del tot"
+        label_de: "Ich bin vollständig genesen"
+        label_it: "Sono guarito completamente"
+        label_es: "Me he recuperado completamente"
+      - value: "2"
+        label: "I recovered, but with some lasting effects"
+        label_ca: "Em vaig recuperar, però amb alguns efectes persistents"
+        label_de: "Ich bin genesen, aber mit einigen bleibenden Wirkungen"
+        label_it: "Sono guarito, ma con alcuni effetti duraturi"
+        label_es: 'Me he recuperado, pero con algunos efectos duraderos'
+      - value: "3"
+        label: "I am recovering"
+        label_ca: "M’estic recuperant"
+        label_de: "Ich genese aktuell"
+        label_it: "Soffro ancora di sintomi, ma sto migliorando"
+        label_es: "Sigo teniendo síntomas, pero estoy mejorando"
+      - value: "4"
+        label: "My condition and/or symptom is continuing"
+        label_ca: "La meva afecció o els símptomes continuen"
+        label_de: "Meine Erkrankung und/oder mein Symptom hält/halten an"
+        label_it: "La mia condizione e/o i miei sintomi continuano"
+        label_es: "Mi enfermedad y/o síntoma continúa"
+  pt_t1_fu_DX_IMMUNO_FIBROMY:
+    safety_alert_question: true
+    conditions:
+      - question: pt_t1_fu_DX_IMMUNO
+        operation: contains
+        value: pt_t1_fu_DX_IMMUNO_FIBRO
+      - question: pt_t1_fu_CHECKPOINT
+        operation: contains
+        value: pt_t1_fu_UNPLNEDMEDCARE    
+    label: "What was the outcome of your medical care for Fibromyalgia?"
+    label_ca: "Quin resultat va tenir la seva atenció mèdica?"
+    label_de: "Welches Ergebnis hatte Ihre medizinische Behandlung der Fibromyalgie?"
+    label_it: "Qual è stato l’esito della Sua cure mediche per la fibromialgia?"
+    label_es: "¿Cuál fue el resultado de su ¿Atención médica para la fibromialgia?"
+    type: radio
+    page_number: 28
+    number_of_columns: 4
+    label_position: top
+    answer_label_position: bottom
+    choices:
+      - value: "1"
+        label: "I recovered fully"
+        label_ca: "Em vaig recuperar del tot"
+        label_de: "Ich bin vollständig genesen"
+        label_it: "Sono guarito completamente"
+        label_es: "Me he recuperado completamente"
+      - value: "2"
+        label: "I recovered, but with some lasting effects"
+        label_ca: "Em vaig recuperar, però amb alguns efectes persistents"
+        label_de: "Ich bin genesen, aber mit einigen bleibenden Wirkungen"
+        label_it: "Sono guarito, ma con alcuni effetti duraturi"
+        label_es: "Me he recuperado, pero con algunos efectos duraderos"
+      - value: "3"
+        label: "I am recovering"
+        label_ca: "M’estic recuperant"
+        label_de: "Ich genese aktuell"
+        label_it: "Soffro ancora di sintomi, ma sto migliorando"
+        label_es: "Sigo teniendo síntomas, pero estoy mejorando"
+      - value: "4"
+        label: "My condition and/or symptom is continuing"
+        label_ca: "La meva afecció o els símptomes continuen"
+        label_de: "Meine Erkrankung und/oder mein Symptom hält/halten an" 
+        label_it: "La mia condizione e/o i miei sintomi continuano"
+        label_es: "Mi enfermedad y/o síntoma continúa"
+  pt_t1_fu_DX_IMMUNO_KAWASAKI:
+    safety_alert_question: true
+    conditions:
+      - question: pt_t1_fu_DX_IMMUNO
+        operation: contains
+        value: pt_t1_fu_DX_IMMUNO_KAWASAKI
+      - question: pt_t1_fu_CHECKPOINT
+        operation: contains
+        value: pt_t1_fu_UNPLNEDMEDCARE   
+    label: "What was the outcome of your medical care for Kawasaki disease?"
+    label_ca: "Quin resultat va tenir la seva atenció mèdica?"
+    label_de: "Welches Ergebnis hatte die medizinische Behandlung der Kawasaki-Krankheit bei Ihnen?"
+    label_it: "Qual è stato l’esito della Sua Cure mediche per la malattia di Kawasaki?"
+    label_es: "¿Cuál fue el resultado de su ¿Atención médica para la enfermedad de Kawasaki?"
+    type: radio
+    page_number: 28
+    number_of_columns: 4
+    label_position: top
+    answer_label_position: bottom
+    choices:
+      - value: "1"
+        label: "I recovered fully"
+        label_ca: "Em vaig recuperar del tot"
+        label_de: "Ich bin vollständig genesen"
+        label_it: "Sono guarito completamente"
+        label_es: "Me he recuperado completamente"
+      - value: "2"
+        label: "I recovered, but with some lasting effects"
+        label_ca: "Em vaig recuperar, però amb alguns efectes persistents"
+        label_de: "Ich bin genesen, aber mit einigen bleibenden Wirkungen"
+        label_it: "Sono guarito, ma con alcuni effetti duraturi"
+        label_es: 'Me he recuperado, pero con algunos efectos duraderos'
+      - value: "3"
+        label: "I am recovering"
+        label_ca: "M’estic recuperant"
+        label_de: "Ich genese aktuell"
+        label_it: "Soffro ancora di sintomi, ma sto migliorando"
+        label_es: "Sigo teniendo síntomas, pero estoy mejorando"
+      - value: "4"
+        label: "My condition and/or symptom is continuing"
+        label_ca: "La meva afecció o els símptomes continuen"
+        label_de: "Meine Erkrankung und/oder mein Symptom hält/halten an" 
+        label_it: "La mia condizione e/o i miei sintomi continuano"
+        label_es: "Mi enfermedad y/o síntoma continúa"
+  pt_t1_fu_DX_IMMUNO_MISA:
+    safety_alert_question: true
+    conditions:
+      - question: pt_t1_fu_DX_IMMUNO
+        operation: contains
+        value: pt_t1_fu_DX_IMMUNO_MISA
+      - question: pt_t1_fu_CHECKPOINT
+        operation: contains
+        value: pt_t1_fu_UNPLNEDMEDCARE   
+    label: "What was the outcome of your medical care for Multisystem inflammatory syndrome in adults (MIS-A)?"
+    label_ca: "Quin resultat va tenir la seva atenció mèdica?"
+    label_de: "Welches Ergebnis hatte Ihre medizinische Behandlung des Multisystemischen Entzündungssyndroms bei Erwachsenen (MIS-A)?"
+    label_it: "Qual è stato l’esito della Sua assistenza medica per la sindrome infiammatoria multisistema negli adulti (MIS-A)"
+    label_es: "¿Cuál fue el resultado de su atención médica para el síndrome inflamatorio multisistémico en adultos (MIS-A)?"
+    type: radio
+    page_number: 28
+    number_of_columns: 4
+    label_position: top
+    answer_label_position: bottom
+    choices:
+      - value: "1"
+        label: "I recovered fully"
+        label_ca: "Em vaig recuperar del tot"
+        label_de: "Ich bin vollständig genesen"
+        label_it: "Sono guarito completamente"
+        label_es: "Me he recuperado completamente"
+      - value: "2"
+        label: "I recovered, but with some lasting effects"
+        label_ca: "Em vaig recuperar, però amb alguns efectes persistents"
+        label_de: "Ich bin genesen, aber mit einigen bleibenden Wirkungen"
+        label_it: "Sono guarito, ma con alcuni effetti duraturi"
+        label_es: "Me he recuperado, pero con algunos efectos duraderos"
+      - value: "3"
+        label: "I am recovering"
+        label_ca: "M’estic recuperant"
+        label_de: "Ich genese aktuell"
+        label_it: "Soffro ancora di sintomi, ma sto migliorando"
+        label_es: "Sigo teniendo síntomas, pero estoy mejorando"
+      - value: "4"
+        label: "My condition and/or symptom is continuing"
+        label_ca: "La meva afecció o els símptomes continuen"
+        label_de: "Meine Erkrankung und/oder mein Symptom hält/halten an" 
+        label_it: "La mia condizione e/o i miei sintomi continuano"
+        label_es: "Mi enfermedad y/o síntoma continúa"
+  pt_t1_fu_DX_IMMUNO_VASCULIT:
+    safety_alert_question: true
+    conditions:
+      - question: pt_t1_fu_DX_IMMUNO
+        operation: contains
+        value: pt_t1_fu_DX_IMMUNO_VASCUL
+      - question: pt_t1_fu_CHECKPOINT
+        operation: contains
+        value: pt_t1_fu_UNPLNEDMEDCARE  
+    label: "What was the outcome of your medical care for Vasculitides (autoimmune disease, characterized by inflammation of blood vessels)?"
+    label_ca: "Quin resultat va tenir la seva atenció mèdica?"
+    label_de: "Welches Ergebnis hatte Ihre medizinische Versorgung bei Vaskulitiden (Autoimmunerkrankung, gekennzeichnet durch Entzündung der Blutgefäße)?"
+    label_it: "Qual è stato l’esito della Sua cure mediche per Vasculitides (malattia autoimmune, caratterizzata da infiammazione dei vasi sanguigni)?"
+    label_es: "¿Cuál fue el resultado de su atención médica para Vasculitides (enfermedad autoinmune, caracterizada por inflamación de los vasos sanguíneos)?"
+    type: radio
+    page_number: 28
+    number_of_columns: 4
+    label_position: top
+    answer_label_position: bottom
+    choices:
+      - value: "1"
+        label: "I recovered fully"
+        label_ca: "Em vaig recuperar del tot"
+        label_de: "Ich bin vollständig genesen"
+        label_it: "Sono guarito completamente"
+        label_es: "Me he recuperado completamente"
+      - value: "2"
+        label: "I recovered, but with some lasting effects"
+        label_ca: "Em vaig recuperar, però amb alguns efectes persistents"
+        label_de: "Ich bin genesen, aber mit einigen bleibenden Wirkungen"
+        label_it: "Sono guarito, ma con alcuni effetti duraturi"
+        label_es: "Me he recuperado, pero con algunos efectos duraderos"
+      - value: "3"
+        label: "I am recovering"
+        label_ca: "M’estic recuperant"
+        label_de: "Ich genese aktuell"
+        label_it: "Soffro ancora di sintomi, ma sto migliorando"
+        label_es: "Sigo teniendo síntomas, pero estoy mejorando"
+      - value: "4"
+        label: "My condition and/or symptom is continuing"
+        label_ca: "La meva afecció o els símptomes continuen"
+        label_de: "Meine Erkrankung und/oder mein Symptom hält/halten an" 
+        label_it: "La mia condizione e/o i miei sintomi continuano"
+        label_es: "Mi enfermedad y/o síntoma continúa"
+  pt_t1_fu_DX_NEURO_ADE:
+    safety_alert_question: true
+    conditions:
+      - question: pt_t1_fu_DX_NEURO
+        operation: contains
+        value: pt_t1_fu_DX_NEURO_ADE
+      - question: pt_t1_fu_CHECKPOINT
+        operation: contains
+        value: pt_t1_fu_UNPLNEDMEDCARE   
+    label: "What was the outcome of your medical care for Acute disseminated encephalomyelitis?"
+    label_ca: "Quin resultat va tenir la seva atenció mèdica?"
+    label_de: "Welches Ergebnis hatte Ihre medizinische Behandlung der akuten disseminierten Enzephalomyelitis?"
+    label_it: "Qual è stato l’esito della Sua assistenza medica per l'encefalomielite acuta diffusa?"
+    label_es: "¿Cuál fue el resultado de su atención médica para la encefalomielitis aguda diseminada?"
+    type: radio
+    page_number: 29
+    number_of_columns: 4
+    label_position: top
+    answer_label_position: bottom
+    choices:
+      - value: "1"
+        label: "I recovered fully"
+        label_ca: "Em vaig recuperar del tot"
+        label_de: "Ich bin vollständig genesen"
+        label_it: "Sono guarito completamente"
+        label_es: "Me he recuperado completamente"
+      - value: "2"
+        label: "I recovered, but with some lasting effects"
+        label_ca: "Em vaig recuperar, però amb alguns efectes persistents"
+        label_de: "Ich bin genesen, aber mit einigen bleibenden Wirkungen"
+        label_it: "Sono guarito, ma con alcuni effetti duraturi"
+        label_es: "Me he recuperado, pero con algunos efectos duraderos"
+      - value: "3"
+        label: "I am recovering"
+        label_ca: "M’estic recuperant"
+        label_de: "Ich genese aktuell"
+        label_it: "Soffro ancora di sintomi, ma sto migliorando"
+        label_es: "Sigo teniendo síntomas, pero estoy mejorando"
+      - value: "4"
+        label: "My condition and/or symptom is continuing"
+        label_ca: "La meva afecció o els símptomes continuen"
+        label_de: "Meine Erkrankung und/oder mein Symptom hält/halten an" 
+        label_it: "La mia condizione e/o i miei sintomi continuano"
+        label_es: "Mi enfermedad y/o síntoma continúa"
+  pt_t1_fu_DX_NEURO_ASEPMENING:
+    safety_alert_question: true
+    conditions:
+      - question: pt_t1_fu_DX_NEURO
+        operation: contains
+        value: pt_t1_fu_DX_NEURO_AM
+      - question: pt_t1_fu_CHECKPOINT
+        operation: contains
+        value: pt_t1_fu_UNPLNEDMEDCARE  
+    label: "What was the outcome of your medical care for Aseptic meningitis (inflammation of the linings of the brain / viral meningitis)?"
+    label_ca: "Quin resultat va tenir la seva atenció mèdica?"
+    label_de: "Welches Ergebnis hatte Ihre medizinische Versorgung bei aseptischer Meningitis (Entzündung der Hirnhäute / virale Meningitis)?"
+    label_it: "Qual è stato l’esito della Sua Meningite asettica (infiammazione dei rivestimenti del cervello/ meningite virale)?"
+    label_es: "¿Cuál fue el resultado de su ¿Meningitis aséptica (inflamación de los revestimientos del cerebro/ meningitis viral)?"
+    type: radio
+    page_number: 29
+    number_of_columns: 4
+    label_position: top
+    answer_label_position: bottom
+    choices:
+      - value: "1"
+        label: "I recovered fully"
+        label_ca: "Em vaig recuperar del tot"
+        label_de: "Ich bin vollständig genesen"
+        label_it: "Sono guarito completamente"
+        label_es: "Sigo teniendo síntomas, pero estoy mejorando"
+      - value: "2"
+        label: "I recovered, but with some lasting effects"
+        label_ca: "Em vaig recuperar, però amb alguns efectes persistents"
+        label_de: "Ich bin genesen, aber mit einigen bleibenden Wirkungen"
+        label_it: "Sono guarito, ma con alcuni effetti duraturi"
+        label_es: "Me he recuperado, pero con algunos efectos duraderos"
+      - value: "3"
+        label: "I am recovering"
+        label_ca: "M’estic recuperant"
+        label_de: "Ich genese aktuell"
+        label_it: "Soffro ancora di sintomi, ma sto migliorando"
+        label_es: "Sigo teniendo síntomas, pero estoy mejorando"
+      - value: "4"
+        label: "My condition and/or symptom is continuing"
+        label_ca: "La meva afecció o els símptomes continuen"
+        label_de: "Meine Erkrankung und/oder mein Symptom hält/halten an" 
+        label_it: "La mia condizione e/o i miei sintomi continuano"
+        label_es: "Mi enfermedad y/o síntoma continúa"
+  pt_t1_fu_DX_NEURO_BELLS:
+    safety_alert_question: true
+    conditions:
+      - question: pt_t1_fu_DX_NEURO
+        operation: contains
+        value: pt_t1_fu_DX_NEURO_PALSY
+      - question: pt_t1_fu_CHECKPOINT
+        operation: contains
+        value: pt_t1_fu_UNPLNEDMEDCARE    
+    label: "What was the outcome of your medical care for Bell’s palsy?"
+    label_ca: "Quin resultat va tenir la seva atenció mèdica?"
+    label_de: "Welches Ergebnis hatte Ihre medizinische Behandlung der Bellschen Lähmung?"
+    label_it: "Qual è stato l’esito della Sua Cure mediche per la paralisi di Bell?"
+    label_es: "¿Cuál fue el resultado de su ¿Atención médica para la parálisis de Bell?"
+    type: radio
+    page_number: 29
+    number_of_columns: 4
+    label_position: top
+    answer_label_position: bottom
+    choices:
+      - value: "1"
+        label: "I recovered fully"
+        label_ca: "Em vaig recuperar del tot"
+        label_de: "Ich bin vollständig genesen"
+        label_it: "Sono guarito completamente"
+        label_es: "Sigo teniendo síntomas, pero estoy mejorando"
+      - value: "2"
+        label: "I recovered, but with some lasting effects"
+        label_ca: "Em vaig recuperar, però amb alguns efectes persistents"
+        label_de: "Ich bin genesen, aber mit einigen bleibenden Wirkungen"
+        label_it: "Sono guarito, ma con alcuni effetti duraturi"
+        label_es: "Me he recuperado, pero con algunos efectos duraderos"
+      - value: "3"
+        label: "I am recovering"
+        label_ca: "M’estic recuperant"
+        label_de: "Ich genese aktuell"
+        label_it: "Soffro ancora di sintomi, ma sto migliorando"
+        label_es: "Sigo teniendo síntomas, pero estoy mejorando"
+      - value: "4"
+        label: "My condition and/or symptom is continuing"
+        label_ca: "La meva afecció o els símptomes continuen"
+        label_de: "Meine Erkrankung und/oder mein Symptom hält/halten an" 
+        label_it: "La mia condizione e/o i miei sintomi continuano"
+        label_es: "Mi enfermedad y/o síntoma continúa"
+  pt_t1_fu_DX_NEURO_ENCEPH:
+    safety_alert_question: true
+    conditions:
+      - question: pt_t1_fu_DX_NEURO
+        operation: contains
+        value: pt_t1_fu_DX_NEURO_ENCEPH
+      - question: pt_t1_fu_CHECKPOINT
+        operation: contains
+        value: pt_t1_fu_UNPLNEDMEDCARE  
+    label: "What was the outcome of your medical care for Encephalitis (inflammation of the brain) Encephalomyelitis (inflammation of the brain and spinal cord)?"
+    label_ca: "Quin resultat va tenir la seva atenció mèdica?"
+    label_de: "Welches Ergebnis hatte Ihre medizinische Versorgung bei Enzephalitis (Entzündung des Gehirns) Enzephalomyelitis (Entzündung des Gehirns und des Rückenmarks)?"
+    label_it: "Qual è stato l’esito della Sua Encefalite (infiammazione del cervello) Encefalomielite (infiammazione del cervello e del midollo spinale)?"
+    label_es: "¿Cuál fue el resultado de su Encefalitis (inflamación del cerebro) Encefalomielitis (inflamación del cerebro y la médula espinal)?"
+    type: radio
+    page_number: 29
+    number_of_columns: 4
+    label_position: top
+    answer_label_position: bottom
+    choices:
+      - value: "1"
+        label: "I recovered fully"
+        label_ca: "Em vaig recuperar del tot"
+        label_de: "Ich bin vollständig genesen"
+        label_it: "Sono guarito completamente"
+        label_es: "Sigo teniendo síntomas, pero estoy mejorando"
+      - value: "2"
+        label: "I recovered, but with some lasting effects"
+        label_ca: "Em vaig recuperar, però amb alguns efectes persistents"
+        label_de: "Ich bin genesen, aber mit einigen bleibenden Wirkungen"
+        label_it: "Sono guarito, ma con alcuni effetti duraturi"
+        label_es: "Me he recuperado, pero con algunos efectos duraderos"
+      - value: "3"
+        label: "I am recovering"
+        label_ca: "M’estic recuperant"
+        label_de: "Ich genese aktuell"
+        label_it: "Soffro ancora di sintomi, ma sto migliorando"
+        label_es: "Sigo teniendo síntomas, pero estoy mejorando"
+      - value: "4"
+        label: "My condition and/or symptom is continuing"
+        label_ca: "La meva afecció o els símptomes continuen"
+        label_de: "Meine Erkrankung und/oder mein Symptom hält/halten an" 
+        label_it: "La mia condizione e/o i miei sintomi continuano"
+        label_es: "Mi enfermedad y/o síntoma continúa"
+  pt_t1_fu_DX_NEURO_GENSEIZ:
+    safety_alert_question: true
+    conditions:
+      - question: pt_t1_fu_DX_NEURO
+        operation: contains
+        value: pt_t1_fu_DX_NEURO_SEIZURE
+      - question: pt_t1_fu_CHECKPOINT
+        operation: contains
+        value: pt_t1_fu_UNPLNEDMEDCARE  
+    label: "What was the outcome of your medical care for Generalized convulsion/ seizure (fit)?"
+    label_ca: "Quin resultat va tenir la seva atenció mèdica?"
+    label_de: "Welches Ergebnis hatte Ihre medizinische Versorgung bei Generalisierter Krampfanfall/ Anfall?"
+    label_it: "Qual è stato l’esito della Sua Convulsioni generalizzate/ convulsioni (fit)?"
+    label_es: "¿Cuál fue el resultado de su ¿Convulsión generalizada/ convulsión (en forma)?"
+    type: radio
+    page_number: 29
+    number_of_columns: 4
+    label_position: top
+    answer_label_position: bottom
+    choices:
+      - value: "1"
+        label: "I recovered fully"
+        label_ca: "Em vaig recuperar del tot"
+        label_de: "Ich bin vollständig genesen"
+        label_it: "Sono guarito completamente"
+        label_es: "Sigo teniendo síntomas, pero estoy mejorando"
+      - value: "2"
+        label: "I recovered, but with some lasting effects"
+        label_ca: "Em vaig recuperar, però amb alguns efectes persistents"
+        label_de: "Ich bin genesen, aber mit einigen bleibenden Wirkungen"
+        label_it: "Sono guarito, ma con alcuni effetti duraturi"
+        label_es: "Me he recuperado, pero con algunos efectos duraderos"
+      - value: "3"
+        label: "I am recovering"
+        label_ca: "M’estic recuperant"
+        label_de: "Ich genese aktuell"
+        label_it: "Soffro ancora di sintomi, ma sto migliorando"
+        label_es: "Sigo teniendo síntomas, pero estoy mejorando"
+      - value: "4"
+        label: "My condition and/or symptom is continuing"
+        label_ca: "La meva afecció o els símptomes continuen"
+        label_de: "Meine Erkrankung und/oder mein Symptom hält/halten an" 
+        label_it: "La mia condizione e/o i miei sintomi continuano"
+        label_es: "Mi enfermedad y/o síntoma continúa"
+  pt_t1_fu_DX_NEURO_GBS:
+    safety_alert_question: true
+    conditions:
+      - question: pt_t1_fu_DX_NEURO
+        operation: contains
+        value: pt_t1_fu_DX_NEURO_GBS
+      - question: pt_t1_fu_CHECKPOINT
+        operation: contains
+        value: pt_t1_fu_UNPLNEDMEDCARE   
+    label: "What was the outcome of your medical care for Guillain-Barré Syndrome (GBS)?"
+    label_ca: "Quin resultat va tenir la seva atenció mèdica?"
+    label_de: "Welches Ergebnis hatte die medizinische Behandlung des Guillain-Barré-Syndroms (GBS) bei Ihnen?"
+    label_it: "Qual è stato l’esito della Sua assistenza medica per la sindrome di Guillain-Barré (GBS)?"
+    label_es: "¿Cuál fue el resultado de su atención médica para el síndrome de Guillain-Barré (EGB)?"
+    page_number: 29
+    type: radio
+    number_of_columns: 4
+    label_position: top
+    answer_label_position: bottom
+    choices:
+      - value: "1"
+        label: "I recovered fully"
+        label_ca: "Em vaig recuperar del tot"
+        label_de: "Ich bin vollständig genesen"
+        label_it: "Sono guarito completamente"
+        label_es: "Sigo teniendo síntomas, pero estoy mejorando"
+      - value: "2"
+        label: "I recovered, but with some lasting effects"
+        label_ca: "Em vaig recuperar, però amb alguns efectes persistents"
+        label_de: "Ich bin genesen, aber mit einigen bleibenden Wirkungen"
+        label_it: "Sono guarito, ma con alcuni effetti duraturi"
+        label_es: "Me he recuperado, pero con algunos efectos duraderos"
+      - value: "3"
+        label: "I am recovering"
+        label_ca: "M’estic recuperant"
+        label_de: "Ich genese aktuell"
+        label_it: "Soffro ancora di sintomi, ma sto migliorando"
+        label_es: "Sigo teniendo síntomas, pero estoy mejorando"
+      - value: "4"
+        label: "My condition and/or symptom is continuing"
+        label_ca: "La meva afecció o els símptomes continuen"
+        label_de: "Meine Erkrankung und/oder mein Symptom hält/halten an" 
+        label_it: "La mia condizione e/o i miei sintomi continuano"
+        label_es: "Mi enfermedad y/o síntoma continúa"
+  pt_t1_fu_DX_NEURO_MS:
+    safety_alert_question: true
+    conditions:
+      - question: pt_t1_fu_DX_NEURO
+        operation: contains
+        value: pt_t1_fu_DX_NEURO_MS
+      - question: pt_t1_fu_CHECKPOINT
+        operation: contains
+        value: pt_t1_fu_UNPLNEDMEDCARE  
+    label: "What was the outcome of your medical care for Multiple sclerosis?"
+    label_ca: "Quin resultat va tenir la seva atenció mèdica?"
+    label_de: "Welches Ergebnis hatte Ihre medizinische Versorgung bei Multipler Sklerose?"
+    label_it: "Qual è stato l’esito della Sua cure mediche per la sclerosi multipla?"
+    label_es: "¿Cuál fue el resultado de su atención médica para la esclerosis múltiple?"
+    type: radio
+    page_number: 29
+    number_of_columns: 4
+    label_position: top
+    answer_label_position: bottom
+    choices:
+      - value: "1"
+        label: "I recovered fully"
+        label_ca: "Em vaig recuperar del tot"
+        label_de: "Ich bin vollständig genesen"
+        label_it: "Sono guarito completamente"
+        label_es: "Sigo teniendo síntomas, pero estoy mejorando"
+      - value: "2"
+        label: "I recovered, but with some lasting effects"
+        label_ca: "Em vaig recuperar, però amb alguns efectes persistents"
+        label_de: "Ich bin genesen, aber mit einigen bleibenden Wirkungen"
+        label_it: "Sono guarito, ma con alcuni effetti duraturi"
+        label_es: "Me he recuperado, pero con algunos efectos duraderos"
+      - value: "3"
+        label: "I am recovering"
+        label_ca: "M’estic recuperant"
+        label_de: "Ich genese aktuell"
+        label_it: "Soffro ancora di sintomi, ma sto migliorando"
+        label_es: "Sigo teniendo síntomas, pero estoy mejorando"
+      - value: "4"
+        label: "My condition and/or symptom is continuing"
+        label_ca: "La meva afecció o els símptomes continuen"
+        label_de: "Meine Erkrankung und/oder mein Symptom hält/halten an" 
+        label_it: "La mia condizione e/o i miei sintomi continuano"
+        label_es: "Mi enfermedad y/o síntoma continúa"
+  pt_t1_fu_DX_NEURO_OPTICNEURI:
+    safety_alert_question: true
+    conditions:
+      - question: pt_t1_fu_DX_NEURO
+        operation: contains
+        value: pt_t1_fu_DX_NEURO_NEURITIS
+      - question: pt_t1_fu_CHECKPOINT
+        operation: contains
+        value: pt_t1_fu_UNPLNEDMEDCARE    
+    label: "What was the outcome of your medical care for Optic neuritis (inflammation of the optic nerve)?"
+    label_ca: "Quin resultat va tenir la seva atenció mèdica?"
+    label_de: "Welches Ergebnis hatte Ihre medizinische Behandlung der Sehnervenentzündung (Opticus neuritis)?"
+    label_it: "Qual è stato l’esito della Sua assistenza medica per la neurite ottica (infiammazione del nervo ottico)?"
+    label_es: "¿Cuál fue el resultado de su atención médica para la neuritis óptica (inflamación del nervio óptico)?"
+    type: radio
+    page_number: 29
+    number_of_columns: 4
+    label_position: top
+    answer_label_position: bottom
+    choices:
+      - value: "1"
+        label: "I recovered fully"
+        label_ca: "Em vaig recuperar del tot"
+        label_de: "Ich bin vollständig genesen"
+        label_it: "Sono guarito completamente"
+        label_es: "Sigo teniendo síntomas, pero estoy mejorando"
+      - value: "2"
+        label: "I recovered, but with some lasting effects"
+        label_ca: "Em vaig recuperar, però amb alguns efectes persistents"
+        label_de: "Ich bin genesen, aber mit einigen bleibenden Wirkungen"
+        label_it: "Sono guarito, ma con alcuni effetti duraturi"
+        label_es: "Me he recuperado, pero con algunos efectos duraderos"
+      - value: "3"
+        label: "I am recovering"
+        label_ca: "M’estic recuperant"
+        label_de: "Ich genese aktuell"
+        label_it: "Soffro ancora di sintomi, ma sto migliorando"
+        label_es: "Sigo teniendo síntomas, pero estoy mejorando"
+      - value: "4"
+        label: "My condition and/or symptom is continuing"
+        label_ca: "La meva afecció o els símptomes continuen"
+        label_de: "Meine Erkrankung und/oder mein Symptom hält/halten an" 
+        label_it: "La mia condizione e/o i miei sintomi continuano"
+        label_es: "Mi enfermedad y/o síntoma continúa"
+  pt_t1_fu_DX_NEURO_OADD:
+    safety_alert_question: true
+    conditions:
+      - question: pt_t1_fu_DX_NEURO
+        operation: contains
+        value: pt_t1_fu_DX_NEURO_DEMYELIN
+      - question: pt_t1_fu_CHECKPOINT
+        operation: contains
+        value: pt_t1_fu_UNPLNEDMEDCARE   
+    label: "What was the outcome of your medical care for Other acute demyelinating diseases (i.e. other central nervous system (CNS) inflammatory disorder)?"
+    label_ca: "Quin resultat va tenir la seva atenció mèdica?"
+    label_de: "Welches Ergebnis hatte Ihre medizinische Versorgung bei anderen akuten demyelinisierenden Erkrankungen (d. h. anderen entzündlichen Erkrankungen des zentralen Nervensystems (ZNS))?"
+    label_it: "Qual è stato l’esito della Sua cure mediche per altre malattie demielinizzanti acute (es. altri disturbi infiammatori del sistema nervoso centrale (SNC))?"
+    label_es: "¿Cuál fue el resultado de su atención médica para otras enfermedades agudas desmielinizantes (i.e. otro trastorno inflamatorio del sistema nervioso central (SNC))?"
+    type: radio
+    page_number: 29
+    number_of_columns: 4
+    label_position: top
+    answer_label_position: bottom
+    choices:
+      - value: "1"
+        label: "I recovered fully"
+        label_ca: "Em vaig recuperar del tot"
+        label_de: "Ich bin vollständig genesen"
+        label_it: "Sono guarito completamente"
+        label_es: "Sigo teniendo síntomas, pero estoy mejorando"
+      - value: "2"
+        label: "I recovered, but with some lasting effects"
+        label_ca: "Em vaig recuperar, però amb alguns efectes persistents"
+        label_de: "Ich bin genesen, aber mit einigen bleibenden Wirkungen"
+        label_it: "Sono guarito, ma con alcuni effetti duraturi"
+        label_es: "Me he recuperado, pero con algunos efectos duraderos"
+      - value: "3"
+        label: "I am recovering"
+        label_ca: "M’estic recuperant"
+        label_de: "Ich genese aktuell"
+        label_it: "Soffro ancora di sintomi, ma sto migliorando"
+        label_es: "Sigo teniendo síntomas, pero estoy mejorando"
+      - value: "4"
+        label: "My condition and/or symptom is continuing"
+        label_ca: "La meva afecció o els símptomes continuen"
+        label_de: "Meine Erkrankung und/oder mein Symptom hält/halten an" 
+        label_it: "La mia condizione e/o i miei sintomi continuano"
+        label_es: "Mi enfermedad y/o síntoma continúa"
+  pt_t1_fu_DX_NEURO_TRANSMYEL:
+    safety_alert_question: true
+    conditions:
+      - question: pt_t1_fu_DX_NEURO
+        operation: contains
+        value: pt_t1_fu_DX_NEURO_TM
+      - question: pt_t1_fu_CHECKPOINT
+        operation: contains
+        value: pt_t1_fu_UNPLNEDMEDCARE   
+    label: "What was the outcome of your medical care for Transverse myelitis (inflammation of both sides of one section of the spinal cord)?"
+    label_ca: "Quin resultat va tenir la seva atenció mèdica?"
+    label_de: "Welches Ergebnis hatte Ihre medizinische Versorgung bei Transversaler Myelitis (Entzündung beider Seiten eines Abschnitts des Rückenmarks)?"
+    label_it: "Qual è stato l’esito della Sua cure mediche per mielite trasversale (infiammazione di entrambi i lati di una sezione del midollo spinale)?"
+    label_es: "¿Cuál fue el resultado de su atención médica para la mielitis transversal (inflamación de ambos lados de una sección de la médula espinal)?"
+    type: radio
+    page_number: 29
+    number_of_columns: 4
+    label_position: top
+    answer_label_position: bottom
+    choices:
+      - value: "1"
+        label: "I recovered fully"
+        label_ca: "Em vaig recuperar del tot"
+        label_de: "Ich bin vollständig genesen"
+        label_it: "Sono guarito completamente"
+        label_es: "Sigo teniendo síntomas, pero estoy mejorando"
+      - value: "2"
+        label: "I recovered, but with some lasting effects"
+        label_ca: "Em vaig recuperar, però amb alguns efectes persistents"
+        label_de: "Ich bin genesen, aber mit einigen bleibenden Wirkungen"
+        label_it: "Sono guarito, ma con alcuni effetti duraturi"
+        label_es: "Me he recuperado, pero con algunos efectos duraderos"
+      - value: "3"
+        label: "I am recovering"
+        label_ca: "M’estic recuperant"
+        label_de: "Ich genese aktuell"
+        label_it: "Soffro ancora di sintomi, ma sto migliorando"
+        label_es: "Sigo teniendo síntomas, pero estoy mejorando"
+      - value: "4"
+        label: "My condition and/or symptom is continuing"
+        label_ca: "La meva afecció o els símptomes continuen"
+        label_de: "Meine Erkrankung und/oder mein Symptom hält/halten an"
+        label_it: "La mia condizione e/o i miei sintomi continuano"
+        label_es: "Mi enfermedad y/o síntoma continúa"
+  pt_t1_fu_DX_OTHER_NARCOCATA:
+    safety_alert_question: true
+    conditions:
+      - question: pt_t1_fu_DX_OTHER
+        operation: contains
+        value: pt_t1_fu_DX_OTHER_NARCO
+      - question: pt_t1_fu_CHECKPOINT
+        operation: contains
+        value: pt_t1_fu_UNPLNEDMEDCARE
+    label: "What was the outcome of your medical care for Narcolepsy and cataplexy?"
+    label_ca: "Quin resultat va tenir la seva atenció mèdica?"
+    label_de: "Welches Ergebnis hatte Ihre medizinische Versorgung bei Narkolepsie und Kataplexie?"
+    label_it: "Qual è stato l’esito della Sua Cure mediche per narcolessia e cataplessia?"
+    label_es: "¿Cuál fue el resultado de su ¿Atención médica para narcolepsia y cataplejía?"
+    type: radio
+    page_number: 30
+    number_of_columns: 4
+    label_position: top
+    answer_label_position: bottom
+    choices:
+      - value: "1"
+        label: "I recovered fully"
+        label_ca: "Em vaig recuperar del tot"
+        label_de: "Ich bin vollständig genesen"
+        label_it: "Sono guarito completamente"
+        label_es: "Sigo teniendo síntomas, pero estoy mejorando"
+      - value: "2"
+        label: "I recovered, but with some lasting effects"
+        label_ca: "Em vaig recuperar, però amb alguns efectes persistents"
+        label_de: "Ich bin genesen, aber mit einigen bleibenden Wirkungen"
+        label_it: "Sono guarito, ma con alcuni effetti duraturi"
+        label_es: "Me he recuperado, pero con algunos efectos duraderos"
+      - value: "3"
+        label: "I am recovering"
+        label_ca: "M’estic recuperant"
+        label_de: "Ich genese aktuell"
+        label_it: "Soffro ancora di sintomi, ma sto migliorando"
+        label_es: "Sigo teniendo síntomas, pero estoy mejorando"
+      - value: "4"
+        label: "My condition and/or symptom is continuing"
+        label_ca: "La meva afecció o els símptomes continuen"
+        label_de: "Meine Erkrankung und/oder mein Symptom hält/halten an"
+        label_it: "La mia condizione e/o i miei sintomi continuano"
+        label_es: "Mi enfermedad y/o síntoma continúa"
+  pt_t1_fu_DX_OTHER_NAALLERGY:
+    safety_alert_question: true
+    conditions:
+      - question: pt_t1_fu_DX_OTHER
+        operation: contains
+        value: pt_t1_fu_DX_OTHER_ALLERGY
+      - question: pt_t1_fu_CHECKPOINT
+        operation: contains
+        value: pt_t1_fu_UNPLNEDMEDCARE 
+    label: "What was the outcome of your medical care for Non-anaphylactic allergic reactions?"
+    label_ca: "Quin resultat va tenir la seva atenció mèdica?"
+    label_de: "Welches Ergebnis hatte Ihre medizinische Versorgung bei nicht-anaphylaktischen allergischen Reaktionen?"
+    label_it: "Qual è stato l’esito della Sua cure mediche per le reazioni allergiche non naftiliche?"
+    label_es: "¿Cuál fue el resultado de su ¿Atención médica para las reacciones alérgicas no hipolácticas?"
+    type: radio
+    page_number: 30
+    number_of_columns: 4
+    label_position: top
+    answer_label_position: bottom
+    choices:
+      - value: "1"
+        label: "I recovered fully"
+        label_ca: "Em vaig recuperar del tot"
+        label_de: "Ich bin vollständig genesen"
+        label_it: "Sono guarito completamente"
+        label_es: "Sigo teniendo síntomas, pero estoy mejorando"
+      - value: "2"
+        label: "I recovered, but with some lasting effects"
+        label_ca: "Em vaig recuperar, però amb alguns efectes persistents"
+        label_de: "Ich bin genesen, aber mit einigen bleibenden Wirkungen"
+        label_it: "Sono guarito, ma con alcuni effetti duraturi"
+        label_es: "Me he recuperado, pero con algunos efectos duraderos"
+      - value: "3"
+        label: "I am recovering"
+        label_ca: "M’estic recuperant"
+        label_de: "Ich genese aktuell"
+        label_it: "Soffro ancora di sintomi, ma sto migliorando"
+        label_es: "Sigo teniendo síntomas, pero estoy mejorando"
+      - value: "4"
+        label: "My condition and/or symptom is continuing"
+        label_ca: "La meva afecció o els símptomes continuen"
+        label_de: "Meine Erkrankung und/oder mein Symptom hält/halten an" 
+        label_it: "La mia condizione e/o i miei sintomi continuano"
+        label_es: "Mi enfermedad y/o síntoma continúa"
+  pt_t1_fu_OTHERDXCHECK:
+    safety_alert_question: true
+    conditions:
+      - question: pt_t1_fu_CHECKPOINT
+        operation: contains
+        value: pt_t1_fu_UNPLNEDMEDCARE
+    label: "Did you receive any other diagnosis from your healthcare provider?"
+    label_ca: "Heu rebut algun altre diagnòstic del vostre metge?"
+    label_de: "Haben Sie eine andere Diagnose von Ihrem medizinischen Betreuer erhalten?"
+    label_it: "Ha ricevuto un’altra diagnosi dal Suo operatore sanitario? "
+    label_es: "¿Recibió algún otro diagnóstico de su profesional sanitario? "
+    type: radio
+    page_number: 31
+    choices:
+      - value: pt_t1_fu_OTHERDXCHECK_yes
+        label: "Yes"
+        label_ca: "Sí"
+        label_de: "Ja"
+        label_it: "Sì"
+        label_es: "Sí"
+      - value: pt_t1_fu_OTHERDXCHECK_no
+        label: "No"
+        label_ca: "No"
+        label_de: "Nein"
+        label_it: "No"
+        label_es: "No"
+  pt_t1_fu_OTHERDXNUM:
+    label: "How many other diagnoses that have not been previously mentioned did you receive?"
+    label_ca: "Quants altres diagnòstics que no s’han esmentat anteriorment van rebre?"
+    label_de: "Wie viele andere, bisher nicht erwähnte Diagnosen haben Sie erhalten?"
+    label_it: "Quante altre diagnosi che non sono state menzionate in precedenza hai ricevuto?"
+    label_es: "¿Cuántos otros diagnósticos que no se han mencionado anteriormente recibió?"
+    safety_alert_question: true
+    page_number: 32
+    type: range
+    min:
+      value: 1
+    max:
+      value: 3
+    conditions:
+      - question: pt_t1_fu_OTHERDXCHECK
+        operation: equal
+        value: pt_t1_fu_OTHERDXCHECK_yes
+      - question: pt_t1_fu_CHECKPOINT
+        operation: contains
+        value: pt_t1_fu_UNPLNEDMEDCARE 
+  pt_t1_fu_OTHERDXNAME1:
+    safety_alert_question: true
+    conditions:
+      - question: pt_t1_fu_CHECKPOINT
+        operation: contains
+        value: pt_t1_fu_UNPLNEDMEDCARE
+      - question: pt_t1_fu_OTHERDXCHECK
+        operation: equal
+        value: pt_t1_fu_OTHERDXCHECK_yes
+      - question: pt_t1_fu_OTHERDXNUM
+        operation: greater_than
+        value: 0
+    label: "Name of first diagnosis"
+    label_ca: "Nom del primer diagnòstic"
+    label_de: "Name der ersten Diagnose"
+    label_it: "Nome della prima diagnosi"
+    label_es: "Nombre del primer diagnóstico"
+    type: condition
+    page_number: 33
+  pt_t1_fu_OTHERDXOUTCOME1:
+    safety_alert_question: true
+    conditions:
+      - question: pt_t1_fu_CHECKPOINT
+        operation: contains
+        value: pt_t1_fu_UNPLNEDMEDCARE
+      - question: pt_t1_fu_OTHERDXCHECK
+        operation: equal
+        value: pt_t1_fu_OTHERDXCHECK_yes
+      - question: pt_t1_fu_OTHERDXNUM
+        operation: greater_than
+        value: 0
+    label: "What was the outcome of your medical care for the first diagnosis?"
+    label_ca: "Quin va ser el resultat de la vostra atenció mèdica per al primer diagnòstic?"
+    label_de: "Welches Ergebnis hatte Ihre medizinische Versorgung bei der ersten Diagnose?"
+    label_it: "Qual è stato l'esito delle tue cure mediche per la prima diagnosi?"
+    label_es: "¿Cuál fue el resultado de su atención médica para el primer diagnóstico?"
+    type: radio
+    page_number: 33
+    choices:
+      - value: "1"
+        label: "I recovered fully"
+        label_ca: "Em vaig recuperar del tot"
+        label_de: "Ich bin vollständig genesen"
+        label_it: "Sono guarito completamente"
+        label_es: "Sigo teniendo síntomas, pero estoy mejorando"
+      - value: "2"
+        label: "I recovered, but with some lasting effects"
+        label_ca: "Em vaig recuperar, però amb alguns efectes persistents"
+        label_de: "Ich bin genesen, aber mit einigen bleibenden Wirkungen"
+        label_it: "Sono guarito, ma con alcuni effetti duraturi"
+        label_es: "Me he recuperado, pero con algunos efectos duraderos"
+      - value: "3"
+        label: "I am recovering"
+        label_ca: "M’estic recuperant"
+        label_de: "Ich genese aktuell"
+        label_it: "Soffro ancora di sintomi, ma sto migliorando"
+        label_es: "Sigo teniendo síntomas, pero estoy mejorando"
+      - value: "4"
+        label: "My condition and/or symptom is continuing"
+        label_ca: "La meva afecció o els símptomes continuen"
+        label_de: "Meine Erkrankung und/oder mein Symptom hält/halten an"
+        label_it: "La mia condizione e/o i miei sintomi continuano"
+        label_es: "Mi enfermedad y/o síntoma continúa"
+  pt_t1_fu_OTHERDXNAME2:
+    safety_alert_question: true
+    conditions:
+      - question: pt_t1_fu_CHECKPOINT
+        operation: contains
+        value: pt_t1_fu_UNPLNEDMEDCARE
+      - question: pt_t1_fu_OTHERDXCHECK
+        operation: equal
+        value: pt_t1_fu_OTHERDXCHECK_yes
+      - question: pt_t1_fu_OTHERDXNUM
+        operation: greater_than
+        value: 1
+    label: "Name of second diagnosis"
+    label_ca: "Nom del segon diagnòstic"
+    label_de: "Name der Zweitdiagnose"
+    label_it: "Nome della seconda diagnosi"
+    label_es: "Nombre del segundo diagnóstico"
+    type: condition
+    page_number: 34
+  pt_t1_fu_OTHERDXOUTCOME2:
+    safety_alert_question: true
+    conditions:
+      - question: pt_t1_fu_CHECKPOINT
+        operation: contains
+        value: pt_t1_fu_UNPLNEDMEDCARE
+      - question: pt_t1_fu_OTHERDXCHECK
+        operation: equal
+        value: pt_t1_fu_OTHERDXCHECK_yes
+      - question: pt_t1_fu_OTHERDXNUM
+        operation: greater_than
+        value: 1
+    label: "What was the outcome of your medical care for the second diagnosis?"
+    label_ca: "Quin va ser el resultat de la vostra atenció mèdica per al segon diagnòstic?"
+    label_de: "Welches Ergebnis hatte Ihre medizinische Versorgung bei der zweiten Diagnose?"
+    label_it: "Qual è stato l'esito delle tue cure mediche per la seconda diagnosi?"
+    label_es: "¿Cuál fue el resultado de su atención médica para el segundo diagnóstico?"
+    type: radio
+    page_number: 34
+    choices:
+      - value: "1"
+        label: "I recovered fully"
+        label_ca: "Em vaig recuperar del tot"
+        label_de: "Ich bin vollständig genesen"
+        label_it: "Sono guarito completamente"
+        label_es: "Sigo teniendo síntomas, pero estoy mejorando"
+      - value: "2"
+        label: "I recovered, but with some lasting effects"
+        label_ca: "Em vaig recuperar, però amb alguns efectes persistents"
+        label_de: "Ich bin genesen, aber mit einigen bleibenden Wirkungen"
+        label_it: "Sono guarito, ma con alcuni effetti duraturi"
+        label_es: "Me he recuperado, pero con algunos efectos duraderos"
+      - value: "3"
+        label: "I am recovering"
+        label_ca: "M’estic recuperant"
+        label_de: "Ich genese aktuell"
+        label_it: "Soffro ancora di sintomi, ma sto migliorando"
+        label_es: "Sigo teniendo síntomas, pero estoy mejorando"
+      - value: "4"
+        label: "My condition and/or symptom is continuing"
+        label_ca: "La meva afecció o els símptomes continuen"
+        label_de: "Meine Erkrankung und/oder mein Symptom hält/halten an"
+        label_it: "La mia condizione e/o i miei sintomi continuano"
+        label_es: "Mi enfermedad y/o síntoma continúa"
+  pt_t1_fu_OTHERDXNAME3:
+    safety_alert_question: true
+    conditions:
+      - question: pt_t1_fu_CHECKPOINT
+        operation: contains
+        value: pt_t1_fu_UNPLNEDMEDCARE
+      - question: pt_t1_fu_OTHERDXCHECK
+        operation: equal
+        value: pt_t1_fu_OTHERDXCHECK_yes
+      - question: pt_t1_fu_OTHERDXNUM
+        operation: greater_than
+        value: 2
+    label: "Name of third diagnosis"
+    label_ca: "Nom del tercer diagnòstic"
+    label_de: "Name der Drittdiagnose"
+    label_it: "Nome della terza diagnosi"
+    label_es: "Nombre del tercer diagnóstico"
+    type: condition
+    page_number: 35
+  pt_t1_fu_OTHERDXOUTCOME3:
+    safety_alert_question: true
+    conditions:
+      - question: pt_t1_fu_CHECKPOINT
+        operation: contains
+        value: pt_t1_fu_UNPLNEDMEDCARE
+      - question: pt_t1_fu_OTHERDXCHECK
+        operation: equal
+        value: pt_t1_fu_OTHERDXCHECK_yes
+      - question: pt_t1_fu_OTHERDXNUM
+        operation: greater_than
+        value: 2
+    label: "What was the outcome of your medical care for the third diagnosis?"
+    label_ca: "Quin va ser el resultat de la vostra atenció mèdica per al tercer diagnòstic?"
+    label_de: "Welches Ergebnis hatte Ihre medizinische Versorgung bei der dritten Diagnose?"
+    label_it: "Qual è stato l'esito delle tue cure mediche per la terza diagnosi?"
+    label_es: "¿Cuál fue el resultado de su atención médica para el tercer diagnóstico?"
+    type: radio
+    page_number: 35
+    choices:
+      - value: "1"
+        label: "I recovered fully"
+        label_ca: "Em vaig recuperar del tot"
+        label_de: "Ich bin vollständig genesen"
+        label_it: "Sono guarito completamente"
+        label_es: "Sigo teniendo síntomas, pero estoy mejorando"
+      - value: "2"
+        label: "I recovered, but with some lasting effects"
+        label_ca: "Em vaig recuperar, però amb alguns efectes persistents"
+        label_de: "Ich bin genesen, aber mit einigen bleibenden Wirkungen"
+        label_it: "Sono guarito, ma con alcuni effetti duraturi"
+        label_es: "Me he recuperado, pero con algunos efectos duraderos"
+      - value: "3"
+        label: "I am recovering"
+        label_ca: "M’estic recuperant"
+        label_de: "Ich genese aktuell"
+        label_it: "Soffro ancora di sintomi, ma sto migliorando"
+        label_es: "Sigo teniendo síntomas, pero estoy mejorando"
+      - value: "4"
+        label: "My condition and/or symptom is continuing"
+        label_ca: "La meva afecció o els símptomes continuen"
+        label_de: "Meine Erkrankung und/oder mein Symptom hält/halten an"
+        label_it: "La mia condizione e/o i miei sintomi continuano"
+        label_es: "Mi enfermedad y/o síntoma continúa"
+  pt_t1_fu_OTHERVACCCHECK:
+    label: "Have you received another vaccination against COVID-19?"
+    label_ca: "Ha rebut alguna altra vacuna de la COVID-19?"
+    label_de: Haben Sie eine weitere Impfung gegen COVID-19 erhalten?
+    label_it: Ha ricevuto un’altra vaccinazione contro il COVID-19?
+    label_es: ¿Ha recibido otra vacuna contra la COVID-19?
+    type: radio
+    page_number: 36
+    choices:
+      - value: "1"
+        label: "Yes"
+        label_ca: "Sí"
+        label_de: "Ja"
+        label_it: "Sì"
+        label_es: "Sí"
+      - value: "0"
+        label: "No"
+        label_ca: "No"
+        label_de: "Nein"
+        label_it: "No"
+        label_es: "No"
+  pt_t1_fu_OTHERVACCNAME:
+    conditions:
+      - question: pt_t1_fu_OTHERVACCCHECK
+        operation: equal
+        value: "1"
+    label: "Which Covid-19 vaccine did you receive?  (Check all that apply)"
+    label_ca: "Quin vacuna de la COVID-19 va rebre?  (Marqui totes les opcions que calgui)"
+    label_de: Welchen COVID-19-Impfstoff haben Sie erhalten?  (Alles Zutreffende ankreuzen)
+    label_it: Quale vaccino anti-Covid-19 ha ricevuto?  (Indicare tutte le voci pertinenti)
+    label_es: "¿Qué vacuna contra la COVID-19 recibió?  (marque todo lo que corresponda)"
+    type: radio
+    page_number: 37
+    choices:
+      - value: "2"
+        label: AstraZeneca
+        label_ca: AstraZeneca
+        label_de: AstraZeneca
+        label_it: AstraZeneca
+        label_es: AstraZeneca
+      - value: "3"
+        label: Johnson & Johnson
+        label_ca: Johnson & Johnson
+        label_de: Johnson & Johnson
+        label_it: Johnson & Johnson
+        label_es: Johnson & Johnson
+      - value: "4"
+        label: Moderna
+        label_ca: Moderna
+        label_de: Moderna
+        label_it: Moderna
+        label_es: Moderna
+      - value: "5"
+        label: Novavax
+        label_ca: Novavax
+        label_de: Novavax
+        label_it: Novavax
+        label_es: Novavax
+      - value: "1"
+        label: Pfizer-BioNTech
+        label_ca: Pfizer-BioNTech
+        label_de: Pfizer-BioNTech
+        label_it: Pfizer BioNTech
+        label_es: Pfizer BioNTech
+      - value: "6"
+        label: Sanofi and GlaxoSmithKline
+        label_ca: Sanofi i GlaxoSmithKline
+        label_de: Sanofi und GlaxoSmithKline
+        label_it: Sanofi e GlaxoSmithKline
+        label_es: Sanofi y GlaxoSmithKline
+      - value: "7"
+        label: Other
+        label_ca: Altre 
+        label_de: Anderes Unternehmen
+        label_it: Altro
+        label_es: Otra
+      - value: "8"
+        label: "Don't know"
+        label_ca: No ho sé
+        label_de: Weiß nicht
+        label_it: Non so
+        label_es: No lo sé
+    db_write:
+      table: AdditionalAppColumn
+      column: dose2_status
+    validation:
+      - exclusive: pt_t1_fu_OTHERVACCNAME_NONE
+  pt_t1_fu_OTHERVACCDAT_AZ:
+    conditions:
+      - question: pt_t1_fu_OTHERVACCNAME
+        operation: equal
+        value: "2"
+    label: "On what date did you receive your AstraZeneca vaccine dose?"
+    label_ca: "En quina data va rebre l'altra dosi de la vacuna Astrazeneca COVID-19?"
+    label_de: "An welchem Tag haben Sie Ihre Impfstoffdosis von AstraZeneca erhalten?"
+    label_it: "In che data ha ricevuto la Sua dose di vaccino Astrazeneca COVID-19"
+    label_es: "¿En qué fecha recibió su AstraZeneca dosis de la vacuna contra la COVID-19?"
+    type: date
+    page_number: 38
+    max:
+      value: CURRENT_DATE
+  pt_t1_fu_OTHERVACCDAT_JNJ:
+    conditions:
+      - question: pt_t1_fu_OTHERVACCNAME
+        operation: equal
+        value: "3"
+    label: "On what date did you receive your Johnson & Johnson vaccine dose?"
+    label_ca: "En quina data va rebre l'altra dosi de la vacuna Johnson & Johnson COVID-19?"
+    label_de: "An welchem Tag haben Sie Ihre Impfstoffdosis von Johnson & Johnson erhalten?"
+    label_it: "In che data ha ricevuto la Sua dose di vaccino Johnson & Johnson COVID-19"
+    label_es: "¿En qué fecha recibió su Johnson & Johnson dosis de la vacuna contra la COVID-19?"
+    type: date
+    page_number: 38
+    max:
+      value: CURRENT_DATE
+  pt_t1_fu_OTHERVACCDAT_MODERNA:
+    conditions:
+      - question: pt_t1_fu_OTHERVACCNAME
+        operation: equal
+        value: "4"
+    label: "On what date did you receive your Moderna vaccine dose?"
+    label_ca: "En quina data va rebre l'altra dosi de la vacuna Moderna COVID-19?"
+    label_de: "An welchem Tag haben Sie Ihre Impfstoffdosis von Moderna erhalten?"
+    label_it: "In che data ha ricevuto la Sua dose di vaccino Moderna COVID-19"
+    label_es: "¿En qué fecha recibió su Moderna dosis de la vacuna contra la COVID-19?"
+    type: date
+    page_number: 38
+    max:
+      value: CURRENT_DATE
+  pt_t1_fu_OTHERVACCDAT_NOVAVAX:
+    conditions:
+      - question: pt_t1_fu_OTHERVACCNAME
+        operation: equal
+        value: "5"
+    label: "On what date did you receive your Novavax vaccine dose?"
+    label_ca: "En quina data va rebre l'altra dosi de la vacuna Novavax COVID-19?"
+    label_de: "An welchem Tag haben Sie Ihre Impfstoffdosis von Novavax erhalten?"
+    label_it: "In che data ha ricevuto la Sua dose di vaccino Novavax COVID-19"
+    label_es: "¿En qué fecha recibió su Novavax dosis de la vacuna contra la COVID-19"
+    type: date
+    page_number: 38
+    max:
+      value: CURRENT_DATE
+  pt_t1_fu_OTHERVACCDAT_PFE:
+    conditions:
+      - question: pt_t1_fu_OTHERVACCNAME
+        operation: equal
+        value: "1"
+    label: "On what date did you receive your Pfizer-BioNTech vaccine dose?"
+    label_ca: "En quina data va rebre l'altra dosi de la vacuna Pfizer-BioNTech COVID-19?"
+    label_de: "An welchem Tag haben Sie Ihre Impfstoffdosis von Pfizer-BioNTech erhalten?"
+    label_it: "In che data ha ricevuto la Sua dose di vaccino Pfizer-BioNTech COVID-19"
+    label_es: "¿En qué fecha recibió su Pfizer-BioNTech dosis de la vacuna contra la COVID-19"
+    type: date
+    page_number: 38
+    max:
+      value: CURRENT_DATE
+  pt_t1_fu_OTHERVACCDAT_GSK:
+    conditions:
+      - question: pt_t1_fu_OTHERVACCNAME
+        operation: equal
+        value: "6"
+    label: "On what date did you receive your Sanofi and GlaxoSmithKline vaccine dose?"
+    label_ca: "En quina data va rebre l'altra dosi de la vacuna Sanofi and GlaxoSmithKline COVID-19?"
+    label_de: "An welchem Tag haben Sie Ihre Impfstoffdosis von Sanofi und GlaxoSmithKline erhalten?"
+    label_it: "In che data ha ricevuto la Sua dose di vaccino Sanofi e GlaxoSmithKline COVID-19"
+    label_es: "¿En qué fecha recibió su Sanofi y GlaxoSmithKline dosis de la vacuna contra la COVID-19"
+    type: date
+    page_number: 38
+    max:
+      value: CURRENT_DATE
+  pt_t1_fu_OTHERVACCDAT_OTHER:
+    conditions:
+      - question: pt_t1_fu_OTHERVACCNAME
+        operation: equal
+        value: "7"
+    label: "On what date did you receive your other Covid-19 vaccine dose?"
+    label_ca: "En quina data va rebre l’altra dosi de la vacuna de la COVID-19?"
+    label_de: "An welchem Tag haben Sie Ihre zweite Covid-19-Impfdosis erhalten?"
+    label_it: "In che data ha ricevuto la Sua altra dose di vaccino anti-Covid-19?"
+    label_es: "¿En qué fecha recibió su otra dosis de la vacuna contra la COVID-19?"
+    type: date
+    page_number: 38
+    max:
+      value: CURRENT_DATE
+  pt_t1_fu_PREGCHECK:
+    conditions:
+      - table: AdditionalAppColumn
+        column: sex
+        operation: equal
+        value: "pt_t0_dem_SEX_Female"
+      - table: AdditionalAppColumn
+        column: dose2_status
+        operation: equal
+        value: "1"
+      - question: pt_t2_preg_PREGCONF
+        operation: unanswered
+        value: "" 
+    db_write:
+      table: AdditionalAppColumn
+      column: pregnancy_status
+    label: "Please use this opportunity to update your pregnancy status - Are you currently pregnant?"
+    label_ca: "Utilitzeu aquesta oportunitat per actualitzar el vostre estat d’embaràs: actualment esteu embarassada?"
+    label_de: "Bitte nutzen Sie diese Gelegenheit, um Ihren Schwangerschaftsstatus zu aktualisieren – Sind Sie derzeit schwanger?"
+    label_it: "Si prega di utilizzare questa opportunità per aggiornare il proprio stato di gravidanza - Sei attualmente incinta?"
+    label_es: "Aproveche esta oportunidad para actualizar el estado de su embarazo. ¿Está embarazada actualmente?"
+    type: radio
+    page_number: 39
+    choices: 
+      - value: pt_t1_fu_PREGCHECK_yes
+        label: "Yes"
+        label_ca: "Sí"
+        label_de: "Ja"
+        label_it: "Sì"
+        label_es: "Sí"
+      - value: pt_t1_fu_PREGCHECK_no
+        label: "No"
+        label_de: "Nein"
+        label_ca: "No"
+        label_it: "No"
+        label_es: "No"
+  q_end:
+    label: This is the end of the questionnaire. If you need to fill in missing details, please close the questionnaire using the [x] at the top right and you can revisit the questionnaire at a later time. Otherwise, if you wish to submit a completed questionnaire, select the option below and press 'NEXT'.
+    label_ca: "Aquest és el final del qüestionari. Si heu d'emplenar les dades que falten, tanqueu el qüestionari amb la x [que hi ha a la part superior dreta] i podreu tornar a visitar el qüestionari més endavant. En cas contrari, si voleu enviar un qüestionari completat, seleccioneu l'opció següent i premeu 'SEGÜENT'."
+    label_de: Dies ist das Ende des Fragebogens. Wenn Sie fehlende Angaben ergänzen müssen, schließen Sie den Fragebogen bitte mit dem [x] oben rechts und Sie können den Fragebogen zu einem späteren Zeitpunkt erneut aufrufen. Wenn Sie andernfalls einen ausgefüllten Fragebogen einreichen möchten, wählen Sie die unten stehende Option und drücken Sie 'WEITER'.
+    label_it: Questa è la fine del questionario. Se avete bisogno di compilare i dettagli mancanti, chiudete il questionario utilizzando la [x] in alto a destra e potrete rivisitare il questionario in un secondo momento. In caso contrario, se si desidera inviare un questionario compilato, selezionare l'opzione qui sotto e premere 'AVANTI'.
+    label_es: Este es el final del cuestionario. Si necesita completar los detalles que faltan, cierre el cuestionario usando la [x] en la parte superior derecha y podrá volver a revisar el cuestionario más adelante. De lo contrario, si desea enviar un cuestionario completado, seleccione la opción a continuación y pulse 'SIGUIENTE'.
+    type: radio
+    page_number: 40
+    choices:
+      - value: q_end_confirm
+        label: "I confirm that these are my final answers"
+        label_ca: "Confirmo que aquestes són les meves respostes finals"
+        label_de: "Ich bestätige, dass dies meine endgültigen Antworten sind"
+        label_it: "Confermo che queste sono le mie risposte finali"
+        label_es: "Confirmo que estas son mis respuestas finales"
