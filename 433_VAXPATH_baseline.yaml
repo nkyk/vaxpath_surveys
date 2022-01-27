@@ -61,8 +61,8 @@ page_titles_de:
   - ""
   - ""
   - ""
-  - "Bitte geben Sie Ihre Kontaktdaten an"
-  - "Bitte geben Sie die Daten der zweiten Person an, an die Sie sich am wahrscheinlichsten wenden, wenn Sie eine medizinische Versorgung benötigen."
+  - "Please provide your contact details"
+  - "Please provide the details of the secondary individual whom you are most likely to contact if you need medical care."
   - "Bitte geben Sie die Kontaktdaten des Hausarztes an, an den Sie sich am ehesten wenden können, wenn Sie medizinische Hilfe benötigen."
   - ""
 page_titles_it:
@@ -91,9 +91,9 @@ page_titles_it:
   - ""
   - ""
   - ""
-  - "La preghiamo di lasciare i suoi contatti"
-  - "La preghiamo di lasciare un contatto di riferimento nel caso in cui avesse bisogno di assistenza medica."
-  - "Si prega di fornire il contatto del medico di base che possibile contattare nel caso in cui avesse bisogno di assistenza medica."
+  - "Please provide your contact details"
+  - "Please provide the details of the secondary individual whom you are most likely to contact if you need medical care."
+  - "Si prega di fornire i dettagli del medico di assistenza primaria che è più probabile contattare se avete bisogno di cure mediche."
   - ""
 page_titles_es:
   - "" 
@@ -121,8 +121,8 @@ page_titles_es:
   - ""
   - ""
   - ""
-  - "Proporcione sus datos de contacto"
-  - "Proporcione los datos de la persona secundaria con la que es más probable que se ponga en contacto si necesita atención médica"
+  - "Please provide your contact details"
+  - "Please provide the details of the secondary individual whom you are most likely to contact if you need medical care."
   - "Por favor proporcione los detalles del médico de atención primaria a quien es más probable que contacte si necesita atención médica"
   - ""
 page_titles_ca:
@@ -151,23 +151,23 @@ page_titles_ca:
   - ""
   - ""
   - ""
-  - "Faciliti’ns les seves dades de contacte"
-  - "Indiqui les dades de l’altra persona amb la qual és més probable que es posi en contacte si necessita atenció mèdica."
+  - "Please provide your contact details"
+  - "Please provide the details of the secondary individual whom you are most likely to contact if you need medical care."
   - "Proporcioneu les dades del metge d’atenció primària amb qui és més probable que us poseu en contacte si necessiteu atenció mèdica."
   - ""
 questions:
   pt_t0_dem_DOB:
     label: Enter the month and year of your date of birth
-    label_de: Geben Sie Ihr Geburtsmonat und Geburtsjahr ein
+    label_de: Geben Sie Geburtsmonat und das Geburtsjahr ein
     label_it: Inserire il mese e l’anno di nascita
     label_es: Introduzca el mes y el año de nacimiento
     label_ca: Indiqui el mes i l’any de naixement
     type: monthyear
     max:
       month:
-        value: 01
+        value: CURRENT_MONTH
       year:
-        value: 2004
+        value: CURRENT_YEAR
     db_write:
       table: AdditionalAppColumn
       column: age
@@ -175,8 +175,8 @@ questions:
     page_number: 1
   pt_t0_dem_SEX:
     label: What was your biological sex assigned at birth?
-    label_de: Welches biologisches Geschlecht wurde Ihnen bei der Geburt zugewiesen?
-    label_it: Qual è il Suo genere?
+    label_de: Welches biologische Geschlecht wurde Ihnen bei der Geburt zugewiesen?
+    label_it: Qual è il Suo sesso biologico assegnato alla nascita?
     label_es: ¿Cuál fue su sexo biológico asignado al nacer?
     label_ca: Quin sexe biològic li van assignar quan va néixer?
     type: radio
@@ -200,40 +200,21 @@ questions:
         label_it: "Intersesso"
         label_es: "Intersexual"
         label_ca: "Intersexual"
-      - value: "pt_t0_dem_SEX_None"
-        label: "None of these describe me"
-        label_de: "Keiner dieser Begriffe beschreibt mich"
-        label_it: "Nessuno di questi mi descrive"
-        label_es: "Ninguno de estos me describe"
-        label_ca: "Cap d’aquests no em descriu"
       - value: "pt_t0_dem_SEX_No_Answer"
         label: "Prefer not to answer"
         label_de: "Ich möchte lieber nicht antworten"
         label_it: "Preferisco non rispondere"
         label_es: "Prefiero no responder"
         label_ca: "Prefereixo no contestar"
+    other: true
+    other_label: None of these describe me
+    other_label_it: "Nessuno di questi mi descrive"
+    other_label_de: "Keiner dieser Begriffe beschreibt mich"
+    other_label_es: "Ninguno de estos me describe"
+    other_label_ca: "Cap d’aquests no em descriu"
     db_write:
       table: AdditionalAppColumn
       column: sex
-  pt_t0_dem_SEXOTHER:
-    label: Please specify your biological sex
-    label_de: Bitte geben Sie Ihr biologisches Geschlecht an
-    label_it: Si prega di specificare il sesso biologico
-    label_es: ¿Cuál fue su sexo biológico asignado al nacer?
-    label_ca: Especifiqui’l (text lliure opcional)
-    type: text
-    page_number: 2
-    conditions: 
-      - question: pt_t0_dem_SEX
-        operation: equal
-        value: pt_t0_dem_SEX_None
-    skip:
-      label: skip
-      label_de: Überspringen
-      label_it: Salta
-      label_es: Saltar
-      label_ca: Omet
-      value: skip
   pt_t0_dem_COUNTRY:
     label: What is your country of origin?
     label_de: Welches Land ist Ihr Herkunftsland?
@@ -241,11 +222,11 @@ questions:
     label_es: ¿Cuál es su país de origen? 
     label_ca: Quin és el seu país d’origen? 
     type: list
-    list_id: 7
-    list_id_de: "8"
-    list_id_it: "9"
-    list_id_es: "10"
-    list_id_ca: "11"
+    list_id: 13
+    list_id_de: "11"
+    list_id_it: "10"
+    list_id_es: "20"
+    list_id_ca: "12"
     page_number: 3
   pt_t0_dem_COUNTRY_OTHR:
     conditions: 
@@ -262,73 +243,86 @@ questions:
   pt_t0_dem_RACE: 
     label: With which race(s) do you identify?
     label_de: Mit welcher/welchen ethnischen Zugehörigkeit(en) identifizieren Sie sich? (Alles Zutreffende ankreuzen)
-    label_it: Con quale/i etnia/e si identifica? (Indicare tutte le voci pertinenti)
+    label_it: Con quale/i popolazione/i si identifica? (Indicare tutte le voci pertinenti)
     label_es: ¿Con qué raza(s) se identifica? (marque todo lo que corresponda)
     label_ca: Amb quina(es) raça(ces) s’identifica? (Marqui totes les opcions que calgui)
     type: checkbox
     page_number: 4
     choices: 
+      - value: pt_t0_dem_RACE_American
+        label: "American Indian or Alaska Native"
+        label_de: "Indianer oder indigene Völker Alaskas"
+        label_it: "Indiana americana o nativo dell’Alaska"
+        label_es: " Indio americano o nativo de Alaska"
+        label_ca: "Índia americana o nadiua d’Alaska"
       - value: pt_t0_dem_RACE_Asian
         label: "Asian"
-        label_de: "Asiatisch"
-        label_it: "Asiatico"
+        label_de: "Asiate"
+        label_it: "Asiatica"
         label_es: "Asiático"
-        label_ca: "Asiático"
+        label_ca: "Asiàtica"
       - value: pt_t0_dem_RACE_African
         label: "Black or African American"
-        label_de: "Afrikaner"
-        label_it: "Afrodiscendente"
-        label_es: "Afro descendiente"
-        label_ca: "Afro descendiente"
+        label_de: "Schwarzer oder Afroamerikaner"
+        label_it: "Nera o afro-americana"
+        label_es: "Negro o afroamericano"
+        label_ca: "Negra o afroamericana"
+      - value: pt_t0_dem_RACE_Hawaiian
+        label: "Native Hawaiian or Other Pacific Islander"
+        label_de: "Ureinwohner Hawaiis oder Heimat anderswo im Pazifikraum"
+        label_it: "Nativo di Hawaii o altro Pacifico Isolana"
+        label_es: "Nativo de Hawái u otra región del Pacífico,Isleño"
+        label_ca: "Nadiua de Hawaii o d’altres illes del Pacífic"
       - value: pt_t0_dem_RACE_White
         label: "White"
-        label_de: "Kaukasischer"
-        label_it: "Caucasico"
-        label_es: "Caucásico"
-        label_ca: "Caucásico"
+        label_de: "Weißer"
+        label_it: "Bianca"
+        label_es: "Blanco"
+        label_ca: "Blanca"
       - value: pt_t0_dem_RACE_Decline
         label: "Decline to answer"
-        label_de: "Möchte nicht Antworten"
-        label_it: "Preferisco non rispondere"
-        label_es: "Prefiero No contestar"
-        label_ca: "Prefiero No contestar"
+        label_de: "Verweigere die Aussage"
+        label_it: "Rifiuto di rispondere"
+        label_es: "Niego a responder"
+        label_ca: "Prefereixo no contestar"
     other: true
     other_label: "Please specify other values"
     other_label_it: "Altro"
-    other_label_de: "Andere"
-    other_label_es: "Otro"
-    other_label_ca: "Altres"
+    other_label_de: "Andere Ethnie"
+    other_label_es: "Otra"
+    other_label_ca: "Un altre (especifiqui’l)"
     validation:
       - exclusive: pt_t0_dem_RACE_Decline
   pt_t0_dem_OCCUP:
     label: What is your current main occupation?
-    label_de: Welche ist Ihre derzeitige Hauptbeschäftigung?
-    label_it: Qual è la Sua occupazione principale?
-    label_es: ¿Cuál es su principal ocupación actual?
+    label_de: Was ist Ihr aktueller Hauptberuf
+    label_it: Qual è la tua occupazione principale?
+    label_es: ¿Cuál es su ocupación principal actual?
     label_ca: Quina és la seva ocupació principal actualment?
     type: list
     page_number: 5
-    list_id: 5
-    list_id_de: 13
-    list_id_it: 14
+    list_id: 6
+    list_id_de: 16
+    list_id_it: 17
     list_id_es: 15
-    list_id_ca: 12
+    list_id_ca: 14
+    page_number: 5
   pt_t0_dem_OCCUP_1:
     conditions: 
       - question: pt_t0_dem_OCCUP
         operation: equal
         value: "Other"
     label: "Please specify your current main occupation."
-    label_de: Bitte geben Sie Ihre aktuelle Hauptbeschäftigung an.
-    label_it: Per favore specifichi la Sua attuale occupazione principale
+    label_de: Bitte geben Sie Ihre aktuelle Hauptbeschäftigung an
+    label_it: Per favore specifica la tua attuale occupazione principale
     label_es: Por favor, especifique su ocupación principal actual
-    label_ca: Especifiqui la seva ocupació principal actual.
+    label_ca: Especifiqueu l'ocupació principal actual
     type: text
     page_number: 5
   pt_t0_mh1_WUNIT:
     label: What unit is your weight measured in?
     label_de: Einheit für Körpergewicht
-    label_it: Unità di peso
+    label_it: Unità di altezza
     label_es: Unidad de peso
     label_ca: Unitat de pes
     type: radio
@@ -354,7 +348,7 @@ questions:
     label: What is your weight (kg)?
     label_de: Wieviel wiegen Sie (kg)?
     label_it: Qual è il Suo peso? (kg)
-    label_es: ¿Cuál es su peso en Kilogramos?
+    label_es: Unidad de peso (kg)
     label_ca: Quin és el seu pes (kg)?
     type: number
     page_number: 7
@@ -367,7 +361,7 @@ questions:
     skip:
       label: Skip
       label_de: Überspringen
-      label_it: Salta
+      label_it: Saltare
       label_es: Saltar
       label_ca: Omet
       value: skip
@@ -379,7 +373,7 @@ questions:
     label: What is your weight (lbs)?
     label_de: Wieviel wiegen Sie (pfd)?
     label_it: Qual è il Suo peso? (Libbre)
-    label_es: ¿Qual è il Suo peso? (Libras) 
+    label_es: Qual è il Suo peso? (Libras) 
     label_ca: Quin és el seu pes (Lliures)?
     type: number
     page_number: 8
@@ -392,7 +386,7 @@ questions:
     skip:
       label: Skip
       label_de: Überspringen
-      label_it: Salta
+      label_it: Saltare
       label_es: Saltar
       label_ca: Omet
       value: skip
@@ -425,7 +419,7 @@ questions:
     label: What is your height (cm)?
     label_de: Wie groß sind Sie (cm)?
     label_it: Qual è la Sua altezza? (cm)
-    label_es: ¿Cuál es su estatura? (cm)
+    label_es: Cuál es su estatura? (cm)
     label_ca: Quina és la seva alçada (cm)?
     type: number
     min: 
@@ -437,7 +431,7 @@ questions:
     skip:
       label: Skip
       label_de: Überspringen
-      label_it: Salta
+      label_it: Saltare
       label_es: Saltar
       label_ca: Omet
       value: skip
@@ -450,7 +444,7 @@ questions:
     label: What is your height (in)?
     label_de: Wie groß sind Sie (zoll)?
     label_it: Qual è la Sua altezza? (pollici)
-    label_es: ¿Cuál es su estatura? (Pulgadas)
+    label_es: Cuál es su estatura? (Pulgadas)
     label_ca: Quina és la seva alçada (polzades)?
     type: number
     min: 
@@ -462,7 +456,7 @@ questions:
     skip:
       label: Skip
       label_de: Überspringen
-      label_it: Salta
+      label_it: Saltare
       label_es: Saltar
       label_ca: Omet
       value: skip
@@ -520,7 +514,7 @@ questions:
         label_ca: "Malaltia pulmonar obstructiva crònica (MPOC)"
       - value: pt_t0_mh1_COND_CHF
         label: "Congestive heart failure (CHF)"
-        label_de: "Herzversagen (HI)"
+        label_de: "Herzinsuffizienz (HI)"
         label_it: "Scompenso cardiaco congestizio (CHF)"
         label_es: "Insuficiencia cardíaca congestiva (ICC)"
         label_ca: "Insuficiència cardíaca congestiva (ICC)"
@@ -587,7 +581,7 @@ questions:
       - value: pt_t0_mh1_COND_None
         label: "None of the above"
         label_de: "Keine der obenstehenden Antworten"
-        label_it: "Nessuna delle precedenti"
+        label_it: "Altro"
         label_es: "Ninguna de las anteriores"
         label_ca: "Cap de les anteriors"
     validation:
@@ -595,41 +589,41 @@ questions:
     other: true
     other_label: "Please specify other values"
     other_label_it: "Altro"
-    other_label_de: "Andere"
+    other_label_de: "Andere Ethnie"
     other_label_es: "Otra"
     other_label_ca: "Un altre (especifiqui’l)"
   pt_t0_mh1_OVRLHLTH:
     label: How would you rate your overall health on a scale of 0-10?
     label_de: Wie würden Sie Ihren allgemeinen Gesundheitszustand auf einer Skala von 0–10 bewerten?
-    label_it: Come valuterebbe la Sua salute generale su una scala di 0-10
+    label_it: Come valuteresti la tua salute generale su una scala di 0-10
     label_es: ¿Cómo calificaría su estado de salud general en una escala del 0 al 10?
     label_ca: Com qualificaria la seva salut en general, en una escala de 0 a 10?
     type: slider
     page_number: 13
     min:
       label: Very poor
-      label_de: Sehr schlecht
+      label_de: Sehr arm
       label_it: Molto povera
-      label_es: Muy mala
-      label_ca: Molt dolenta
+      label_es: Muy pobre
+      label_ca: Molt pobre
       value: 0 
     max: 
       label: Excellent, my health could not be better
       label_de: Ausgezeichnet, meine Gesundheit könnte nicht besser sein
       label_it: Eccellente, la mia salute non potrebbe essere migliore
-      label_es: Excelente, mi salud no podría ser mejor
-      label_ca: Excel·lent, la meva salut no podria ser millor
+      label_es: Tengo una salud de hierro
+      label_ca: Excellent, la meva salut no podria ser millor
       value: 10
     skip:
       label: Skip
       label_de: Überspringen
-      label_it: Salta
+      label_it: Saltare
       label_es: Saltar
       label_ca: Omet
       value: skip
   pt_t0_mh1_PRESCRIPMED:
     label: Have you taken any prescription medication(s) 7 days prior to your vaccination?
-    label_de: Haben Sie 7 Tage vor Ihrer Impfung verschreibungspflichtige Medikamente eingenommen?
+    label_de: Haben Sie in den 7 Tagen vor Ihrer Impfung verschreibungspflichtige Medikamente angewendet?
     label_it: Ha assunto farmaci su prescrizione (o farmaci) 7 giorni prima della vaccinazione?
     label_es: ¿Ha tomado algún medicamento con receta 7 días antes de la vacunación?
     label_ca: Va prendre algun medicament de venda amb recepta en els 7 dies anteriors a la vacunació?
@@ -650,7 +644,7 @@ questions:
         label_ca: "No"
   pt_t0_mh1_MULTIMED: 
     label: What prescription medication(s) did you take?
-    label_de: Welche(s) verschreibungspflichtige(s) Medikament(e) haben Sie eingenommen?
+    label_de: Welche verschreibungspflichtigen Medikamente haben Sie angewendet?
     label_it: Quale/i farmaco/i su prescrizione ha assunto?
     label_es: ¿Qué medicamentos con receta tomó?
     label_ca: Quins medicaments de venda amb recepta va prendre?
@@ -663,7 +657,7 @@ questions:
         value: pt_t0_mh1_PRESCRIPMED_yes
   pt_t0_mh1_VACCINE:
     label: Did you receive any vaccinations other than for COVID-19 (e.g., flu, hepatitis) in the 6 months prior to your first COVID-19 vaccine dose?
-    label_de: Haben Sie in den 6 Monaten vor Ihrer ersten COVID-19-Impfdosis andere Impfungen als die gegen COVID-19 (z. B. Grippe, Hepatitis) erhalten?
+    label_de: Haben Sie in den 6 Monaten vor Ihrer ersten COVID-19-Impfdosis andere Impfungen als gegen COVID-19 (z. B. Grippe, Hepatitis) erhalten?
     label_it: Ha ricevuto vaccinazioni diverse da quelle per il COVID-19 (ad es. influenza, epatite) nei 6 mesi precedenti la Sua prima dose del vaccino anti-COVID-19?
     label_es: ¿Se le administró alguna vacuna distinta a la vacuna contra la COVID-19 (p. ej., gripe, hepatitis) en los 6 meses anteriores a su primera dosis de la vacuna contra la COVID-19?
     label_ca: Va rebre alguna vacuna a part de la vacuna de la COVID-19 (p. ex., de la grip, l’hepatitis) en els 6 mesos anteriors a la seva primera dosi de la vacuna de la COVID-19?
@@ -697,7 +691,7 @@ questions:
     choices:
       - value: pt_t0_mh1_VACCINETYPE_influenza
         label: "Seasonal influenza"
-        label_de: "Saisonbedingte Grippe"
+        label_de: "Saisonale Grippe"
         label_it: "Influenza stagionale"
         label_es: "Gripe estacional"
         label_ca: "Grip estacional"
@@ -800,7 +794,7 @@ questions:
     other: true
     other_label: "Please specify other values"
     other_label_it: "Altro"
-    other_label_de: "Andere"
+    other_label_de: "Andere Ethnie"
     other_label_es: "Otra"
     other_label_ca: "Un altre (especifiqui’l)"
   pt_t0_mh1_MEDALLRGY:
@@ -821,7 +815,7 @@ questions:
       - value: pt_t0_mh1_MEDALLRGY_no
         label: "No"
         label_de: "Nein"
-        label_it: "No"
+        label_it: "Sì"
         label_es: "No"
         label_ca: "No"
   pt_t0_mh1_ALLRGYTYPE:
@@ -870,12 +864,12 @@ questions:
     other: true
     other_label: "Please specify other values"
     other_label_it: "Altro"
-    other_label_de: "Andere"
+    other_label_de: "Andere Ethnie"
     other_label_es: "Otra"
     other_label_ca: "Un altre (especifiqui’l)"
   pt_t0_mh1_COVLAB:
     label: Has a healthcare provider (or lab test) told you that you had COVID-19?  
-    label_de: Hat Ihnen ein Gesundheitsdienstleister (oder ein Labortest) mitgeteilt, dass Sie COVID-19 hatten?
+    label_de: Hat Ihnen eine Fachperson aus dem Gesundheitswesen gesagt, dass Sie COVID-19 hatten (oder wurde das durch eine Laboruntersuchung festgestellt? 
     label_it: Un operatore sanitario (o esame di laboratorio) Le ha indicato che ha avuto il COVID-19?  
     label_es: ¿Le ha dicho un profesional sanitario (o una prueba de laboratorio) que tuvo COVID-19?  
     label_ca: "Ha estat diagnosticat per un professional sanitari (o una prova de laboratori) que vostè ha tingut COVID-19?"
@@ -896,7 +890,7 @@ questions:
         label_ca: "No"
   pt_t0_mh1_COVLAB_DATE:
     label: When was the test or visit that led to your diagnosis of COVID-19? (If unsure, please estimate to the best of your ability.)
-    label_de: "Wann wurde der Test oder die Untersuchung durchgeführt, der/die zu Ihrer Diagnose COVID-19 führte? (Wenn Sie sich nicht sicher sind, schätzen Sie bitte nach bestem Wissen und Gewissen)."
+    label_de: "Wann fand die Untersuchung oder der Besuch statt, die/der zu Ihrer COVID-19-Diagnose führte? Falls Sie sich nicht sicher sind, schätzen Sie bitte so gut Sie können."
     label_it: "Quando è stato eseguito il test o la visita che ha portato alla diagnosi di COVID-19?"
     label_es: "¿Cuándo fue la prueba o visita en la que tuvo lugar su diagnóstico de COVID-19?"
     label_ca: "Quan va ser la prova o la visita que va conduir al seu diagnòstic de COVID-19? (Si no ho té clar, indiqui-ho amb la màxima aproximació possible.)"
@@ -912,11 +906,11 @@ questions:
         operation: equal
         value: pt_t0_mh1_COVLAB_yes
   pt_t0_mh1_COVSYMP:
-    label: Have you experienced any of the following symptoms in the last 3 days? (Check all that apply)
-    label_de: Hatten Sie in den letzten 3 Tagen eines der folgenden Symptome? (Kreuzen Sie alles an, was zutrifft)
-    label_it: Ha manifestato uno dei seguenti sintomi nei 3 giorni successivi alla vaccinazione?  (Indicare tutte le voci pertinenti)
-    label_es: ¿Ha experimentado alguno de los siguientes síntomas en los últimos 3 días? (marque todo lo que corresponda)
-    label_ca: Ha tingut algun dels símptomes següents durant els darrers 3 dies? (Marqui totes les opcions que corresponguin)
+    label: Did you experience any of the following symptoms in the 3 days before vaccination? (Check all that apply)
+    label_de: Haben Sie innerhalb von 3 Tagen vor der Impfung eines der folgenden Symptome verspürt? (Kreuzen Sie alles an, was zutrifft)
+    label_it: Ha manifestato uno dei seguenti sintomi nei 3 giorni precedenti la vaccinazione? (Indicare tutte le voci pertinenti)
+    label_es: ¿Experimentó alguno de los siguientes síntomas en los 3 días anteriores a la vacunación? (Marque todo lo que corresponda)
+    label_ca: Ha tingut algun dels símptomes següents durant els 3 dies anteriors a la vacunació?  (Marqui totes les opcions que calgui)
     type: checkbox
     page_number: 22
     choices: 
@@ -1038,7 +1032,7 @@ questions:
         label_ca: "No" 
   pt_t0_fra_HELP_REGBAS:
     label: Do you need someone to help you on a regular basis?
-    label_de: Brauchen Sie regelmäßig jemanden, der Ihnen hilft?
+    label_de: Brauchen Sie regelmäßig Hilfe von jemand anderem?
     label_it: Ha bisogno di qualcuno che La aiuti regolarmente?
     label_es: ¿Necesita que alguien le ayude de forma regular?
     label_ca: "Necessita que algú l’ajudi de manera habitual?"
@@ -1090,7 +1084,7 @@ questions:
         label_ca: "No"
   pt_t0_fra_SUPPORT:
     label: In case of need, can you count on someone close to you?
-    label_de: Können Sie bei Bedarf mit einer Ihnen nahestehenden Person rechnen?
+    label_de: Können Sie bei Bedarf auf eine Ihnen nahestehende Person zählen?
     label_it: "In caso di necessità, può contare su qualcuno vicino a Lei?"
     label_es: En caso de necesidad, ¿puede contar con alguien cercano a usted?
     label_ca: "En cas de necessitat, pot comptar amb algú proper a vostè?"
@@ -1116,7 +1110,7 @@ questions:
         label_ca: "No"
   pt_t0_fra_WALK_AIDE:
     label: "Do you regularly use a stick, walker or wheelchair to get about?"
-    label_de: "Benutzen Sie regelmäßig einen Stock, eine Gehhilfe oder einen Rollstuhl, um sich fortzubewegen?"
+    label_de: "Verwenden Sie regelmäßig einen Stock, Rollator oder Rollstuhl, um mobil zu sein?"
     label_it: "Utilizza regolarmente un bastone, un deambulatore o una sedia a rotelle?"
     label_es: "¿Utiliza habitualmente un bastón, un andador o una silla de ruedas para moverse?"
     label_ca: "Utilitza habitualment un bastó, caminador o una cadira de rodes per desplaçar-se?"
@@ -1168,7 +1162,6 @@ questions:
         label_es: "No he recibido una vacuna de Pfizer-BioNTech contra la COVID-19"
         label_ca: "No em van posar la vacuna contra la COVID-19 de Pfizer-BioNTech"
   pt_t0_vi1_VACCDOSE_DATE:
-    default_value: "{{AdditionalAppColumn.vaccdate}}"
     conditions: 
       - question: pt_t0_vi1_VACCDOSE
         operation: equal
@@ -1183,11 +1176,17 @@ questions:
       En quina data li van posar la primera vacuna contra la COVID-19 de Pfizer-BioNTech? <br> Si no ho sap, indiqui la data més aproximada possible
     type: date
     page_number: 25
-    max: 
+    max:
       value: CURRENT_DATE
-    db_write:
-      table: AdditionalAppColumn
-      column: vaccdate
+    min: 
+      value: "2020-12-01"
+    skip:
+      label: Uncertain
+      label_de: überspringen
+      label_it: Saltare
+      label_es: Saltar
+      label_ca: Omet
+      value: skip
   pt_t0_vi1_VACCCENTER:
     conditions: 
       - question: pt_t0_vi1_VACCDOSE
@@ -1195,7 +1194,7 @@ questions:
         value: pt_t0_vi1_VACCDOSE_Yes
     label: "At which center were you vaccinated?"
     label_de: In welchem Zentrum wurden Sie geimpft?
-    label_it: In quale centro è stato/a vaccinato/a?
+    label_it: In quale centro è stato vaccinato?
     label_es: ¿En qué centro se vacunó?
     label_ca: A quin centre li van posar la vacuna?
     type: text
@@ -1215,7 +1214,7 @@ questions:
     skip:
       label: Skip
       label_de: Überspringen
-      label_it: Salta
+      label_it: Saltare
       label_es: Saltar
       label_ca: Omet
       value: skip
@@ -1226,7 +1225,7 @@ questions:
         operation: equal
         value: pt_t0_vi1_VACCDOSE_Yes
     label: "Where on your body did you receive the vaccine injection?"
-    label_de: An welcher Stelle Ihres Körpers haben Sie die Impfstoffinjektion erhalten?
+    label_de: Wo an Ihrem Körper haben Sie die Impfstoffinjektion erhalten?
     label_it: In che punto del corpo ha ricevuto l’iniezione del vaccino?
     label_es: ¿En qué parte del cuerpo recibió la inyección de la vacuna?
     label_ca: "A quina part del cos li van injectar la vacuna?"
@@ -1252,18 +1251,17 @@ questions:
         label_es: "Otra"
         label_ca: "Altres"
   pt_t0_ci1_PHONENUM:
-    label: "Telephone or cellphone number, including the country code"
-    label_de: Telefonnummer, Bitte geben Sie die Landesvorwahl ein
-    label_it: Numero di telefono, per favore indicare il prefisso del paese 
-    label_es: Número de teléfono, indique por favor el codigo de país
-    label_ca: Número de telèfon, indiqui si us plau el codi de país
+    label: "Telephone or cellphone number"
+    label_de: Telefonnummer
+    label_it: Numero di telefono
+    label_es: Número de teléfono
+    label_ca: Número de telèfon
     type: text
-    default_value: "{{User.primary_contact_number}}"
-    regex: "\\A(\\+?\\d{1,4}[\\s.-]?)?\\(?\\d{3}\\)?[\\s.-]?\\d{3}[\\s.-]?\\d{4,5}\\z"
+    regex: "\\A(\\+?\\d{1,2}[\\s.-]?)?\\(?\\d{3}\\)?[\\s.-]?\\d{3}[\\s.-]?\\d{4}\\z"
     page_number: 26
     db_write:
       table: User
-      column: secondary_contact_number
+      column: primary_contact_number
   pt_t0_ci1_EMAIL:
     label: "Email address"
     label_de: E-Mail-Adresse
@@ -1271,71 +1269,43 @@ questions:
     label_es: Dirección de correo electrónico
     label_ca: Correu electrònic
     type: text
-    default_value: "{{User.email}}"
     regex: "\\A[\\w+\\-.]+@[a-z\\d\\-]+(\\.[a-z\\d\\-]+)*\\.[a-z]+\\z"
     page_number: 26
     db_write:
-      table: AdditionalAppColumn
+      table: User
       column: email
   pt_t0_ci1_2NDCONTACT:
     label: "Secondary contact name"
-    label_de: Name der zweiten Kontaktperson
+    label_de: Name des Sekundärkontakts
     label_it: Recapito secondario
     label_es: Nombre de contacto secundario
     label_ca: Nom de la persona de contacte secundària
     type: text
     page_number: 27
     db_write:
-      table: AdditionalAppColumn
-      secondary_table: AdditionalContact
-      column: alternate_contact_name
-    skip:
-      label: skip
-      label_de: Überspringen
-      label_it: Salta
-      label_es: Saltar
-      label_ca: Omet
-      value: skip
+      table: User
+      column: alternative_contact
   pt_t0_ci1_2NDCONTACTEMAIL:
     label: "Secondary contact email address"
-    label_de: E-Mail der zweiten Kontaktperson
+    label_de: E-Mail-Adresse des Sekundärkontakts
     label_it: Indirizzo e-mail del recapito secondario
     label_es: Dirección de correo electrónico de contacto secundario
     label_ca: Adreça de correu electrònic de la persona de contacte secundària
     type: text
     regex: "\\A[\\w+\\-.]+@[a-z\\d\\-]+(\\.[a-z\\d\\-]+)*\\.[a-z]+\\z"
-    db_write:
-      table: AdditionalAppColumn
-      secondary_table: AdditionalContact
-      column: alternate_contact_email
-    skip:
-      label: skip
-      label_de: Überspringen
-      label_it: Salta
-      label_es: Saltar
-      label_ca: Omet
-      value: skip
     page_number: 27
   pt_t0_ci1_2NDCONTACTPHONE:
     label: "Secondary contact telephone or cellphone number"
-    label_de: Telefonnummer oder Handynummer der zweiten Kontaktperson, Bitte geben Sie die Landesvorwahl ein 
-    label_it: Numero di telefono o di cellulare del recapito secondario, per favore indicare il prefisso del paese
-    label_es: Número de teléfono o móvil de contacto secundario, indique por favor el codigo de país
-    label_ca: Telèfon fix o mòbil de la persona de contacte secundària, indiqui si us plau el codi de país
+    label_de: Telefonnummer oder Handynummer des Sekundärkontakts
+    label_it: Numero di telefono o di cellulare del recapito secondario
+    label_es: Número de teléfono o móvil de contacto secundario
+    label_ca: Telèfon fix o mòbil de la persona de contacte secundària
     type: text
-    regex: "\\A(\\+?\\d{1,4}[\\s.-]?)?\\(?\\d{3}\\)?[\\s.-]?\\d{3}[\\s.-]?\\d{4,5}\\z"
+    regex: "\\A(\\+?\\d{1,2}[\\s.-]?)?\\(?\\d{3}\\)?[\\s.-]?\\d{3}[\\s.-]?\\d{4}\\z"
     page_number: 27
     db_write:
-      table: AdditionalAppColumn
-      secondary_table: AdditionalContact
-      column: alternate_contact_phone
-    skip:
-      label: skip
-      label_de: Überspringen
-      label_it: Salta
-      label_es: Saltar
-      label_ca: Omet
-      value: skip
+      table: User
+      column: secondary_contact_number
   pt_t0_ci1_PCPNAME:
     label: "Primary care physician name (for safety follow up)"
     label_de: "Bitte geben Sie die Daten des Hausarztes an, an den Sie sich am wahrscheinlichsten wenden, wenn Sie eine medizinische Versorgung benötigen. Name des Hausarztes (zur Sicherheitsnachbeobachtung)"
@@ -1343,61 +1313,38 @@ questions:
     label_es: Nombre del médico de atención primaria (para el seguimiento de seguridad)
     label_ca: Nom del metge d’atenció primària (per al seguiment de la seguretat)
     type: text
-    skip:
-      label: skip
-      label_de: Überspringen
-      label_it: Salta
-      label_es: Saltar
-      label_ca: Omet
-      value: skip
     page_number: 28
-    db_write:
-      table: AdditionalAppColumn
-      secondary_table: HealthCareProviderInformation
-      column: primary_care_physician_name
   pt_t0_ci1_PCPCONTACTPHONE:
     label: "Primary care physician phone number"
-    label_de: "Telefonnummer des Hausarztes, Bitte geben Sie die Landesvorwahl ein"
-    label_it: "Numero di telefono del medico di base, per favore indicare il prefisso del paese"
-    label_es: "Número de teléfono del médico de atención primaria, indique por favor el codigo de país"
-    label_ca: "Número de telèfon del metge d’atenció primària, indiqui si us plau el codi de país"
+    label_de: "Telefonnummer des Hausarztes"
+    label_it: "Numero di telefono del medico di base"
+    label_es:
+    label_ca: "Número de telèfon del metge d’atenció primària"
     type: text
-    regex: "\\A(\\+?\\d{1,4}[\\s.-]?)?\\(?\\d{3}\\)?[\\s.-]?\\d{3}[\\s.-]?\\d{4,5}\\z"
+    regex: "\\A(\\+?\\d{1,2}[\\s.-]?)?\\(?\\d{3}\\)?[\\s.-]?\\d{3}[\\s.-]?\\d{4}\\z"
     skip:
-      label: skip
-      label_de: Überspringen
-      label_it: Salta
-      label_es: Saltar
+      label: Skip
       label_ca: Omet
+      label_de: überspringen
       value: skip
     page_number: 28
-    db_write:
-      table: AdditionalAppColumn
-      secondary_table: HealthCareProviderInformation
-      column: primary_care_physician_phone
   pt_t0_ci1_PCPCONTACTEMAIL:
     label: "Primary care physician email"
     label_de: "E-Mail-Adresse des Hausarztes"
     label_it: "E-mail del medico di base"
-    label_es: "Correo electrónico del médico de atención primaria"
+    label_es:
     label_ca: "Correu electrònic del metge d’atenció primària"
     type: text
     regex: "\\A[\\w+\\-.]+@[a-z\\d\\-]+(\\.[a-z\\d\\-]+)*\\.[a-z]+\\z"
     skip:
-      label: skip
-      label_de: Überspringen
-      label_it: Salta
-      label_es: Saltar
+      label: Skip
       label_ca: Omet
+      label_de: überspringen
       value: skip
     page_number: 28
-    db_write:
-      table: AdditionalAppColumn
-      secondary_table: HealthCareProviderInformation
-      column: primary_care_physician_email
   pt_t0_ci1_CONTACTPREF:
     label: "How would you like us to contact you for follow up questionnaires?"
-    label_de: Wie möchten Sie, dass wir Sie für zum ausfüllen der Fragebögen kontaktieren?
+    label_de: Wie sollen wir Sie zum Ausfüllen der Fragebögen zur Nachbeobachtung kontaktieren?
     label_it: Come desidera essere contattato per i questionari di follow-up? 
     label_es: ¿Cómo desea que nos pongamos en contacto con usted para realizar cuestionarios de seguimiento? 
     label_ca: Com preferiria que ens poséssim en contacte amb vostè per als qüestionaris de seguiment?
@@ -1413,13 +1360,13 @@ questions:
       - value: "2"
         label: "Web/app-based questionnaire"
         label_de: "Web-/App-basierter Fragebogen"
-        label_it: "Tramite web/applicazione"
+        label_it: "Questionario basato su web/applicazione"
         label_es: "Cuestionario basado en web/aplicación"
         label_ca: "Qüestionari a través de web o aplicació"
       - value: "3"
         label: "Do not contact me anymore"
         label_de: "Kontaktieren Sie mich nicht mehr"
-        label_it: "Non desidero essere più contattato"
+        label_it: "Non mi contatti più"
         label_es: "No volver a ponerse en contacto conmigo"
         label_ca: "No em torneu a contactar"
     db_write:
@@ -1427,10 +1374,10 @@ questions:
       column: discon_status
   q_end:
     label: This is the end of the questionnaire. If you need to fill in missing details, please close the questionnaire using the [x] at the top right and you can revisit the questionnaire at a later time. Otherwise, if you wish to submit a completed questionnaire, select the option below and press 'NEXT'.
-    label_de: Das ist das Ende des Fragebogens. Wenn Sie fehlende Angaben ausfüllen müssen, schließen Sie bitte den Fragebogen mit dem [x] oben rechts und Sie können den Fragebogen zu einem späteren Zeitpunkt erneut aufrufen. Andernfalls, wenn Sie einen ausgefüllten Fragebogen einreichen möchten, wählen Sie die Option unten und drücken Sie 'Nächste'.
-    label_it: Fine del questionario. Se ha bisogno di compilare i dettagli mancanti, chiuda il questionario utilizzando la [x] in alto a destra e potrà riprendere il questionario in un secondo momento. In caso contrario, se desidera inviare il questionario compilato, selezioni l'opzione qui sotto e prema 'AVANTI'.
-    label_es: Este es el final del cuestionario. Si necesita rellenar los detalles que faltan, cierre el cuestionario utilizando la [x] de la esquina superior derecha y puede volver a consultar el cuestionario más adelante. En caso contrario, si desea enviar un cuestionario cumplimentado, seleccione la opción a continuación y pulse 'SIGUIENTE'.
-    label_ca: Ha arribat al final del qüestionari. Si ha d’introduir informació pendent, premi el símbol [x] a dalt a la dreta per tancar el qüestionari i tornar-hi a accedir més tard. Si no és el cas i vol enviar el qüestionari emplenat, seleccioni l’opció a continuació i premi 'SEGÜENT'.
+    label_de: Dies ist das Ende des Fragebogens. Wenn Sie fehlende Angaben ergänzen müssen, schließen Sie den Fragebogen bitte mit dem [x] oben rechts und Sie können den Fragebogen zu einem späteren Zeitpunkt erneut aufrufen. Wenn Sie andernfalls einen ausgefüllten Fragebogen einreichen möchten, wählen Sie die unten stehende Option und drücken Sie 'WEITER'.
+    label_it: Questa è la fine del questionario. Se avete bisogno di compilare i dettagli mancanti, chiudete il questionario utilizzando la [x] in alto a destra e potrete rivisitare il questionario in un secondo momento. In caso contrario, se si desidera inviare un questionario compilato, selezionare l'opzione qui sotto e premere 'AVANTI'.
+    label_es: Este es el final del cuestionario. Si necesita completar los detalles que faltan, cierre el cuestionario usando la [x] en la parte superior derecha y podrá volver a revisar el cuestionario más adelante. De lo contrario, si desea enviar un cuestionario completado, seleccione la opción a continuación y pulse 'SIGUIENTE'.
+    label_ca: Aquest és el final del qüestionari. Si heu d'emplenar les dades que falten, tanqueu el qüestionari amb la x [que hi ha a la part superior dreta] i podreu tornar a visitar el qüestionari més endavant. En cas contrari, si voleu enviar un qüestionari completat, seleccioneu l'opció següent i premeu "SEGÜENT".
     type: radio
     choices:
       - value: q_end_confirm
@@ -1438,4 +1385,4 @@ questions:
         label_de: "Ich bestätige, dass dies meine endgültigen Antworten sind"
         label_it: "Confermo che queste sono le mie risposte finali"
         label_es: "Confirmo que estas son mis respuestas finales"
-        label_ca: "Confirmo que aquestes són les meves respostes definitives"
+        label_ca: "Confirmo que aquestes són les meves respostes finals"
