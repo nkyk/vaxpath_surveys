@@ -605,6 +605,9 @@ questions:
     label_es: ¿Cuál era el nombre del profesional sanitario?
     type: text
     page_number: 11
+    db_write:
+      table: AdditionalAppColumn
+      column: alt_hcp_name
   pt_t1_fu_HCPLOCATION:
     safety_alert_question: true
     conditions:
@@ -628,6 +631,9 @@ questions:
       label_it: "Non so"
       label_es: "No lo sé"
       value: skip
+    db_write:
+      table: AdditionalAppColumn
+      column: alt_hcp_location
   pt_t1_fu_HCPEMAIL:
     safety_alert_question: true
     conditions:
@@ -652,6 +658,9 @@ questions:
       label_it: "Non so"
       label_es: "No lo sé"
       value: skip
+    db_write:
+      table: AdditionalAppColumn
+      column: alt_hcp_email
   pt_t1_fu_SYMPTOMS:
     safety_alert_question: true
     conditions:
