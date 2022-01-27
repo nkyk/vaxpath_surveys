@@ -4353,7 +4353,8 @@ questions:
         column: pregnancy_status
         condition_operator: or
         operation: not_equal
-        value: pt_t2_preg_PREGCONF_no    db_write:
+        value: pt_t2_preg_PREGCONF_no
+    db_write:
       table: AdditionalAppColumn
       column: pregnancy_status
     label: >-
