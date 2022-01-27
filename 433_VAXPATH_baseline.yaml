@@ -1255,7 +1255,7 @@ questions:
     label_es: Número de teléfono, indique por favor el codigo de país
     label_ca: Número de telèfon, indiqui si us plau el codi de país
     type: text
-    regex: “\\A(\\+?\\d{1,4}[\\s.-]?)?\\(?\\d{3}\\)?[\\s.-]?\\d{3}[\\s.-]?\\d{4}\\z”
+    regex: "\\A(\\+?\\d{1,4}[\\s.-]?)?\\(?\\d{3}\\)?[\\s.-]?\\d{3}[\\s.-]?\\d{4}\\z"
     page_number: 26
     db_write:
       table: User
@@ -1318,7 +1318,7 @@ questions:
     label_es: Número de teléfono o móvil de contacto secundario, indique por favor el codigo de país
     label_ca: Telèfon fix o mòbil de la persona de contacte secundària, indiqui si us plau el codi de país
     type: text
-    regex: “\\A(\\+?\\d{1,4}[\\s.-]?)?\\(?\\d{3}\\)?[\\s.-]?\\d{3}[\\s.-]?\\d{4}\\z”
+    regex: "\\A(\\+?\\d{1,4}[\\s.-]?)?\\(?\\d{3}\\)?[\\s.-]?\\d{3}[\\s.-]?\\d{4}\\z"
     page_number: 27
     db_write:
       table: AdditionalAppColumn
@@ -1357,7 +1357,7 @@ questions:
     label_es: "Número de teléfono del médico de atención primaria, indique por favor el codigo de país"
     label_ca: "Número de telèfon del metge d’atenció primària, indiqui si us plau el codi de país"
     type: text
-    regex: “\\A(\\+?\\d{1,4}[\\s.-]?)?\\(?\\d{3}\\)?[\\s.-]?\\d{3}[\\s.-]?\\d{4}\\z”
+    regex: "\\A(\\+?\\d{1,4}[\\s.-]?)?\\(?\\d{3}\\)?[\\s.-]?\\d{3}[\\s.-]?\\d{4}\\z"
     skip:
       label: skip
       label_de: Überspringen
