@@ -263,9 +263,9 @@ questions:
         value: pt_t1_fu_CNTCTINFO_PART
     label: "Secondary contact telephone or cellphone number"
     label_de: Telefonnummer oder Handynummer der zweiten Kontaktperson, Bitte geben Sie die Landesvorwahl ein 
-    label_it: Numero di telefono o di cellulare del recapito secondario, per favore indicare il prefisso del paese 
-    label_es: Número de teléfono o móvil de contacto secundario, indique por favor el codigo de pais 
-    label_ca: Telèfon fix o mòbil de la persona de contacte secundària, indiqui si us plau el codi de pai
+    label_it: Numero di telefono o di cellulare del recapito secondario, per favore indicare il prefisso del paese
+    label_es: Número de teléfono o móvil de contacto secundario, indique por favor el codigo de pais
+    label_ca: Telèfon fix o mòbil de la persona de contacte secundària, indiqui si us plau el codi de pai 
     type: text
     default_survey_reference: VAXPATH_dose2
     default_question_keyword: pt_t1_ci2_2NDCONTACTPHONE
@@ -459,7 +459,7 @@ questions:
         label: "Primary care physician / general practitioner"
         label_de: "Hausarzt / Allgemeinmediziner"
         label_it: "Medico di base/medico curante"
-        label_es: "Nombre del médico de atención primaria (para el seguimiento de seguridad)"
+        label_es: "Médico de atención primaria/médico de cabecera"
         label_ca: "Metge d’atenció primària/metge de capçalera"
       - value: pt_t1_fu_VISITFACILITY_2
         label: Tele-health
@@ -647,7 +647,7 @@ questions:
     label_ca: "Indiqui el correu electrònic de les instal·lacions o del professional sanitari que va visitar"
     label_de: "E-Mail-Adresse der von Ihnen besuchten Einrichtung oder des Gesundheitsdienstleisters"
     label_it: "Indirizzo e-mail della struttura che ha visitato o dell’operatore sanitario presso cui si è recato"
-    label_es: "¿Dirección de correo electrónico del centro o profesional sanitario que visitó"
+    label_es: "Dirección de correo electrónico del centro o profesional sanitario que visitó"
     type: text
     regex: "\\A[\\w+\\-.]+@[a-z\\d\\-]+(\\.[a-z\\d\\-]+)*\\.[a-z]+\\z"
     page_number: 11
@@ -964,6 +964,8 @@ questions:
         label: "Thrombocytopenia (low platelet count)"
         label_ca: "Trombocitopènia (recompte baix de plaquetes)"
         label_de: "Thrombozytopenie (niedrige Blutplättchenzahl)"
+        label_es: "Trombocitopenia (nivel bajo de plaquetas)"
+        label_it: "Trombocitopenia (bassa conta piastrinica)"
       - value: pt_t1_fu_DX_HEMA_NONE
         label: "None of the above"
         label_ca: "Cap de les anteriors"
@@ -1147,7 +1149,7 @@ questions:
       - value: pt_t1_fu_DX_OTHER_NONE
         label: "None of the above"
         label_ca: "Cap de les anteriors"
-        label_de: "None of the above"
+        label_de: "Keine der obenstehenden Antworten"
         label_it: "Nessuno dei suddetti sintomi"
         label_es: "Ninguno de las anteriores"
     validation:
@@ -1165,7 +1167,7 @@ questions:
     label_ca: "Quin resultat va tenir la seva atenció mèdica?"
     label_de: "Welches Ergebnis hatte Ihre medizinische Versorgung bei akutem Myokardinfarkt (Herzinfarkt)?"
     label_it: "Qual è stato l’esito della Sua infarto miocardico acuto?"
-    label_es: "¿Cuál fue el resultado de su Infarto agudo de miocardio"
+    label_es: "¿Cuál fue el resultado de su Infarto agudo de miocardio?"
     type: radio
     page_number: 19
     number_of_columns: 4
@@ -1209,7 +1211,7 @@ questions:
     label_ca: "Quin resultat va tenir la seva atenció mèdica?"
     label_de: "Welches Ergebnis hatte Ihre medizinische Versorgung bei koronarer Herzkrankheit (Herzrhythmusstörungen aufgrund einer koronaren Herzkrankheit)?"
     label_it: "Qual è stato l’esito della Sua Aritmia malattia coronarica"
-    label_es: "¿Cuál fue el resultado de su Arritmia por enfermedad arterial coronaria"
+    label_es: "¿Cuál fue el resultado de su Arritmia por enfermedad arterial coronaria?"
     type: radio
     page_number: 20
     number_of_columns: 4
@@ -1253,7 +1255,7 @@ questions:
     label_ca: "Quin resultat va tenir la seva atenció mèdica?"
     label_de: "Welches Ergebnis hatte Ihre medizinische Versorgung bei Herzversagen und kardiogenem Schock?"
     label_it: "Qual è stato l’esito della Sua Insufficienza cardiaca e shock cardiogenol"
-    label_es: "¿Cuál fue el resultado de su Insuficiencia cardíaca y shock cardiogénico"
+    label_es: "¿Cuál fue el resultado de su Insuficiencia cardíaca y shock cardiogénico?"
     type: radio
     page_number: 21
     number_of_columns: 4
@@ -1297,7 +1299,7 @@ questions:
     label_ca: "Quin resultat va tenir la seva atenció mèdica?"
     label_de: Welches Ergebnis hatte Ihre medizinische Versorgung bei Mikroangiopathie [Erkrankung der Kapillaren (sehr kleine Blutgefäße)]?
     label_it: Qual è stato l’esito della Sua Microangiopatia [Malattia dei capillari (vasi sanguigni molto piccoli)
-    label_es: ¿Cuál fue el resultado de su Microangiopatía [Enfermedad de los capilares (vasos sanguíneos muy pequeños)
+    label_es: ¿Cuál fue el resultado de su Microangiopatía [Enfermedad de los capilares (vasos sanguíneos muy pequeños)?
     type: radio
     page_number: 22
     number_of_columns: 4
@@ -1341,7 +1343,7 @@ questions:
     label_ca: "Quin resultat va tenir la seva atenció mèdica?"
     label_de: "Welches Ergebnis hatte Ihre medizinische Versorgung bei Myokarditis (Schwellung/Entzündung des Herzens)?"
     label_it: "Qual è stato l’esito della Sua Miocardite (gonfiore/ infiammazione del cuore)"
-    label_es: "¿Cuál fue el resultado de su Miocarditis (hinchazón/inflamación del corazón)"
+    label_es: "¿Cuál fue el resultado de su Miocarditis (hinchazón/inflamación del corazón)?"
     type: radio
     page_number: 23
     number_of_columns: 4
@@ -1385,7 +1387,7 @@ questions:
     label_ca: "Quin resultat va tenir la seva atenció mèdica?"
     label_de: "Welches Ergebnis hatte Ihre medizinische Versorgung bei Perikarditis (Schwellung/Entzündung der Membran um das Herz)?"
     label_it: "Qual è stato l’esito della Sua Pericardite (gonfiore/ infiammazione della membrana intorno al cuore"
-    label_es: "¿Cuál fue el resultado de su Pericarditis (hinchazón/inflamación de la membrana alrededor del corazón)"
+    label_es: "¿Cuál fue el resultado de su Pericarditis (hinchazón/inflamación de la membrana alrededor del corazón)?"
     type: radio
     page_number: 24
     number_of_columns: 4
@@ -1429,7 +1431,7 @@ questions:
     label_ca: "Quin resultat va tenir la seva atenció mèdica?"
     label_de: "Welches Ergebnis hatte Ihre medizinische Behandlung der Stress-Kardiomyopathie (stressbedingte Schädigung des Herzens)?"
     label_it: "Qual è stato l’esito della Sua Cardiomiopatia da stress (danni indotti dallo stress al cuore)"
-    label_es: "¿Cuál fue el resultado de su Miocardiopatía por estrés (daño al corazón inducido por estrés)"
+    label_es: "¿Cuál fue el resultado de su Miocardiopatía por estrés (daño al corazón inducido por estrés)?"
     type: radio
     page_number: 26
     number_of_columns: 4
@@ -1473,7 +1475,7 @@ questions:
     label_ca: "Quin resultat va tenir la seva atenció mèdica?"
     label_de: "Welches Ergebnis hatte Ihre medizinische Versorgung bei Herzrhythmusstörungen (Arrythmie)?"
     label_it: "Qual è stato l’esito della Sua Ritmo cardiaco anormale (aritmia)"
-    label_es: "¿Cuál fue el resultado de su Ritmo cardíaco anormal (arritmia)"
+    label_es: "¿Cuál fue el resultado de su Ritmo cardíaco anormal (arritmia)?"
     type: radio
     page_number: 26
     number_of_columns: 4
@@ -1517,7 +1519,7 @@ questions:
     label_ca: "Quin resultat va tenir la seva atenció mèdica?"
     label_de: "Welches Ergebnis hatte Ihre medizinische Versorgung bei akuter Nierenschädigung (nur plötzlicher Vorfall, nicht bei chronischen Erkrankungen)?"
     label_it: "Qual è stato l’esito della Sua Lesione renale acuta (solo episodio improvviso, escluse le condizioni croniche)"
-    label_es: "¿Cuál fue el resultado de su Lesión renal aguda (solo episodio repentino, sin incluir afecciones crónicas)"
+    label_es: "¿Cuál fue el resultado de su Lesión renal aguda (solo episodio repentino, sin incluir afecciones crónicas)?"
     type: radio
     page_number: 26
     number_of_columns: 4
@@ -1561,7 +1563,7 @@ questions:
     label_ca: "Quin resultat va tenir la seva atenció mèdica?"
     label_de: "Welches Ergebnis hatte Ihre medizinische Versorgung bei akuter Leberschädigung (nur bei plötzlichem Auftreten, nicht bei chronischen Erkrankungen)?"
     label_it: "Qual è stato l’esito della Sua Lesioni epatiche acute (solo episodio improvviso, escluse le condizioni croniche)"
-    label_es: "¿Cuál fue el resultado de su Lesión hepática aguda (solo episodio repentino, sin incluir afecciones crónicas)"
+    label_es: "¿Cuál fue el resultado de su Lesión hepática aguda (solo episodio repentino, sin incluir afecciones crónicas)?"
     type: radio
     page_number: 26
     number_of_columns: 4
@@ -1605,7 +1607,7 @@ questions:
     label_ca: "Quin resultat va tenir la seva atenció mèdica?"
     label_de: "Welches Ergebnis hatte Ihre medizinische Versorgung bei akuter Pankreatitis (plötzliche Entzündung der Bauchspeicheldrüse)?"
     label_it: "Qual è stato l’esito della Sua Pancreatite acuta (infiammazione improvvisa del pancreas)"
-    label_es: "¿Cuál fue el resultado de su Pancreatitis aguda (inflamación repentina del páncreas)"
+    label_es: "¿Cuál fue el resultado de su Pancreatitis aguda (inflamación repentina del páncreas)?"
     type: radio
     page_number: 26
     number_of_columns: 4
@@ -1649,7 +1651,7 @@ questions:
     label_ca: "Quin resultat va tenir la seva atenció mèdica?"
     label_de: "Welches Ergebnis hatte Ihre medizinische Behandlung des akuten Atemnotsyndroms?"
     label_it: "Qual è stato l’esito della Sua Sindrome da distress respiratorio acuto"
-    label_es: "¿Cuál fue el resultado de su Síndrome de distrés respiratorio agudo"
+    label_es: "¿Cuál fue el resultado de su Síndrome de distrés respiratorio agudo?"
     type: radio
     page_number: 26
     number_of_columns: 4
@@ -1693,7 +1695,7 @@ questions:
     label_ca: "Quin resultat va tenir la seva atenció mèdica?"
     label_de: "Welches war das Ergebnis Ihrer medizinischen Behandlung bei Anosmie (Geruchsverlust), Ageusie (Geschmacksverlust)?"
     label_it: "Qual è stato l’esito della Sua Anosmia (perdita di odore), Ageusia (perdita di gusto)"
-    label_es: "¿Cuál fue el resultado de su Anosmia (pérdida del olfato), Ageusia (pérdida del gusto)"
+    label_es: "¿Cuál fue el resultado de su Anosmia (pérdida del olfato), Ageusia (pérdida del gusto)?"
     type: radio
     page_number: 26
     number_of_columns: 4
@@ -1737,7 +1739,7 @@ questions:
     label_ca: "Quin resultat va tenir la seva atenció mèdica?"
     label_de: Welches Ergebnis hatte Ihre medizinische Behandlung von Chilblain-ähnlichen Läsionen (schmerzhafte und juckende Schwellungen der Haut, meist an Händen und Füßen)?
     label_it: "Qual è stato l’esito della Sua Chilblain-come lesioni (doloroso e prurito gonfiore sulla pelle, di solito sulle mani e piedi)"
-    label_es: "¿Cuál fue el resultado de su Lesiones similares a la chilblaina (inflamación dolorosa y con picazón en la piel, generalmente en las manos y los pies)"
+    label_es: "¿Cuál fue el resultado de su Lesiones similares a la chilblaina (inflamación dolorosa y con picazón en la piel, generalmente en las manos y los pies)?"
     type: radio
     page_number: 26
     number_of_columns: 4
@@ -1781,7 +1783,7 @@ questions:
     label_ca: "Quin resultat va tenir la seva atenció mèdica?"
     label_de: "Welches Ergebnis hatte Ihre medizinische Versorgung bei koronarer Herzkrankheit?"
     label_it: "Qual è stato l’esito della Sua cure mediche per la malattia coronarica"
-    label_es: "¿Cuál fue el resultado de su atención médica para la enfermedad coronaria"
+    label_es: "¿Cuál fue el resultado de su atención médica para la enfermedad coronaria?"
     type: radio
     page_number: 26
     number_of_columns: 4
@@ -1825,7 +1827,7 @@ questions:
     label_ca: "Quin resultat va tenir la seva atenció mèdica?"
     label_de: "Welches Ergebnis hatte Ihre medizinische Versorgung bei einer tiefen Venenthrombose (Blutgerinnsel in einer tiefen Vene)?"
     label_it: "Qual è stato l’esito della Sua Trombosi venosa profonda (coagulo di sangue in una vena profonda)"
-    label_es: "¿Cuál fue el resultado de su Trombosis venosa profunda (coágulo de sangre en una vena profunda)"
+    label_es: "¿Cuál fue el resultado de su Trombosis venosa profunda (coágulo de sangre en una vena profunda)?"
     type: radio
     page_number: 26
     number_of_columns: 4
@@ -1869,7 +1871,7 @@ questions:
     label_ca: "Quin resultat va tenir la seva atenció mèdica?"
     label_de: "Welches Ergebnis hatte Ihre medizinische Versorgung bei Erythema multiforme (Immunreaktion der Haut)?"
     label_it: "Eritema multiforme (reazione immunitaria della pelle)"
-    label_es: "¿Cuál fue el resultado de su Eritema multiforme (reacción inmunitaria de la piel)"
+    label_es: "¿Cuál fue el resultado de su Eritema multiforme (reacción inmunitaria de la piel)?"
     type: radio
     page_number: 26
     number_of_columns: 4
@@ -1913,7 +1915,7 @@ questions:
     label_ca: "Quin resultat va tenir la seva atenció mèdica?"
     label_de: "Welches Ergebnis hatte Ihre medizinische Versorgung bei einer hämorrhagischen Erkrankung (Blutungsstörung)?"
     label_it: "Qual è stato l’esito della Sua Malattia emorragica (malattia emorragica)"
-    label_es: "¿Cuál fue el resultado de su Enfermedad hemorrágica (trastorno hemorrágico)"
+    label_es: "¿Cuál fue el resultado de su Enfermedad hemorrágica (trastorno hemorrágico)?"
     type: radio
     page_number: 26
     number_of_columns: 4
@@ -1957,7 +1959,7 @@ questions:
     label_ca: "Quin resultat va tenir la seva atenció mèdica?"
     label_de: "Welches Ergebnis hatte Ihre medizinische Versorgung bei Gliedmaßenischämie (verminderter Blutfluss in einer Gliedmaße)?"
     label_it: "Qual è stato l’esito della Sua Ischemia degli arti (ridotto flusso di sangue ad un arto)"
-    label_es: "¿Cuál fue el resultado de su Isquemia del miembro (disminución del flujo sanguíneo a un miembro"
+    label_es: "¿Cuál fue el resultado de su Isquemia del miembro (disminución del flujo sanguíneo a un miembro?"
     type: radio
     page_number: 26
     number_of_columns: 4
@@ -2001,7 +2003,7 @@ questions:
     label_ca: "Quin resultat va tenir la seva atenció mèdica?"
     label_de: "Welches Ergebnis hatte Ihre medizinische Versorgung bei Lungenembolie (Blutgerinnsel in der Lunge)?"
     label_it: "Qual è stato l’esito della Sua assistenza medica per embolo/embolia polmonare (coagulo di sangue sul polmone)"
-    label_es: "¿Cuál fue el resultado de su atención médica para Émbolo pulmonar/embolia (coágulo de sangre en el pulmón)"
+    label_es: "¿Cuál fue el resultado de su atención médica para Émbolo pulmonar/embolia (coágulo de sangre en el pulmón)?"
     type: radio
     page_number: 26
     number_of_columns: 4
@@ -2045,7 +2047,7 @@ questions:
     label_ca: "Quin resultat va tenir la seva atenció mèdica?"
     label_de: "Welches Ergebnis hatte Ihre medizinische Behandlung der Rhabdomyolyse?"
     label_it: "Qual è stato l’esito della Sua cure mediche per rabdomiolisi?"
-    label_es: "¿Cuál fue el resultado de su atención médica para la Rabdomiólisis"
+    label_es: "¿Cuál fue el resultado de su atención médica para la Rabdomiólisis?"
     type: radio
     page_number: 26
     number_of_columns: 4
@@ -2177,7 +2179,7 @@ questions:
     label_ca: "Quin resultat va tenir la seva atenció mèdica?"
     label_de: "Welches Ergebnis hatte Ihre medizinische Versorgung bei Schlaganfall?"
     label_it: "Qual è stato l’esito della Sua Cure mediche per Stroke?"
-    label_es: "¿Cuál fue el resultado de su ¿Atención médica para Stroke?"
+    label_es: "¿Cuál fue el resultado de su atención médica para Stroke?"
     type: radio
     page_number: 26
     number_of_columns: 4
@@ -2221,7 +2223,7 @@ questions:
     label_ca: "Quin resultat va tenir la seva atenció mèdica?"
     label_de: Welches Ergebnis hatte Ihre medizinische Versorgung bei subakuter Thyreoiditis (entzündliche Erkrankung der Schilddrüse)?
     label_it: "Qual è stato l’esito della Sua Tiroidite subacute (malattia infiammatoria della tiroide)?"
-    label_es: "¿Cuál fue el resultado de su ¿Tiroiditis subaguda (enfermedad inflamatoria de la tiroides)?"
+    label_es: "¿Cuál fue el resultado de su Tiroiditis subaguda (enfermedad inflamatoria de la tiroides)?"
     type: radio
     page_number: 26
     number_of_columns: 4
@@ -2309,7 +2311,7 @@ questions:
     label_ca: "Quin resultat va tenir la seva atenció mèdica?"
     label_de: "Welches Ergebnis hatte Ihre medizinische Versorgung bei disseminierter intravaskulärer Koagulation (abnorme Blutgerinnung)?"
     label_it: "Qual è stato l’esito della Sua cure mediche per coagulazione intravascolare disseminata (coagulazione anomala del sangue)"
-    label_es: "¿Cuál fue el resultado de su Coagulación intravascular diseminada (coagulación sanguínea anormal)"
+    label_es: "¿Cuál fue el resultado de su Coagulación intravascular diseminada (coagulación sanguínea anormal)?"
     type: radio
     page_number: 27
     number_of_columns: 4
@@ -2397,7 +2399,7 @@ questions:
     label_ca: "Quin resultat va tenir la seva atenció mèdica?"
     label_de: "Welches Ergebnis hatte Ihre medizinische Versorgung bei Anaphylaxie (lebensbedrohliche allergische Reaktion, die dringend ärztliche Hilfe erfordert)?"
     label_it: "Qual è stato l’esito della Sua Anafilassi (minaccia di vita reazione allergica che richiede urgente assistenza medica)?"
-    label_es: ¿Cuál fue el resultado de su ¿Anafilaxia (reacción alérgica potencialmente mortal que requiere atención médica urgente)?
+    label_es: ¿Cuál fue el resultado de su Anafilaxia (reacción alérgica potencialmente mortal que requiere atención médica urgente)?
     type: radio
     page_number: 28
     number_of_columns: 4
@@ -2485,7 +2487,7 @@ questions:
     label_ca: "Quin resultat va tenir la seva atenció mèdica?"
     label_de: "Welches Ergebnis hatte Ihre medizinische Behandlung der Autoimmunthyreoiditis (auch chronische lymphozytäre Thyreoiditis, Hashimoto-Thyreoiditis oder Hashimoto-Krankheit genannt)?"
     label_it: "Qual è stato l’esito della Sua Tiroidite autoimmune (detta anche tiroidite linfocitaria cronica, tiroidite di Hashimoto o malattia di Hashimoto)?"
-    label_es: "¿Cuál fue el resultado de su ¿Tiroiditis autoinmune (también llamada tiroiditis linfocítica crónica, tiroiditis de Hashimoto o enfermedad de Hashimoto)?"
+    label_es: "¿Cuál fue el resultado de su Tiroiditis autoinmune (también llamada tiroiditis linfocítica crónica, tiroiditis de Hashimoto o enfermedad de Hashimoto)?"
     type: radio
     page_number: 28
     number_of_columns: 4
@@ -2529,7 +2531,7 @@ questions:
     label_ca: "Quin resultat va tenir la seva atenció mèdica?"
     label_de: "Welches Ergebnis hatte Ihre medizinische Behandlung der Fibromyalgie?"
     label_it: "Qual è stato l’esito della Sua cure mediche per la fibromialgia?"
-    label_es: "¿Cuál fue el resultado de su ¿Atención médica para la fibromialgia?"
+    label_es: "¿Cuál fue el resultado de su Atención médica para la fibromialgia?"
     type: radio
     page_number: 28
     number_of_columns: 4
@@ -2573,7 +2575,7 @@ questions:
     label_ca: "Quin resultat va tenir la seva atenció mèdica?"
     label_de: "Welches Ergebnis hatte die medizinische Behandlung der Kawasaki-Krankheit bei Ihnen?"
     label_it: "Qual è stato l’esito della Sua Cure mediche per la malattia di Kawasaki?"
-    label_es: "¿Cuál fue el resultado de su ¿Atención médica para la enfermedad de Kawasaki?"
+    label_es: "¿Cuál fue el resultado de su Atención médica para la enfermedad de Kawasaki?"
     type: radio
     page_number: 28
     number_of_columns: 4
@@ -2749,7 +2751,7 @@ questions:
     label_ca: "Quin resultat va tenir la seva atenció mèdica?"
     label_de: "Welches Ergebnis hatte Ihre medizinische Versorgung bei aseptischer Meningitis (Entzündung der Hirnhäute / virale Meningitis)?"
     label_it: "Qual è stato l’esito della Sua Meningite asettica (infiammazione dei rivestimenti del cervello/ meningite virale)?"
-    label_es: "¿Cuál fue el resultado de su ¿Meningitis aséptica (inflamación de los revestimientos del cerebro/ meningitis viral)?"
+    label_es: "¿Cuál fue el resultado de su Meningitis aséptica (inflamación de los revestimientos del cerebro/ meningitis viral)?"
     type: radio
     page_number: 29
     number_of_columns: 4
@@ -2793,7 +2795,7 @@ questions:
     label_ca: "Quin resultat va tenir la seva atenció mèdica?"
     label_de: "Welches Ergebnis hatte Ihre medizinische Behandlung der Bellschen Lähmung?"
     label_it: "Qual è stato l’esito della Sua Cure mediche per la paralisi di Bell?"
-    label_es: "¿Cuál fue el resultado de su ¿Atención médica para la parálisis de Bell?"
+    label_es: "¿Cuál fue el resultado de su atención médica para la parálisis de Bell?"
     type: radio
     page_number: 29
     number_of_columns: 4
@@ -2881,7 +2883,7 @@ questions:
     label_ca: "Quin resultat va tenir la seva atenció mèdica?"
     label_de: "Welches Ergebnis hatte Ihre medizinische Versorgung bei Generalisierter Krampfanfall/ Anfall?"
     label_it: "Qual è stato l’esito della Sua Convulsioni generalizzate/ convulsioni (fit)?"
-    label_es: "¿Cuál fue el resultado de su ¿Convulsión generalizada/ convulsión (en forma)?"
+    label_es: "¿Cuál fue el resultado de su Convulsión generalizada/ convulsión (en forma)?"
     type: radio
     page_number: 29
     number_of_columns: 4
@@ -3145,7 +3147,7 @@ questions:
     label_ca: "Quin resultat va tenir la seva atenció mèdica?"
     label_de: "Welches Ergebnis hatte Ihre medizinische Versorgung bei Narkolepsie und Kataplexie?"
     label_it: "Qual è stato l’esito della Sua Cure mediche per narcolessia e cataplessia?"
-    label_es: "¿Cuál fue el resultado de su ¿Atención médica para narcolepsia y cataplejía?"
+    label_es: "¿Cuál fue el resultado de su Atención médica para narcolepsia y cataplejía?"
     type: radio
     page_number: 30
     number_of_columns: 4
@@ -3189,7 +3191,7 @@ questions:
     label_ca: "Quin resultat va tenir la seva atenció mèdica?"
     label_de: "Welches Ergebnis hatte Ihre medizinische Versorgung bei nicht-anaphylaktischen allergischen Reaktionen?"
     label_it: "Qual è stato l’esito della Sua cure mediche per le reazioni allergiche non naftiliche?"
-    label_es: "¿Cuál fue el resultado de su ¿Atención médica para las reacciones alérgicas no hipolácticas?"
+    label_es: "¿Cuál fue el resultado de su Atención médica para las reacciones alérgicas no hipolácticas?"
     type: radio
     page_number: 30
     number_of_columns: 4
@@ -3658,4 +3660,4 @@ questions:
     db_write:
       table: AdditionalAppColumn
       column: subject_status
-      column_value: "Complete"
+      column_value: "Completed"
