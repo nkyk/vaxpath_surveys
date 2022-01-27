@@ -1168,6 +1168,7 @@ questions:
         label_es: "No he recibido una vacuna de Pfizer-BioNTech contra la COVID-19"
         label_ca: "No em van posar la vacuna contra la COVID-19 de Pfizer-BioNTech"
   pt_t0_vi1_VACCDOSE_DATE:
+    default_value: "{{AdditionalAppColumn.vaccdate}}"
     conditions: 
       - question: pt_t0_vi1_VACCDOSE
         operation: equal
