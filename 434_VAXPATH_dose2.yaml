@@ -134,13 +134,6 @@ questions:
     page_number: 9
     max:
       value: CURRENT_DATE
-    skip:
-      label: Uncertain
-      label_de: überspringen
-      label_it: Saltare
-      label_es: Saltar
-      label_ca: Omet
-      value: skip
   pt_t1_vi2_VACCCENTER:
     conditions: 
       - question: pt_t1_vi2_VACCDOSE
