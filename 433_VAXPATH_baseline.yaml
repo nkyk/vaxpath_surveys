@@ -304,7 +304,7 @@ questions:
     label: What is your current main occupation?
     label_de: Welche ist Ihre derzeitige Hauptbeschäftigung?
     label_it: Qual è la tua occupazione principale?
-    label_es: Cuál es su principal ocupación actual
+    label_es: ¿Cuál es su principal ocupación actual?
     label_ca: Quina és la seva ocupació principal actualment?
     type: list
     page_number: 5
@@ -355,7 +355,7 @@ questions:
     label: What is your weight (kg)?
     label_de: Wieviel wiegen Sie (kg)?
     label_it: Qual è il Suo peso? (kg)
-    label_es: Unidad de peso (kg)
+    label_es: ¿Unidad de peso (kg)?
     label_ca: Quin és el seu pes (kg)?
     type: number
     page_number: 7
@@ -380,7 +380,7 @@ questions:
     label: What is your weight (lbs)?
     label_de: Wieviel wiegen Sie (pfd)?
     label_it: Qual è il Suo peso? (Libbre)
-    label_es: Qual è il Suo peso? (Libras) 
+    label_es: ¿Qual è il Suo peso? (Libras) 
     label_ca: Quin és el seu pes (Lliures)?
     type: number
     page_number: 8
@@ -426,7 +426,7 @@ questions:
     label: What is your height (cm)?
     label_de: Wie groß sind Sie (cm)?
     label_it: Qual è la Sua altezza? (cm)
-    label_es: Cuál es su estatura? (cm)
+    label_es: ¿Cuál es su estatura? (cm)
     label_ca: Quina és la seva alçada (cm)?
     type: number
     min: 
@@ -451,7 +451,7 @@ questions:
     label: What is your height (in)?
     label_de: Wie groß sind Sie (zoll)?
     label_it: Qual è la Sua altezza? (pollici)
-    label_es: Cuál es su estatura? (Pulgadas)
+    label_es: ¿Cuál es su estatura? (Pulgadas)
     label_ca: Quina és la seva alçada (polzades)?
     type: number
     min: 
