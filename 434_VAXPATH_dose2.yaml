@@ -1,0 +1,883 @@
+title: Dose 2 Questionnaire
+title_de: Dosis-2-Fragebogen
+title_it: Dose 2 Questionario
+title_es: Cuestionario sobre la segunda dosis
+title_ca: Qüestionari de la dosi 2
+header: "Sponsor: Pfizer, Study Name: VaxPath, Sponsor Study Number: C4591010, Protocol Version: 1, CRF Version: Version 2"
+size: large
+page_titles:
+  - "" 
+  - ""
+  - ""
+  - ""
+  - "" 
+  - ""
+  - ""
+  - ""
+  - "" 
+  - ""
+  - "Please provide your updated contact details"
+  - "Please provide the updated details of the secondary individual whom you are most likely to contact if you need medical care."
+  - "" 
+  - "Please provide the updated details of the primary care physician whom you are most likely to contact if you need medical care."
+  - ""
+  - ""
+page_titles_de:
+  - "" 
+  - ""
+  - ""
+  - ""
+  - "" 
+  - ""
+  - ""
+  - ""
+  - "" 
+  - ""
+  - "Bitte geben Sie Ihre aktualisierten Kontaktdaten an"
+  - "Bitte geben Sie die aktualisierten Daten der zweiten Person an, an die Sie sich am wahrscheinlichsten wenden, wenn Sie eine medizinische Versorgung benötigen."
+  - "" 
+  - "Bitte geben Sie die Kontaktdaten des Hausarztes an, an den Sie sich am ehesten wenden können, wenn Sie medizinische Hilfe benötigen."
+  - ""
+  - ""
+page_titles_it:
+  - "" 
+  - ""
+  - ""
+  - ""
+  - "" 
+  - ""
+  - ""
+  - ""
+  - "" 
+  - ""
+  - "Please provide your updated contact details"
+  - "Please provide the updated details of the secondary individual whom you are most likely to contact if you need medical care."
+  - "" 
+  - "La preghiamo di fornire i dettagli del medico di base che contatterebbe con maggior probabilità in caso di necessità di cure mediche"
+  - ""
+  - ""
+page_titles_es:
+  - "" 
+  - ""
+  - ""
+  - ""
+  - "" 
+  - ""
+  - ""
+  - ""
+  - "" 
+  - ""
+  - "Please provide your updated contact details"
+  - "Please provide the updated details of the secondary individual whom you are most likely to contact if you need medical care."
+  - "" 
+  - "Proporcione los detalles del médico de atención primaria con el que es más probable que se ponga en contacto si necesita atención médica."
+  - ""
+  - ""
+page_titles_ca:
+  - "" 
+  - ""
+  - ""
+  - ""
+  - "" 
+  - ""
+  - ""
+  - ""
+  - "" 
+  - ""
+  - "Please provide your updated contact details"
+  - "Please provide the updated details of the secondary individual whom you are most likely to contact if you need medical care."
+  - "" 
+  - "Quantes vegades ha hagut de veure un metge per trobar alguna cosa inesperada des del darrer contacte de l'estudi?"
+  - ""
+  - ""
+questions:
+  pt_t1_vi2_VACCDOSE:
+    label: "Did you receive your second Pfizer-BioNTech COVID-19 vaccination?"
+    label_de: Haben Sie Ihre zweite COVID-19-Impfung von Pfizer-BioNTech erhalten?
+    label_it: Ha ricevuto la Sua seconda vaccinazione Pfizer-BioNTech anti-Covid-19?
+    label_es: ¿Se le administró su segunda vacunación contra la COVID-19 de Pfizer-BioNTech?
+    label_ca: Ha rebut la seva segona dosi de la vacuna contra la COVID-19 de Pfizer-BioNTech
+    type: radio
+    page_number: 8
+    choices:
+      - value: pt_t1_vi2_VACCDOSE_Yes
+        label: "Yes"
+        label_de: "Ja"
+        label_it: "Sì"
+        label_es: "Sí"
+        label_ca: "Sí"
+      - value: pt_t1_vi2_VACCDOSE_No
+        label: "No"
+        label_de: "Nein"
+        label_it: "No"
+        label_es: "No"
+        label_ca: "No"
+      - value: pt_t1_vi2_VACCDOSE_notPfizer
+        label: "I did not get a Pfizer-BioNTech COVID-19 vaccination"
+        label_de: "Ich habe keinen COVID-19-Impfstoff von Pfizer-BioNTech"
+        label_it: "Non ho ricevuto un vaccino Pfizer-BioNTech anti-Covid-19"
+        label_es: "No he recibido una vacuna de Pfizer-BioNTech contra la COVID-19"
+        label_ca: "No em van posar la vacuna contra la COVID-19 de Pfizer-BioNTech"
+  pt_t1_vi2_VACCDOSE_DATE:
+    conditions: 
+      - question: pt_t1_vi2_VACCDOSE
+        operation: equal
+        value: pt_t1_vi2_VACCDOSE_Yes
+    label: |
+      What was the date of your second Pfizer-BioNTech Covid-19 vaccination? <br> If unknown, please estimate as accurately as possible
+    label_de: |
+      An welchem Datum haben Sie Ihre zweite Impfung mit Pfizer-BioNTech Covid-19 erhalten? <br> Falls unbekannt, bitte so genau wie möglich schätzen
+    label_it:  Qual è stata la data della Sua seconda vaccinazione Pfizer-BioNTech anti-Covid-19? Se non sa, stimi il più accuratamente possibile
+    label_es: ¿Cuál fue la fecha de su segunda vacunación contra la COVID-19 de Pfizer-BioNTech? Si la desconoce, calcule con la mayor exactitud posible
+    label_ca: En quina data li van posar la segona dosi de la vacuna contra la COVID-19 de Pfizer-BioNTech?Si no ho sap, indiqui la data més aproximada possible"
+    type: date
+    page_number: 9
+    max:
+      value: CURRENT_DATE
+    skip:
+      label: Uncertain
+      label_de: überspringen
+      label_it: Saltare
+      label_es: Saltar
+      label_ca: Omet
+      value: skip
+  pt_t1_vi2_VACCCENTER:
+    conditions: 
+      - question: pt_t1_vi2_VACCDOSE
+        operation: equal
+        value: pt_t1_vi2_VACCDOSE_Yes
+    label: "At which center were you vaccinated?"
+    label_de: In welchem Zentrum wurden Sie geimpft?
+    label_it: In quale centro è stato vaccinato?
+    label_es: ¿En qué centro se vacunó?
+    label_ca: A quin centre es va vacunar?
+    type: text
+    page_number: 9
+  pt_t1_vi2_VACCLOTNUM:
+    conditions: 
+      - question: pt_t1_vi2_VACCDOSE
+        operation: equal
+        value: pt_t1_vi2_VACCDOSE_Yes
+    label: "Provide the vaccine lot number. (Example: AB1234)"
+    label_de: "Geben Sie die Chargennummer des Impfstoffs an. (Beispiel: AB1234)"
+    label_it: Fornire il numero di lotto del vaccino
+    label_es: Proporcione el número de lote de la vacuna
+    label_ca: Indiqui el número de lot de la vacuna
+    type: text
+    regex: "^[a-zA-Z]{2}[0-9]{4}$"
+    skip:
+      label: Skip
+      label_de: Überspringen
+      label_it: Saltare
+      label_es: Saltar
+      label_ca: Omet
+      value: skip
+    page_number: 9
+  pt_t1_vi2_VACCSITE:
+    conditions: 
+      - question: pt_t1_vi2_VACCDOSE
+        operation: equal
+        value: pt_t1_vi2_VACCDOSE_Yes
+    label: "Where on your body did you receive the vaccine injection?"
+    label_de: An welcher Stelle Ihres Körpers haben Sie die Impfstoffinjektion erhalten?
+    label_it: In che punto del corpo ha ricevuto l’iniezione del vaccino?
+    label_es: "¿En qué parte del cuerpo recibió la inyección de la vacuna?"
+    label_ca: A quina part del cos li van injectar la vacuna?
+    type: radio
+    page_number: 9
+    choices:
+      - value: pt_t1_vi2_VACCSITE_left
+        label: "Left Arm"
+        label_de: "Linker Arm"
+        label_it: "Braccio sinistro"
+        label_es: "Brazo izquierdo"
+        label_ca: "Braç esquerre"
+      - value: pt_t1_vi2_VACCSITE_right
+        label: "Right Arm"
+        label_de: "Rechter Arm"
+        label_it: "Braccio destro"
+        label_es: "Brazo derecho"
+        label_ca: "Braç dret"
+      - value: pt_t1_vi2_VACCSITE_other
+        label: "Other"
+        label_de: "Andere Stelle"
+        label_it: "Altro"
+        label_es: "Otra"
+        label_ca: "Altre"
+  pt_t1_mh2_PRESCRIPMED:
+    label: "Have you taken any prescription medication(s) 7 days prior to your vaccination?"
+    label_de: Haben Sie 7 Tage vor Ihrer Impfung verschreibungspflichtige Medikamente eingenommen?
+    label_it: Ha assunto farmaci su prescrizione 7 giorni prima della Sua vaccinazione?
+    label_es: ¿Ha tomado algún medicamento con receta 7 días antes de la vacunación?
+    label_ca: Va prendre algun medicament de venda amb recepta en els 7 dies anteriors a la vacunació?
+    type: radio
+    page_number: 10
+    choices:
+      - value: pt_t1_mh2_PRESCRIPMED_yes
+        label: "Yes"
+        label_de: "Ja"
+        label_it: "Sì"
+        label_es: "Sí"
+        label_ca: "Sí"
+      - value: pt_t1_mh2_PRESCRIPMED_no
+        label: "No"
+        label_de: "Nein"
+        label_it: "No"
+        label_es: "No"
+        label_ca: "No"
+  pt_t1_mh2_MULTIMED: 
+    label: What prescription medication(s) did you take?
+    label_de: Welche verschreibungspflichtigen Medikamente haben Sie angewendet?
+    label_it: Quali farmaci su prescrizione ha assunto?
+    label_es: ¿Qué medicamentos con receta tomó?
+    label_ca: Quins medicaments de venda amb recepta va prendre?
+    type: multi_medication
+    country_code: eu
+    page_number: 20
+    conditions: 
+      - question: pt_t1_mh2_PRESCRIPMED
+        operation: equal
+        value: pt_t1_mh2_PRESCRIPMED_yes
+  pt_t1_mh2_VACCINE:
+    label: Did you receive any vaccinations other than for COVID-19 (e.g., flu, hepatitis) since the first COVID-19 vaccine dose?
+    label_de: Haben Sie seit der ersten COVID-19-Impfdosis andere Impfungen als die gegen COVID-19 (z.B. Grippe, Hepatitis) erhalten?
+    label_it: Ha ricevuto vaccinazioni diverse da quelle per il COVID-19 (ad es. influenza, epatite) dalla prima dose di vaccino anti-COVID-19?
+    label_es: ¿Se le administró alguna vacuna distinta a la vacuna contra la COVID-19 (p. ej., gripe, hepatitis) desde su primera dosis de la vacuna contra la COVID-19?
+    label_ca: Ha rebut alguna vacuna a part de la vacuna de la COVID-19 (p. ex., de la grip, l’hepatitis) des de la seva primera dosi de la vacuna de la COVID-19?
+    type: radio
+    page_number: 30
+    choices: 
+      - value: pt_t1_mh2_VACCINE_yes
+        label: "Yes"
+        label_de: "Ja"
+        label_it: "Sì"
+        label_es: "Sí"
+        label_ca: "Sí"
+      - value: pt_t1_mh2_VACCINE_no
+        label: "No"
+        label_de: "Nein"
+        label_it: "No"
+        label_es: "No"
+        label_ca: "No"
+  pt_t1_mh2_VACCINETYPE:
+    label: Select all vaccinations, other than Covid-19, which you received since your first Covid-19 vaccine dose.  (Check all that apply)
+    label_de: Wählen Sie alle Impfungen außer Covid-19 aus, die Sie seit Ihrer ersten Covid-19-Impfdosis erhalten haben. (Kreuzen Sie alles an, was zutrifft)
+    label_it: Selezioni tutte le vaccinazioni, diverse da quelle per il Covid-19, che ha ricevuto dalla prima dose di vaccino anti-Covid-19.  (Indicare tutte le voci pertinenti)
+    label_es: Seleccione todas las vacunas distintas a la vacuna contra la COVID-19 que recibió desde su primera dosis de la vacuna contra la COVID-19.  (marque todo lo que corresponda)
+    label_ca: Seleccioni totes les vacunes, a part de la vacuna de la COVID-19, que ha rebut des de la seva primera dosi de la vacuna de la COVID-19.  (Marqui totes les opcions que calgui)
+    type: checkbox
+    page_number: 40
+    conditions: 
+      - question: pt_t1_mh2_VACCINE
+        operation: equal
+        value: pt_t1_mh2_VACCINE_yes
+    choices:
+      - value: pt_t1_mh2_VACCINETYPE_influenza
+        label: "Seasonal influenza"
+        label_de: "Saisonale Grippe"
+        label_it: "Influenza stagionale"
+        label_es: "Gripe estacional"
+        label_ca: "Influenza stagionale" 
+      - value: pt_t1_mh2_VACCINETYPE_DTP
+        label: "DTP (Diphtheria, Tetanus and Pertussis)"
+        label_de: "DTP (Diphtherie, Wundstarrkrampf und Keuchhusten)"
+        label_it: "DTP (difterite, tetano e pertosse)"
+        label_es: "DTP (difteria, tétanos y tosferina)"
+        label_ca: "DTP (difterite, tetano e pertosse)"
+      - value: pt_t1_mh2_VACCINETYPE_HB
+        label: "HB (Hepatitis B virus)"
+        label_de: "HBV (Hepatitis-B-Virus)"
+        label_it: "HB (virus dell’epatite B)"
+        label_es: "HB (virus de la hepatitis B)"
+        label_ca: "HB (virus de l’hepatitis B)" 
+      - value: pt_t1_mh2_VACCINETYPE_HA
+        label: "Hepatitis A"
+        label_de: "Hepatitis A"
+        label_it: "Epatite A"
+        label_es: "Hepatitis A"
+        label_ca: "Hepatitis A"
+      - value: pt_t1_mh2_VACCINETYPE_Hib
+        label: "Hib (Haemophilus influenza type b)"
+        label_de: "Hib (Haemophilus influenzae Typ b)"
+        label_it: "Hib (Haemophilus influenzae tipus b)"
+        label_es: "Hib (Haemophilus influenzae tipo b)"
+        label_ca: "Hib (Haemophilus influenzae tipus b)"
+      - value: pt_t1_mh2_VACCINETYPE_HPV
+        label: "HPV (Human Papilloma Virus)"
+        label_de: "HPV (humanes Papillomvirus)"
+        label_it: "HPV (papillomavirus umano)"
+        label_es: "VPH (virus del papiloma humano)"
+        label_ca: "VPH (virus del papil·loma humà)"
+      - value: pt_t1_mh2_VACCINETYPE_HZ
+        label: "HZ (Herpes-zoster virus)"
+        label_de: "Varicella-Zoster-Virus (VZV)"
+        label_it: "HZ(virus herpes zoster)"
+        label_es: "HZ (herpes zóster)"
+        label_ca: "HZ (virus herpes zoster)"
+      - value: pt_t1_mh2_VACCINETYPE_Meningococcal
+        label: "Meningococcal"
+        label_de: "Meningokokken"
+        label_it: "Meningococ"
+        label_es: "Meningocócica"
+        label_ca: "Meningococ"
+      - value: pt_t1_mh2_VACCINETYPE_Pertussis
+        label: "Pertussis"
+        label_de: "Keuchhusten (Pertussis)"
+        label_it: "Pertosse"
+        label_es: "Tosferina"
+        label_ca: "Tos ferina"
+      - value: pt_t1_mh2_VACCINETYPE_Pneumococcal
+        label: "Pneumococcal"
+        label_de: "Pneumokokken"
+        label_it: "Pneumococcico"
+        label_es: "Neumocócica"
+        label_ca: "Pneumococ"
+      - value: pt_t1_mh2_VACCINETYPE_PTV
+        label: "PTV (Polio)"
+        label_de: "PTV (Polio)"
+        label_it: "PTV (polio)"
+        label_es: "PTV (Polio)"
+        label_ca: "PTV (pòlio)"
+      - value: pt_t1_mh2_VACCINETYPE_Rotavirus
+        label: "Rotavirus"
+        label_de: "Rotavirus"
+        label_it: "Rotavirus"
+        label_es: "Rotavirus"
+        label_ca: "Rotavirus"
+      - value: pt_t1_mh2_VACCINETYPE_Tetanus
+        label: "Tetanus"
+        label_de: "Wundstarrkrampf (Tetanus)"
+        label_it: "Tetano"
+        label_es: "Tétanos"
+        label_ca: "Tètanus"
+      - value: pt_t1_mh2_VACCINETYPE_Typhoid
+        label: "Typhoid"
+        label_de: "Typhus"
+        label_it: "Tifo"
+        label_es: "Fiebre tifoidea"
+        label_ca: "Tifoïdal"
+      - value: pt_t1_mh2_VACCINETYPE_MMR
+        label: "TV (MMR) (Measles, Mumps and Rubella)"
+        label_de: "TV (MMR) (Masern, Mumps und Röteln)"
+        label_it: "(MMR) (morbillo, parotite e rosolia)"
+        label_es: "TV (MMR) (sarampión, paperas y rubéola)"
+        label_ca: "TV (XGR) (xarampió, galteres i rubèola)"
+      - value: pt_t1_mh2_VACCINETYPE_VZV
+        label: "VZV (Varicella Zoster virus)"
+        label_de: "VZV (Varicella-Zoster-Virus)"
+        label_it: "VZV (virus Varicella Zoster)"
+        label_es: "VVZ (virus de la varicela-zóster"
+        label_ca: "VZV (virus de la varicel·la-zòster)"
+      - value: pt_t1_mh2_VACCINETYPE_yellow_fever
+        label: "Yellow fever"
+        label_de: "Gelbfieber"
+        label_it: "Febbre gialla"
+        label_es: "Fiebre amarilla"
+        label_ca: "Febre groga"
+    other: true
+    other_label: "Please specify other values"
+    other_label_it: "Altro"
+    other_label_de: "Andere Ethnie"
+    other_label_es: "Otra"
+    other_label_ca: "Un altre (especifiqui’l)"
+  pt_t1_mh2_COVSYMP:
+    label: Did you experience any of the following symptoms in the 3 days after vaccination?  (Check all that apply)
+    label_de: Haben Sie innerhalb von 3 Tagen nach der Impfung eines der folgenden Symptome verspürt? (Kreuzen Sie alles an, was zutrifft)
+    label_it: Ha manifestato uno dei seguenti sintomi nei 3 giorni successivi alla vaccinazione?  (Indicare tutte le voci pertinenti)
+    label_es: ¿Experimentó alguno de los siguientes síntomas en los 3 días posteriores a la vacunación?  (marque todo lo que corresponda)
+    label_ca: ha tingut algun dels símptomes següents durant els 3 dies posteriors a la vacunació?  (Marqui totes les opcions que calgui)
+    type: checkbox
+    page_number: 40
+    choices: 
+      - value: pt_t1_mh2_COVSYMP_pain
+        label: "Arthralgia/joint pain"
+        label_de: "Gelenkschmerzen (Arthralgie)"
+        label_it: "Artralgia/dolore articolare"
+        label_es: "Artralgia/dolor articular"
+        label_ca: "Artràlgia/dolor articular"
+      - value: pt_t1_mh2_COVSYMP_Cough
+        label: "Cough"
+        label_de: "Husten"
+        label_it: "Tosse"
+        label_es: "Tos"
+        label_ca: "Tos"
+      - value: pt_t1_mh2_COVSYMP_Fatigue
+        label: "Fatigue"
+        label_de: "Erschöpfung (Fatigue)"
+        label_it: "Affaticamento"
+        label_es: "Fatiga"
+        label_ca: "Fatiga"
+      - value: pt_t1_mh2_COVSYMP_fever
+        label: "Fever/feverishness"
+        label_de: "Fieber/Fieberhaftigkeit"
+        label_it: "Febbre/Stato febbricitante"
+        label_es: "Fiebre/destemplanza"
+        label_ca: "Febre/estat febri"
+      - value: pt_t1_mh2_COVSYMP_headache
+        label: "Headache"
+        label_de: "Kopfschmerzen"
+        label_it: "Mal di testa"
+        label_es: "Dolor de cabeza"
+        label_ca: "Mal de cap"
+      - value: pt_t1_mh2_COVSYMP_Malaise
+        label: "Malaise"
+        label_de: Allgemeines Unwohlsein
+        label_it: "Malessere"
+        label_es: "Malestar"
+        label_ca: "Malestar general"
+      - value: pt_t1_mh2_COVSYMP_Myalgia
+        label: "Myalgia/muscle pain"
+        label_de: Muskelschmerzen (Myalgie)
+        label_it: "Mialgia/dolore muscolare"
+        label_es: "Mialgia/dolor muscular"
+        label_ca: "Miàlgia/dolor muscular"
+      - value: pt_t1_mh2_COVSYMP_chills
+        label: "Shivering/chills"
+        label_de: "Schüttelfrost"
+        label_it: "Brividi/tremiti"
+        label_es: "Escalofríos"
+        label_ca: "Calfreds/esgarrifaments"
+      - value: pt_t1_mh2_COVSYMP_vomit
+        label: "Vomiting and Diarrhea"
+        label_de: "Erbrechen und Durchfall"
+        label_it: "Vomito e diarrea"
+        label_es: "Vómitos y diarrea"
+        label_ca: "Vòmits i diarrea"
+      - value: pt_t1_mh2_COVSYMP_none
+        label: "None of the above symptoms"
+        label_de: "Keine der oben genannten Symptome"
+        label_it: "Nessuno dei suddetti sintomi"
+        label_es: "Ninguno de los síntomas anteriores"
+        label_ca: "Cap de les anteriors"
+    validation:
+      - exclusive: pt_t1_mh2_COVSYMP_none
+  pt_t1_preg_PREGCONF:
+    label: You previously confirmed that you were pregnant. Are you still pregnant?
+    label_de: Sie haben bereits bestätigt, dass Sie schwanger sind. Sind Sie immer noch schwanger? 
+    label_it: Ha confermato precedentemente di essere incinta. È ancora incinta?
+    label_es: Anteriormente confirmó que estaba embarazada. ¿Sigue embarazada?
+    label_ca: Anteriorment va confirmar que estava embarassada. Encara està embarassada?
+    type: radio
+    default_survey_reference: VAXPATH_dose2
+    default_question_keyword: pt_t1_mh2_PREG
+    default_value: VAXPATH_dose2.pt_t1_mh2_PREG
+    page_number: 50
+    choices: 
+      - value: pt_t1_preg_PREGCONF_yes
+        label: "Yes"
+        label_de: "Ja"
+        label_it: "Sì"
+        label_es: "Sí"
+        label_ca: "Sí"
+      - value: pt_t1_preg_PREGCONF_no
+        label: "No"
+        label_de: "Nein"
+        label_it: "No"
+        label_es: "No"
+        label_ca: "No"
+    conditions:
+      - table: AdditionalAppColumn
+        column: pregnancy_status
+        operation: equal
+        value: "pt_t0_mh1_PREG_yes"
+      - table: AdditionalAppColumn
+        column: pregnancy_status
+        condition_operator: or
+        operation: equal
+        value: "pt_t2_preg_PREGCONF_yes"
+      - table: AdditionalAppColumn
+        column: pregnancy_status
+        condition_operator: or
+        operation: equal
+        value: "pt_t1_fu_PREGCHECK_yes"
+    db_write:
+      table: AdditionalAppColumn
+      column: pregnancy_status
+  pt_t1_mh2_PREG:
+    label: Are you currently pregnant?
+    label_de: Sind Sie derzeit schwanger?
+    label_it: Lei è attualmente incinta?
+    label_es: ¿Está embarazada en la actualidad?
+    label_ca: Està embarassada actualment?
+    type: radio
+    default_survey_reference: VAXPATH_BASELINE
+    default_question_keyword: pt_t0_mh1_PREG
+    default_value: VAXPATH_BASELINE.pt_t0_mh1_PREG
+    page_number: 60
+    choices: 
+      - value: pt_t1_mh1_PREG_yes
+        label: "Yes"
+        label_de: "Ja"
+        label_it: "Sì"
+        label_es: "Sí"
+        label_ca: "Sí"
+      - value: pt_t1_mh1_PREG_no
+        label: "No"
+        label_de: "Nein"
+        label_it: "No"
+        label_es: "No"
+        label_ca: "No"
+    conditions:
+      - table: AdditionalAppColumn
+        column: pregnancy_status
+        operation: equal
+        value: "pt_t0_mh1_PREG_no"
+      - table: AdditionalAppColumn
+        column: pregnancy_status
+        condition_operator: or
+        operation: equal
+        value: "pt_t2_preg_PREGCONF_no"
+      - table: AdditionalAppColumn
+        column: pregnancy_status
+        condition_operator: or
+        operation: equal
+        value: "pt_t1_fu_PREGCHECK_no"
+    db_write:
+      table: AdditionalAppColumn
+      column: pregnancy_status
+  pt_t1_preg_POUTCOME:
+    label: What was your pregnancy outcome?
+    label_de: Was war der Ausgang Ihrer Schwangerschaft?
+    label_it: Qual è stato l’esito della Sua gravidanza?
+    label_es: ¿Cuál fue el desenlace de su embarazo?
+    label_ca: Quin va ser el desenllaç de l'embaràs?
+    type: radio
+    conditions: 
+      - question: pt_t1_preg_PREGCONF
+        operation: equal
+        value: pt_t1_preg_PREGCONF_no
+    page_number: 70
+    choices: 
+      - value: livebirth
+        label: "Live birth"
+        label_de: "Lebendgeburt"
+        label_it: "Nascita in vita"
+        label_es: "Nacimiento vivo"
+        label_ca: "Naixement de bebè viu"
+      - value: ectopic
+        label: "Ectopic pregnancy (a pregnancy outside the uterus)"
+        label_de: "Eileiterschwangerschaft (eine Schwangerschaft außerhalb der Gebärmutter)"
+        label_it: "Gravidanza ectopica (una gravidanza al di fuori dell’utero)"
+        label_es: "Embarazo ectópico (embarazo fuera del útero)"
+        label_ca: "Embaràs ectòpic (embaràs fora de l’úter)"
+      - value: termination
+        label: "Elective or therapeutic termination"
+        label_de: "Selbstgewählter oder therapeutischer Schwangerschaftsabbruch"
+        label_it: "Interruzione elettiva o terapeutica"
+        label_es: "Finalización programada o terapéutica"
+        label_ca: "Interrupció de l’embaràs electiva o terapèutica"
+      - value: molar
+        label: "Molar pregnancy (a non-viable fertilized egg implants in the uterus)"
+        label_de: "Molenschwangerschaft (nicht lebensfähige, befruchtete Eizelle nistet sich in der Gebärmutter ein)"
+        label_it: "Gravidanza molare (impianti di ovuli fecondati non vitali nell’utero)"
+        label_es: "Embarazo molar (implantes de óvulos fertilizados no viables en el útero)"
+        label_ca: "Embaràs molar (implantació no viable d’òvul fecundat a l’úter)"
+      - value: abortion
+        label: "Spontaneous abortion (miscarriage), <=20 gestational weeks"
+        label_de: "Spontaner Abort (Fehlgeburt), ≤20. Schwangerschaftswoche"
+        label_it: "Aborto spontaneo, ≤20 settimane gestazionali"
+        label_es: "Aborto espontáneo, <=20 semanas de gestación"
+        label_ca: "Avortament espontani (interrupció involuntària), <=20 setmanes de gestació"
+      - value: Stillbirth
+        label: "Stillbirth (>20 gestational weeks)"
+        label_de: "Stillgeburt (>20.Schwangerschaftswoche)"
+        label_it: "Nato morto (>20 settimane gestazionali)"
+        label_es: "Mortinato (>20 semanas de gestación)"
+        label_ca: "Naixement de fetus mort (>20 setmanes de gestació)"
+  pt_t1_preg_OUTCOME_DATE:
+    label: Date of pregnancy outcome
+    label_de: Datum des Schwangerschaftsausgangs
+    label_it: Data dell’esito della gravidanza
+    label_es: Fecha del desenlace del embarazo
+    label_ca: Data de desenllaç de l’embaràs
+    type: date
+    conditions: 
+      - question: pt_t1_preg_PREGCONF
+        operation: equal
+        value: pt_t1_preg_PREGCONF_no
+    page_number: 70
+    max: 
+      value: CURRENT_DATE
+  pt_t1_preg_GESTAGE:
+    label: Gestational age at pregnancy outcome (weeks)
+    label_de: Gestationsalter bei Schwangerschaftsausgang (Wochen)
+    label_it: Età gestazionale all’esito della gravidanza (settimane)
+    label_es: Edad gestacional en el momento del desenlace del embarazo (semanas)
+    label_ca: Edat gestacional en el moment del desenllaç de l’embaràs (setmanes)
+    type: number
+    conditions: 
+      - question: pt_t1_preg_PREGCONF
+        operation: equal
+        value: pt_t1_preg_PREGCONF_no
+    page_number: 70
+    min:
+      value: 1
+    max: 
+      value: 42 
+  pt_t1_ci2_CONTACTCHANGE:
+    label: "Has any of your contact information changed?"
+    label_de: Haben sich Ihre Kontaktdaten geändert?
+    label_it: I Suoi recapiti sono cambiati?
+    label_es: ¿Ha cambiado alguno de sus datos de contacto?
+    label_ca: Alguna de les seves dades de contacte ha canviat?
+    type: radio
+    page_number: 100
+    choices:
+      - value: pt_t1_ci2_CONTACTCHANGE_Yes
+        label: "Yes"
+        label_de: "Ja"
+        label_it: "Sì"
+        label_es: "Sí"
+        label_ca: "Sí"
+      - value: pt_t1_ci2_CONTACTCHANGE_No
+        label: "No"
+        label_de: "Nein"
+        label_it: "No"
+        label_es: "No"
+        label_ca: "No"
+  pt_t1_ci2_PHONENUM:
+    conditions:
+      - question: pt_t1_ci2_CONTACTCHANGE
+        operation: equal
+        value: pt_t1_ci2_CONTACTCHANGE_Yes
+    label: "Telephone or cellphone number"
+    label_de: Telefon- oder Handynummer
+    label_it: Numero di telefono o cellulare
+    label_es: Número de teléfono o móvil
+    label_ca: Número de telèfon fix o mòbil
+    type: text
+    regex: "\\A(\\+?\\d{1,2}[\\s.-]?)?\\(?\\d{3}\\)?[\\s.-]?\\d{3}[\\s.-]?\\d{4}\\z"
+    default_survey_reference: VAXPATH_BASELINE
+    default_question_keyword: pt_t0_ci1_PHONENUM
+    page_number: 110
+    db_write:
+      table: User
+      column: primary_contact_number
+  pt_t1_ci2_EMAIL:
+    conditions:
+      - question: pt_t1_ci2_CONTACTCHANGE
+        operation: equal
+        value: pt_t1_ci2_CONTACTCHANGE_Yes
+    label: "Email address"
+    label_de: E-Mail-Adresse
+    label_it: Indirizzo e-mail
+    label_es: Dirección de correo electrónico
+    label_ca: Número de telèfon fix o mòbil
+    type: text
+    regex: "\\A[\\w+\\-.]+@[a-z\\d\\-]+(\\.[a-z\\d\\-]+)*\\.[a-z]+\\z"
+    default_survey_reference: VAXPATH_BASELINE
+    default_question_keyword: pt_t0_ci1_EMAIL
+    page_number: 110
+    db_write:
+      table: User
+      column: email
+  pt_t1_ci2_2NDCONTACT:
+    conditions:
+      - question: pt_t1_ci2_CONTACTCHANGE
+        operation: equal
+        value: pt_t1_ci2_CONTACTCHANGE_Yes
+    label: "Secondary contact name"
+    label_de: Name der zweiten Kontaktperson
+    label_it: Recapito secondario
+    label_es: Nombre de contacto secundario
+    label_ca: Nom de la persona de contacte secundària
+    type: text
+    default_survey_reference: VAXPATH_BASELINE
+    default_question_keyword: pt_t0_ci1_2NDCONTACT
+    page_number: 120
+    db_write:
+      table: AdditionalAppColumn
+      secondary_table: AdditionalContact
+      column: alternate_contact_name
+  pt_t1_ci2_2NDCONTACTEMAIL:
+    conditions:
+      - question: pt_t1_ci2_CONTACTCHANGE
+        operation: equal
+        value: pt_t1_ci2_CONTACTCHANGE_Yes
+    label: "Secondary contact email address"
+    label_de: E-Mail der zweiten Kontaktperson
+    label_it: Indirizzo e-mail del recapito secondario
+    label_es: Dirección de correo electrónico de contacto secundario
+    label_ca: Adreça de correu electrònic de la persona de contacte secundària
+    type: text
+    regex: "\\A[\\w+\\-.]+@[a-z\\d\\-]+(\\.[a-z\\d\\-]+)*\\.[a-z]+\\z"
+    default_survey_reference: VAXPATH_BASELINE
+    default_question_keyword: pt_t0_ci1_2NDCONTACTEMAIL
+    page_number: 120
+    db_write:
+      table: AdditionalAppColumn
+      secondary_table: AdditionalContact
+      column: alternate_contact_email
+  pt_t1_ci2_2NDCONTACTPHONE:
+    conditions:
+      - question: pt_t1_ci2_CONTACTCHANGE
+        operation: equal
+        value: pt_t1_ci2_CONTACTCHANGE_Yes
+    label: "Secondary contact telephone or cellphone number"
+    label_de: Telefonnummer oder Handynummer der zweiten Kontaktperson
+    label_it: Numero di telefono o di cellulare del recapito secondario
+    label_es: Número de teléfono o móvil de contacto secundario
+    label_ca: Telèfon fix o mòbil de la persona de contacte secundària
+    type: text
+    default_survey_reference: VAXPATH_BASELINE
+    default_question_keyword: pt_t0_ci1_2NDCONTACTPHONE
+    regex: "\\A(\\+?\\d{1,2}[\\s.-]?)?\\(?\\d{3}\\)?[\\s.-]?\\d{3}[\\s.-]?\\d{4}\\z"
+    page_number: 120
+    db_write:
+      table: AdditionalAppColumn
+      secondary_table: AdditionalContact
+      column: alternate_contact_phone
+  pt_t1_ci2_PCPCHANGE:
+    label: "Have your primary care physician details changed?"
+    label_de: Haben sich die Kontaktdaten Ihres Hausarztes geändert?
+    label_it: I dettagli del Suo medico di base sono cambiati?
+    label_es: ¿Ha cambiado la información de su médico de atención primaria?
+    label_ca: Les dades del seu metge d’atenció primària han canviat?
+    type: radio
+    page_number: 130
+    choices:
+      - value: pt_t1_ci2_PCPCHANGE_Yes
+        label: "Yes"
+        label_de: "Ja"
+        label_it: "Sì"
+        label_es: "Sí"
+        label_ca: "Sí"
+      - value: pt_t1_ci2_PCPCHANGE_No
+        label: "No"
+        label_de: "Nein"
+  pt_t1_ci2_PCPNAME:
+    conditions:
+      - question: pt_t1_ci2_PCPCHANGE
+        operation: equal
+        value: pt_t1_ci2_PCPCHANGE_Yes
+    label: "Primary care physician name (for safety follow up)"
+    label_de: Name des Hausarztes (zur Sicherheit Nachbeobachtung)"
+    label_it: Nome del medico di base (per il follow-up di sicurezza)
+    label_es: Nombre del médico de atención primaria (para el seguimiento de seguridad)
+    label_ca: Nom del metge d’atenció primària (per al seguiment de la seguretat)
+    type: text
+    default_survey_reference: VAXPATH_BASELINE
+    default_question_keyword: pt_t0_ci1_PCPNAME
+    page_number: 140
+    db_write:
+      table: AdditionalAppColumn
+      secondary_table: HealthCareProviderInformation
+      column: primary_care_physician_name
+  pt_t1_ci2_PCPCONTACTPHONE:
+    conditions:
+      - question: pt_t1_ci2_PCPCHANGE
+        operation: equal
+        value: pt_t1_ci2_PCPCHANGE_Yes
+    label: "Primary care physician phone number"
+    label_de: "Telefonnummer des Hausarztes"
+    label_it: "Numero di telefono del medico di base"
+    label_es: "Número de teléfono del médico de atención primaria"
+    label_ca: "Número de telèfon del metge d’atenció primària"
+    type: text
+    regex: "\\A(\\+?\\d{1,2}[\\s.-]?)?\\(?\\d{3}\\)?[\\s.-]?\\d{3}[\\s.-]?\\d{4}\\z"
+    default_survey_reference: VAXPATH_BASELINE
+    default_question_keyword: pt_t0_ci1_PCPCONTACTPHONE
+    skip:
+      label: Skip
+      label_de: überspringen
+      label_it: Saltare
+      label_es: Saltar
+      label_ca: Omet
+      value: skip
+    page_number: 140
+    db_write:
+      table: AdditionalAppColumn
+      secondary_table: HealthCareProviderInformation
+      column: primary_care_physician_phone
+  pt_t1_ci2_PCPCONTACTEMAIL:
+    conditions:
+      - question: pt_t1_ci2_PCPCHANGE
+        operation: equal
+        value: pt_t1_ci2_PCPCHANGE_Yes
+    label: "Primary care physician email"
+    label_de: "E-Mail-Adresse des Hausarztes"
+    label_it: "E-mail del medico di base"
+    label_es: "Correo electrónico del médico de atención primaria"
+    label_ca: "Correu electrònic del metge d’atenció primària"
+    type: text
+    regex: "\\A[\\w+\\-.]+@[a-z\\d\\-]+(\\.[a-z\\d\\-]+)*\\.[a-z]+\\z"
+    default_survey_reference: VAXPATH_BASELINE
+    default_question_keyword: pt_t0_ci1_PCPCONTACTEMAIL
+    skip:
+      label: Skip
+      label_de: überspringen
+      label_it: Saltare
+      label_es: Saltar
+      label_ca: Omet
+      value: skip
+    page_number: 140
+    db_write:
+      table: AdditionalAppColumn
+      secondary_table: HealthCareProviderInformation
+      column: primary_care_physician_email
+  pt_t1_ci2_CONTACTPREFCHANGE:
+    label: "Would you like to change your preferred follow-up method?"
+    label_de: Möchten Sie Ihre bevorzugte Methode zur Nachbeobachtung ändern?
+    label_it: Desidera modificare il Suo metodo di follow-up preferito?
+    label_es: ¿Le gustaría cambiar su método de seguimiento preferido?
+    label_ca: Desitja canviar el seu mètode de seguiment preferit?
+    type: radio
+    page_number: 150
+    choices:
+      - value: pt_t1_ci2_CONTACTPREFCHANGE_Yes
+        label: "Yes"
+        label_de: "Ja"
+        label_it: "Sì"
+        label_es: "Sí"
+        label_ca: "Sí" 
+      - value: pt_t1_ci2_CONTACTPREFCHANGE_No
+        label: "No"
+        label_de: "Nein"
+  pt_t1_ci2_CONTACTPREF:
+    conditions:
+      - question: pt_t1_ci2_CONTACTPREFCHANGE
+        operation: equal
+        value: pt_t1_ci2_CONTACTPREFCHANGE_Yes
+    label: "How would you like us to contact you for follow up questionnaires?"
+    label_de: Wie möchten Sie, dass wir Sie für zum ausfüllen der Fragebögen kontaktieren?
+    label_it: Come desidera essere contattato per i questionari di follow-up? 
+    label_es: ¿Cómo desea que nos pongamos en contacto con usted para realizar cuestionarios de seguimiento? 
+    label_ca: Com preferiria que ens poséssim en contacte amb vostè per als qüestionaris de seguiment?
+    type: radio
+    page_number: 160
+    choices:
+      - value: "1"
+        label: "Telephone interview"
+        label_de: "Telefon-Interview"
+        label_it: "Colloquio telefonico"
+        label_es: "Entrevista telefónica"
+        label_ca: "Entrevista telefònica" 
+      - value: "2"
+        label: "Web/app-based questionnaire"
+        label_de: "Web-/App-basierter Fragebogen"
+        label_it: "Questionario basato su web/applicazione"
+        label_es: "Cuestionario basado en web/aplicación"
+        label_ca: "Qüestionari a través de web o aplicació"
+      - value: "3"
+        label: "Do not contact me anymore"
+        label_de: "Kontaktieren Sie mich nicht mehr"
+        label_it: "Non mi contatti più"
+        label_es: "No volver a ponerse en contacto conmigo"
+        label_ca: "No em torneu a contactar"
+    db_write:
+      table: AdditionalAppColumn
+      column: discon_status
+  q_end:
+    label: This is the end of the questionnaire. If you need to fill in missing details, please close the questionnaire using the [x] at the top right and you can revisit the questionnaire at a later time. Otherwise, if you wish to submit a completed questionnaire, select the option below and press 'NEXT'.
+    label_de: Dies ist das Ende des Fragebogens. Wenn Sie fehlende Angaben ergänzen müssen, schließen Sie den Fragebogen bitte mit dem [x] oben rechts und Sie können den Fragebogen zu einem späteren Zeitpunkt erneut aufrufen. Wenn Sie andernfalls einen ausgefüllten Fragebogen einreichen möchten, wählen Sie die unten stehende Option und drücken Sie 'WEITER'.
+    label_it: "Questa è la fine del questionario. Se avete bisogno di compilare i dettagli mancanti, chiudete il questionario utilizzando la [x] in alto a destra e potrete rivisitare il questionario in un secondo momento. In caso contrario, se si desidera inviare un questionario compilato, selezionare l'opzione qui sotto e premere 'AVANTI'."
+    label_es: "Este es el final del cuestionario. Si necesita completar los detalles que faltan, cierre el cuestionario usando la [x] en la parte superior derecha y podrá volver a revisar el cuestionario más adelante. De lo contrario, si desea enviar un cuestionario completo, seleccione la opción a continuación y pulse 'SIGUIENTE'."
+    label_ca: Aquest és el final del qüestionari. Si heu d'emplenar les dades que falten, tanqueu el qüestionari amb la x [que hi ha a la part superior dreta] i podreu tornar a visitar el qüestionari més endavant. En cas contrari, si voleu enviar un qüestionari completat, seleccioneu l'opció següent i premeu 'SEGÜENT'."
+    type: radio
+    choices:
+      - value: q_end_confirm
+        label: "I confirm that these are my final answers"
+        label_de: "Ich bestätige, dass dies meine endgültigen Antworten sind"
+        label_it: "Confermo che queste sono le mie risposte finali"
+        label_es: "Confirmo que estas son mis respuestas finales"
+        label_ca: "Confirmo que aquestes són les meves respostes finals"
