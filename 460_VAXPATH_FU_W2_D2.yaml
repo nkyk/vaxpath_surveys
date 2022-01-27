@@ -7,14 +7,13 @@ header: "Sponsor: Pfizer, Study Name: VaxPath, Sponsor Study Number: C4591010, P
 size: large 
 page_titles:
 admin_emails:
-  - janie.gous@iqvia.com
-  - anke.bross@iqvia.com
-  - chandni.thakur@quintiles.com
-  - begona.gonzalez@quintiles.com
-  - theresa.roy@quintiles.com
+  - Anke.Bross@quintiles.com
+  - antonio.stefanov@quintiles.com
+  - martina.paciarotti@iqvia.com
+  - andja.gvozdenovic-tomasevski@iqvia.com
+  - anacarolina.silva@quintiles.com
+  - denitza.christova@iqvia.com
   - jared@selfcarecatalysts.com
-  - jacob@selfcarecatalysts.com
-  - shameni@selfcarecatalysts.com
 questions: 
   pt_t1_fu_CHECKPOINT:
     label: "Do you have anything you want to change or report from the options below? If there is nothing to change or report please select 'None' and click Next to complete the questionnaire."
