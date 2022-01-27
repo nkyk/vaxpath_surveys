@@ -3656,7 +3656,3 @@ questions:
         label_de: "Ich bestätige, dass dies meine endgültigen Antworten sind"
         label_it: "Confermo che queste sono le mie risposte finali"
         label_es: "Confirmo que estas son mis respuestas definitivas"
-    db_write:
-      table: AdditionalAppColumn
-      column: subject_status
-      column_value: "Complete"
