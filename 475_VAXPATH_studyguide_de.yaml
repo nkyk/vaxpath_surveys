@@ -1,12 +1,14 @@
 title: VaxPath Onboarding
+title_de: VaxPath Onboarding
 description: "Welcome to the VAXPATH study sponsored by BioNTech/Pfizer. . Please Select 'Next' to learn more about the study."
+description_de: "Willkommen bei der von BioNTech/Pfizer in Auftrag gegebenen VAXPATH-Studie. Bitte wählen Sie „Weiter“, um mehr über die Studie zu erfahren."
 pages:
   page1:
     questions:
       q1:
         type: blank
         label: "<div style='display: flex; justify-content: center;'>
-<img src=\"https://pendo-static-5784910028996608.storage.googleapis.com/aY_w5nxoHqOR-GExaM4RhugRMAY/guide-media-8c519a0e-6789-4c2f-b10b-c64d67a70f9d\" alt=\"logo\" style='margin-bottom: 10px; width: 100%; height: 50%; text-align: center; margin-bottom: 20px;'>
+<img src=\"https://health-storylines-public-files.s3.ca-central-1.amazonaws.com/VAXPATH+wordmark.jpg\" alt=\"logo\" style='margin-bottom: 10px; width: 100%; height: 50%; text-align: center; margin-bottom: 20px;'>
 </div>
 <div style='text-align: center; margin-bottom: 10px; font-size: 23px;'>
 <b>
@@ -17,14 +19,29 @@ Welcome to the VAXPATH study sponsored by BioNTech/Pfizer.
 This study will explore how well you tolerate the vaccine. This study is “non-interventional” because it collects information only. 
 </div>
 <div style='margin-left: auto; margin-right: auto; font-weight: 400; margin-bottom: 10px; font-size: 15px;'>
-If you’d like to learn more about the study, please contact the Call Center at <a href=\"tel:0800-891-1129\">0800-891-1129</a> or by email at <a href=\"mailto:VAXPATHhelpdesk@iqvia.com\">VAXPATHhelpdesk@iqvia.com</a>
+If you’d like to learn more about the study, please contact the Call Center at <a href=\"tel:0800-891-1129\">0800-891-1129</a> or by email at <a href=\"mailto:VAXPATHhelpdesk@iqvia.com\">VAXPATHhelpdesk@iqvia.com</a>. If you are experiencing a technical issue with the app, please contact <a href=\"mailto:vaxpathsupport@selfcarecatalysts.com\">vaxpathsupport@selfcarecatalysts.com</a> and someone will reach out to you about your app related question.
+</div>"
+
+        label_de: "<div style='display: flex; justify-content: center;'>
+<img src=\"https://health-storylines-public-files.s3.ca-central-1.amazonaws.com/VAXPATH+wordmark.jpg\" alt=\"logo\" style='margin-bottom: 10px; width: 100%; height: 50%; text-align: center; margin-bottom: 20px;'>
+</div>
+<div style='text-align: center; margin-bottom: 10px; font-size: 23px;'>
+<b>
+Willkommen bei der von BioNTech/Pfizer in Auftrag gegebenen VAXPATH-Studie.
+</b>
+</div>
+<div style='margin-left: auto; margin-right: auto; font-weight: 400; margin-bottom: 10px; font-size: 15px;'>
+In dieser Studie wird untersucht, wie gut Sie den Impfstoff vertragen. Diese Studie ist „nicht-interventionell“, da nur Informationen gesammelt werden.
+</div>
+<div style='margin-left: auto; margin-right: auto; font-weight: 400; margin-bottom: 10px; font-size: 15px;'>
+Wenn Sie mehr über die Studie erfahren möchten, kontaktieren Sie bitte das Callcenter unter <a href=\"tel:0-800-891-1129\">0-800-891-1129</a> oder per E-Mail unter <a href=\"mailto:VAXPATHhelpdesk@iqvia.com\">VAXPATHhelpdesk@iqvia.com</a>. Wenn Sie ein technisches Problem mit der App haben, wenden Sie sich bitte an <a href=\"mailto:vaxpathsupport@selfcarecatalysts.com\">vaxpathsupport@selfcarecatalysts.com</a> und es wird sich jemand mit Ihnen bezüglich Ihrer App-bezogenen Frage in Verbindung setzen.
 </div>"
   page2: 
     questions:
       q2:
         type: blank
         label: "<div style='display: flex; justify-content: center;'>
-<img src=\"https://pendo-static-5784910028996608.storage.googleapis.com/aY_w5nxoHqOR-GExaM4RhugRMAY/guide-media-1c0a5858-ce62-4d11-8971-7187a1457310\" alt=\"logo\" style='margin-bottom: 10px; width: 100%; height: 50%; text-align: center; margin-bottom: 20px;'>
+<img src=\"https://health-storylines-public-files.s3.ca-central-1.amazonaws.com/VAXPATH+wordmark.jpg\" alt=\"logo\" style='margin-bottom: 10px; width: 100%; height: 50%; text-align: center; margin-bottom: 20px;'>
 </div>
 <div style='text-align: center; margin-bottom: 10px; font-size: 23px;'>
 <b>
@@ -43,14 +60,37 @@ I confirm I am at least 18 years of age
 </li>
 </ul>
 <div style=\"margin-left: auto; margin-right: auto; font-weight: 400; margin-bottom: 10px; margin-top: 10px; font-size: 15px;\">
-If you’d like to learn more about the study, please contact the Call Center at <a href=\"tel:1-800-891-1129\">1-800-891-1129</a> or by email at <a href=\"mailto:help@vaxpath.com\">help@vaxpath.com</a>
+If you’d like to learn more about the study, please contact the Call Center at <a href=\"tel:0800-891-1129\">0800-891-1129</a> or by email at <a href=\"mailto:VAXPATHhelpdesk@iqvia.com\">VAXPATHhelpdesk@iqvia.com</a>. If you are experiencing a technical issue with the app, please contact <a href=\"mailto:vaxpathsupport@selfcarecatalysts.com\">vaxpathsupport@selfcarecatalysts.com</a> and someone will reach out to you about your app related question.
+</div>"
+
+        label_de: "<div style='display: flex; justify-content: center;'>
+<img src=\"https://health-storylines-public-files.s3.ca-central-1.amazonaws.com/VAXPATH+wordmark.jpg\" alt=\"logo\" style='margin-bottom: 10px; width: 100%; height: 50%; text-align: center; margin-bottom: 20px;'>
+</div>
+<div style='text-align: center; margin-bottom: 10px; font-size: 23px;'>
+<b>
+Sind Sie geeignet?
+</b>
+</div>
+<div style='margin-left: auto; margin-right: auto; font-weight: 400; margin-bottom: 10px; font-size: 15px;'>
+Damit diese Studie für Sie infrage kommt, müssen Sie Ihre erste Impfstoffdosis in den letzten 5 Tagen erhalten haben und mindestens 18 Jahre alt sein.
+</div>
+<ul style='padding: 0; list-style-position: inside;'>
+<li style='font-weight: 400; margin-bottom: 10px; font-size: 15px;'>
+Ich bestätige, dass ich in den letzten 5 Tagen meine erste Impfung mit dem Impfstoff von Pfizer/BioNTech erhalten habe.
+</li>
+<li style='font-weight: 400; margin-bottom: 10px; font-size: 15px;'>
+Ich bestätige, dass ich mindestens 18 Jahre alt bin.
+</li>
+</ul>
+<div style=\"margin-left: auto; margin-right: auto; font-weight: 400; margin-bottom: 10px; margin-top: 10px; font-size: 15px;\">
+Wenn Sie mehr über die Studie erfahren möchten, kontaktieren Sie bitte das Callcenter unter <a href=\"tel:0-800-891-1129\">0-800-891-1129</a> oder per E-Mail unter <a href=\"mailto:VAXPATHhelpdesk@iqvia.com\">VAXPATHhelpdesk@iqvia.com</a>. Wenn Sie ein technisches Problem mit der App haben, wenden Sie sich bitte an <a href=\"mailto:vaxpathsupport@selfcarecatalysts.com\">vaxpathsupport@selfcarecatalysts.com</a> und es wird sich jemand mit Ihnen bezüglich Ihrer App-bezogenen Frage in Verbindung setzen.
 </div>"
   page3:
     questions:
       q3: 
         type: blank
         label:  "<div style='display: flex; justify-content: center;'>
-<img src=\"https://pendo-static-5784910028996608.storage.googleapis.com/aY_w5nxoHqOR-GExaM4RhugRMAY/guide-media-15aff47c-4aae-4e2f-a6b0-1c9f0209edab\" alt=\"logo\" style='margin-bottom: 10px; width: 100%; height: 50%; text-align: center; margin-bottom: 20px;'>
+<img src=\"https://health-storylines-public-files.s3.ca-central-1.amazonaws.com/VAXPATH+wordmark.jpg\" alt=\"logo\" style='margin-bottom: 10px; width: 100%; height: 50%; text-align: center; margin-bottom: 20px;'>
 </div>
 <div style='text-align: center; margin-bottom: 10px; font-size: 23px;'>
 <b>
@@ -64,17 +104,35 @@ You’re here because you received a BioNTech/Pfizer COVID-19 vaccine in the las
 Don’t worry! We’ll remind you with a notification reminder when a survey is released. 
 </div>
 <div style='margin-left: auto; margin-right: auto; font-weight: 400; margin-bottom: 10px; font-size: 15px;'>
-If you’d like to learn more about the study, please contact the Call Center at <a href=\"tel:1-800-891-1129\">1-800-891-1129</a> or by email at <a href=\"mailto:help@vaxpath.com\">help@vaxpath.com</a>
+If you’d like to learn more about the study, please contact the Call Center at <a href=\"tel:0800-891-1129\">0800-891-1129</a> or by email at <a href=\"mailto:VAXPATHhelpdesk@iqvia.com\">VAXPATHhelpdesk@iqvia.com</a>. If you are experiencing a technical issue with the app, please contact <a href=\"mailto:vaxpathsupport@selfcarecatalysts.com\">vaxpathsupport@selfcarecatalysts.com</a> and someone will reach out to you about your app related question.
+</div>"
+
+        label_de:  "<div style='display: flex; justify-content: center;'>
+<img src=\"https://health-storylines-public-files.s3.ca-central-1.amazonaws.com/VAXPATH+wordmark.jpg\" alt=\"logo\" style='margin-bottom: 10px; width: 100%; height: 50%; text-align: center; margin-bottom: 20px;'>
+</div>
+<div style='text-align: center; margin-bottom: 10px; font-size: 23px;'>
+<b>
+Was kann ich erwarten?
+</b>
+</div>
+<div style='margin-left: auto; margin-right: auto; font-weight: 400; margin-bottom: 10px; font-size: 15px;'>
+Sie sind hier, weil Sie in den letzten 5 Tagen eine Impfung mit dem COVID-19-Impfstoff von BioNTech/Pfizer erhalten haben. Diese Studie dauert 2 Jahre. Sie werden gebeten, in regelmäßigen Abständen einige Fragebögen auszufüllen.
+</div>
+<div style='margin-left: auto; margin-right: auto; font-weight: 400; margin-bottom: 10px; font-size: 15px;'>
+Keine Sorge! Wir werden Sie mit einer Erinnerungsnachricht informieren, wenn eine Umfrage veröffentlicht wird.
+</div>
+<div style='margin-left: auto; margin-right: auto; font-weight: 400; margin-bottom: 10px; font-size: 15px;'>
+Wenn Sie mehr über die Studie erfahren möchten, kontaktieren Sie bitte das Callcenter unter <a href=\"tel:0-800-891-1129\">0-800-891-1129</a> oder per E-Mail unter <a href=\"mailto:VAXPATHhelpdesk@iqvia.com\">VAXPATHhelpdesk@iqvia.com</a>. Wenn Sie ein technisches Problem mit der App haben, wenden Sie sich bitte an <a href=\"mailto:vaxpathsupport@selfcarecatalysts.com\">vaxpathsupport@selfcarecatalysts.com</a> und es wird sich jemand mit Ihnen bezüglich Ihrer App-bezogenen Frage in Verbindung setzen.
 </div>"
   page4:
     questions:
       q4: 
         type: blank
         label:  "<div style='display: flex; justify-content: center;'>
-<img src=\"https://pendo-static-5784910028996608.storage.googleapis.com/aY_w5nxoHqOR-GExaM4RhugRMAY/guide-media-89da73b7-a824-412d-ab7a-0ec0d6c0ce86\" alt=\"logo\" style='margin-bottom: 10px; width: 100%; height: 50%; text-align: center; margin-bottom: 20px;'>
+<img src=\"https://health-storylines-public-files.s3.ca-central-1.amazonaws.com/VAXPATH+wordmark.jpg\" alt=\"logo\" style='margin-bottom: 10px; width: 100%; height: 50%; text-align: center; margin-bottom: 20px;'>
 </div>
 <div style='display: flex; justify-content: center;'>
-<img src=\"https://pendo-static-5784910028996608.storage.googleapis.com/aY_w5nxoHqOR-GExaM4RhugRMAY/guide-media-918ab04c-66e6-432d-9e83-34db770658b6\" alt=\"logo\" style='margin-bottom: 10px; width: 50%; height: 50%; text-align: center; margin-bottom: 20px;'>
+<img src=\"https://health-storylines-public-files.s3.ca-central-1.amazonaws.com/browser.png\" alt=\"logo\" style='margin-bottom: 10px; width: 50%; height: 50%; text-align: center; margin-bottom: 20px;'>
 </div>
 <div style='text-align: center; margin-bottom: 10px; font-size: 23px;'>
 <b>
@@ -88,14 +146,32 @@ We provide physical, electronic (including encryption), and procedural safeguard
 For example, we limit access to this information to authorized employees and contractors who need to know the information. 
 </div>
 <div style='margin-left: auto; margin-right: auto; font-weight: 400; margin-bottom: 10px; font-size: 15px;'>
-If you’d like to learn more about the study, please contact the Call Center at <a href=\"tel:1-800-891-1129\">1-800-891-1129</a> or by email at <a href=\"mailto:help@vaxpath.com\">help@vaxpath.com</a>
+If you’d like to learn more about the study, please contact the Call Center at <a href=\"tel:0800-891-1129\">0800-891-1129</a> or by email at <a href=\"mailto:VAXPATHhelpdesk@iqvia.com\">VAXPATHhelpdesk@iqvia.com</a>. If you are experiencing a technical issue with the app, please contact <a href=\"mailto:vaxpathsupport@selfcarecatalysts.com\">vaxpathsupport@selfcarecatalysts.com</a> and someone will reach out to you about your app related question.
+</div>"
+
+        label_de:  "<div style='display: flex; justify-content: center;'>
+<img src=\"https://health-storylines-public-files.s3.ca-central-1.amazonaws.com/VAXPATH+wordmark.jpg\" alt=\"logo\" style='margin-bottom: 10px; width: 100%; height: 50%; text-align: center; margin-bottom: 20px;'>
+</div>
+<div style='display: flex; justify-content: center;'>
+<img src=\"https://health-storylines-public-files.s3.ca-central-1.amazonaws.com/browser.png\" alt=\"logo\" style='margin-bottom: 10px; width: 50%; height: 50%; text-align: center; margin-bottom: 20px;'>
+</div>
+<div style='text-align: center; margin-bottom: 10px; font-size: 23px;'>
+<b>
+Sind meine Daten sicher?
+</b>
+</div>
+<div style='margin-left: auto; margin-right: auto; font-weight: 400; margin-bottom: 10px; font-size: 15px;'>
+Wir stellen physische, elektronische (einschließlich Verschlüsselung) und verfahrenstechnische Sicherheitsmaßnahmen bereit, um die von uns verarbeiteten Daten zu schützen. Beispielsweise beschränken wir den Zugriff auf diese Informationen auf autorisierte Mitarbeiter und Auftragnehmer, die diese Daten kennen müssen. 
+</div>
+<div style='margin-left: auto; margin-right: auto; font-weight: 400; margin-bottom: 10px; font-size: 15px;'>
+Wenn Sie mehr über die Studie erfahren möchten, kontaktieren Sie bitte das Callcenter unter <a href=\"tel:0-800-891-1129\">0-800-891-1129</a> oder per E-Mail unter <a href=\"mailto:VAXPATHhelpdesk@iqvia.com\">VAXPATHhelpdesk@iqvia.com</a>. Wenn Sie ein technisches Problem mit der App haben, wenden Sie sich bitte an <a href=\"mailto:vaxpathsupport@selfcarecatalysts.com\">vaxpathsupport@selfcarecatalysts.com</a> und es wird sich jemand mit Ihnen bezüglich Ihrer App-bezogenen Frage in Verbindung setzen.
 </div>"
   page5:
     questions:
       q5: 
         type: blank
         label:  "<div style='display: flex; justify-content: center;'>
-<img src=\"https://pendo-static-5784910028996608.storage.googleapis.com/aY_w5nxoHqOR-GExaM4RhugRMAY/guide-media-15aff47c-4aae-4e2f-a6b0-1c9f0209edab\" alt=\"logo\" style='margin-bottom: 10px; width: 100%; height: 50%; text-align: center; margin-bottom: 20px;'>
+<img src=\"https://health-storylines-public-files.s3.ca-central-1.amazonaws.com/VAXPATH+wordmark.jpg\" alt=\"logo\" style='margin-bottom: 10px; width: 100%; height: 50%; text-align: center; margin-bottom: 20px;'>
 </div>
         <div style='text-align: center; margin-bottom: 10px; font-size: 23px;'>
 <b>
@@ -106,33 +182,61 @@ Last Step: Complete Contact and Medical Information
 Go ahead and review the E-Consent document and sign!
 </div>
 <div style='margin-left: auto; margin-right: auto; font-weight: 400; margin-bottom: 10px; font-size: 15px;'>
-If you’d like to learn more about the study, please contact the Call Center at <a href=\"tel:1-800-891-1129\">1-800-891-1129</a> or by email at <a href=\"mailto:help@vaxpath.com\">help@vaxpath.com</a>
+If you’d like to learn more about the study, please contact the Call Center at <a href=\"tel:0800-891-1129\">0800-891-1129</a> or by email at <a href=\"mailto:VAXPATHhelpdesk@iqvia.com\">VAXPATHhelpdesk@iqvia.com</a>. If you are experiencing a technical issue with the app, please contact <a href=\"mailto:vaxpathsupport@selfcarecatalysts.com\">vaxpathsupport@selfcarecatalysts.com</a> and someone will reach out to you about your app related question.
+</div>"
+
+        label_de:  "<div style='display: flex; justify-content: center;'>
+<img src=\"https://health-storylines-public-files.s3.ca-central-1.amazonaws.com/VAXPATH+wordmark.jpg\" alt=\"logo\" style='margin-bottom: 10px; width: 100%; height: 50%; text-align: center; margin-bottom: 20px;'>
+</div>
+<div style='text-align: center; margin-bottom: 10px; font-size: 23px;'>
+<b>
+Letzter Schritt: Vervollständigen Sie die Kontakt- und medizinischen Daten
+</b>
+</div>
+<div style='margin-left: auto; margin-right: auto; font-weight: 400; margin-bottom: 10px; font-size: 15px;'>
+Fahren Sie mit der elektronischen Einwilligungserklärung fort und unterzeichnen Sie diese bitte! 
+</div>
+<div style='margin-left: auto; margin-right: auto; font-weight: 400; margin-bottom: 10px; font-size: 15px;'>
+Wenn Sie mehr über die Studie erfahren möchten, kontaktieren Sie bitte das Callcenter unter <a href=\"tel:0-800-891-1129\">0-800-891-1129</a> oder per E-Mail unter <a href=\"mailto:VAXPATHhelpdesk@iqvia.com\">VAXPATHhelpdesk@iqvia.com</a>. Wenn Sie ein technisches Problem mit der App haben, wenden Sie sich bitte an <a href=\"mailto:vaxpathsupport@selfcarecatalysts.com\">vaxpathsupport@selfcarecatalysts.com</a> und es wird sich jemand mit Ihnen bezüglich Ihrer App-bezogenen Frage in Verbindung setzen.
 </div>"
   page6:
     questions:
       q6: 
         type: blank
         label:  "<div style='display: flex; justify-content: center;'>
-<img src=\"https://pendo-static-5784910028996608.storage.googleapis.com/aY_w5nxoHqOR-GExaM4RhugRMAY/guide-media-ee2db7c9-d9d0-4bd6-82c7-eaa49afdd35c\" alt=\"logo\" style='margin-bottom: 10px; width: 100%; height: 50%; text-align: center; margin-bottom: 20px;'>
+<img src=\"https://health-storylines-public-files.s3.ca-central-1.amazonaws.com/VAXPATH+wordmark.jpg\" alt=\"logo\" style='margin-bottom: 10px; width: 100%; height: 50%; text-align: center; margin-bottom: 20px;'>
 </div>
 <div style='display: flex; justify-content: center;'>
-<img src=\"https://pendo-static-5784910028996608.storage.googleapis.com/aY_w5nxoHqOR-GExaM4RhugRMAY/guide-media-55d3d9fa-9dca-4583-bbb5-67602391e93b\" alt=\"logo\" style='margin-bottom: 10px; width: 100%; height: 50%; text-align: center; margin-bottom: 20px;'>
+<img src=\"https://health-storylines-public-files.s3.ca-central-1.amazonaws.com/IMG_3D83DC4B89A4-1.jpeg\" alt=\"logo\" style='margin-bottom: 10px; width: 100%; height: 50%; text-align: center; margin-bottom: 20px;'>
 </div>
 <div style='margin-left: auto; margin-right: auto; font-weight: 400; margin-bottom: 10px; font-size: 15px;'>
 Thank you for your interest in the VAXPATH study! Now you can go ahead and complete your first survey by pulling down the screen to refresh.
 </div>
 <div style='margin-left: auto; margin-right: auto; font-weight: 400; margin-bottom: 10px; font-size: 15px;'>
-If you’d like to learn more about the study, please contact the Call Center at <a href=\"tel:1-800-891-1129\">1-800-891-1129</a> or by email at <a href=\"mailto:help@vaxpath.com\">help@vaxpath.com</a>
+If you’d like to learn more about the study, please contact the Call Center at <a href=\"tel:0800-891-1129\">0800-891-1129</a> or by email at <a href=\"mailto:VAXPATHhelpdesk@iqvia.com\">VAXPATHhelpdesk@iqvia.com</a>. If you are experiencing a technical issue with the app, please contact <a href=\"mailto:vaxpathsupport@selfcarecatalysts.com\">vaxpathsupport@selfcarecatalysts.com</a> and someone will reach out to you about your app related question.
+</div>"
+
+        label_de:  "<div style='display: flex; justify-content: center;'>
+<img src=\"https://health-storylines-public-files.s3.ca-central-1.amazonaws.com/VAXPATH+wordmark.jpg\" alt=\"logo\" style='margin-bottom: 10px; width: 100%; height: 50%; text-align: center; margin-bottom: 20px;'>
+</div>
+<div style='display: flex; justify-content: center;'>
+<img src=\"https://health-storylines-public-files.s3.ca-central-1.amazonaws.com/IMG_3D83DC4B89A4-1.jpeg\" alt=\"logo\" style='margin-bottom: 10px; width: 100%; height: 50%; text-align: center; margin-bottom: 20px;'>
+</div>
+<div style='margin-left: auto; margin-right: auto; font-weight: 400; margin-bottom: 10px; font-size: 15px;'>
+Vielen Dank für Ihr Interesse an der VAXPATH-Studie! Nun können Sie fortfahren und Ihre erste Umfrage abschließen, indem Sie den Bildschirm zum Aktualisieren nach unten ziehen.
+</div>
+<div style='margin-left: auto; margin-right: auto; font-weight: 400; margin-bottom: 10px; font-size: 15px;'>
+Wenn Sie mehr über die Studie erfahren möchten, kontaktieren Sie bitte das Callcenter unter <a href=\"tel:0-800-891-1129\">0-800-891-1129</a> oder per E-Mail unter <a href=\"mailto:VAXPATHhelpdesk@iqvia.com\">VAXPATHhelpdesk@iqvia.com</a>. Wenn Sie ein technisches Problem mit der App haben, wenden Sie sich bitte an <a href=\"mailto:vaxpathsupport@selfcarecatalysts.com\">vaxpathsupport@selfcarecatalysts.com</a> und es wird sich jemand mit Ihnen bezüglich Ihrer App-bezogenen Frage in Verbindung setzen.
 </div>"
   page7:
     questions:
       q7: 
         type: blank
         label:  "<div style='display: flex; justify-content: center;'>
-<img src=\"https://pendo-static-5784910028996608.storage.googleapis.com/aY_w5nxoHqOR-GExaM4RhugRMAY/guide-media-7700d885-5716-42ab-a60c-644da847aafc\" alt=\"logo\" style='margin-bottom: 10px; width: 100%; height: 50%;text-align: center; margin-bottom: 20px;'>
+<img src=\"https://health-storylines-public-files.s3.ca-central-1.amazonaws.com/VAXPATH+wordmark.jpg\" alt=\"logo\" style='margin-bottom: 10px; width: 100%; height: 50%;text-align: center; margin-bottom: 20px;'>
 </div>
 <div style='display: flex; justify-content: center;'>
-<img src=\"https://pendo-mpl-static-5678164130922496.storage.googleapis.com/IBCUQuwofBcL8_4gigsa-IOe398/guide-media-aff11279-3e20-41eb-b94b-e4ad8d04a711.gif\" alt=\"logo\" style='margin-bottom: 10px; width: 30%; height: 50%; text-align: center; margin-bottom: 20px;'>
+<img src=\"https://health-storylines-public-files.s3.ca-central-1.amazonaws.com/checkmark.gif\" alt=\"logo\" style='margin-bottom: 10px; width: 30%; height: 50%; text-align: center; margin-bottom: 20px;'>
 </div>
 <div style='margin-left: auto; margin-right: auto; font-weight: 400; margin-bottom: 10px; font-size: 15px;'>
 It’s time to complete your profile! Head over there by tapping the ‘Menu’ button then ‘Settings’.
@@ -141,14 +245,27 @@ It’s time to complete your profile! Head over there by tapping the ‘Menu’ 
 Here you can change your profile settings or contact information. Let’s try adding your contact information. 
 </div>
 <div style='margin-left: auto; margin-right: auto; font-weight: 400; margin-bottom: 10px; font-size: 15px;'>
-If you’d like to learn more about the study, please contact the Call Center at <a href=\"tel:1-800-891-1129\">1-800-891-1129</a> or by email at <a href=\"mailto:help@vaxpath.com\">help@vaxpath.com</a>
+If you’d like to learn more about the study, please contact the Call Center at <a href=\"tel:0800-891-1129\">0800-891-1129</a> or by email at <a href=\"mailto:VAXPATHhelpdesk@iqvia.com\">VAXPATHhelpdesk@iqvia.com</a>. If you are experiencing a technical issue with the app, please contact <a href=\"mailto:vaxpathsupport@selfcarecatalysts.com\">vaxpathsupport@selfcarecatalysts.com</a> and someone will reach out to you about your app related question.
+</div>"
+
+        label_de:  "<div style='display: flex; justify-content: center;'>
+<img src=\"https://health-storylines-public-files.s3.ca-central-1.amazonaws.com/VAXPATH+wordmark.jpg\" alt=\"logo\" style='margin-bottom: 10px; width: 100%; height: 50%;text-align: center; margin-bottom: 20px;'>
+</div>
+<div style='display: flex; justify-content: center;'>
+<img src=\"https://health-storylines-public-files.s3.ca-central-1.amazonaws.com/checkmark.gif\" alt=\"logo\" style='margin-bottom: 10px; width: 30%; height: 50%; text-align: center; margin-bottom: 20px;'>
+</div>
+<div style='margin-left: auto; margin-right: auto; font-weight: 400; margin-bottom: 10px; font-size: 15px;'>
+Nun vervollständigen Sie bitte Ihr Profil! Fahren Sie fort, indem Sie auf die Schaltfläche „Menü“ und dann auf „Einstellungen“ klicken. Hier können Sie Ihre Profileinstellungen oder Kontaktdaten ändern. Versuchen Sie nun, Ihre Kontaktdaten hinzuzufügen. 
+</div>
+<div style='margin-left: auto; margin-right: auto; font-weight: 400; margin-bottom: 10px; font-size: 15px;'>
+Wenn Sie mehr über die Studie erfahren möchten, kontaktieren Sie bitte das Callcenter unter <a href=\"tel:0-800-891-1129\">0-800-891-1129</a> oder per E-Mail unter <a href=\"mailto:VAXPATHhelpdesk@iqvia.com\">VAXPATHhelpdesk@iqvia.com</a>. Wenn Sie ein technisches Problem mit der App haben, wenden Sie sich bitte an <a href=\"mailto:vaxpathsupport@selfcarecatalysts.com\">vaxpathsupport@selfcarecatalysts.com</a> und es wird sich jemand mit Ihnen bezüglich Ihrer App-bezogenen Frage in Verbindung setzen.
 </div>"
   page8:
     questions:
       q8: 
         type: blank
         label:  "<div style='display: flex; justify-content: center;'>
-<img src=\"https://pendo-static-5784910028996608.storage.googleapis.com/aY_w5nxoHqOR-GExaM4RhugRMAY/guide-media-7700d885-5716-42ab-a60c-644da847aafc\" alt=\"logo\" style='margin-bottom: 10px; width: 100%; height: 50%; text-align: center; margin-bottom: 20px;'>
+<img src=\"https://health-storylines-public-files.s3.ca-central-1.amazonaws.com/VAXPATH+wordmark.jpg\" alt=\"logo\" style='margin-bottom: 10px; width: 100%; height: 50%; text-align: center; margin-bottom: 20px;'>
 </div>
 <div style='margin-left: auto; margin-right: auto; font-weight: 400; margin-bottom: 10px; font-size: 15px;'>
 That’s all we have for you right now! Over the next two years, you’ll be asked to complete surveys periodically. 
@@ -157,33 +274,59 @@ That’s all we have for you right now! Over the next two years, you’ll be ask
 We’ll send you push notifications to remind you so make sure you turn them on in your settings! If you have any questions, you can access this study guide again within your Home Screen. You can also find the Call Center contact information there as well.
 </div>
 <div style='margin-left: auto; margin-right: auto; font-weight: 400; margin-bottom: 10px; font-size: 15px;'>
-If you’d like to learn more about the study, please contact the Call Center at <a href=\"tel:1-800-891-1129\">1-800-891-1129</a> or by email at <a href=\"mailto:help@vaxpath.com\">help@vaxpath.com</a>
+If you’d like to learn more about the study, please contact the Call Center at <a href=\"tel:0800-891-1129\">0800-891-1129</a> or by email at <a href=\"mailto:VAXPATHhelpdesk@iqvia.com\">VAXPATHhelpdesk@iqvia.com</a>. If you are experiencing a technical issue with the app, please contact <a href=\"mailto:vaxpathsupport@selfcarecatalysts.com\">vaxpathsupport@selfcarecatalysts.com</a> and someone will reach out to you about your app related question.
+</div>"
+
+        label_de:  "<div style='display: flex; justify-content: center;'>
+<img src=\"https://health-storylines-public-files.s3.ca-central-1.amazonaws.com/VAXPATH+wordmark.jpg\" alt=\"logo\" style='margin-bottom: 10px; width: 100%; height: 50%; text-align: center; margin-bottom: 20px;'>
+</div>
+<div style='margin-left: auto; margin-right: auto; font-weight: 400; margin-bottom: 10px; font-size: 15px;'>
+Das war’s fürs Erste! Während der nächsten zwei Jahre werden Sie gebeten, regelmäßig Umfragen auszufüllen.
+</div>
+<div style='margin-left: auto; margin-right: auto; font-weight: 400; margin-bottom: 10px; font-size: 15px;'>
+Wir werden Ihnen Push-Benachrichtigungen senden, um Sie daran zu erinnern. Stellen Sie also bitte sicher, dass Sie diese in Ihren Einstellungen aktivieren! Wenn Sie Fragen haben, sehen Sie in unserem Tool „Häufig gestellte Fragen“ nach. Dort finden Sie auch die Nummer des Callcenters.
+</div>
+<div style='margin-left: auto; margin-right: auto; font-weight: 400; margin-bottom: 10px; font-size: 15px;'>
+Wenn Sie mehr über die Studie erfahren möchten, kontaktieren Sie bitte das Callcenter unter <a href=\"tel:0-800-891-1129\">0-800-891-1129</a> oder per E-Mail unter <a href=\"mailto:VAXPATHhelpdesk@iqvia.com\">VAXPATHhelpdesk@iqvia.com</a>. Wenn Sie ein technisches Problem mit der App haben, wenden Sie sich bitte an <a href=\"mailto:vaxpathsupport@selfcarecatalysts.com\">vaxpathsupport@selfcarecatalysts.com</a> und es wird sich jemand mit Ihnen bezüglich Ihrer App-bezogenen Frage in Verbindung setzen.
 </div>"
   page9:
     questions:
       q9: 
         type: blank
         label:  "<div style='display: flex; justify-content: center;'>
-<img src=\"https://pendo-static-5784910028996608.storage.googleapis.com/aY_w5nxoHqOR-GExaM4RhugRMAY/guide-media-7700d885-5716-42ab-a60c-644da847aafc\" alt=\"logo\" style='margin-bottom: 10px; width: 100%; height: 50%; text-align: center; margin-bottom: 20px;'>
+<img src=\"https://health-storylines-public-files.s3.ca-central-1.amazonaws.com/VAXPATH+wordmark.jpg\" alt=\"logo\" style='margin-bottom: 10px; width: 100%; height: 50%; text-align: center; margin-bottom: 20px;'>
 </div>
 <div style='display: flex; justify-content: center;'>
-<img src=\"https://pendo-mhu-static-5681150794137600.storage.googleapis.com/nge604boKZycGgS-ULKMyvTWNZM/guide-media-783a799d-71a0-460f-b4f7-3124e5639ec8\" alt=\"logo\" style='margin-bottom: 10px; width: 100%; height: 50%; text-align: center; margin-bottom: 20px;'>
+<img src=\"https://health-storylines-public-files.s3.ca-central-1.amazonaws.com/econsent1.png\" alt=\"logo\" style='margin-bottom: 10px; width: 100%; height: 50%; text-align: center; margin-bottom: 20px;'>
 </div>
 <div style='margin-left: auto; margin-right: auto; font-weight: 400; margin-bottom: 10px; font-size: 15px;'>
 Your participation in this study is completely voluntary (your choice). Take as long as you need to make your decision. You also can choose to take part in the study now, and then change your mind later at any time.
 </div>
 <div style='margin-left: auto; margin-right: auto; font-weight: 400; margin-bottom: 10px; font-size: 15px;'>
-If you’d like to learn more about the study, please contact the Call Center at <a href=\"tel:1-800-891-1129\">1-800-891-1129</a> or by email at <a href=\"mailto:help@vaxpath.com\">help@vaxpath.com</a>
+If you’d like to learn more about the study, please contact the Call Center at <a href=\"tel:0800-891-1129\">0800-891-1129</a> or by email at <a href=\"mailto:VAXPATHhelpdesk@iqvia.com\">VAXPATHhelpdesk@iqvia.com</a>. If you are experiencing a technical issue with the app, please contact <a href=\"mailto:vaxpathsupport@selfcarecatalysts.com\">vaxpathsupport@selfcarecatalysts.com</a> and someone will reach out to you about your app related question.
+</div>"
+
+        label_de:  "<div style='display: flex; justify-content: center;'>
+<img src=\"https://health-storylines-public-files.s3.ca-central-1.amazonaws.com/VAXPATH+wordmark.jpg\" alt=\"logo\" style='margin-bottom: 10px; width: 100%; height: 50%; text-align: center; margin-bottom: 20px;'>
+</div>
+<div style='display: flex; justify-content: center;'>
+<img src=\"https://health-storylines-public-files.s3.ca-central-1.amazonaws.com/econsent1.png\" alt=\"logo\" style='margin-bottom: 10px; width: 100%; height: 50%; text-align: center; margin-bottom: 20px;'>
+</div>
+<div style='margin-left: auto; margin-right: auto; font-weight: 400; margin-bottom: 10px; font-size: 15px;'>
+Ihre Teilnahme an dieser Studie ist vollkommen freiwillig (Ihre Entscheidung). Nehmen Sie sich so viel Zeit wie nötig, um Ihre Entscheidung zu treffen. Sie können sich auch jetzt für eine Teilnahme an der Studie entscheiden und später jederzeit Ihre Meinung ändern. 
+</div>
+<div style='margin-left: auto; margin-right: auto; font-weight: 400; margin-bottom: 10px; font-size: 15px;'>
+Wenn Sie mehr über die Studie erfahren möchten, kontaktieren Sie bitte das Callcenter unter <a href=\"tel:0-800-891-1129\">0-800-891-1129</a> oder per E-Mail unter <a href=\"mailto:VAXPATHhelpdesk@iqvia.com\">VAXPATHhelpdesk@iqvia.com</a>. Wenn Sie ein technisches Problem mit der App haben, wenden Sie sich bitte an <a href=\"mailto:vaxpathsupport@selfcarecatalysts.com\">vaxpathsupport@selfcarecatalysts.com</a> und es wird sich jemand mit Ihnen bezüglich Ihrer App-bezogenen Frage in Verbindung setzen.
 </div>"
   page10:
     questions:
       q10: 
         type: blank
         label:  "<div style='display: flex; justify-content: center;'>
-<img src=\"https://pendo-static-5784910028996608.storage.googleapis.com/aY_w5nxoHqOR-GExaM4RhugRMAY/guide-media-7700d885-5716-42ab-a60c-644da847aafc\" alt=\"logo\" style='margin-bottom: 10px; width: 100%; height: 50%; text-align: center; margin-bottom: 20px;'>
+<img src=\"https://health-storylines-public-files.s3.ca-central-1.amazonaws.com/VAXPATH+wordmark.jpg\" alt=\"logo\" style='margin-bottom: 10px; width: 100%; height: 50%; text-align: center; margin-bottom: 20px;'>
 </div>
 <div style='display: flex; justify-content: center;'>
-<img src=\"https://pendo-mhu-static-5681150794137600.storage.googleapis.com/nge604boKZycGgS-ULKMyvTWNZM/guide-media-d6c4d458-7d9e-4c8b-90fd-e30add1c6efd\" alt=\"logo\" style='margin-bottom: 10px; width: 100%; height: 50%; text-align: center; margin-bottom: 20px;'>
+<img src=\"https://health-storylines-public-files.s3.ca-central-1.amazonaws.com/econsent2.png\" alt=\"logo\" style='margin-bottom: 10px; width: 100%; height: 50%; text-align: center; margin-bottom: 20px;'>
 </div>
 <div style='margin-left: auto; margin-right: auto; font-weight: 400; margin-bottom: 10px; font-size: 15px;'>
 We encourage you to speak with your family, caregivers, doctors, and the study team about taking part in this study and whether it is right for you. The study team at the IQVIA will work with you to answer any questions that you may have about the study. 
@@ -191,17 +334,32 @@ We encourage you to speak with your family, caregivers, doctors, and the study t
 <div style='margin-left: auto; margin-right: auto; font-weight: 400; margin-bottom: 10px; font-size: 15px;'>
 If you choose to participate, you will be asked to sign this consent form before starting the study. You will also be asked to allow the study sponsor to review your relevant (or important) health records if you experience certain health events.</div>
 <div style='margin-left: auto; margin-right: auto; font-weight: 400; margin-bottom: 10px; font-size: 15px;'>
-If you’d like to learn more about the study, please contact the Call Center at <a href=\"tel:1-800-891-1129\">1-800-891-1129</a> or by email at <a href=\"mailto:help@vaxpath.com\">help@vaxpath.com</a>
+If you’d like to learn more about the study, please contact the Call Center at <a href=\"tel:0800-891-1129\">0800-891-1129</a> or by email at <a href=\"mailto:VAXPATHhelpdesk@iqvia.com\">VAXPATHhelpdesk@iqvia.com</a>. If you are experiencing a technical issue with the app, please contact <a href=\"mailto:vaxpathsupport@selfcarecatalysts.com\">vaxpathsupport@selfcarecatalysts.com</a> and someone will reach out to you about your app related question.
+</div>"
+
+        label_de:  "<div style='display: flex; justify-content: center;'>
+<img src=\"https://health-storylines-public-files.s3.ca-central-1.amazonaws.com/VAXPATH+wordmark.jpg\" alt=\"logo\" style='margin-bottom: 10px; width: 100%; height: 50%; text-align: center; margin-bottom: 20px;'>
+</div>
+<div style='display: flex; justify-content: center;'>
+<img src=\"https://health-storylines-public-files.s3.ca-central-1.amazonaws.com/econsent2.png\" alt=\"logo\" style='margin-bottom: 10px; width: 100%; height: 50%; text-align: center; margin-bottom: 20px;'>
+</div>
+<div style='margin-left: auto; margin-right: auto; font-weight: 400; margin-bottom: 10px; font-size: 15px;'>
+Wir empfehlen Ihnen, mit Ihrer Familie, Ihren Betreuern, Ärzten und dem Studienteam über die Teilnahme an dieser Studie zu sprechen und darüber, ob sie für Sie geeignet ist. Das Studienteam bei IQVIA wird mit Ihnen alle Fragen, die Sie möglicherweise zur Studie haben, durchgehen und diese beantworten.
+</div>
+<div style='margin-left: auto; margin-right: auto; font-weight: 400; margin-bottom: 10px; font-size: 15px;'>
+Wenn Sie sich für eine Teilnahme entscheiden, werden Sie gebeten, diese Einwilligungserklärung zu unterzeichnen, bevor Sie mit der Teilnahme an der Studie beginnen. Sie werden auch gebeten, dem Sponsor (Auftraggeber der Studie) zu erlauben, Ihre wichtigen (oder relevanten) Krankenakten einzusehen, wenn bei Ihnen bestimmte gesundheitliche Ereignisse auftreten.
+<div style='margin-left: auto; margin-right: auto; font-weight: 400; margin-bottom: 10px; font-size: 15px;'>
+Wenn Sie mehr über die Studie erfahren möchten, kontaktieren Sie bitte das Callcenter unter <a href=\"tel:0-800-891-1129\">0-800-891-1129</a> oder per E-Mail unter <a href=\"mailto:VAXPATHhelpdesk@iqvia.com\">VAXPATHhelpdesk@iqvia.com</a>. Wenn Sie ein technisches Problem mit der App haben, wenden Sie sich bitte an <a href=\"mailto:vaxpathsupport@selfcarecatalysts.com\">vaxpathsupport@selfcarecatalysts.com</a> und es wird sich jemand mit Ihnen bezüglich Ihrer App-bezogenen Frage in Verbindung setzen.
 </div>"
   page11:
     questions:
       q11: 
         type: blank
         label:  "<div style='display: flex; justify-content: center;'>
-<img src=\"https://pendo-static-5784910028996608.storage.googleapis.com/aY_w5nxoHqOR-GExaM4RhugRMAY/guide-media-7700d885-5716-42ab-a60c-644da847aafc\" alt=\"logo\" style='margin-bottom: 10px; width: 100%; height: 50%; text-align: center; margin-bottom: 20px;'>
+<img src=\"https://health-storylines-public-files.s3.ca-central-1.amazonaws.com/VAXPATH+wordmark.jpg\" alt=\"logo\" style='margin-bottom: 10px; width: 100%; height: 50%; text-align: center; margin-bottom: 20px;'>
 </div>
 <div style='display: flex; justify-content: center;'>
-<img src=\"https://pendo-mhu-static-5681150794137600.storage.googleapis.com/nge604boKZycGgS-ULKMyvTWNZM/guide-media-ee7112b9-9898-4df5-83ed-1478b2cd752c\" alt=\"logo\" style='margin-bottom: 10px; width: 100%; height: 50%; text-align: center; margin-bottom: 20px;'>
+<img src=\"https://health-storylines-public-files.s3.ca-central-1.amazonaws.com/econsent3.png\" alt=\"logo\" style='margin-bottom: 10px; width: 100%; height: 50%; text-align: center; margin-bottom: 20px;'>
 </div>
 <div style='margin-left: auto; margin-right: auto; font-weight: 400; margin-bottom: 10px; font-size: 15px;'>
 If you agree to participate, a copy of this signed consent will be available to you through the online portal.
@@ -213,5 +371,24 @@ We appreciate that you are thinking of taking part in this study.
 The VAXPATH study team
 </div>
 <div style='margin-left: auto; margin-right: auto; font-weight: 400; margin-bottom: 10px; font-size: 15px;'>
-If you’d like to learn more about the study, please contact the Call Center at <a href=\"tel:1-800-891-1129\">1-800-891-1129</a> or by email at <a href=\"mailto:help@vaxpath.com\">help@vaxpath.com</a>
+If you’d like to learn more about the study, please contact the Call Center at <a href=\"tel:0800-891-1129\">0800-891-1129</a> or by email at <a href=\"mailto:VAXPATHhelpdesk@iqvia.com\">VAXPATHhelpdesk@iqvia.com</a>. If you are experiencing a technical issue with the app, please contact <a href=\"mailto:vaxpathsupport@selfcarecatalysts.com\">vaxpathsupport@selfcarecatalysts.com</a> and someone will reach out to you about your app related question.
+</div>"
+
+        label_de:  "<div style='display: flex; justify-content: center;'>
+<img src=\"https://health-storylines-public-files.s3.ca-central-1.amazonaws.com/VAXPATH+wordmark.jpg\" alt=\"logo\" style='margin-bottom: 10px; width: 100%; height: 50%; text-align: center; margin-bottom: 20px;'>
+</div>
+<div style='display: flex; justify-content: center;'>
+<img src=\"https://health-storylines-public-files.s3.ca-central-1.amazonaws.com/econsent3.png\" alt=\"logo\" style='margin-bottom: 10px; width: 100%; height: 50%; text-align: center; margin-bottom: 20px;'>
+</div>
+<div style='margin-left: auto; margin-right: auto; font-weight: 400; margin-bottom: 10px; font-size: 15px;'>
+Wenn Sie der Teilnahme zustimmen, ist eine Kopie dieser unterzeichneten Einwilligungserklärung über das Online-Portal für Sie verfügbar.
+</div>
+<div style='margin-left: auto; margin-right: auto; font-weight: 400; margin-bottom: 10px; font-size: 15px;'>
+Wir wissen es zu schätzen, dass Sie über eine Teilnahme an dieser Studie nachdenken.
+</div>
+<div style='margin-left: auto; margin-right: auto; font-weight: 400; margin-bottom: 10px; font-size: 15px;'>
+Das VAXPATH-Studienteam
+</div>
+<div style='margin-left: auto; margin-right: auto; font-weight: 400; margin-bottom: 10px; font-size: 15px;'>
+Wenn Sie mehr über die Studie erfahren möchten, kontaktieren Sie bitte das Callcenter unter <a href=\"tel:0-800-891-1129\">0-800-891-1129</a> oder per E-Mail unter <a href=\"mailto:VAXPATHhelpdesk@iqvia.com\">VAXPATHhelpdesk@iqvia.com</a>. Wenn Sie ein technisches Problem mit der App haben, wenden Sie sich bitte an <a href=\"mailto:vaxpathsupport@selfcarecatalysts.com\">vaxpathsupport@selfcarecatalysts.com</a> und es wird sich jemand mit Ihnen bezüglich Ihrer App-bezogenen Frage in Verbindung setzen.
 </div>"
