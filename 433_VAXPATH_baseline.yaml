@@ -91,9 +91,9 @@ page_titles_it:
   - ""
   - ""
   - ""
-  - "Si prega di fornire i propri dati di contatto"
-  - "Fornisci i dettagli della persona secondaria che è più probabile che tu possa contattare se hai bisogno di cure mediche."
-  - "Si prega di fornire i dettagli del medico di assistenza primaria che è più probabile contattare se avete bisogno di cure mediche."
+  - "La preghiamo di lasciare i suoi contatti"
+  - "La preghiamo di lasciare un contatto di riferimento nel caso in cui avesse bisogno di assistenza medica."
+  - "Si prega di fornire il contatto del medico di base che possibile contattare nel caso in cui avesse bisogno di assistenza medica."
   - ""
 page_titles_es:
   - "" 
@@ -176,7 +176,7 @@ questions:
   pt_t0_dem_SEX:
     label: What was your biological sex assigned at birth?
     label_de: Welches biologisches Geschlecht wurde Ihnen bei der Geburt zugewiesen?
-    label_it: Qual è il Suo sesso biologico assegnato alla nascita?
+    label_it: Qual è il Suo genere?
     label_es: ¿Cuál fue su sexo biológico asignado al nacer?
     label_ca: Quin sexe biològic li van assignar quan va néixer?
     type: radio
@@ -262,7 +262,7 @@ questions:
   pt_t0_dem_RACE: 
     label: With which race(s) do you identify?
     label_de: Mit welcher/welchen ethnischen Zugehörigkeit(en) identifizieren Sie sich? (Alles Zutreffende ankreuzen)
-    label_it: Con quale/i popolazione/i si identifica? (Indicare tutte le voci pertinenti)
+    label_it: Con quale/i etnia/e si identifica? (Indicare tutte le voci pertinenti)
     label_es: ¿Con qué raza(s) se identifica? (marque todo lo que corresponda)
     label_ca: Amb quina(es) raça(ces) s’identifica? (Marqui totes les opcions que calgui)
     type: checkbox
@@ -303,7 +303,7 @@ questions:
   pt_t0_dem_OCCUP:
     label: What is your current main occupation?
     label_de: Welche ist Ihre derzeitige Hauptbeschäftigung?
-    label_it: Qual è la tua occupazione principale?
+    label_it: Qual è la Sua occupazione principale?
     label_es: ¿Cuál es su principal ocupación actual?
     label_ca: Quina és la seva ocupació principal actualment?
     type: list
@@ -321,7 +321,7 @@ questions:
         value: "Other"
     label: "Please specify your current main occupation."
     label_de: Bitte geben Sie Ihre aktuelle Hauptbeschäftigung an.
-    label_it: Per favore specifica la tua attuale occupazione principale
+    label_it: Per favore specifichi la Sua attuale occupazione principale
     label_es: Por favor, especifique su ocupación principal actual
     label_ca: Especifiqui la seva ocupació principal actual.
     type: text
@@ -602,7 +602,7 @@ questions:
   pt_t0_mh1_OVRLHLTH:
     label: How would you rate your overall health on a scale of 0-10?
     label_de: Wie würden Sie Ihren allgemeinen Gesundheitszustand auf einer Skala von 0–10 bewerten?
-    label_it: Come valuteresti la tua salute generale su una scala di 0-10
+    label_it: Come valuterebbe la Sua salute generale su una scala di 0-10
     label_es: ¿Cómo calificaría su estado de salud general en una escala del 0 al 10?
     label_ca: Com qualificaria la seva salut en general, en una escala de 0 a 10?
     type: slider
@@ -1192,7 +1192,7 @@ questions:
         value: pt_t0_vi1_VACCDOSE_Yes
     label: "At which center were you vaccinated?"
     label_de: In welchem Zentrum wurden Sie geimpft?
-    label_it: In quale centro è stato vaccinato?
+    label_it: In quale centro è stato/a vaccinato/a?
     label_es: ¿En qué centro se vacunó?
     label_ca: A quin centre li van posar la vacuna?
     type: text
@@ -1410,13 +1410,13 @@ questions:
       - value: "2"
         label: "Web/app-based questionnaire"
         label_de: "Web-/App-basierter Fragebogen"
-        label_it: "Questionario basato su web/applicazione"
+        label_it: "Tramite web/applicazione"
         label_es: "Cuestionario basado en web/aplicación"
         label_ca: "Qüestionari a través de web o aplicació"
       - value: "3"
         label: "Do not contact me anymore"
         label_de: "Kontaktieren Sie mich nicht mehr"
-        label_it: "Non mi contatti più"
+        label_it: "Non desidero essere più contattato"
         label_es: "No volver a ponerse en contacto conmigo"
         label_ca: "No em torneu a contactar"
     db_write:
@@ -1425,7 +1425,7 @@ questions:
   q_end:
     label: This is the end of the questionnaire. If you need to fill in missing details, please close the questionnaire using the [x] at the top right and you can revisit the questionnaire at a later time. Otherwise, if you wish to submit a completed questionnaire, select the option below and press 'NEXT'.
     label_de: Das ist das Ende des Fragebogens. Wenn Sie fehlende Angaben ausfüllen müssen, schließen Sie bitte den Fragebogen mit dem [x] oben rechts und Sie können den Fragebogen zu einem späteren Zeitpunkt erneut aufrufen. Andernfalls, wenn Sie einen ausgefüllten Fragebogen einreichen möchten, wählen Sie die Option unten und drücken Sie 'Nächste'.
-    label_it: Questa è la fine del questionario. Se avete bisogno di compilare i dettagli mancanti, chiudete il questionario utilizzando la [x] in alto a destra e potrete rivisitare il questionario in un secondo momento. In caso contrario, se si desidera inviare un questionario compilato, selezionare l'opzione qui sotto e premere 'AVANTI'.
+    label_it: Fine del questionario. Se ha bisogno di compilare i dettagli mancanti, chiuda il questionario utilizzando la [x] in alto a destra e potrà riprendere il questionario in un secondo momento. In caso contrario, se desidera inviare il questionario compilato, selezioni l'opzione qui sotto e prema 'AVANTI'.
     label_es: Este es el final del cuestionario. Si necesita rellenar los detalles que faltan, cierre el cuestionario utilizando la [x] de la esquina superior derecha y puede volver a consultar el cuestionario más adelante. En caso contrario, si desea enviar un cuestionario cumplimentado, seleccione la opción a continuación y pulse 'SIGUIENTE'.
     label_ca: Ha arribat al final del qüestionari. Si ha d’introduir informació pendent, premi el símbol [x] a dalt a la dreta per tancar el qüestionari i tornar-hi a accedir més tard. Si no és el cas i vol enviar el qüestionari emplenat, seleccioni l’opció a continuació i premi 'SEGÜENT'.
     type: radio
