@@ -550,7 +550,7 @@ questions:
       - question: pt_t1_fu_CHECKPOINT
         operation: contains
         value: pt_t1_fu_UNPLNEDMEDCARE
-      - question: .pt_t1_fu_VISITSTDAT
+      - question: pt_t1_fu_VISITSTDAT
         operation: not_equal
         value: "2099-10-10" 
     label: "What was the date when the visit ended? E.g. if you were hospitalised, provide the date when you were discharged."
