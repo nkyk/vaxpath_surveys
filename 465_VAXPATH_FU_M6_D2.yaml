@@ -561,7 +561,7 @@ questions:
     type: date
     page_number: 9
     min:
-      value: pt_t1_fu_VISITSTDAT
+      value: .pt_t1_fu_VISITSTDAT
     max:
       value: CURRENT_DATE
   pt_t1_fu_HCPCHECK:
