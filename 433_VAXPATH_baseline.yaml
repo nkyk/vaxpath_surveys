@@ -158,7 +158,7 @@ page_titles_ca:
 questions:
   pt_t0_dem_DOB:
     label: Enter the month and year of your date of birth
-    label_de: Geben Sie Ihr Gebutsmonat und Geburtsjahr ein
+    label_de: Geben Sie Ihr Geburtsmonat und Geburtsjahr ein
     label_it: Inserire il mese e l’anno di nascita
     label_es: Introduzca el mes y el año de nacimiento
     label_ca: Indiqui el mes i l’any de naixement
@@ -355,7 +355,7 @@ questions:
     label: What is your weight (kg)?
     label_de: Wieviel wiegen Sie (kg)?
     label_it: Qual è il Suo peso? (kg)
-    label_es: ¿Unidad de peso (kg)?
+    label_es: ¿Cuál es su peso en Kilogramos?
     label_ca: Quin és el seu pes (kg)?
     type: number
     page_number: 7
@@ -1261,8 +1261,8 @@ questions:
     label: "Telephone or cellphone number, including the country code"
     label_de: Telefonnummer, Bitte geben Sie die Landesvorwahl ein
     label_it: Numero di telefono, per favore indicare il prefisso del paese 
-    label_es: Número de teléfono, indique por favor el codigo de pais 
-    label_ca: Número de telèfon, indiqui si us plau el codi de pais
+    label_es: Número de teléfono, indique por favor el codigo de país
+    label_ca: Número de telèfon, indiqui si us plau el codi de país
     type: text
     regex: "\\A(\\+?\\d{1,2}[\\s.-]?)?\\(?\\d{3}\\)?[\\s.-]?\\d{3}[\\s.-]?\\d{4}\\z"
     page_number: 26
@@ -1324,8 +1324,8 @@ questions:
     label: "Secondary contact telephone or cellphone number"
     label_de: Telefonnummer oder Handynummer der zweiten Kontaktperson, Bitte geben Sie die Landesvorwahl ein 
     label_it: Numero di telefono o di cellulare del recapito secondario, per favore indicare il prefisso del paese
-    label_es: Número de teléfono o móvil de contacto secundario, indique por favor el codigo de pais
-    label_ca: Telèfon fix o mòbil de la persona de contacte secundària, indiqui si us plau el codi de pais
+    label_es: Número de teléfono o móvil de contacto secundario, indique por favor el codigo de país
+    label_ca: Telèfon fix o mòbil de la persona de contacte secundària, indiqui si us plau el codi de país
     type: text
     regex: "\\A(\\+?\\d{1,2}[\\s.-]?)?\\(?\\d{3}\\)?[\\s.-]?\\d{3}[\\s.-]?\\d{4}\\z"
     page_number: 27
@@ -1363,8 +1363,8 @@ questions:
     label: "Primary care physician phone number"
     label_de: "Telefonnummer des Hausarztes, Bitte geben Sie die Landesvorwahl ein"
     label_it: "Numero di telefono del medico di base, per favore indicare il prefisso del paese"
-    label_es: "Número de teléfono del médico de atención primaria, indique por favor el codigo de pais"
-    label_ca: "Número de telèfon del metge d’atenció primària, indiqui si us plau el codi de pais"
+    label_es: "Número de teléfono del médico de atención primaria, indique por favor el codigo de país"
+    label_ca: "Número de telèfon del metge d’atenció primària, indiqui si us plau el codi de país"
     type: text
     regex: "\\A(\\+?\\d{1,2}[\\s.-]?)?\\(?\\d{3}\\)?[\\s.-]?\\d{3}[\\s.-]?\\d{4}\\z"
     skip:
