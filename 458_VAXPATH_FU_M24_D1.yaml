@@ -18,7 +18,7 @@ admin_emails:
 questions: 
   pt_t1_fu_CHECKPOINT:
     label: "Do you have anything you want to change or report from the options below? If there is nothing to change or report please select 'None' and click Next to complete the questionnaire."
-    label_de: "Möchten Sie etwas ändern oder über die folgenden Optionen melden? Wenn nichts zu ändern oder zu melden ist, wählen Sie bitte 'Keine' und klicken Sie auf Weiter, um den Fragebogen auszufüllen."
+    label_de: "Möchten Sie etwas von den unten aufgeführten Optionen ändern oder melden? Wenn es nichts zu ändern oder zu melden gibt, wählen Sie bitte 'Keine' und klicken Sie auf Weiter, um um den Fragebogen auszufüllen."
     label_it: "Hai qualcosa che desideri modificare o segnalare dalle opzioni seguenti? Se non c'è nulla da cambiare o segnalare, selezionare 'Nessuno' e fare clic su Avanti per completare il questionario." 
     label_es: "¿Tiene algo que desee cambiar o informar de las opciones a continuación? Si no hay nada que cambiar o informar, seleccione 'Ninguno' y haga clic en Siguiente para completar el cuestionario."
     label_ca: "Teniu alguna cosa que vulgueu canviar o informar de les opcions següents? Si no hi ha res que canviar o informar, seleccioneu 'Cap' i feu clic a Següent per completar el qüestionari."
@@ -57,7 +57,7 @@ questions:
       operation: contains
   pt_t2_preg_PREGCONF:
     label: You previously confirmed that you were pregnant. Are you still pregnant?
-    label_de: Sie haben zuvor bestätigt, dass Sie schwanger waren. Sind Sie immer noch schwanger?
+    label_de: Sie haben bereits bestätigt, dass Sie schwanger sind. Sind Sie immer noch schwanger?
     label_it: Hai già confermato di essere incinta. Sei ancora incinta?
     label_es: Anteriormente confirmó que estaba embarazada. ¿Sigue embarazada?
     label_ca: Anteriorment va confirmar que estava embarassada. Encara està embarassada?
@@ -170,7 +170,7 @@ questions:
       value: CURRENT_DATE
   pt_t2_preg_GESTAGE:
     label: Gestational age at pregnancy outcome (weeks)
-    label_de: Schwangerschaftsalter bei Schwangerschaftsausgang (Wochen)
+    label_de: Gestationsalter bei Schwangerschaftsausgang (Wochen)
     label_it: Età gestazionale all’esito della gravidanza (settimane)
     label_es: Edad gestacional en el momento del desenlace del embarazo (semanas)
     label_ca: Edat gestacional en el moment del desenllaç de l’embaràs (setmanes)
@@ -226,7 +226,7 @@ questions:
         operation: contains
         value: pt_t1_fu_CNTCTINFO_PART
     label: "Secondary contact name"
-    label_de: Name des Sekundärkontakts
+    label_de: Name der zweiten Kontaktperson
     label_it: Recapito secondario
     label_es: Nombre de contacto secundario
     label_ca: Nom de la persona de contacte secundària
@@ -244,7 +244,7 @@ questions:
         operation: contains
         value: pt_t1_fu_CNTCTINFO_PART
     label: "Secondary contact email address"
-    label_de: E-Mail-Adresse des Sekundärkontakts
+    label_de: E-Mail der zweiten Kontaktperson
     label_it: Indirizzo e-mail del recapito secondario
     label_es: Dirección de correo electrónico de contacto secundario
     label_ca: Adreça de correu electrònic de la persona de contacte secundària
@@ -263,7 +263,7 @@ questions:
         operation: contains
         value: pt_t1_fu_CNTCTINFO_PART
     label: "Secondary contact telephone or cellphone number"
-    label_de: Telefonnummer oder Handynummer des Sekundärkontakts
+    label_de: Telefonnummer oder Handynummer der zweiten Kontaktperson
     label_it: Numero di telefono o di cellulare del recapito secondario
     label_es: Número de teléfono o móvil de contacto secundario
     label_ca: Telèfon fix o mòbil de la persona de contacte secundària
@@ -359,13 +359,17 @@ questions:
         label_ca: "Sí" 
       - value: pt_t2_ci2_CONTACTPREFCHANGE_No
         label: "No"
+        label_de: "Nein"
+        label_it: "No"
+        label_es: "No"
+        label_ca: "No"
   pt_t2_ci2_CONTACTPREF:
     conditions:
       - question: pt_t2_ci2_CONTACTPREFCHANGE
         operation: equal
         value: pt_t2_ci2_CONTACTPREFCHANGE_Yes
     label: "How would you like us to contact you for follow up questionnaires?"
-    label_de: Wie sollen wir Sie zum Ausfüllen der Fragebögen zur Nachbeobachtung kontaktieren?
+    label_de: Wie möchten Sie, dass wir Sie für zum ausfüllen der Fragebögen kontaktieren?
     label_it: Come desidera essere contattato per i questionari di follow-up? 
     label_es: ¿Cómo desea que nos pongamos en contacto con usted para realizar cuestionarios de seguimiento? 
     label_ca: Com preferiria que ens poséssim en contacte amb vostè per als qüestionaris de seguiment?
@@ -427,7 +431,7 @@ questions:
         label_ca: "Sí"
       - value: pt_t1_fu_UNPLANCARE_no
         label: "No"
-        label_de: "Nien"
+        label_de: "Nein"
         label_it: "No"
         label_es: "No"
         label_ca: "No"
@@ -447,7 +451,7 @@ questions:
     choices:
       - value: pt_t1_fu_VISITFACILITY_1
         label: "Primary care physician / general practitioner"
-        label_de: "Hausarzt/Praktischer Arzt"
+        label_de: "Hausarzt / Allgemeinmediziner"
         label_it: "Medico di base/medico curante"
         label_es: "Nombre del médico de atención primaria (para el seguimiento de seguridad)"
         label_ca: "Metge d’atenció primària/metge de capçalera"
@@ -495,7 +499,7 @@ questions:
         value: pt_t1_fu_UNPLNEDMEDCARE
     label: "What was the main purpose of your unplanned medical care visit?"
     label_ca: "Quin era el propòsit principal de la vostra visita mèdica no programada?"
-    label_de: "Was war das Hauptzweck Ihres ungeplanten Besuchs zur medizinischen Versorgung?"
+    label_de: "Was war der Hauptgrund für Ihren ungeplanten Arztbesuch?"
     label_it: "Qual era lo scopo principale della tua visita medica non programmata?"
     label_es: "¿Cuál fue el propósito principal de su visita médica no programada?"
     type: checkbox
@@ -533,7 +537,7 @@ questions:
         value: pt_t1_fu_UNPLNEDMEDCARE
     label: What was the date of your unplanned medical care visit? If unsure, please estimate to the best of your ability.
     label_ca: "En quina data es va fer la visita d’atenció mèdica no programada? Si no ho té clar, indiqui-ho amb la màxima aproximació possible."
-    label_de: "Wann fand Ihr ungeplanter Besuch zur medizinischen Versorgung statt (Datum)? Falls Sie sich nicht sicher sind, schätzen Sie bitte so gut Sie können."
+    label_de: "An welchem Tag fand Ihr ungeplannter Besuch zur medizinischen Versorgung statt? Falls Sie sich nicht sicher sind, schätzen Sie bitte nach bestem Wissen und Gewissen)"
     label_it: "Qual è la data della Sua visita per le cure mediche non programmate?In caso di dubbi, fornisca una stima al meglio delle Sue capacità."
     label_es: ¿Cuál fue la fecha de su visita de atención médica no programada?
     type: date
@@ -568,7 +572,7 @@ questions:
         value: pt_t1_fu_UNPLNEDMEDCARE
     label: "Please check if this is the same healthcare provider listed in your profile?"
     label_ca: "Comprovi si aquest és el mateix professional sanitari indicat en el seu perfil."
-    label_de: Bitte prüfen Sie, ob dies dieselbe Fachperson aus dem Gesundheitswesen ist, die in Ihrem Profil aufgeführt ist.
+    label_de: Bitte prüfen Sie, ob es sich um denselben Gesundheitsdienstleister handelt, der in Ihrem Profil aufgeführt ist.
     label_it: Controlli se si tratta dello stesso operatore sanitario indicato nel Suo profilo.
     label_es: Compruebe si este es el mismo profesional sanitario que aparece en su perfil.
     type: radio
@@ -583,7 +587,7 @@ questions:
       - value: pt_t1_fu_HCPCHECK_no
         label: "No"
         label_ca: "No"
-        label_de: "Nien"
+        label_de: "Nein"
         label_it: "No"
   pt_t1_fu_HCPNAME:
     safety_alert_question: true
@@ -610,10 +614,10 @@ questions:
       - question: pt_t1_fu_HCPCHECK
         operation: equal
         value: pt_t1_fu_HCPCHECK_no
-    label: "Location of facility or healthcare provider you visited?"
-    label_ca: "Indiqui la ubicació de les instal·lacions o del professional sanitari que va visitar."
-    label_de: "Wie heißt die Fachperson aus dem Gesundheitswesen?"
-    label_it: "Posizione della struttura?"
+    label: "Location of facility or healthcare provider you visited"
+    label_ca: "Indiqui la ubicació de les instal·lacions o del professional sanitari que va visitar"
+    label_de: "Standort der von Ihnen besuchten Einrichtung oder des Gesundheitsdienstleisters"
+    label_it: "Posizione della struttura"
     label_es: ¿Ubicación del centro o profesional sanitario que visitó?
     type: text
     page_number: 11
@@ -633,11 +637,11 @@ questions:
       - question: pt_t1_fu_HCPCHECK
         operation: equal
         value: pt_t1_fu_HCPCHECK_no
-    label: "Email address of facility or healthcare provider you visited?"
+    label: "Email address of facility or healthcare provider you visited"
     label_ca: "Indiqui el correu electrònic de les instal·lacions o del professional sanitari que va visitar"
-    label_de: "E-Mail-Adresse der von Ihnen aufgesuchten Versorgungseinrichtung oder Fachperson aus dem Gesundheitswesen?"
-    label_it: "Indirizzo e-mail della struttura che ha visitato o dell’operatore sanitario presso cui si è recato?"
-    label_es: "¿Dirección de correo electrónico del centro o profesional sanitario que visitó?"
+    label_de: "E-Mail-Adresse der von Ihnen besuchten Einrichtung oder des Gesundheitsdienstleisters"
+    label_it: "Indirizzo e-mail della struttura che ha visitato o dell’operatore sanitario presso cui si è recato"
+    label_es: "¿Dirección de correo electrónico del centro o profesional sanitario que visitó"
     type: text
     regex: "\\A[\\w+\\-.]+@[a-z\\d\\-]+(\\.[a-z\\d\\-]+)*\\.[a-z]+\\z"
     page_number: 11
@@ -738,7 +742,7 @@ questions:
         value: pt_t1_fu_UNPLNEDMEDCARE
     label: "Were you diagnosed with any of the following (scroll through the diagnoses listed on all pages):"
     label_ca: "Indiqui si li van diagnosticar alguna de les coses següents (cal desplaçar-se per les llistes de diagnòstics de totes les pàgines):"
-    label_de: "Wurde bei Ihnen eine der nachfolgenden Diagnosen gestellt (scrollen Sie durch die auf allen Seiten aufgeführten Diagnosen)"
+    label_de: "Wurde bei Ihnen eine der folgenden Diagnosen festgestellt (scrollen Sie durch die auf allen Seiten aufgeführten Diagnosen)?"
     label_it: "Le è stato diagnosticato uno qualsiasi dei seguenti (scorrere le diagnosi elencate in tutte le pagine):"
     label_es: "¿Se le diagnosticó alguno de los siguientes? (desplácese por los diagnósticos indicados en todas las páginas)"
     type: checkbox
@@ -802,7 +806,7 @@ questions:
         value: pt_t1_fu_UNPLNEDMEDCARE
     label: "Were you diagnosed with any of the following (scroll through the diagnoses listed on all pages):"
     label_ca: "Indiqui si li van diagnosticar alguna de les coses següents (cal desplaçar-se per les llistes de diagnòstics de totes les pàgines):"
-    label_de: "Wurde bei Ihnen eine der nachfolgenden Diagnosen gestellt (scrollen Sie durch die auf allen Seiten aufgeführten Diagnosen)"
+    label_de: "Wurde bei Ihnen eine der folgenden Diagnosen festgestellt (scrollen Sie durch die auf allen Seiten aufgeführten Diagnosen)?"
     label_it: "Le è stato diagnosticato uno qualsiasi dei seguenti (scorrere le diagnosi elencate in tutte le pagine):"
     label_es: "¿Se le diagnosticó alguno de los siguientes? (desplácese por los diagnósticos indicados en todas las páginas)"
     type: checkbox
@@ -932,7 +936,7 @@ questions:
         value: pt_t1_fu_UNPLNEDMEDCARE
     label: "Were you diagnosed with any of the following (scroll through the diagnoses listed on all pages):"
     label_ca: "Indiqui si li van diagnosticar alguna de les coses següents (cal desplaçar-se per les llistes de diagnòstics de totes les pàgines):"
-    label_de: "Wurde bei Ihnen eine der nachfolgenden Diagnosen gestellt (scrollen Sie durch die auf allen Seiten aufgeführten Diagnosen)"
+    label_de: "Wurde bei Ihnen eine der folgenden Diagnosen festgestellt (scrollen Sie durch die auf allen Seiten aufgeführten Diagnosen)?"
     label_it: "Le è stato diagnosticato uno qualsiasi dei seguenti (scorrere le diagnosi elencate in tutte le pagine)"
     label_es: "¿Se le diagnosticó alguno de los siguientes? (desplácese por los diagnósticos indicados en todas las páginas)"
     type: checkbox
@@ -970,7 +974,7 @@ questions:
         value: pt_t1_fu_UNPLNEDMEDCARE
     label: "Were you diagnosed with any of the following (scroll through the diagnoses listed on all pages):"
     label_ca: "Indiqui si li van diagnosticar alguna de les coses següents (cal desplaçar-se per les llistes de diagnòstics de totes les pàgines):"
-    label_de: "Wurde bei Ihnen eine der nachfolgenden Diagnosen gestellt (scrollen Sie durch die auf allen Seiten aufgeführten Diagnosen)"
+    label_de: "Wurde bei Ihnen eine der folgenden Diagnosen festgestellt (scrollen Sie durch die auf allen Seiten aufgeführten Diagnosen)?"
     label_it: "Le è stato diagnosticato uno qualsiasi dei seguenti (scorrere le diagnosi elencate in tutte le pagine)"
     label_es: "¿Se le diagnosticó alguno de los siguientes? (desplácese por los diagnósticos indicados en todas las páginas)"
     type: checkbox
@@ -1034,7 +1038,7 @@ questions:
         value: pt_t1_fu_UNPLNEDMEDCARE
     label: "Were you diagnosed with any of the following (scroll through the diagnoses listed on all pages):"
     label_ca: "Indiqui si li van diagnosticar alguna de les coses següents (cal desplaçar-se per les llistes de diagnòstics de totes les pàgines):"
-    label_de: "Wurde bei Ihnen eine der nachfolgenden Diagnosen gestellt (scrollen Sie durch die auf allen Seiten aufgeführten Diagnosen)"
+    label_de: "Wurde bei Ihnen eine der folgenden Diagnosen festgestellt (scrollen Sie durch die auf allen Seiten aufgeführten Diagnosen)?"
     label_it: "Le è stato diagnosticato uno qualsiasi dei seguenti (scorrere le diagnosi elencate in tutte le pagine)"
     label_es: "¿Se le diagnosticó alguno de los siguientes? (desplácese por los diagnósticos indicados en todas las páginas)"
     type: checkbox
@@ -1116,7 +1120,7 @@ questions:
         value: pt_t1_fu_UNPLNEDMEDCARE
     label: "Were you diagnosed with any of the following (scroll through the diagnoses listed on all pages):"
     label_ca: "Indiqui si li van diagnosticar alguna de les coses següents (cal desplaçar-se per les llistes de diagnòstics de totes les pàgines):"
-    label_de: "Wurde bei Ihnen eine der nachfolgenden Diagnosen gestellt (scrollen Sie durch die auf allen Seiten aufgeführten Diagnosen)"
+    label_de: "Wurde bei Ihnen eine der folgenden Diagnosen festgestellt (scrollen Sie durch die auf allen Seiten aufgeführten Diagnosen)?"
     label_it: "Le è stato diagnosticato uno qualsiasi dei seguenti (scorrere le diagnosi elencate in tutte le pagine)"
     label_es: "¿Se le diagnosticó alguno de los siguientes? (desplácese por los diagnósticos indicados en todas las páginas)"
     type: checkbox
@@ -1153,7 +1157,7 @@ questions:
         value: pt_t1_fu_UNPLNEDMEDCARE   
     label: "What was the outcome of your medical care for Acute myocardial infarction (heart attack)?"
     label_ca: "Quin resultat va tenir la seva atenció mèdica?"
-    label_de: "Was war das Ergebnis Ihrer medizinischen Versorgung? [Akuter Myokardinfarkt (Herzinfarkt)]"
+    label_de: "Welches Ergebnis hatte Ihre medizinische Versorgung bei akutem Myokardinfarkt (Herzinfarkt)?"
     label_it: "Qual è stato l’esito della Sua infarto miocardico acuto?"
     label_es: "¿Cuál fue el resultado de su Infarto agudo de miocardio"
     type: radio
@@ -1197,7 +1201,7 @@ questions:
         value: pt_t1_fu_UNPLNEDMEDCARE 
     label: "What was the outcome of your medical care for Coronary artery disease arrhythmia (abnormal heart rhythm due to coronary artery disease)?"
     label_ca: "Quin resultat va tenir la seva atenció mèdica?"
-    label_de: "Was war das Ergebnis Ihrer medizinischen Versorgung? [Arrhythmie infolge einer koronaren Arterienkrankheit (abnormer Herzrhythmus infolge einer Erkrankung der Herzkranzgefäße)]"
+    label_de: "Welches Ergebnis hatte Ihre medizinische Versorgung bei koronarer Herzkrankheit (Herzrhythmusstörungen aufgrund einer koronaren Herzkrankheit)?"
     label_it: "Qual è stato l’esito della Sua Aritmia malattia coronarica"
     label_es: "¿Cuál fue el resultado de su Arritmia por enfermedad arterial coronaria"
     type: radio
@@ -1241,7 +1245,7 @@ questions:
         value: pt_t1_fu_UNPLNEDMEDCARE
     label: "What was the outcome of your medical care for Heart failure and cardiogenic shock?"
     label_ca: "Quin resultat va tenir la seva atenció mèdica?"
-    label_de: "Was war das Ergebnis Ihrer medizinischen Versorgung? [Herzinsuffizienz und kardiogener Schock]"
+    label_de: "Welches Ergebnis hatte Ihre medizinische Versorgung bei Herzversagen und kardiogenem Schock?"
     label_it: "Qual è stato l’esito della Sua Insufficienza cardiaca e shock cardiogenol"
     label_es: "¿Cuál fue el resultado de su Insuficiencia cardíaca y shock cardiogénico"
     type: radio
@@ -1285,7 +1289,7 @@ questions:
         value: pt_t1_fu_UNPLNEDMEDCARE 
     label: "What was the outcome of your medical care for Microangiopathy [Disease of the capillaries (very small blood vessels)]?"
     label_ca: "Quin resultat va tenir la seva atenció mèdica?"
-    label_de: Was war das Ergebnis Ihrer medizinischen Versorgung? [Mikroangiopathie (Erkrankung der Kapillaren [sehr kleine Blutgefäße)]
+    label_de: Welches Ergebnis hatte Ihre medizinische Versorgung bei Mikroangiopathie [Erkrankung der Kapillaren (sehr kleine Blutgefäße)]?
     label_it: Qual è stato l’esito della Sua Microangiopatia [Malattia dei capillari (vasi sanguigni molto piccoli)
     label_es: ¿Cuál fue el resultado de su Microangiopatía [Enfermedad de los capilares (vasos sanguíneos muy pequeños)
     type: radio
@@ -1329,7 +1333,7 @@ questions:
         value: pt_t1_fu_UNPLNEDMEDCARE   
     label: "What was the outcome of your medical care for Myocarditis (swelling/inflammation of the heart)?"
     label_ca: "Quin resultat va tenir la seva atenció mèdica?"
-    label_de: "Was war das Ergebnis Ihrer medizinischen Versorgung? [Myokarditis (Schwellung/Entzündung des Herzmuskels)]"
+    label_de: "Welches Ergebnis hatte Ihre medizinische Versorgung bei Myokarditis (Schwellung/Entzündung des Herzens)?"
     label_it: "Qual è stato l’esito della Sua Miocardite (gonfiore/ infiammazione del cuore)"
     label_es: "¿Cuál fue el resultado de su Miocarditis (hinchazón/inflamación del corazón)"
     type: radio
@@ -1373,7 +1377,7 @@ questions:
         value: pt_t1_fu_UNPLNEDMEDCARE    
     label: "What was the outcome of your medical care for Pericarditis (swelling/inflammation of the membrane around the heart)?"
     label_ca: "Quin resultat va tenir la seva atenció mèdica?"
-    label_de: "Was war das Ergebnis Ihrer medizinischen Versorgung? [Perikarditis (Schwellung/Entzündung der das Herz umgebenden Membran)]"
+    label_de: "Welches Ergebnis hatte Ihre medizinische Versorgung bei Perikarditis (Schwellung/Entzündung der Membran um das Herz)?"
     label_it: "Qual è stato l’esito della Sua Pericardite (gonfiore/ infiammazione della membrana intorno al cuore"
     label_es: "¿Cuál fue el resultado de su Pericarditis (hinchazón/inflamación de la membrana alrededor del corazón)"
     type: radio
@@ -1417,7 +1421,7 @@ questions:
         value: pt_t1_fu_UNPLNEDMEDCARE   
     label: "What was the outcome of your medical care for Stress cardiomyopathy (stress-induced damage to the heart)?"
     label_ca: "Quin resultat va tenir la seva atenció mèdica?"
-    label_de: "Was war das Ergebnis Ihrer medizinischen Versorgung? [Stress-Kardiomyopathie (Belastungsbedingte Schädigung des Herzens)]"
+    label_de: "Welches Ergebnis hatte Ihre medizinische Behandlung der Stress-Kardiomyopathie (stressbedingte Schädigung des Herzens)?"
     label_it: "Qual è stato l’esito della Sua Cardiomiopatia da stress (danni indotti dallo stress al cuore)"
     label_es: "¿Cuál fue el resultado de su Miocardiopatía por estrés (daño al corazón inducido por estrés)"
     type: radio
@@ -1461,7 +1465,7 @@ questions:
         value: pt_t1_fu_UNPLNEDMEDCARE 
     label: "What was the outcome of your medical care for Abnormal heart rhythm (arrythmia)?"
     label_ca: "Quin resultat va tenir la seva atenció mèdica?"
-    label_de: "Was war das Ergebnis Ihrer medizinischen Versorgung? [Abnormer Herzrhythmus (Arrhythmie)]"
+    label_de: "Welches Ergebnis hatte Ihre medizinische Versorgung bei Herzrhythmusstörungen (Arrythmie)?"
     label_it: "Qual è stato l’esito della Sua Ritmo cardiaco anormale (aritmia)"
     label_es: "¿Cuál fue el resultado de su Ritmo cardíaco anormal (arritmia)"
     type: radio
@@ -1505,7 +1509,7 @@ questions:
         value: pt_t1_fu_UNPLNEDMEDCARE   
     label: "What was the outcome of your medical care for Acute kidney injury (sudden episode only, not including chronic conditions)?"
     label_ca: "Quin resultat va tenir la seva atenció mèdica?"
-    label_de: "Was war das Ergebnis Ihrer medizinischen Versorgung? [Akute Nierenschädigung (nur plötzliche Episode, ohne chronische Erkrankungen)]"
+    label_de: "Welches Ergebnis hatte Ihre medizinische Versorgung bei akuter Nierenschädigung (nur plötzlicher Vorfall, nicht bei chronischen Erkrankungen)?"
     label_it: "Qual è stato l’esito della Sua Lesione renale acuta (solo episodio improvviso, escluse le condizioni croniche)"
     label_es: "¿Cuál fue el resultado de su Lesión renal aguda (solo episodio repentino, sin incluir afecciones crónicas)"
     type: radio
@@ -1549,7 +1553,7 @@ questions:
         value: pt_t1_fu_UNPLNEDMEDCARE 
     label: "What was the outcome of your medical care for Acute liver injury (sudden episode only, not including chronic conditions)?"
     label_ca: "Quin resultat va tenir la seva atenció mèdica?"
-    label_de: "Was war das Ergebnis Ihrer medizinischen Versorgung? [Akute Leberschädigung (nur plötzliche Episode, ohne chronische Erkrankungen)]"
+    label_de: "Welches Ergebnis hatte Ihre medizinische Versorgung bei akuter Leberschädigung (nur bei plötzlichem Auftreten, nicht bei chronischen Erkrankungen)?"
     label_it: "Qual è stato l’esito della Sua Lesioni epatiche acute (solo episodio improvviso, escluse le condizioni croniche)"
     label_es: "¿Cuál fue el resultado de su Lesión hepática aguda (solo episodio repentino, sin incluir afecciones crónicas)"
     type: radio
@@ -1593,7 +1597,7 @@ questions:
         value: pt_t1_fu_UNPLNEDMEDCARE   
     label: "What was the outcome of your medical care for Acute pancreatitis (sudden inflammation of the pancreas)?"
     label_ca: "Quin resultat va tenir la seva atenció mèdica?"
-    label_de: "Was war das Ergebnis Ihrer medizinischen Versorgung? [Akute Pankreatitis (plötzliche Entzündung der Bauchspeicheldrüse)]"
+    label_de: "Welches Ergebnis hatte Ihre medizinische Versorgung bei akuter Pankreatitis (plötzliche Entzündung der Bauchspeicheldrüse)?"
     label_it: "Qual è stato l’esito della Sua Pancreatite acuta (infiammazione improvvisa del pancreas)"
     label_es: "¿Cuál fue el resultado de su Pancreatitis aguda (inflamación repentina del páncreas)"
     type: radio
@@ -1637,7 +1641,7 @@ questions:
         value: pt_t1_fu_UNPLNEDMEDCARE   
     label: "What was the outcome of your medical care for Acute respiratory distress syndrome?"
     label_ca: "Quin resultat va tenir la seva atenció mèdica?"
-    label_de: "Was war das Ergebnis Ihrer medizinischen Versorgung? [Akutes Lungenversagen (Acute respiratory distress syndrome, ARDS)]"
+    label_de: "Welches Ergebnis hatte Ihre medizinische Behandlung des akuten Atemnotsyndroms?"
     label_it: "Qual è stato l’esito della Sua Sindrome da distress respiratorio acuto"
     label_es: "¿Cuál fue el resultado de su Síndrome de distrés respiratorio agudo"
     type: radio
@@ -1681,7 +1685,7 @@ questions:
         value: pt_t1_fu_UNPLNEDMEDCARE   
     label: "What was the outcome of your medical care for Anosmia (loss of smell), Ageusia (loss of taste)?"
     label_ca: "Quin resultat va tenir la seva atenció mèdica?"
-    label_de: "Was war das Ergebnis Ihrer medizinischen Versorgung? [Anosmie (Riechverlust), Ageusie (Geschmacksverlust)]"
+    label_de: "Welches war das Ergebnis Ihrer medizinischen Behandlung bei Anosmie (Geruchsverlust), Ageusie (Geschmacksverlust)?"
     label_it: "Qual è stato l’esito della Sua Anosmia (perdita di odore), Ageusia (perdita di gusto)"
     label_es: "¿Cuál fue el resultado de su Anosmia (pérdida del olfato), Ageusia (pérdida del gusto)"
     type: radio
@@ -1725,7 +1729,7 @@ questions:
         value: pt_t1_fu_UNPLNEDMEDCARE   
     label: "What was the outcome of your medical care for Chilblain-like lesions (painful and itchy swelling on the skin, usually on the hands and feet)?"
     label_ca: "Quin resultat va tenir la seva atenció mèdica?"
-    label_de: Was war das Ergebnis Ihrer medizinischen Versorgung? [Frostbeulenartige Läsionen (schmerzhafte und juckende Schwellung der Haut, normalerweise an Händen und Füßen)]
+    label_de: Welches Ergebnis hatte Ihre medizinische Behandlung von Chilblain-ähnlichen Läsionen (schmerzhafte und juckende Schwellungen der Haut, meist an Händen und Füßen)?
     label_it: "Qual è stato l’esito della Sua Chilblain-come lesioni (doloroso e prurito gonfiore sulla pelle, di solito sulle mani e piedi)"
     label_es: "¿Cuál fue el resultado de su Lesiones similares a la chilblaina (inflamación dolorosa y con picazón en la piel, generalmente en las manos y los pies)"
     type: radio
@@ -1769,7 +1773,7 @@ questions:
         value: pt_t1_fu_UNPLNEDMEDCARE  
     label: "What was the outcome of your medical care for Coronary artery disease?"
     label_ca: "Quin resultat va tenir la seva atenció mèdica?"
-    label_de: "Was war das Ergebnis Ihrer medizinischen Versorgung? [Koronararterienerkrankung]"
+    label_de: "Welches Ergebnis hatte Ihre medizinische Versorgung bei koronarer Herzkrankheit?"
     label_it: "Qual è stato l’esito della Sua cure mediche per la malattia coronarica"
     label_es: "¿Cuál fue el resultado de su atención médica para la enfermedad coronaria"
     type: radio
@@ -1813,7 +1817,7 @@ questions:
         value: pt_t1_fu_UNPLNEDMEDCARE    
     label: "What was the outcome of your medical care for Deep vein thrombosis (blood clot in a deep vein)?"
     label_ca: "Quin resultat va tenir la seva atenció mèdica?"
-    label_de: "Was war das Ergebnis Ihrer medizinischen Versorgung? [Tiefe Venenthrombose (Blutgerinnsel in einer tiefen Vene)]"
+    label_de: "Welches Ergebnis hatte Ihre medizinische Versorgung bei einer tiefen Venenthrombose (Blutgerinnsel in einer tiefen Vene)?"
     label_it: "Qual è stato l’esito della Sua Trombosi venosa profonda (coagulo di sangue in una vena profonda)"
     label_es: "¿Cuál fue el resultado de su Trombosis venosa profunda (coágulo de sangre en una vena profunda)"
     type: radio
@@ -1857,7 +1861,7 @@ questions:
         value: pt_t1_fu_UNPLNEDMEDCARE 
     label: "What was the outcome of your medical care for Erythema multiforme (skin immune reaction)?"
     label_ca: "Quin resultat va tenir la seva atenció mèdica?"
-    label_de: "Was war das Ergebnis Ihrer medizinischen Versorgung? [Erythema multiforme (Immunreaktion der Haut)]"
+    label_de: "Welches Ergebnis hatte Ihre medizinische Versorgung bei Erythema multiforme (Immunreaktion der Haut)?"
     label_it: "Eritema multiforme (reazione immunitaria della pelle)"
     label_es: "¿Cuál fue el resultado de su Eritema multiforme (reacción inmunitaria de la piel)"
     type: radio
@@ -1901,7 +1905,7 @@ questions:
         value: pt_t1_fu_UNPLNEDMEDCARE   
     label: "What was the outcome of your medical care for Hemorrhagic disease (bleeding disorder)?"
     label_ca: "Quin resultat va tenir la seva atenció mèdica?"
-    label_de: "Was war das Ergebnis Ihrer medizinischen Versorgung? [Hämorrhagische Erkrankung (Blutungsstörung)]"
+    label_de: "Welches Ergebnis hatte Ihre medizinische Versorgung bei einer hämorrhagischen Erkrankung (Blutungsstörung)?"
     label_it: "Qual è stato l’esito della Sua Malattia emorragica (malattia emorragica)"
     label_es: "¿Cuál fue el resultado de su Enfermedad hemorrágica (trastorno hemorrágico)"
     type: radio
@@ -1945,7 +1949,7 @@ questions:
         value: pt_t1_fu_UNPLNEDMEDCARE  
     label: "What was the outcome of your medical care for Limb ischemia (reduced blood flow to a limb)?"
     label_ca: "Quin resultat va tenir la seva atenció mèdica?"
-    label_de: "Was war das Ergebnis Ihrer medizinischen Versorgung? [Ischämie der Gliedmaßen (verminderter Blutfluss zu einer Gliedmaße)]"
+    label_de: "Welches Ergebnis hatte Ihre medizinische Versorgung bei Gliedmaßenischämie (verminderter Blutfluss in einer Gliedmaße)?"
     label_it: "Qual è stato l’esito della Sua Ischemia degli arti (ridotto flusso di sangue ad un arto)"
     label_es: "¿Cuál fue el resultado de su Isquemia del miembro (disminución del flujo sanguíneo a un miembro"
     type: radio
@@ -1989,7 +1993,7 @@ questions:
         value: pt_t1_fu_UNPLNEDMEDCARE
     label: "What was the outcome of your medical care for Pulmonary embolus/embolism (blood clot on the lung)?"
     label_ca: "Quin resultat va tenir la seva atenció mèdica?"
-    label_de: "Was war das Ergebnis Ihrer medizinischen Versorgung? [Lungenembolie/Embolie (Blutgerinnsel in der Lunge)]"
+    label_de: "Welches Ergebnis hatte Ihre medizinische Versorgung bei Lungenembolie (Blutgerinnsel in der Lunge)?"
     label_it: "Qual è stato l’esito della Sua assistenza medica per embolo/embolia polmonare (coagulo di sangue sul polmone)"
     label_es: "¿Cuál fue el resultado de su atención médica para Émbolo pulmonar/embolia (coágulo de sangre en el pulmón)"
     type: radio
@@ -2033,7 +2037,7 @@ questions:
         value: pt_t1_fu_UNPLNEDMEDCARE  
     label: "What was the outcome of your medical care for Rhabdomyolysis?"
     label_ca: "Quin resultat va tenir la seva atenció mèdica?"
-    label_de: "Was war das Ergebnis Ihrer medizinischen Versorgung? [Rhabdomyolyse]"
+    label_de: "Welches Ergebnis hatte Ihre medizinische Behandlung der Rhabdomyolyse?"
     label_it: "Qual è stato l’esito della Sua cure mediche per rabdomiolisi?"
     label_es: "¿Cuál fue el resultado de su atención médica para la Rabdomiólisis"
     type: radio
@@ -2077,7 +2081,7 @@ questions:
         value: pt_t1_fu_UNPLNEDMEDCARE   
     label: "What was the outcome of your medical care for Severe COVID-19 disease?"
     label_ca: "Quin resultat va tenir la seva atenció mèdica?"
-    label_de: "Was war das Ergebnis Ihrer medizinischen Versorgung? [Schwere COVID-19-Erkrankung]"
+    label_de: "Welches Ergebnis hatte Ihre medizinische Behandlung der schweren COVID-19-Krankheit?"
     label_it: "Qual è stato l’esito della Sua cure mediche per la malattia grave COVID-19?"
     label_es: "¿Cuál fue el resultado de su atención médica para la enfermedad grave COVID-19?"
     type: radio
@@ -2121,7 +2125,7 @@ questions:
         value: pt_t1_fu_UNPLNEDMEDCARE   
     label: "What was the outcome of your medical care for Single organ cutaneous vasculitis?"
     label_ca: "Quin resultat va tenir la seva atenció mèdica?"
-    label_de: "Was war das Ergebnis Ihrer medizinischen Versorgung? [Kutane Vaskulitis in einem Organ]"
+    label_de: "Welches Ergebnis hatte Ihre medizinische Versorgung bei kutaner Vaskulitis der einzelnen Organe?"
     label_it: "Qual è stato l’esito della Sua cure mediche per la vasculite cutanea monoorgano?"
     label_es: "¿Cuál fue el resultado de su atención médica para la vasculitis cutánea de un solo órgano?"
     type: radio
@@ -2165,7 +2169,7 @@ questions:
         value: pt_t1_fu_UNPLNEDMEDCARE 
     label: "What was the outcome of your medical care for Stroke?"
     label_ca: "Quin resultat va tenir la seva atenció mèdica?"
-    label_de: "Was war das Ergebnis Ihrer medizinischen Versorgung? [Schlaganfall]"
+    label_de: "Welches Ergebnis hatte Ihre medizinische Versorgung bei Schlaganfall?"
     label_it: "Qual è stato l’esito della Sua Cure mediche per Stroke?"
     label_es: "¿Cuál fue el resultado de su ¿Atención médica para Stroke?"
     type: radio
@@ -2209,7 +2213,7 @@ questions:
         value: pt_t1_fu_UNPLNEDMEDCARE  
     label: "What was the outcome of your medical care for Subacute thyroiditis (inflammatory disease of the thyroid)?"
     label_ca: "Quin resultat va tenir la seva atenció mèdica?"
-    label_de: Was war das Ergebnis Ihrer medizinischen Versorgung? [Subakute Thyreoiditis (entzündliche Erkrankung der Schilddrüse)]
+    label_de: Welches Ergebnis hatte Ihre medizinische Versorgung bei subakuter Thyreoiditis (entzündliche Erkrankung der Schilddrüse)?
     label_it: "Qual è stato l’esito della Sua Tiroidite subacute (malattia infiammatoria della tiroide)?"
     label_es: "¿Cuál fue el resultado de su ¿Tiroiditis subaguda (enfermedad inflamatoria de la tiroides)?"
     type: radio
@@ -2253,7 +2257,7 @@ questions:
         value: pt_t1_fu_UNPLNEDMEDCARE
     label: "What was the outcome of your medical care for Coagulation disorder (includes thrombotic disorders, bleeding disorders)?"
     label_ca: "Quin resultat va tenir la seva atenció mèdica?"
-    label_de: "Was war das Ergebnis Ihrer medizinische Versorgung für Gerinnungsstörung (einschließlich thrombotische Störungen, Blutungsstörungen)?"
+    label_de: "Welches Ergebnis hatte die medizinische Behandlung Ihrer Gerinnungsstörung (einschließlich thrombotischer Störungen, Blutungsstörungen)?"
     label_it: "Qual è stato l’esito della Sua assistenza medica per il disturbo della coagulazione (include disturbi trombotici, disturbi del sanguinamento)?"
     label_es: "¿Cuál fue el resultado de su atención médica para el trastorno de coagulación (incluye trastornos trombóticos, trastornos hemorrágicos)?"
     type: radio
@@ -2297,7 +2301,7 @@ questions:
         value: pt_t1_fu_UNPLNEDMEDCARE   
     label: "What was the outcome of your medical care for Disseminated intravascular coagulation (abnormal blood clotting)?"
     label_ca: "Quin resultat va tenir la seva atenció mèdica?"
-    label_de: "Was war das Ergebnis Ihrer medizinische Versorgung für Disseminierte intravaskuläre Koagulation (abnorme Blutgerinnung)"
+    label_de: "Welches Ergebnis hatte Ihre medizinische Versorgung bei disseminierter intravaskulärer Koagulation (abnorme Blutgerinnung)?"
     label_it: "Qual è stato l’esito della Sua cure mediche per coagulazione intravascolare disseminata (coagulazione anomala del sangue)"
     label_es: "¿Cuál fue el resultado de su Coagulación intravascular diseminada (coagulación sanguínea anormal)"
     type: radio
@@ -2341,7 +2345,7 @@ questions:
         value: pt_t1_fu_UNPLNEDMEDCARE  
     label: "What was the outcome of your medical care for Thrombocytopenia (low platelet count)?"
     label_ca: "Quin resultat va tenir la seva atenció mèdica?"
-    label_de: "Was war das Ergebnis Ihrer medizinische Versorgung für Thrombozytopenie (niedrige Thrombozytenzahl)?"
+    label_de: "Welches Ergebnis hatte Ihre medizinische Versorgung bei Thrombozytopenie (niedrige Thrombozytenzahl)?"
     label_it: "Qual è stato l’esito della Sua cure mediche per trombocitopenia (basso numero di piastrine)?"
     label_es: "¿Cuál fue el resultado de su atención médica para la trombocitopenia (bajo conteo de plaquetas)?"
     type: radio
@@ -2385,7 +2389,7 @@ questions:
         value: pt_t1_fu_UNPLNEDMEDCARE
     label: "What was the outcome of your medical care for Anaphylaxis (life-threatening allergic reaction that requires urgent medical attention)?"
     label_ca: "Quin resultat va tenir la seva atenció mèdica?"
-    label_de: "Was war das Ergebnis Ihrer Anaphylaxie (lebensbedrohliche allergische Reaktion, die dringend ärztliche Hilfe benötigt)?"
+    label_de: "Welches Ergebnis hatte Ihre medizinische Versorgung bei Anaphylaxie (lebensbedrohliche allergische Reaktion, die dringend ärztliche Hilfe erfordert)?"
     label_it: "Qual è stato l’esito della Sua Anafilassi (minaccia di vita reazione allergica che richiede urgente assistenza medica)?"
     label_es: ¿Cuál fue el resultado de su ¿Anafilaxia (reacción alérgica potencialmente mortal que requiere atención médica urgente)?
     type: radio
@@ -2429,7 +2433,7 @@ questions:
         value: pt_t1_fu_UNPLNEDMEDCARE
     label: "What was the outcome of your medical care for Arthritis and arthralgia (joint pain)?"
     label_ca: "Quin resultat va tenir la seva atenció mèdica?"
-    label_de: "Was war das Ergebnis Ihrer medizinische Versorgung für Arthritis und Arthralgie (Gelenkschmerzen)?"
+    label_de: "Welches Ergebnis hatte Ihre medizinische Versorgung bei Arthritis und Arthralgie (Gelenkschmerzen)?"
     label_it: "Qual è stato l’esito della Sua cure mediche per l'artrite e l'artralgia (dolori articolari)?"
     label_es: "¿Cuál fue el resultado de su atención médica para la artritis y la artralgia (dolor en las articulaciones)?"
     type: radio
@@ -2473,7 +2477,7 @@ questions:
         value: pt_t1_fu_UNPLNEDMEDCARE  
     label: "What was the outcome of your medical care for Autoimmune thyroiditis (also called chronic lymphocytic thyroiditis, Hashimoto's thyroiditis, or Hashimoto's disease)?"
     label_ca: "Quin resultat va tenir la seva atenció mèdica?"
-    label_de: "Was war das Ergebnis Ihrer Autoimmunthyreoiditis (auch als chronische lymphatische Thyreoiditis, Hashimoto-Thyreoiditis oder Hashimoto-Krankheit bezeichnet)?"
+    label_de: "Welches Ergebnis hatte Ihre medizinische Behandlung der Autoimmunthyreoiditis (auch chronische lymphozytäre Thyreoiditis, Hashimoto-Thyreoiditis oder Hashimoto-Krankheit genannt)?"
     label_it: "Qual è stato l’esito della Sua Tiroidite autoimmune (detta anche tiroidite linfocitaria cronica, tiroidite di Hashimoto o malattia di Hashimoto)?"
     label_es: "¿Cuál fue el resultado de su ¿Tiroiditis autoinmune (también llamada tiroiditis linfocítica crónica, tiroiditis de Hashimoto o enfermedad de Hashimoto)?"
     type: radio
@@ -2517,7 +2521,7 @@ questions:
         value: pt_t1_fu_UNPLNEDMEDCARE    
     label: "What was the outcome of your medical care for Fibromyalgia?"
     label_ca: "Quin resultat va tenir la seva atenció mèdica?"
-    label_de: "Was war das Ergebnis Ihrer medizinische Versorgung für Fibromyalgie?"
+    label_de: "Welches Ergebnis hatte Ihre medizinische Behandlung der Fibromyalgie?"
     label_it: "Qual è stato l’esito della Sua cure mediche per la fibromialgia?"
     label_es: "¿Cuál fue el resultado de su ¿Atención médica para la fibromialgia?"
     type: radio
@@ -2561,7 +2565,7 @@ questions:
         value: pt_t1_fu_UNPLNEDMEDCARE   
     label: "What was the outcome of your medical care for Kawasaki disease?"
     label_ca: "Quin resultat va tenir la seva atenció mèdica?"
-    label_de: "Was war das Ergebnis Ihrer medizinische Versorgung für Kawasaki-Krankheit?"
+    label_de: "Welches Ergebnis hatte die medizinische Behandlung der Kawasaki-Krankheit bei Ihnen?"
     label_it: "Qual è stato l’esito della Sua Cure mediche per la malattia di Kawasaki?"
     label_es: "¿Cuál fue el resultado de su ¿Atención médica para la enfermedad de Kawasaki?"
     type: radio
@@ -2605,7 +2609,7 @@ questions:
         value: pt_t1_fu_UNPLNEDMEDCARE   
     label: "What was the outcome of your medical care for Multisystem inflammatory syndrome in adults (MIS-A)?"
     label_ca: "Quin resultat va tenir la seva atenció mèdica?"
-    label_de: "Was war das Ergebnis Ihrer medizinische Versorgung für Multisystem entzündliches Syndrom bei Erwachsenen (MIS-A)"
+    label_de: "Welches Ergebnis hatte Ihre medizinische Behandlung des Multisystemischen Entzündungssyndroms bei Erwachsenen (MIS-A)?"
     label_it: "Qual è stato l’esito della Sua assistenza medica per la sindrome infiammatoria multisistema negli adulti (MIS-A)"
     label_es: "¿Cuál fue el resultado de su atención médica para el síndrome inflamatorio multisistémico en adultos (MIS-A)?"
     type: radio
@@ -2649,7 +2653,7 @@ questions:
         value: pt_t1_fu_UNPLNEDMEDCARE  
     label: "What was the outcome of your medical care for Vasculitides (autoimmune disease, characterized by inflammation of blood vessels)?"
     label_ca: "Quin resultat va tenir la seva atenció mèdica?"
-    label_de: "Was war das Ergebnis Ihrer medizinische Versorgung für Vasculitides (Autoimmunerkrankung, gekennzeichnet durch Entzündung der Blutgefäße)?"
+    label_de: "Welches Ergebnis hatte Ihre medizinische Versorgung bei Vaskulitiden (Autoimmunerkrankung, gekennzeichnet durch Entzündung der Blutgefäße)?"
     label_it: "Qual è stato l’esito della Sua cure mediche per Vasculitides (malattia autoimmune, caratterizzata da infiammazione dei vasi sanguigni)?"
     label_es: "¿Cuál fue el resultado de su atención médica para Vasculitides (enfermedad autoinmune, caracterizada por inflamación de los vasos sanguíneos)?"
     type: radio
@@ -2693,7 +2697,7 @@ questions:
         value: pt_t1_fu_UNPLNEDMEDCARE   
     label: "What was the outcome of your medical care for Acute disseminated encephalomyelitis?"
     label_ca: "Quin resultat va tenir la seva atenció mèdica?"
-    label_de: "Was war das Ergebnis Ihrer medizinische Versorgung für akute disseminierte Enzephalomyelitis?"
+    label_de: "Welches Ergebnis hatte Ihre medizinische Behandlung der akuten disseminierten Enzephalomyelitis?"
     label_it: "Qual è stato l’esito della Sua assistenza medica per l'encefalomielite acuta diffusa?"
     label_es: "¿Cuál fue el resultado de su atención médica para la encefalomielitis aguda diseminada?"
     type: radio
@@ -2737,7 +2741,7 @@ questions:
         value: pt_t1_fu_UNPLNEDMEDCARE  
     label: "What was the outcome of your medical care for Aseptic meningitis (inflammation of the linings of the brain / viral meningitis)?"
     label_ca: "Quin resultat va tenir la seva atenció mèdica?"
-    label_de: "Was war das Ergebnis Ihrer Aseptische Meningitis (Entzündung der Linings des Gehirns / virale Meningitis)?"
+    label_de: "Welches Ergebnis hatte Ihre medizinische Versorgung bei aseptischer Meningitis (Entzündung der Hirnhäute / virale Meningitis)?"
     label_it: "Qual è stato l’esito della Sua Meningite asettica (infiammazione dei rivestimenti del cervello/ meningite virale)?"
     label_es: "¿Cuál fue el resultado de su ¿Meningitis aséptica (inflamación de los revestimientos del cerebro/ meningitis viral)?"
     type: radio
@@ -2781,7 +2785,7 @@ questions:
         value: pt_t1_fu_UNPLNEDMEDCARE    
     label: "What was the outcome of your medical care for Bell’s palsy?"
     label_ca: "Quin resultat va tenir la seva atenció mèdica?"
-    label_de: "Was war das Ergebnis Ihrer Medizinische Versorgung für Bells Lähmung?"
+    label_de: "Welches Ergebnis hatte Ihre medizinische Behandlung der Bellschen Lähmung?"
     label_it: "Qual è stato l’esito della Sua Cure mediche per la paralisi di Bell?"
     label_es: "¿Cuál fue el resultado de su ¿Atención médica para la parálisis de Bell?"
     type: radio
@@ -2825,7 +2829,7 @@ questions:
         value: pt_t1_fu_UNPLNEDMEDCARE  
     label: "What was the outcome of your medical care for Encephalitis (inflammation of the brain) Encephalomyelitis (inflammation of the brain and spinal cord)?"
     label_ca: "Quin resultat va tenir la seva atenció mèdica?"
-    label_de: "Was war das Ergebnis Ihrer Enzephalitis (Entzündung des Gehirns) Enzephalomyelitis (Entzündung des Gehirns und des Rückenmarks)?"
+    label_de: "Welches Ergebnis hatte Ihre medizinische Versorgung bei Enzephalitis (Entzündung des Gehirns) Enzephalomyelitis (Entzündung des Gehirns und des Rückenmarks)?"
     label_it: "Qual è stato l’esito della Sua Encefalite (infiammazione del cervello) Encefalomielite (infiammazione del cervello e del midollo spinale)?"
     label_es: "¿Cuál fue el resultado de su Encefalitis (inflamación del cerebro) Encefalomielitis (inflamación del cerebro y la médula espinal)?"
     type: radio
@@ -2869,7 +2873,7 @@ questions:
         value: pt_t1_fu_UNPLNEDMEDCARE  
     label: "What was the outcome of your medical care for Generalized convulsion/ seizure (fit)?"
     label_ca: "Quin resultat va tenir la seva atenció mèdica?"
-    label_de: "Was war das Ergebnis Ihrer Generalisierte Konvulsion/ Anfall (fit)?"
+    label_de: "Welches Ergebnis hatte Ihre medizinische Versorgung bei Generalisierter Krampfanfall/ Anfall?"
     label_it: "Qual è stato l’esito della Sua Convulsioni generalizzate/ convulsioni (fit)?"
     label_es: "¿Cuál fue el resultado de su ¿Convulsión generalizada/ convulsión (en forma)?"
     type: radio
@@ -2913,7 +2917,7 @@ questions:
         value: pt_t1_fu_UNPLNEDMEDCARE   
     label: "What was the outcome of your medical care for Guillain-Barré Syndrome (GBS)?"
     label_ca: "Quin resultat va tenir la seva atenció mèdica?"
-    label_de: "Was war das Ergebnis Ihrer medizinische Versorgung für Guillain-Barré-Syndrom (GBS)?"
+    label_de: "Welches Ergebnis hatte die medizinische Behandlung des Guillain-Barré-Syndroms (GBS) bei Ihnen?"
     label_it: "Qual è stato l’esito della Sua assistenza medica per la sindrome di Guillain-Barré (GBS)?"
     label_es: "¿Cuál fue el resultado de su atención médica para el síndrome de Guillain-Barré (EGB)?"
     page_number: 29
@@ -2957,7 +2961,7 @@ questions:
         value: pt_t1_fu_UNPLNEDMEDCARE  
     label: "What was the outcome of your medical care for Multiple sclerosis?"
     label_ca: "Quin resultat va tenir la seva atenció mèdica?"
-    label_de: "Was war das Ergebnis Ihrer medizinische Versorgung für Multiple Sklerose?"
+    label_de: "Welches Ergebnis hatte Ihre medizinische Versorgung bei Multipler Sklerose?"
     label_it: "Qual è stato l’esito della Sua cure mediche per la sclerosi multipla?"
     label_es: "¿Cuál fue el resultado de su atención médica para la esclerosis múltiple?"
     type: radio
@@ -3001,7 +3005,7 @@ questions:
         value: pt_t1_fu_UNPLNEDMEDCARE    
     label: "What was the outcome of your medical care for Optic neuritis (inflammation of the optic nerve)?"
     label_ca: "Quin resultat va tenir la seva atenció mèdica?"
-    label_de: "Was war das Ergebnis Ihrer medizinische Versorgung für Optikusneuritis (Entzündung des Sehnervs)?"
+    label_de: "Welches Ergebnis hatte Ihre medizinische Behandlung der Sehnervenentzündung (Opticus neuritis)?"
     label_it: "Qual è stato l’esito della Sua assistenza medica per la neurite ottica (infiammazione del nervo ottico)?"
     label_es: "¿Cuál fue el resultado de su atención médica para la neuritis óptica (inflamación del nervio óptico)?"
     type: radio
@@ -3045,7 +3049,7 @@ questions:
         value: pt_t1_fu_UNPLNEDMEDCARE   
     label: "What was the outcome of your medical care for Other acute demyelinating diseases (i.e. other central nervous system (CNS) inflammatory disorder)?"
     label_ca: "Quin resultat va tenir la seva atenció mèdica?"
-    label_de: "Was war das Ergebnis Ihrer medizinische Versorgung für andere akute demyelinisierende Krankheiten (z. B. andere entzündliche Erkrankungen des zentralen Nervensystems (ZNS))?"
+    label_de: "Welches Ergebnis hatte Ihre medizinische Versorgung bei anderen akuten demyelinisierenden Erkrankungen (d. h. anderen entzündlichen Erkrankungen des zentralen Nervensystems (ZNS))?"
     label_it: "Qual è stato l’esito della Sua cure mediche per altre malattie demielinizzanti acute (es. altri disturbi infiammatori del sistema nervoso centrale (SNC))?"
     label_es: "¿Cuál fue el resultado de su atención médica para otras enfermedades agudas desmielinizantes (i.e. otro trastorno inflamatorio del sistema nervioso central (SNC))?"
     type: radio
@@ -3089,7 +3093,7 @@ questions:
         value: pt_t1_fu_UNPLNEDMEDCARE   
     label: "What was the outcome of your medical care for Transverse myelitis (inflammation of both sides of one section of the spinal cord)?"
     label_ca: "Quin resultat va tenir la seva atenció mèdica?"
-    label_de: "Was war das Ergebnis Ihrer medizinische Versorgung für Transversale Myelitis (Entzündung auf beiden Seiten eines Querschnitts des Rückenmarks)?"
+    label_de: "Welches Ergebnis hatte Ihre medizinische Versorgung bei Transversaler Myelitis (Entzündung beider Seiten eines Abschnitts des Rückenmarks)?"
     label_it: "Qual è stato l’esito della Sua cure mediche per mielite trasversale (infiammazione di entrambi i lati di una sezione del midollo spinale)?"
     label_es: "¿Cuál fue el resultado de su atención médica para la mielitis transversal (inflamación de ambos lados de una sección de la médula espinal)?"
     type: radio
@@ -3133,7 +3137,7 @@ questions:
         value: pt_t1_fu_UNPLNEDMEDCARE
     label: "What was the outcome of your medical care for Narcolepsy and cataplexy?"
     label_ca: "Quin resultat va tenir la seva atenció mèdica?"
-    label_de: "Was war das Ergebnis Ihrer medizinische Versorgung für Narkolepsie und Kataplexie?"
+    label_de: "Welches Ergebnis hatte Ihre medizinische Versorgung bei Narkolepsie und Kataplexie?"
     label_it: "Qual è stato l’esito della Sua Cure mediche per narcolessia e cataplessia?"
     label_es: "¿Cuál fue el resultado de su ¿Atención médica para narcolepsia y cataplejía?"
     type: radio
@@ -3177,7 +3181,7 @@ questions:
         value: pt_t1_fu_UNPLNEDMEDCARE 
     label: "What was the outcome of your medical care for Non-anaphylactic allergic reactions?"
     label_ca: "Quin resultat va tenir la seva atenció mèdica?"
-    label_de: "Was war das Ergebnis Ihrer medizinische Versorgung für nicht-naphylaktische allergische Reaktionen?"
+    label_de: "Welches Ergebnis hatte Ihre medizinische Versorgung bei nicht-anaphylaktischen allergischen Reaktionen?"
     label_it: "Qual è stato l’esito della Sua cure mediche per le reazioni allergiche non naftiliche?"
     label_es: "¿Cuál fue el resultado de su ¿Atención médica para las reacciones alérgicas no hipolácticas?"
     type: radio
@@ -3218,7 +3222,7 @@ questions:
         value: pt_t1_fu_UNPLNEDMEDCARE
     label: "Did you receive any other diagnosis from your healthcare provider?"
     label_ca: "Heu rebut un diagnòstic diferent del vostre professional sanitari?"
-    label_de: "Haben Sie eine andere Diagnose von Ihrer Fachperson aus dem Gesundheitswesen erhalten?"
+    label_de: "Haben Sie eine andere Diagnose von Ihrem medizinischen Betreuer erhalten?"
     label_it: "Hai ricevuto una diagnosi diversa dal tuo medico curante?"
     label_es: "¿Recibió un diagnóstico diferente de su profesional de la salud?"
     type: radio
@@ -3239,7 +3243,7 @@ questions:
   pt_t1_fu_OTHERDXNUM:
     label: "How many other diagnoses that have not been previously mentioned did you receive?"
     label_ca: "Quants altres diagnòstics que no s’han esmentat anteriorment van rebre?"
-    label_de: "Wie viele andere Diagnosen, die noch nicht erwähnt wurden, haben Sie erhalten?"
+    label_de: "Wie viele andere, bisher nicht erwähnte Diagnosen haben Sie erhalten?"
     label_it: "Quante altre diagnosi che non sono state menzionate in precedenza hai ricevuto?"
     label_es: "¿Cuántos otros diagnósticos que no se han mencionado anteriormente recibió?"
     safety_alert_question: true
@@ -3270,7 +3274,7 @@ questions:
         value: 0
     label: "Name of first diagnosis"
     label_ca: "Nom del primer diagnòstic"
-    label_de: "Name der Erstdiagnose"
+    label_de: "Name der ersten Diagnose"
     label_it: "Nome della prima diagnosi"
     label_es: "Nombre del primer diagnóstico"
     type: condition
@@ -3289,7 +3293,7 @@ questions:
         value: 0
     label: "What was the outcome of your medical care for the first diagnosis?"
     label_ca: "Quin va ser el resultat de la vostra atenció mèdica per al primer diagnòstic?"
-    label_de: "Wie war das Ergebnis Ihrer medizinischen Betreuung bei der Erstdiagnose?"
+    label_de: "Welches Ergebnis hatte Ihre medizinische Versorgung bei der ersten Diagnose?"
     label_it: "Qual è stato l'esito delle tue cure mediche per la prima diagnosi?"
     label_es: "¿Cuál fue el resultado de su atención médica para el primer diagnóstico?"
     type: radio
@@ -3333,7 +3337,7 @@ questions:
         value: 1
     label: "Name of second diagnosis"
     label_ca: "Nom del segon diagnòstic"
-    label_de: "Name der zweiten Diagnose"
+    label_de: "Name der Zweitdiagnose"
     label_it: "Nome della seconda diagnosi"
     label_es: "Nombre del segundo diagnóstico"
     type: condition
@@ -3352,7 +3356,7 @@ questions:
         value: 1
     label: "What was the outcome of your medical care for the second diagnosis?"
     label_ca: "Quin va ser el resultat de la vostra atenció mèdica per al segon diagnòstic?"
-    label_de: "Wie war das Ergebnis Ihrer medizinischen Betreuung bei der zweiten Diagnose?"
+    label_de: "Welches Ergebnis hatte Ihre medizinische Versorgung bei der zweiten Diagnose?"
     label_it: "Qual è stato l'esito delle tue cure mediche per la seconda diagnosi?"
     label_es: "¿Cuál fue el resultado de su atención médica para el segundo diagnóstico?"
     type: radio
@@ -3396,7 +3400,7 @@ questions:
         value: 2
     label: "Name of third diagnosis"
     label_ca: "Nom del tercer diagnòstic"
-    label_de: "Name der dritten Diagnose"
+    label_de: "Name der Drittdiagnose"
     label_it: "Nome della terza diagnosi"
     label_es: "Nombre del tercer diagnóstico"
     type: condition
@@ -3415,7 +3419,7 @@ questions:
         value: 2
     label: "What was the outcome of your medical care for the third diagnosis?"
     label_ca: "Quin va ser el resultat de la vostra atenció mèdica per al tercer diagnòstic?"
-    label_de: "Was war das Ergebnis Ihrer medizinischen Betreuung bei der dritten Diagnose?"
+    label_de: "Welches Ergebnis hatte Ihre medizinische Versorgung bei der dritten Diagnose?"
     label_it: "Qual è stato l'esito delle tue cure mediche per la terza diagnosi?"
     label_es: "¿Cuál fue el resultado de su atención médica para el tercer diagnóstico?"
     type: radio
@@ -3471,11 +3475,11 @@ questions:
       - question: pt_t1_fu_OTHERVACCCHECK
         operation: equal
         value: "1"
-    label: "Which Covid-19 vaccine did you receive?  (Check all that apply)"
-    label_ca: "Quin vacuna de la COVID-19 va rebre?  (Marqui totes les opcions que calgui)"
-    label_de: Welchen COVID-19-Impfstoff haben Sie erhalten?  (Alles Zutreffende ankreuzen)
-    label_it: Quale vaccino anti-Covid-19 ha ricevuto?  (Indicare tutte le voci pertinenti)
-    label_es: "¿Qué vacuna contra la COVID-19 recibió?  (marque todo lo que corresponda)"
+    label: "Which Covid-19 vaccine did you receive?"
+    label_ca: "Quin vacuna de la COVID-19 va rebre?"
+    label_de: Welchen COVID-19-Impfstoff haben Sie erhalten?
+    label_it: Quale vaccino anti-Covid-19 ha ricevuto?
+    label_es: "¿Qué vacuna contra la COVID-19 recibió?"
     type: radio
     page_number: 37
     choices:
@@ -3539,7 +3543,7 @@ questions:
         value: "2"
     label: "On what date did you receive your AstraZeneca vaccine dose?"
     label_ca: "En quina data va rebre l'altra dosi de la vacuna Astrazeneca COVID-19?"
-    label_de: "Wann haben Sie Ihre andere Dosis des Astrazeneca COVID-19-Impfstoffs erhalten (Datum)?"
+    label_de: "An welchem Tag haben Sie Ihre Impfstoffdosis von AstraZeneca erhalten?"
     label_it: "In che data ha ricevuto la Sua dose di vaccino Astrazeneca COVID-19"
     label_es: "¿En qué fecha recibió su AstraZeneca dosis de la vacuna contra la COVID-19?"
     type: date
@@ -3553,7 +3557,7 @@ questions:
         value: "3"
     label: "On what date did you receive your Johnson & Johnson vaccine dose?"
     label_ca: "En quina data va rebre l'altra dosi de la vacuna Johnson & Johnson COVID-19?"
-    label_de: "Wann haben Sie Ihre andere Dosis des Johnson & Johnson COVID-19-Impfstoffs erhalten (Datum)?"
+    label_de: "An welchem Tag haben Sie Ihre Impfstoffdosis von Johnson & Johnson erhalten?"
     label_it: "In che data ha ricevuto la Sua dose di vaccino Johnson & Johnson COVID-19"
     label_es: "¿En qué fecha recibió su Johnson & Johnson dosis de la vacuna contra la COVID-19?"
     type: date
@@ -3567,7 +3571,7 @@ questions:
         value: "4"
     label: "On what date did you receive your Moderna vaccine dose?"
     label_ca: "En quina data va rebre l'altra dosi de la vacuna Moderna COVID-19?"
-    label_de: "Wann haben Sie Ihre andere Dosis des Moderna COVID-19-Impfstoffs erhalten (Datum)?"
+    label_de: "An welchem Tag haben Sie Ihre Impfstoffdosis von Moderna erhalten?"
     label_it: "In che data ha ricevuto la Sua dose di vaccino Moderna COVID-19"
     label_es: "¿En qué fecha recibió su Moderna dosis de la vacuna contra la COVID-19?"
     type: date
@@ -3581,7 +3585,7 @@ questions:
         value: "5"
     label: "On what date did you receive your Novavax vaccine dose?"
     label_ca: "En quina data va rebre l'altra dosi de la vacuna Novavax COVID-19?"
-    label_de: "Wann haben Sie Ihre andere Dosis des Novavax COVID-19-Impfstoffs erhalten (Datum)?"
+    label_de: "An welchem Tag haben Sie Ihre Impfstoffdosis von Novavax erhalten?"
     label_it: "In che data ha ricevuto la Sua dose di vaccino Novavax COVID-19"
     label_es: "¿En qué fecha recibió su Novavax dosis de la vacuna contra la COVID-19"
     type: date
@@ -3595,7 +3599,7 @@ questions:
         value: "1"
     label: "On what date did you receive your Pfizer-BioNTech vaccine dose?"
     label_ca: "En quina data va rebre l'altra dosi de la vacuna Pfizer-BioNTech COVID-19?"
-    label_de: "Wann haben Sie Ihre andere Dosis des Pfizer-BioNTech COVID-19-Impfstoffs erhalten (Datum)?"
+    label_de: "An welchem Tag haben Sie Ihre Impfstoffdosis von Pfizer-BioNTech erhalten?"
     label_it: "In che data ha ricevuto la Sua dose di vaccino Pfizer-BioNTech COVID-19"
     label_es: "¿En qué fecha recibió su Pfizer-BioNTech dosis de la vacuna contra la COVID-19"
     type: date
@@ -3609,7 +3613,7 @@ questions:
         value: "6"
     label: "On what date did you receive your Sanofi and GlaxoSmithKline vaccine dose?"
     label_ca: "En quina data va rebre l'altra dosi de la vacuna Sanofi and GlaxoSmithKline COVID-19?"
-    label_de: "Wann haben Sie Ihre andere Dosis des Sanofi and GlaxoSmithKline COVID-19-Impfstoffs erhalten (Datum)?"
+    label_de: "An welchem Tag haben Sie Ihre Impfstoffdosis von Sanofi und GlaxoSmithKline erhalten?"
     label_it: "In che data ha ricevuto la Sua dose di vaccino Sanofi e GlaxoSmithKline COVID-19"
     label_es: "¿En qué fecha recibió su Sanofi y GlaxoSmithKline dosis de la vacuna contra la COVID-19"
     type: date
@@ -3623,7 +3627,7 @@ questions:
         value: "7"
     label: "On what date did you receive your other Covid-19 vaccine dose?"
     label_ca: "En quina data va rebre l’altra dosi de la vacuna de la COVID-19?"
-    label_de: "Wann haben Sie Ihre andere COVID-19-Impfstoffdosis erhalten (Datum)?"
+    label_de: "An welchem Tag haben Sie Ihre zweite Covid-19-Impfdosis erhalten?"
     label_it: "In che data ha ricevuto la Sua altra dose di vaccino anti-Covid-19?"
     label_es: "¿En qué fecha recibió su otra dosis de la vacuna contra la COVID-19?"
     type: date
@@ -3645,3 +3649,7 @@ questions:
         label_de: "Ich bestätige, dass dies meine endgültigen Antworten sind"
         label_it: "Confermo che queste sono le mie risposte finali"
         label_es: "Confirmo que estas son mis respuestas finales"
+    db_write:
+      table: AdditionalAppColumn
+      column: subject_status
+      column_value: "Complete"
