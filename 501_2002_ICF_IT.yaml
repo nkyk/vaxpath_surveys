@@ -6,7 +6,7 @@ questions:
     db_write:
       table: User
       column: edc_id
-      value: calculate
+      column_value: calculate
     hsc_consent: true
     type: econsent
     required_questions: "first_name,last_name"
