@@ -50,8 +50,8 @@ page_titles_it:
   - ""
   - "" 
   - ""
-  - "Please provide your updated contact details"
-  - "Please provide the updated details of the secondary individual whom you are most likely to contact if you need medical care."
+  - "Si prega di fornire i dettagli di contatto aggiornati"
+  - "Fornisci i dettagli aggiornati della persona secondaria che è più probabile che tu possa contattare se hai bisogno di cure mediche."
   - "" 
   - "La preghiamo di fornire i dettagli del medico di base che contatterebbe con maggior probabilità in caso di necessità di cure mediche"
   - ""
@@ -67,8 +67,8 @@ page_titles_es:
   - ""
   - "" 
   - ""
-  - "Please provide your updated contact details"
-  - "Please provide the updated details of the secondary individual whom you are most likely to contact if you need medical care."
+  - "Proporcione sus datos de contacto actualizados"
+  - "Proporcione los datos actualizados de la persona secundaria con la que es más probable que se ponga en contacto si necesita atención médica."
   - "" 
   - "Proporcione los detalles del médico de atención primaria con el que es más probable que se ponga en contacto si necesita atención médica."
   - ""
@@ -84,8 +84,8 @@ page_titles_ca:
   - ""
   - "" 
   - ""
-  - "Please provide your updated contact details"
-  - "Please provide the updated details of the secondary individual whom you are most likely to contact if you need medical care."
+  - "Faciliti’ns les seves dades de contacte actuals"
+  - "Indiqui les dades actuals de l’altra persona amb la qual és més probable que es posi en contacte si necessita atenció mèdica."
   - "" 
   - "Quantes vegades ha hagut de veure un metge per trobar alguna cosa inesperada des del darrer contacte de l'estudi?"
   - ""
@@ -756,6 +756,13 @@ questions:
     label_es: Nombre del médico de atención primaria (para el seguimiento de seguridad)
     label_ca: Nom del metge d’atenció primària (per al seguiment de la seguretat)
     type: text
+    skip:
+      label: skip
+      label_de: Überspringen
+      label_it: Saltare
+      label_es: Saltar
+      label_ca: Omet
+      value: skip
     default_survey_reference: VAXPATH_BASELINE
     default_question_keyword: pt_t0_ci1_PCPNAME
     page_number: 140
@@ -872,7 +879,7 @@ questions:
     label_de: Dies ist das Ende des Fragebogens. Wenn Sie fehlende Angaben ergänzen müssen, schließen Sie den Fragebogen bitte mit dem [x] oben rechts und Sie können den Fragebogen zu einem späteren Zeitpunkt erneut aufrufen. Wenn Sie andernfalls einen ausgefüllten Fragebogen einreichen möchten, wählen Sie die unten stehende Option und drücken Sie 'WEITER'.
     label_it: "Questa è la fine del questionario. Se avete bisogno di compilare i dettagli mancanti, chiudete il questionario utilizzando la [x] in alto a destra e potrete rivisitare il questionario in un secondo momento. In caso contrario, se si desidera inviare un questionario compilato, selezionare l'opzione qui sotto e premere 'AVANTI'."
     label_es: "Este es el final del cuestionario. Si necesita completar los detalles que faltan, cierre el cuestionario usando la [x] en la parte superior derecha y podrá volver a revisar el cuestionario más adelante. De lo contrario, si desea enviar un cuestionario completo, seleccione la opción a continuación y pulse 'SIGUIENTE'."
-    label_ca: Aquest és el final del qüestionari. Si heu d'emplenar les dades que falten, tanqueu el qüestionari amb la x [que hi ha a la part superior dreta] i podreu tornar a visitar el qüestionari més endavant. En cas contrari, si voleu enviar un qüestionari completat, seleccioneu l'opció següent i premeu 'SEGÜENT'."
+    label_ca: "Ha arribat al final del qüestionari. Si ha d’introduir informació pendent, premi el símbol [x] a dalt a la dreta per tancar el qüestionari i tornar-hi a accedir més tard. Si no és el cas i vol enviar el qüestionari emplenat, seleccioni l’opció a continuació i premi 'SEGÜENT'."
     type: radio
     choices:
       - value: q_end_confirm
@@ -880,4 +887,4 @@ questions:
         label_de: "Ich bestätige, dass dies meine endgültigen Antworten sind"
         label_it: "Confermo che queste sono le mie risposte finali"
         label_es: "Confirmo que estas son mis respuestas finales"
-        label_ca: "Confirmo que aquestes són les meves respostes finals"
+        label_ca: "Confirmo que aquestes són les meves respostes definitives"
