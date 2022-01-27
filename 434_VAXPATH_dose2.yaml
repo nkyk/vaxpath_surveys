@@ -134,9 +134,6 @@ questions:
     page_number: 9
     max:
       value: CURRENT_DATE
-    db_write:
-      table: AdditionalAppColumn
-      column: vaccdate2
   pt_t1_vi2_VACCCENTER:
     conditions: 
       - question: pt_t1_vi2_VACCDOSE
