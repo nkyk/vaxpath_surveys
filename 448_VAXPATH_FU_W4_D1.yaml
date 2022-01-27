@@ -4351,7 +4351,7 @@ questions:
         condition_operator: or
         operation: not_equal
         value: pt_t2_preg_PREGCONF_no
-      - question: VAXPATH_BASELINE.pt_t0_dem_SEX
+      - question: VAXPATH_baseline.pt_t0_dem_SEX
         operation: equal
         value: pt_t0_dem_SEX_Female
     db_write:
