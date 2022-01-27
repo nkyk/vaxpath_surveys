@@ -91,8 +91,8 @@ page_titles_it:
   - ""
   - ""
   - ""
-  - "Please provide your contact details"
-  - "Please provide the details of the secondary individual whom you are most likely to contact if you need medical care."
+  - "Si prega di fornire i propri dati di contatto"
+  - "Fornisci i dettagli della persona secondaria che è più probabile che tu possa contattare se hai bisogno di cure mediche."
   - "Si prega di fornire i dettagli del medico di assistenza primaria che è più probabile contattare se avete bisogno di cure mediche."
   - ""
 page_titles_es:
@@ -121,8 +121,8 @@ page_titles_es:
   - ""
   - ""
   - ""
-  - "Please provide your contact details"
-  - "Please provide the details of the secondary individual whom you are most likely to contact if you need medical care."
+  - "Proporcione sus datos de contacto"
+  - "Proporcione los datos de la persona secundaria con la que es más probable que se ponga en contacto si necesita atención médica"
   - "Por favor proporcione los detalles del médico de atención primaria a quien es más probable que contacte si necesita atención médica"
   - ""
 page_titles_ca:
@@ -151,8 +151,8 @@ page_titles_ca:
   - ""
   - ""
   - ""
-  - "Please provide your contact details"
-  - "Please provide the details of the secondary individual whom you are most likely to contact if you need medical care."
+  - "Faciliti’ns les seves dades de contacte"
+  - "Indiqui les dades de l’altra persona amb la qual és més probable que es posi en contacte si necessita atenció mèdica."
   - "Proporcioneu les dades del metge d’atenció primària amb qui és més probable que us poseu en contacte si necessiteu atenció mèdica."
   - ""
 questions:
@@ -241,11 +241,11 @@ questions:
     label_es: ¿Cuál es su país de origen? 
     label_ca: Quin és el seu país d’origen? 
     type: list
-    list_id: 7
-    list_id_de: "8"
-    list_id_it: "9"
-    list_id_es: "10"
-    list_id_ca: "11"
+    list_id: 13
+    list_id_de: "11"
+    list_id_it: "10"
+    list_id_es: "20"
+    list_id_ca: "12"
     page_number: 3
   pt_t0_dem_COUNTRY_OTHR:
     conditions: 
@@ -316,15 +316,15 @@ questions:
     label: What is your current main occupation?
     label_de: Welche ist Ihre derzeitige Hauptbeschäftigung?
     label_it: Qual è la tua occupazione principale?
-    label_es: ¿Cuál es su ocupación principal actual?
+    label_es: Cuál es su principal ocupación actual
     label_ca: Quina és la seva ocupació principal actualment?
     type: list
     page_number: 5
-    list_id: 5
-    list_id_de: 13
-    list_id_it: 14
+    list_id: 6
+    list_id_de: 16
+    list_id_it: 17
     list_id_es: 15
-    list_id_ca: 12
+    list_id_ca: 14
     page_number: 5
   pt_t0_dem_OCCUP_1:
     conditions: 
@@ -335,7 +335,7 @@ questions:
     label_de: Bitte geben Sie Ihre aktuelle Hauptbeschäftigung an.
     label_it: Per favore specifica la tua attuale occupazione principale
     label_es: Por favor, especifique su ocupación principal actual
-    label_ca: Especifiqueu l'ocupació principal actual
+    label_ca: Especifiqui la seva ocupació principal actual.
     type: text
     page_number: 5
   pt_t0_mh1_WUNIT:
@@ -600,7 +600,7 @@ questions:
       - value: pt_t0_mh1_COND_None
         label: "None of the above"
         label_de: "Keine der obenstehenden Antworten"
-        label_it: "Altro"
+        label_it: "Nessuna delle precedenti"
         label_es: "Ninguna de las anteriores"
         label_ca: "Cap de les anteriors"
     validation:
@@ -623,15 +623,15 @@ questions:
       label: Very poor
       label_de: Sehr schlecht
       label_it: Molto povera
-      label_es: Muy pobre
-      label_ca: Molt pobre
+      label_es: Muy mala
+      label_ca: Molt dolenta
       value: 0 
     max: 
       label: Excellent, my health could not be better
       label_de: Ausgezeichnet, meine Gesundheit könnte nicht besser sein
       label_it: Eccellente, la mia salute non potrebbe essere migliore
-      label_es: Tengo una salud de hierro
-      label_ca: Excellent, la meva salut no podria ser millor
+      label_es: Excelente, mi salud no podría ser mejor
+      label_ca: Excel·lent, la meva salut no podria ser millor
       value: 10
     skip:
       label: Skip
@@ -834,7 +834,7 @@ questions:
       - value: pt_t0_mh1_MEDALLRGY_no
         label: "No"
         label_de: "Nein"
-        label_it: "Sì"
+        label_it: "No"
         label_es: "No"
         label_ca: "No"
   pt_t0_mh1_ALLRGYTYPE:
@@ -928,8 +928,8 @@ questions:
     label: Have you experienced any of the following symptoms in the last 3 days? (Check all that apply)
     label_de: Hatten Sie in den letzten 3 Tagen eines der folgenden Symptome? (Kreuzen Sie alles an, was zutrifft)
     label_it: Ha manifestato uno dei seguenti sintomi nei 3 giorni successivi alla vaccinazione?  (Indicare tutte le voci pertinenti)
-    label_es: ¿Experimentó alguno de los siguientes síntomas en los 3 días posteriores a la vacunación?  (marque todo lo que corresponda)
-    label_ca: ha tingut algun dels símptomes següents durant els 3 dies posteriors a la vacunació?  (Marqui totes les opcions que calgui)
+    label_es: ¿Ha experimentado alguno de los siguientes síntomas en los últimos 3 días? (marque todo lo que corresponda)
+    label_ca: Ha tingut algun dels símptomes següents durant els darrers 3 dies? (Marqui totes les opcions que corresponguin)
     type: checkbox
     page_number: 22
     choices: 
@@ -1338,6 +1338,13 @@ questions:
     label_es: Nombre del médico de atención primaria (para el seguimiento de seguridad)
     label_ca: Nom del metge d’atenció primària (per al seguiment de la seguretat)
     type: text
+    skip:
+      label: skip
+      label_de: Überspringen
+      label_it: Saltare
+      label_es: Saltar
+      label_ca: Omet
+      value: skip
     page_number: 28
     db_write:
       table: AdditionalAppColumn
@@ -1352,9 +1359,11 @@ questions:
     type: text
     regex: "\\A(\\+?\\d{1,2}[\\s.-]?)?\\(?\\d{3}\\)?[\\s.-]?\\d{3}[\\s.-]?\\d{4}\\z"
     skip:
-      label: Skip
+      label: skip
+      label_de: Überspringen
+      label_it: Saltare
+      label_es: Saltar
       label_ca: Omet
-      label_de: überspringen
       value: skip
     page_number: 28
     db_write:
@@ -1370,9 +1379,11 @@ questions:
     type: text
     regex: "\\A[\\w+\\-.]+@[a-z\\d\\-]+(\\.[a-z\\d\\-]+)*\\.[a-z]+\\z"
     skip:
-      label: Skip
+      label: skip
+      label_de: Überspringen
+      label_it: Saltare
+      label_es: Saltar
       label_ca: Omet
-      label_de: überspringen
       value: skip
     page_number: 28
     db_write:
@@ -1413,8 +1424,8 @@ questions:
     label: This is the end of the questionnaire. If you need to fill in missing details, please close the questionnaire using the [x] at the top right and you can revisit the questionnaire at a later time. Otherwise, if you wish to submit a completed questionnaire, select the option below and press 'NEXT'.
     label_de: Das ist das Ende des Fragebogens. Wenn Sie fehlende Angaben ausfüllen müssen, schließen Sie bitte den Fragebogen mit dem [x] oben rechts und Sie können den Fragebogen zu einem späteren Zeitpunkt erneut aufrufen. Andernfalls, wenn Sie einen ausgefüllten Fragebogen einreichen möchten, wählen Sie die Option unten und drücken Sie ''WEITER'.
     label_it: Questa è la fine del questionario. Se avete bisogno di compilare i dettagli mancanti, chiudete il questionario utilizzando la [x] in alto a destra e potrete rivisitare il questionario in un secondo momento. In caso contrario, se si desidera inviare un questionario compilato, selezionare l'opzione qui sotto e premere 'AVANTI'.
-    label_es: Este es el final del cuestionario. Si necesita completar los detalles que faltan, cierre el cuestionario usando la [x] en la parte superior derecha y podrá volver a revisar el cuestionario más adelante. De lo contrario, si desea enviar un cuestionario completado, seleccione la opción a continuación y pulse 'SIGUIENTE'.
-    label_ca: Aquest és el final del qüestionari. Si heu d'emplenar les dades que falten, tanqueu el qüestionari amb la x [que hi ha a la part superior dreta] i podreu tornar a visitar el qüestionari més endavant. En cas contrari, si voleu enviar un qüestionari completat, seleccioneu l'opció següent i premeu "SEGÜENT".
+    label_es: Este es el final del cuestionario. Si necesita rellenar los detalles que faltan, cierre el cuestionario utilizando la [x] de la esquina superior derecha y puede volver a consultar el cuestionario más adelante. En caso contrario, si desea enviar un cuestionario cumplimentado, seleccione la opción a continuación y pulse 'SIGUIENTE'.
+    label_ca: Ha arribat al final del qüestionari. Si ha d’introduir informació pendent, premi el símbol [x] a dalt a la dreta per tancar el qüestionari i tornar-hi a accedir més tard. Si no és el cas i vol enviar el qüestionari emplenat, seleccioni l’opció a continuació i premi 'SEGÜENT'.
     type: radio
     choices:
       - value: q_end_confirm
@@ -1422,4 +1433,4 @@ questions:
         label_de: "Ich bestätige, dass dies meine endgültigen Antworten sind"
         label_it: "Confermo che queste sono le mie risposte finali"
         label_es: "Confirmo que estas son mis respuestas finales"
-        label_ca: "Confirmo que aquestes són les meves respostes finals"
+        label_ca: "Confirmo que aquestes són les meves respostes definitives"
