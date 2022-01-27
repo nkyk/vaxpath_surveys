@@ -596,7 +596,7 @@ questions:
     other: true
     other_label: "Please specify other values"
     other_label_it: "Altro"
-    other_label_de: "Andere Ethnie"
+    other_label_de: "Andere"
     other_label_es: "Otra"
     other_label_ca: "Un altre (especifiqui’l)"
   pt_t0_mh1_OVRLHLTH:
@@ -801,7 +801,7 @@ questions:
     other: true
     other_label: "Please specify other values"
     other_label_it: "Altro"
-    other_label_de: "Andere Ethnie"
+    other_label_de: "Andere"
     other_label_es: "Otra"
     other_label_ca: "Un altre (especifiqui’l)"
   pt_t0_mh1_MEDALLRGY:
@@ -871,7 +871,7 @@ questions:
     other: true
     other_label: "Please specify other values"
     other_label_it: "Altro"
-    other_label_de: "Andere Ethnie"
+    other_label_de: "Andere"
     other_label_es: "Otra"
     other_label_ca: "Un altre (especifiqui’l)"
   pt_t0_mh1_COVLAB:
