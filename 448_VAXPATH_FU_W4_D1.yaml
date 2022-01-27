@@ -4341,19 +4341,19 @@ questions:
     max:
       value: CURRENT_DATE
   pt_t1_fu_PREGCHECK:
-    conditions:
-      - table: AdditionalAppColumn
-        column: sex
+    conditions: 
+      - question: VAXPATH_BASELINE.pt_t0_dem_SEX
         operation: equal
         value: pt_t0_dem_SEX_Female
       - table: AdditionalAppColumn
-        column: dose2_status
-        operation: equal
-        value: '1'
-      - question: pt_t2_preg_PREGCONF
-        operation: unanswered
-        value: ''
-    db_write:
+        column: pregnancy_status
+        operation: not_equal
+        value: pt_t2_preg_PREGCONF_yes
+      - table: AdditionalAppColumn
+        column: pregnancy_status
+        condition_operator: or
+        operation: not_equal
+        value: pt_t2_preg_PREGCONF_no    db_write:
       table: AdditionalAppColumn
       column: pregnancy_status
     label: >-
