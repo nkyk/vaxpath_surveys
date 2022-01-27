@@ -230,7 +230,7 @@ questions:
     skip:
       label: skip
       label_de: Überspringen
-      label_it: Saltare
+      label_it: Salta
       label_es: Saltar
       label_ca: Omet
       value: skip
@@ -268,48 +268,36 @@ questions:
     type: checkbox
     page_number: 4
     choices: 
-      - value: pt_t0_dem_RACE_American
-        label: "American Indian or Alaska Native"
-        label_de: "Indianer oder indigene Völker Alaskas"
-        label_it: "Indiana americana o nativo dell’Alaska"
-        label_es: " Indio americano o nativo de Alaska"
-        label_ca: "Índia americana o nadiua d’Alaska"
       - value: pt_t0_dem_RACE_Asian
         label: "Asian"
-        label_de: "Asiate"
-        label_it: "Asiatica"
+        label_de: "Asiatisch"
+        label_it: "Asiatico"
         label_es: "Asiático"
-        label_ca: "Asiàtica"
+        label_ca: "Asiático"
       - value: pt_t0_dem_RACE_African
         label: "Black or African American"
-        label_de: "Afrikanische Abstammung"
-        label_it: "Nera o afro-americana"
-        label_es: "Negro o afroamericano"
-        label_ca: "Negra o afroamericana"
-      - value: pt_t0_dem_RACE_Hawaiian
-        label: "Native Hawaiian or Other Pacific Islander"
-        label_de: "Ureinwohner Hawaiis oder Heimat anderswo im Pazifikraum"
-        label_it: "Nativo di Hawaii o altro Pacifico Isolana"
-        label_es: "Nativo de Hawái u otra región del Pacífico,Isleño"
-        label_ca: "Nadiua de Hawaii o d’altres illes del Pacífic"
+        label_de: "Afrikaner"
+        label_it: "Afrodiscendente"
+        label_es: "Afro descendiente"
+        label_ca: "Afro descendiente"
       - value: pt_t0_dem_RACE_White
         label: "White"
-        label_de: "Weißer"
-        label_it: "Bianca"
-        label_es: "Blanco"
-        label_ca: "Blanca"
+        label_de: "Kaukasischer"
+        label_it: "Caucasico"
+        label_es: "Caucásico"
+        label_ca: "Caucásico"
       - value: pt_t0_dem_RACE_Decline
         label: "Decline to answer"
-        label_de: "Verweigere die Aussage"
-        label_it: "Rifiuto di rispondere"
-        label_es: "Niego a responder"
-        label_ca: "Prefereixo no contestar"
+        label_de: "Möchte nicht Anttworten"
+        label_it: "Preferisco non rispondere"
+        label_es: "Prefiero No contestar"
+        label_ca: "Prefiero No contestar"
     other: true
     other_label: "Please specify other values"
     other_label_it: "Altro"
-    other_label_de: "Andere Ethnie"
-    other_label_es: "Otra"
-    other_label_ca: "Un altre (especifiqui’l)"
+    other_label_de: "Andere"
+    other_label_es: "Otro"
+    other_label_ca: "Otro"
     validation:
       - exclusive: pt_t0_dem_RACE_Decline
   pt_t0_dem_OCCUP:
@@ -380,7 +368,7 @@ questions:
     skip:
       label: Skip
       label_de: Überspringen
-      label_it: Saltare
+      label_it: Salta
       label_es: Saltar
       label_ca: Omet
       value: skip
@@ -405,7 +393,7 @@ questions:
     skip:
       label: Skip
       label_de: Überspringen
-      label_it: Saltare
+      label_it: Salta
       label_es: Saltar
       label_ca: Omet
       value: skip
@@ -450,7 +438,7 @@ questions:
     skip:
       label: Skip
       label_de: Überspringen
-      label_it: Saltare
+      label_it: Salta
       label_es: Saltar
       label_ca: Omet
       value: skip
@@ -475,7 +463,7 @@ questions:
     skip:
       label: Skip
       label_de: Überspringen
-      label_it: Saltare
+      label_it: Salta
       label_es: Saltar
       label_ca: Omet
       value: skip
@@ -636,7 +624,7 @@ questions:
     skip:
       label: Skip
       label_de: Überspringen
-      label_it: Saltare
+      label_it: Salta
       label_es: Saltar
       label_ca: Omet
       value: skip
@@ -1202,7 +1190,7 @@ questions:
     skip:
       label: Uncertain
       label_de: überspringen
-      label_it: Saltare
+      label_it: Salta
       label_es: Saltar
       label_ca: Omet
       value: skip
@@ -1233,7 +1221,7 @@ questions:
     skip:
       label: Skip
       label_de: Überspringen
-      label_it: Saltare
+      label_it: Salta
       label_es: Saltar
       label_ca: Omet
       value: skip
@@ -1305,6 +1293,13 @@ questions:
       table: AdditionalAppColumn
       secondary_table: AdditionalContact
       column: alternate_contact_name
+    skip:
+      label: skip
+      label_de: Überspringen
+      label_it: Salta
+      label_es: Saltar
+      label_ca: Omet
+      value: skip
   pt_t0_ci1_2NDCONTACTEMAIL:
     label: "Secondary contact email address"
     label_de: E-Mail der zweiten Kontaktperson
@@ -1317,6 +1312,13 @@ questions:
       table: AdditionalAppColumn
       secondary_table: AdditionalContact
       column: alternate_contact_email
+    skip:
+      label: skip
+      label_de: Überspringen
+      label_it: Salta
+      label_es: Saltar
+      label_ca: Omet
+      value: skip
     page_number: 27
   pt_t0_ci1_2NDCONTACTPHONE:
     label: "Secondary contact telephone or cellphone number"
@@ -1331,6 +1333,13 @@ questions:
       table: AdditionalAppColumn
       secondary_table: AdditionalContact
       column: alternate_contact_phone
+    skip:
+      label: skip
+      label_de: Überspringen
+      label_it: Salta
+      label_es: Saltar
+      label_ca: Omet
+      value: skip
   pt_t0_ci1_PCPNAME:
     label: "Primary care physician name (for safety follow up)"
     label_de: "Bitte geben Sie die Daten des Hausarztes an, an den Sie sich am wahrscheinlichsten wenden, wenn Sie eine medizinische Versorgung benötigen. Name des Hausarztes (zur Sicherheitsnachbeobachtung)"
@@ -1341,7 +1350,7 @@ questions:
     skip:
       label: skip
       label_de: Überspringen
-      label_it: Saltare
+      label_it: Salta
       label_es: Saltar
       label_ca: Omet
       value: skip
@@ -1354,14 +1363,14 @@ questions:
     label: "Primary care physician phone number"
     label_de: "Telefonnummer des Hausarztes"
     label_it: "Numero di telefono del medico di base"
-    label_es:
+    label_es: "Número de teléfono del médico de atención primaria"
     label_ca: "Número de telèfon del metge d’atenció primària"
     type: text
     regex: "\\A(\\+?\\d{1,2}[\\s.-]?)?\\(?\\d{3}\\)?[\\s.-]?\\d{3}[\\s.-]?\\d{4}\\z"
     skip:
       label: skip
       label_de: Überspringen
-      label_it: Saltare
+      label_it: Salta
       label_es: Saltar
       label_ca: Omet
       value: skip
@@ -1374,14 +1383,14 @@ questions:
     label: "Primary care physician email"
     label_de: "E-Mail-Adresse des Hausarztes"
     label_it: "E-mail del medico di base"
-    label_es:
+    label_es: "Correo electrónico del médico de atención primaria"
     label_ca: "Correu electrònic del metge d’atenció primària"
     type: text
     regex: "\\A[\\w+\\-.]+@[a-z\\d\\-]+(\\.[a-z\\d\\-]+)*\\.[a-z]+\\z"
     skip:
       label: skip
       label_de: Überspringen
-      label_it: Saltare
+      label_it: Salta
       label_es: Saltar
       label_ca: Omet
       value: skip
