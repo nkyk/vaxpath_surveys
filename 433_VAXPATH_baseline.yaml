@@ -1268,7 +1268,7 @@ questions:
     page_number: 26
     db_write:
       table: User
-      column: primary_contact_number
+      column: secondary_contact_number
   pt_t0_ci1_EMAIL:
     label: "Email address"
     label_de: E-Mail-Adresse
