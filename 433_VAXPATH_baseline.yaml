@@ -165,9 +165,9 @@ questions:
     type: monthyear
     max:
       month:
-        value: CURRENT_MONTH
+        value: 01
       year:
-        value: CURRENT_YEAR
+        value: 2004
     db_write:
       table: AdditionalAppColumn
       column: age
@@ -313,6 +313,7 @@ questions:
     list_id_it: 14
     list_id_es: 15
     list_id_ca: 12
+    page_number: 5
   pt_t0_dem_OCCUP_1:
     conditions: 
       - question: pt_t0_dem_OCCUP
