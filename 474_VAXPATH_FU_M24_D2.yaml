@@ -3552,6 +3552,9 @@ questions:
       - question: pt_t1_fu_OTHERVACCNAME
         operation: equal
         value: "2"
+      - question: pt_t1_fu_OTHERVACCCHECK
+        operation: equal
+        value: "1"
     label: "On what date did you receive your AstraZeneca vaccine dose?"
     label_ca: "Quin dia va rebre la seva dosi de la vacuna d’AstraZeneca?"
     label_de: "An welchem Tag haben Sie Ihre Impfstoffdosis von AstraZeneca erhalten?"
@@ -3566,6 +3569,9 @@ questions:
       - question: pt_t1_fu_OTHERVACCNAME
         operation: equal
         value: "3"
+      - question: pt_t1_fu_OTHERVACCCHECK
+        operation: equal
+        value: "1"
     label: "On what date did you receive your Johnson & Johnson vaccine dose?"
     label_ca: "Quin dia va rebre la seva dosi de la vacuna de Johnson & Johnson?"
     label_de: "An welchem Tag haben Sie Ihre Impfstoffdosis von Johnson & Johnson erhalten?"
@@ -3580,6 +3586,9 @@ questions:
       - question: pt_t1_fu_OTHERVACCNAME
         operation: equal
         value: "4"
+      - question: pt_t1_fu_OTHERVACCCHECK
+        operation: equal
+        value: "1"
     label: "On what date did you receive your Moderna vaccine dose?"
     label_ca: "Quin dia va rebre la seva dosi de la vacuna de Moderna?"
     label_de: "An welchem Tag haben Sie Ihre Impfstoffdosis von Moderna erhalten?"
@@ -3594,6 +3603,9 @@ questions:
       - question: pt_t1_fu_OTHERVACCNAME
         operation: equal
         value: "5"
+      - question: pt_t1_fu_OTHERVACCCHECK
+        operation: equal
+        value: "1"
     label: "On what date did you receive your Novavax vaccine dose?"
     label_ca: "Quin dia va rebre la seva dosi de la vacuna de Novavax?"
     label_de: "An welchem Tag haben Sie Ihre Impfstoffdosis von Novavax erhalten?"
@@ -3606,6 +3618,9 @@ questions:
   pt_t1_fu_OTHERVACCDAT_PFE:
     conditions:
       - question: pt_t1_fu_OTHERVACCNAME
+        operation: equal
+        value: "1"
+      - question: pt_t1_fu_OTHERVACCCHECK
         operation: equal
         value: "1"
     label: "On what date did you receive your Pfizer-BioNTech vaccine dose?"
@@ -3622,6 +3637,9 @@ questions:
       - question: pt_t1_fu_OTHERVACCNAME
         operation: equal
         value: "6"
+      - question: pt_t1_fu_OTHERVACCCHECK
+        operation: equal
+        value: "1"
     label: "On what date did you receive your Sanofi and GlaxoSmithKline vaccine dose?"
     label_ca: "Quin dia va rebre la seva dosi de la vacuna de Sanofi i GlaxoSmithKline?"
     label_de: "An welchem Tag haben Sie Ihre Impfstoffdosis von Sanofi und GlaxoSmithKline erhalten?"
@@ -3636,6 +3654,9 @@ questions:
       - question: pt_t1_fu_OTHERVACCNAME
         operation: equal
         value: "7"
+      - question: pt_t1_fu_OTHERVACCCHECK
+        operation: equal
+        value: "1"
     label: "On what date did you receive your other Covid-19 vaccine dose?"
     label_ca: "Quin dia va rebre l’altra dosi de la vacuna de la COVID-19?"
     label_de: "An welchem Tag haben Sie Ihre zweite Covid-19-Impfdosis erhalten?"
