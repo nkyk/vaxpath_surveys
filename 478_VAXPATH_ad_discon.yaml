@@ -6,20 +6,7 @@ title_es: "Retirada"
 header: "Sponsor: Pfizer, Study Name: VaxPath, Sponsor Study Number: C4591010, Protocol Version: 1, CRF Version: Version 2"
 size: large
 admin_emails:
-  - janie.gous@iqvia.com
-  - anke.bross@iqvia.com
-  - chandni.thakur@quintiles.com
-  - begona.gonzalez@quintiles.com
-  - theresa.roy@quintiles.com
-  - jared@selfcarecatalysts.com
-  - jacob@selfcarecatalysts.com
-  - shameni@selfcarecatalysts.com
-  - antonio.stefanov+vaxpath@quintiles.com
-  - martina.paciarotti+vaxpath@iqvia.com
-  - andja.gvozdenovic-tomasevski+vaxpath@iqvia.com
-  - anacarolina.silva+vaxpath@quintiles.com
-  - anke.bross+vaxpath@quintiles.com
-  - denitza.christova+vaxpath@iqvia.com
+- VAXPATH@iqvia.com
 questions:
   pt_t0_dc_REASON:
     label: "Reason for discontinuation"
