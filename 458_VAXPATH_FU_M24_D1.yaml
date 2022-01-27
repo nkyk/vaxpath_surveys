@@ -12,7 +12,7 @@ questions:
   pt_t1_fu_CHECKPOINT:
     label: "Do you have anything you want to change or report from the options below? If there is nothing to change or report please select 'None' and click Next to complete the questionnaire."
     label_de: "Möchten Sie etwas von den unten aufgeführten Optionen ändern oder melden? Wenn es nichts zu ändern oder zu melden gibt, wählen Sie bitte 'Keine' und klicken Sie auf Weiter, um um den Fragebogen auszufüllen."
-    label_it: "Ha qualcosa che desidera modificare o segnalare nelle opzioni seguenti? Se non c'è nulla da cambiare o segnalare, selezioni 'Nessuno' e faccia clic su Avanti per completare il questionario." 
+    label_it: "Hai qualcosa che desideri modificare o segnalare dalle opzioni seguenti? Se non c'è nulla da cambiare o segnalare, selezionare 'Nessuno' e fare clic su Avanti per completare il questionario." 
     label_es: "¿Hay algo que desee cambiar o notificar en las opciones a continuación? Si no hay nada que cambiar o notificar, seleccione 'Nada' y haga clic en 'Siguiente' para finalizar el cuestionario."
     label_ca: "Hi ha alguna cosa que vulgui modificar o notificar de les opcions següents? Si no ha de modificar ni notificar res, seleccioni 'Res' i faci clic a 'Següent' per emplenar el qüestionari."
     type: checkbox
@@ -28,7 +28,7 @@ questions:
         label: "My Health Care Provider information has changed"
         label_ca: "La informació del meu proveïdor d’atenció mèdica ha canviat"
         label_de: "Die Informationen meines Gesundheitsdienstleisters haben sich geändert"
-        label_it: "Le informazioni sul mio medico di base sono cambiate"
+        label_it: "Le informazioni sul mio fornitore di assistenza sanitaria sono cambiate" 
         label_es: "La información de mi proveedor de atención médica ha cambiado" 
       - value: pt_t1_fu_UNPLNEDMEDCARE
         label: "I would like to report an Unplanned Medical Care Event"
@@ -40,7 +40,7 @@ questions:
         label: "None"
         label_ca: "Cap de les anteriors no és certa"
         label_de: "Keines der oben genannten ist wahr"
-        label_it: "Nessuna delle precedenti" 
+        label_it: "Nessuna delle precedenti è vera" 
         label_es: "Ninguna de las anteriores son ciertas" 
     validation:
       - exclusive: pt_t1_fu_NONE
@@ -51,7 +51,7 @@ questions:
   pt_t2_preg_PREGCONF:
     label: You previously confirmed that you were pregnant. Are you still pregnant?
     label_de: Sie haben bereits bestätigt, dass Sie schwanger sind. Sind Sie immer noch schwanger?
-    label_it: Ha confermato precedentemente di essere incinta. È ancora incinta?
+    label_it: Hai già confermato di essere incinta. Sei ancora incinta?
     label_es: Anteriormente confirmó que estaba embarazada. ¿Sigue embarazada?
     label_ca: Anteriorment va confirmar que estava embarassada. Encara està embarassada?
     conditions: 
@@ -185,10 +185,10 @@ questions:
     label: "Telephone or cellphone number"
     label_de: Telefon- oder Handynummer, Bitte geben Sie die Landesvorwahl ein 
     label_it: Numero di telefono o cellulare, per favore indicare il prefisso del paese 
-    label_es: Número de teléfono o móvil, indique por favor el codigo de país 
+    label_es: Número de teléfono o móvil, indique por favor el codigo de país
     label_ca: Número de telèfon fix o mòbil, indiqui si us plau el codi de país
     type: text
-    regex: "\\A(\\+?\\d{1,4}[\\s.-]?)?\\(?\\d{3}\\)?[\\s.-]?\\d{3}[\\s.-]?\\d{4,5}\\z"
+    regex: "\\A(\\+?\\d{1,2}[\\s.-]?)?\\(?\\d{3}\\)?[\\s.-]?\\d{3}[\\s.-]?\\d{4}\\z"
     default_survey_reference: VAXPATH_dose2
     default_question_keyword: pt_t1_ci2_PHONENUM
     page_number: 4
@@ -259,11 +259,11 @@ questions:
     label_de: Telefonnummer oder Handynummer der zweiten Kontaktperson, Bitte geben Sie die Landesvorwahl ein 
     label_it: Numero di telefono o di cellulare del recapito secondario, per favore indicare il prefisso del paese
     label_es: Número de teléfono o móvil de contacto secundario, indique por favor el codigo de país
-    label_ca: Telèfon fix o mòbil de la persona de contacte secundària, indiqui si us plau el codi de país
+    label_ca: Telèfon fix o mòbil de la persona de contacte secundària, indiqui si us plau el codi de país 
     type: text
     default_survey_reference: VAXPATH_dose2
     default_question_keyword: pt_t1_ci2_2NDCONTACTPHONE
-    regex: "\\A(\\+?\\d{1,4}[\\s.-]?)?\\(?\\d{3}\\)?[\\s.-]?\\d{3}[\\s.-]?\\d{4,5}\\z"
+    regex: "\\A(\\+?\\d{1,2}[\\s.-]?)?\\(?\\d{3}\\)?[\\s.-]?\\d{3}[\\s.-]?\\d{4}\\z"
     page_number: 4
     db_write:
       table: AdditionalAppColumn
@@ -305,7 +305,7 @@ questions:
     label_es: "Número de teléfono del médico de atención primaria, indique por favor el codigo de país"
     label_ca: "Número de telèfon del metge d’atenció primària, indiqui si us plau el codi de país"
     type: text
-    regex: "\\A(\\+?\\d{1,4}[\\s.-]?)?\\(?\\d{3}\\)?[\\s.-]?\\d{3}[\\s.-]?\\d{4,5}\\z"
+    regex: "\\A(\\+?\\d{1,2}[\\s.-]?)?\\(?\\d{3}\\)?[\\s.-]?\\d{3}[\\s.-]?\\d{4}\\z"
     skip:
       label: Skip
       label_de: überspringen
@@ -385,13 +385,13 @@ questions:
       - value: "2"
         label: "Web/app-based questionnaire"
         label_de: "Web-/App-basierter Fragebogen"
-        label_it: "Tramite web/applicazione"
+        label_it: "Questionario basato su web/applicazione"
         label_es: "Cuestionario basado en web/aplicación"
         label_ca: "Qüestionari a través de web o aplicació"
       - value: "3"
         label: "Do not contact me anymore"
         label_de: "Kontaktieren Sie mich nicht mehr"
-        label_it: "Non desidero essere più contattato/a"
+        label_it: "Non mi contatti più"
         label_es: "No volver a ponerse en contacto conmigo"
         label_ca: "No em torneu a contactar"
     db_write:
@@ -400,7 +400,7 @@ questions:
   pt_t1_fu_UNPLANTXT:
     label: "This form should only be used for unplanned medical care which you have not reported in a previous survey. Unplanned medical care includes any non-routine medical care."
     label_de: "Dieses Dokument sollte nur für eine ungeplante medizinische Versorgung verwendet werden, die Sie in einer vorherigen Umfrage nicht angegeben haben. Eine ungeplante medizinische Versorgung umfasst jegliche nicht routinemäßige medizinische Versorgung."
-    label_it: "Questo modulo deve essere utilizzato solo per cure mediche non pianificate che non ha segnalato in un sondaggio precedente. L'assistenza medica non pianificata include qualsiasi assistenza medica non di routine."
+    label_it: "Questo documento deve essere utilizzato solo per cure mediche non pianificate che non hai fornito in un sondaggio precedente. L'assistenza medica non pianificata include qualsiasi assistenza medica non di routine."
     label_es: "Este documento solo debe usarse para atención médica no planificada que no proporcionó en una encuesta anterior. La atención médica no planificada incluye cualquier atención médica que no sea de rutina."
     label_ca: "Aquest document només s’ha d’utilitzar per a atenció mèdica no planificada que no vau proporcionar en una enquesta anterior. L’atenció mèdica no planificada inclou qualsevol assistència mèdica no rutinària."
     type: blank
@@ -443,7 +443,7 @@ questions:
         value: pt_t1_fu_UNPLNEDMEDCARE
     label: "Which type of facility did you visit for your unplanned medical care?"
     label_de: "Welche Art von Versorgungseinrichtung haben Sie für Ihre ungeplante medizinische Versorgung aufgesucht?"
-    label_it: "Che tipo di struttura ha visitato per le sue cure mediche non programmate?"
+    label_it: "Che tipo di struttura ha visitato per le sue cure mediche non programmate??"
     label_es: "¿Qué tipo de centro visitó por su atención médica no programada?"
     label_ca: "Quin tipus d'instal·lació va visitar per rebre l’atenció mèdica no programada?"
     type: checkbox
@@ -452,7 +452,7 @@ questions:
       - value: pt_t1_fu_VISITFACILITY_1
         label: "Primary care physician / general practitioner"
         label_de: "Hausarzt / Allgemeinmediziner"
-        label_it: "Medico di base"
+        label_it: "Medico di base/medico curante"
         label_es: "Médico de atención primaria/médico de cabecera"
         label_ca: "Metge d’atenció primària/metge de capçalera"
       - value: pt_t1_fu_VISITFACILITY_2
@@ -500,7 +500,7 @@ questions:
     label: "What was the main purpose of your unplanned medical care visit?"
     label_ca: "Quin era el propòsit principal de la vostra visita mèdica no programada?"
     label_de: "Was war der Hauptgrund für Ihren ungeplanten Arztbesuch?"
-    label_it: "Qual'era lo scopo principale della Sua visita?"
+    label_it: "Qual era lo scopo principale della tua visita medica non programmata?"
     label_es: "¿Cuál fue el propósito principal de su visita médica no programada?"
     type: checkbox
     page_number: 9
@@ -538,7 +538,7 @@ questions:
     label: What was the date of your unplanned medical care visit? If unsure, please estimate to the best of your ability.
     label_ca: "En quina data es va fer la visita d’atenció mèdica no programada? Si no ho té clar, indiqui-ho amb la màxima aproximació possible."
     label_de: "An welchem Tag fand Ihr ungeplannter Besuch zur medizinischen Versorgung statt? Falls Sie sich nicht sicher sind, schätzen Sie bitte nach bestem Wissen und Gewissen)"
-    label_it: "Qual è la data della Sua visita per le cure mediche non programmate? In caso di dubbi, fornisca una stima."
+    label_it: "Qual è la data della Sua visita per le cure mediche non programmate?In caso di dubbi, fornisca una stima al meglio delle Sue capacità."
     label_es: ¿Cuál fue la fecha de su visita de atención médica no programada?
     type: date
     page_number: 9
@@ -557,7 +557,8 @@ questions:
     label_ca: En quina data va finalitzar la seva visita? ex., si va necessitar ingrés hospitalari, indiqui la data en la qual li van donar l’alta hospitalària.
     label_de: Wann endete der Besuch (Datum)? Wenn Sie z. B. ins Krankenhaus eingewiesen wurden, geben Sie das Datum der Entlassung an.
     label_es: ¿En qué fecha finalizó la visita? ej., si fue hospitalizado, indique la fecha en la que recibió el alta.
-    label_it: Qual è stata la data in cui è terminata la visita? Ad esempio, se è stato/a ricoverato/a in ospedale, indichi la data in cui è stata/o dimessa.
+    label_it: Qual è stata la data in cui è terminata la visita?Ad esempio, se è stato ricoverato in ospedale, indichi la data in cui è stato dimesso. 
+    type: date
     page_number: 9
     min:
       value: .pt_t1_fu_VISITSTDAT
@@ -619,7 +620,7 @@ questions:
     label: "Location of facility or healthcare provider you visited"
     label_ca: "Indiqui la ubicació de les instal·lacions o del professional sanitari que va visitar"
     label_de: "Standort der von Ihnen besuchten Einrichtung oder des Gesundheitsdienstleisters"
-    label_it: "L'ubicazione della struttura che ha visitato?"
+    label_it: "Posizione della struttura"
     label_es: ¿Ubicación del centro o profesional sanitario que visitó?
     type: text
     page_number: 11
@@ -645,7 +646,7 @@ questions:
     label: "Email address of facility or healthcare provider you visited"
     label_ca: "Indiqui el correu electrònic de les instal·lacions o del professional sanitari que va visitar"
     label_de: "E-Mail-Adresse der von Ihnen besuchten Einrichtung oder des Gesundheitsdienstleisters"
-    label_it: "Indirizzo e-mail della struttura che ha visitato o delloperatore sanitario presso cui si è recato/a?"
+    label_it: "Indirizzo e-mail della struttura che ha visitato o dell’operatore sanitario presso cui si è recato"
     label_es: "Dirección de correo electrónico del centro o profesional sanitario que visitó"
     type: text
     regex: "\\A[\\w+\\-.]+@[a-z\\d\\-]+(\\.[a-z\\d\\-]+)*\\.[a-z]+\\z"
@@ -751,7 +752,7 @@ questions:
     label: "Were you diagnosed with any of the following (scroll through the diagnoses listed on all pages):"
     label_ca: "Indiqui si li van diagnosticar alguna de les coses següents (cal desplaçar-se per les llistes de diagnòstics de totes les pàgines):"
     label_de: "Wurde bei Ihnen eine der folgenden Diagnosen festgestellt (scrollen Sie durch die auf allen Seiten aufgeführten Diagnosen)?"
-    label_it: "Le è stato/a diagnosticato/a una qualsiasi delle seguenti patologie (scorrere le diagnosi elencate in tutte le pagine):"
+    label_it: "Le è stato diagnosticato uno qualsiasi dei seguenti (scorrere le diagnosi elencate in tutte le pagine):"
     label_es: "¿Se le diagnosticó alguno de los siguientes? (desplácese por los diagnósticos indicados en todas las páginas)"
     type: checkbox
     page_number: 13
@@ -815,7 +816,7 @@ questions:
     label: "Were you diagnosed with any of the following (scroll through the diagnoses listed on all pages):"
     label_ca: "Indiqui si li van diagnosticar alguna de les coses següents (cal desplaçar-se per les llistes de diagnòstics de totes les pàgines):"
     label_de: "Wurde bei Ihnen eine der folgenden Diagnosen festgestellt (scrollen Sie durch die auf allen Seiten aufgeführten Diagnosen)?"
-    label_it: "Le è stato/a diagnosticato/a uno qualsiasi dei seguenti (scorrere le diagnosi elencate in tutte le pagine):"
+    label_it: "Le è stato diagnosticato uno qualsiasi dei seguenti (scorrere le diagnosi elencate in tutte le pagine):"
     label_es: "¿Se le diagnosticó alguno de los siguientes? (desplácese por los diagnósticos indicados en todas las páginas)"
     type: checkbox
     page_number: 14
@@ -945,7 +946,7 @@ questions:
     label: "Were you diagnosed with any of the following (scroll through the diagnoses listed on all pages):"
     label_ca: "Indiqui si li van diagnosticar alguna de les coses següents (cal desplaçar-se per les llistes de diagnòstics de totes les pàgines):"
     label_de: "Wurde bei Ihnen eine der folgenden Diagnosen festgestellt (scrollen Sie durch die auf allen Seiten aufgeführten Diagnosen)?"
-    label_it: "Le è stato/a diagnosticato/a uno qualsiasi dei seguenti (scorrere le diagnosi elencate in tutte le pagine):"
+    label_it: "Le è stato diagnosticato uno qualsiasi dei seguenti (scorrere le diagnosi elencate in tutte le pagine)"
     label_es: "¿Se le diagnosticó alguno de los siguientes? (desplácese por los diagnósticos indicados en todas las páginas)"
     type: checkbox
     page_number: 15
@@ -967,7 +968,7 @@ questions:
         label_ca: "Trombocitopènia (recompte baix de plaquetes)"
         label_de: "Thrombozytopenie (niedrige Blutplättchenzahl)"
         label_es: "Trombocitopenia (nivel bajo de plaquetas)"
-        label_it: "Trombocitopenia (Basso numero di piastrine)"
+        label_it: "Trombocitopenia (bassa conta piastrinica)"
       - value: pt_t1_fu_DX_HEMA_NONE
         label: "None of the above"
         label_ca: "Cap de les anteriors"
@@ -985,7 +986,7 @@ questions:
     label: "Were you diagnosed with any of the following (scroll through the diagnoses listed on all pages):"
     label_ca: "Indiqui si li van diagnosticar alguna de les coses següents (cal desplaçar-se per les llistes de diagnòstics de totes les pàgines):"
     label_de: "Wurde bei Ihnen eine der folgenden Diagnosen festgestellt (scrollen Sie durch die auf allen Seiten aufgeführten Diagnosen)?"
-    label_it: "Le è stato/a diagnosticato/a uno qualsiasi dei seguenti (scorrere le diagnosi elencate in tutte le pagine):"
+    label_it: "Le è stato diagnosticato uno qualsiasi dei seguenti (scorrere le diagnosi elencate in tutte le pagine)"
     label_es: "¿Se le diagnosticó alguno de los siguientes? (desplácese por los diagnósticos indicados en todas las páginas)"
     type: checkbox
     page_number: 16
@@ -1049,7 +1050,7 @@ questions:
     label: "Were you diagnosed with any of the following (scroll through the diagnoses listed on all pages):"
     label_ca: "Indiqui si li van diagnosticar alguna de les coses següents (cal desplaçar-se per les llistes de diagnòstics de totes les pàgines):"
     label_de: "Wurde bei Ihnen eine der folgenden Diagnosen festgestellt (scrollen Sie durch die auf allen Seiten aufgeführten Diagnosen)?"
-    label_it: "Le è stato/a diagnosticato/a uno qualsiasi dei seguenti (scorrere le diagnosi elencate in tutte le pagine):"
+    label_it: "Le è stato diagnosticato uno qualsiasi dei seguenti (scorrere le diagnosi elencate in tutte le pagine)"
     label_es: "¿Se le diagnosticó alguno de los siguientes? (desplácese por los diagnósticos indicados en todas las páginas)"
     type: checkbox
     page_number: 17
@@ -1131,7 +1132,7 @@ questions:
     label: "Were you diagnosed with any of the following (scroll through the diagnoses listed on all pages):"
     label_ca: "Indiqui si li van diagnosticar alguna de les coses següents (cal desplaçar-se per les llistes de diagnòstics de totes les pàgines):"
     label_de: "Wurde bei Ihnen eine der folgenden Diagnosen festgestellt (scrollen Sie durch die auf allen Seiten aufgeführten Diagnosen)?"
-    label_it: "Le è stato/a diagnosticato/a uno qualsiasi dei seguenti (scorrere le diagnosi elencate in tutte le pagine):"
+    label_it: "Le è stato diagnosticato uno qualsiasi dei seguenti (scorrere le diagnosi elencate in tutte le pagine)"
     label_es: "¿Se le diagnosticó alguno de los siguientes? (desplácese por los diagnósticos indicados en todas las páginas)"
     type: checkbox
     page_number: 18
@@ -1168,7 +1169,7 @@ questions:
     label: "What was the outcome of your medical care for Acute myocardial infarction (heart attack)?"
     label_ca: "Quin resultat va tenir la seva atenció mèdica?"
     label_de: "Welches Ergebnis hatte Ihre medizinische Versorgung bei akutem Myokardinfarkt (Herzinfarkt)?"
-    label_it: "Qual è stato l'esito del Suo infarto miocardico acuto?"
+    label_it: "Qual è stato l’esito della Sua infarto miocardico acuto?"
     label_es: "¿Cuál fue el resultado de su Infarto agudo de miocardio?"
     type: radio
     page_number: 19
@@ -1180,13 +1181,13 @@ questions:
         label: "I recovered fully"
         label_ca: "Em vaig recuperar del tot" 
         label_de: "Ich bin vollständig genesen"
-        label_it: "Sono guarito/a/a completamente"
+        label_it: "Sono guarito completamente"
         label_es: "Me he recuperado completamente"
       - value: "2"
         label: "I recovered, but with some lasting effects"
         label_ca: "Em vaig recuperar, però amb alguns efectes persistents"
         label_de: "Ich bin genesen, aber mit einigen bleibenden Wirkungen"
-        label_it: "Sono guarito/a/a, ma con alcuni effetti duraturi"
+        label_it: "Sono guarito, ma con alcuni effetti duraturi"
         label_es: "Me he recuperado, pero con algunos efectos duraderos"
       - value: "3"
         label: "I am recovering"
@@ -1212,7 +1213,7 @@ questions:
     label: "What was the outcome of your medical care for Coronary artery disease arrhythmia (abnormal heart rhythm due to coronary artery disease)?"
     label_ca: "Quin resultat va tenir la seva atenció mèdica?"
     label_de: "Welches Ergebnis hatte Ihre medizinische Versorgung bei koronarer Herzkrankheit (Herzrhythmusstörungen aufgrund einer koronaren Herzkrankheit)?"
-    label_it: "Qual'è stato l'esito della Sua diagnosi di aritmia da malattia coronarica?"
+    label_it: "Qual è stato l’esito della Sua Aritmia malattia coronarica"
     label_es: "¿Cuál fue el resultado de su Arritmia por enfermedad arterial coronaria?"
     type: radio
     page_number: 20
@@ -1224,13 +1225,13 @@ questions:
         label: "I recovered fully"
         label_ca: "Em vaig recuperar del tot"
         label_de: "Ich bin vollständig genesen"
-        label_it: "Sono guarito/a/a completamente"
+        label_it: "Sono guarito completamente"
         label_es: "Me he recuperado completamente"
       - value: "2"
         label: "I recovered, but with some lasting effects"
         label_ca: "Em vaig recuperar, però amb alguns efectes persistents"
         label_de: "Ich bin genesen, aber mit einigen bleibenden Wirkungen"
-        label_it: "Sono guarito/a/a, ma con alcuni effetti duraturi"
+        label_it: "Sono guarito, ma con alcuni effetti duraturi"
         label_es: "Me he recuperado, pero con algunos efectos duraderos"
       - value: "3"
         label: "I am recovering"
@@ -1256,7 +1257,7 @@ questions:
     label: "What was the outcome of your medical care for Heart failure and cardiogenic shock?"
     label_ca: "Quin resultat va tenir la seva atenció mèdica?"
     label_de: "Welches Ergebnis hatte Ihre medizinische Versorgung bei Herzversagen und kardiogenem Schock?"
-    label_it: "Qual'è stato l'esito della Sua diagnosi di insufficienza cardiaca e shock cardiogeno"
+    label_it: "Qual è stato l’esito della Sua Insufficienza cardiaca e shock cardiogenol"
     label_es: "¿Cuál fue el resultado de su Insuficiencia cardíaca y shock cardiogénico?"
     type: radio
     page_number: 21
@@ -1268,13 +1269,13 @@ questions:
         label: "I recovered fully"
         label_ca: "Em vaig recuperar del tot"
         label_de: "Ich bin vollständig genesen"
-        label_it: "Sono guarito/a/a completamente"
+        label_it: "Sono guarito completamente"
         label_es: "Me he recuperado completamente"
       - value: "2"
         label: "I recovered, but with some lasting effects"
         label_ca: "Em vaig recuperar, però amb alguns efectes persistents"
         label_de: "Ich bin genesen, aber mit einigen bleibenden Wirkungen"
-        label_it: "Sono guarito/a/a, ma con alcuni effetti duraturi"
+        label_it: "Sono guarito, ma con alcuni effetti duraturi"
         label_es: "Me he recuperado, pero con algunos efectos duraderos"
       - value: "3"
         label: "I am recovering"
@@ -1300,7 +1301,7 @@ questions:
     label: "What was the outcome of your medical care for Microangiopathy [Disease of the capillaries (very small blood vessels)]?"
     label_ca: "Quin resultat va tenir la seva atenció mèdica?"
     label_de: Welches Ergebnis hatte Ihre medizinische Versorgung bei Mikroangiopathie [Erkrankung der Kapillaren (sehr kleine Blutgefäße)]?
-    label_it: Qual'è stato l'esito della Sua diagnosi di microangiopatia (malattia dei capillari, vasi sanguigni molto piccoli)
+    label_it: Qual è stato l’esito della Sua Microangiopatia [Malattia dei capillari (vasi sanguigni molto piccoli)
     label_es: ¿Cuál fue el resultado de su Microangiopatía [Enfermedad de los capilares (vasos sanguíneos muy pequeños)?
     type: radio
     page_number: 22
@@ -1312,13 +1313,13 @@ questions:
         label: "I recovered fully"
         label_ca: "Em vaig recuperar del tot"
         label_de: "Ich bin vollständig genesen"
-        label_it: "Sono guarito/a/a completamente"
+        label_it: "Sono guarito completamente"
         label_es: "Me he recuperado completamente"
       - value: "2"
         label: "I recovered, but with some lasting effects"
         label_ca: "Em vaig recuperar, però amb alguns efectes persistents"
         label_de: "Ich bin genesen, aber mit einigen bleibenden Wirkungen"
-        label_it: "Sono guarito/a/a, ma con alcuni effetti duraturi"
+        label_it: "Sono guarito, ma con alcuni effetti duraturi"
         label_es: "Me he recuperado, pero con algunos efectos duraderos"
       - value: "3"
         label: "I am recovering"
@@ -1356,13 +1357,13 @@ questions:
         label: "I recovered fully"
         label_ca: "Em vaig recuperar del tot" 
         label_de: "Ich bin vollständig genesen"
-        label_it: "Sono guarito/a/a completamente"
+        label_it: "Sono guarito completamente"
         label_es: "Me he recuperado completamente"
       - value: "2"
         label: "I recovered, but with some lasting effects"
         label_ca: "Em vaig recuperar, però amb alguns efectes persistents" 
         label_de: "Ich bin genesen, aber mit einigen bleibenden Wirkungen"
-        label_it: "Sono guarito/a/a, ma con alcuni effetti duraturi"
+        label_it: "Sono guarito, ma con alcuni effetti duraturi"
         label_es: "Me he recuperado, pero con algunos efectos duraderos"
       - value: "3"
         label: "I am recovering"
@@ -1388,7 +1389,7 @@ questions:
     label: "What was the outcome of your medical care for Pericarditis (swelling/inflammation of the membrane around the heart)?"
     label_ca: "Quin resultat va tenir la seva atenció mèdica?"
     label_de: "Welches Ergebnis hatte Ihre medizinische Versorgung bei Perikarditis (Schwellung/Entzündung der Membran um das Herz)?"
-    label_it: "Qual è stato l’esito della Sua Pericardite (gonfiore/ infiammazione della membrana intorno al cuore)"
+    label_it: "Qual è stato l’esito della Sua Pericardite (gonfiore/ infiammazione della membrana intorno al cuore"
     label_es: "¿Cuál fue el resultado de su Pericarditis (hinchazón/inflamación de la membrana alrededor del corazón)?"
     type: radio
     page_number: 24
@@ -1400,13 +1401,13 @@ questions:
         label: "I recovered fully"
         label_ca: "Em vaig recuperar del tot"
         label_de: "Ich bin vollständig genesen"
-        label_it: "Sono guarito/a/a completamente"
+        label_it: "Sono guarito completamente"
         label_es: "Me he recuperado completamente"
       - value: "2"
         label: "I recovered, but with some lasting effects"
         label_ca: "Em vaig recuperar, però amb alguns efectes persistents"
         label_de: "Ich bin genesen, aber mit einigen bleibenden Wirkungen"
-        label_it: "Sono guarito/a/a, ma con alcuni effetti duraturi"
+        label_it: "Sono guarito, ma con alcuni effetti duraturi"
         label_es: "Me he recuperado, pero con algunos efectos duraderos"
       - value: "3"
         label: "I am recovering"
@@ -1432,7 +1433,7 @@ questions:
     label: "What was the outcome of your medical care for Stress cardiomyopathy (stress-induced damage to the heart)?"
     label_ca: "Quin resultat va tenir la seva atenció mèdica?"
     label_de: "Welches Ergebnis hatte Ihre medizinische Behandlung der Stress-Kardiomyopathie (stressbedingte Schädigung des Herzens)?"
-    label_it: "Qual è stato l’esito della Sua Cardiomiopatia da stress (danni indotti al cuore dallo stress)"
+    label_it: "Qual è stato l’esito della Sua Cardiomiopatia da stress (danni indotti dallo stress al cuore)"
     label_es: "¿Cuál fue el resultado de su Miocardiopatía por estrés (daño al corazón inducido por estrés)?"
     type: radio
     page_number: 26
@@ -1444,13 +1445,13 @@ questions:
         label: "I recovered fully"
         label_ca: "Em vaig recuperar del tot"
         label_de: "Ich bin vollständig genesen"
-        label_it: "Sono guarito/a/a completamente"
+        label_it: "Sono guarito completamente"
         label_es: "Me he recuperado completamente"
       - value: "2"
         label: "I recovered, but with some lasting effects"
         label_ca: "Em vaig recuperar, però amb alguns efectes persistents"
         label_de: "Ich bin genesen, aber mit einigen bleibenden Wirkungen"
-        label_it: "Sono guarito/a/a, ma con alcuni effetti duraturi"
+        label_it: "Sono guarito, ma con alcuni effetti duraturi"
         label_es: "Me he recuperado, pero con algunos efectos duraderos"
       - value: "3"
         label: "I am recovering"
@@ -1476,7 +1477,7 @@ questions:
     label: "What was the outcome of your medical care for Abnormal heart rhythm (arrythmia)?"
     label_ca: "Quin resultat va tenir la seva atenció mèdica?"
     label_de: "Welches Ergebnis hatte Ihre medizinische Versorgung bei Herzrhythmusstörungen (Arrythmie)?"
-    label_it: "Qual'è stato l'esito della Sua aritmia (ritmo cardiaco anomalo)"
+    label_it: "Qual è stato l’esito della Sua Ritmo cardiaco anormale (aritmia)"
     label_es: "¿Cuál fue el resultado de su Ritmo cardíaco anormal (arritmia)?"
     type: radio
     page_number: 26
@@ -1488,13 +1489,13 @@ questions:
         label: "I recovered fully"
         label_ca: "Em vaig recuperar del tot"
         label_de: "Ich bin vollständig genesen" 
-        label_it: "Sono guarito/a/a completamente"
+        label_it: "Sono guarito completamente"
         label_es: "Me he recuperado completamente"
       - value: "2"
         label: "I recovered, but with some lasting effects"
         label_ca: "Em vaig recuperar, però amb alguns efectes persistents"
         label_de: "Ich bin genesen, aber mit einigen bleibenden Wirkungen"
-        label_it: "Sono guarito/a/a, ma con alcuni effetti duraturi"
+        label_it: "Sono guarito, ma con alcuni effetti duraturi"
         label_es: "Me he recuperado, pero con algunos efectos duraderos"
       - value: "3"
         label: "I am recovering"
@@ -1520,7 +1521,7 @@ questions:
     label: "What was the outcome of your medical care for Acute kidney injury (sudden episode only, not including chronic conditions)?"
     label_ca: "Quin resultat va tenir la seva atenció mèdica?"
     label_de: "Welches Ergebnis hatte Ihre medizinische Versorgung bei akuter Nierenschädigung (nur plötzlicher Vorfall, nicht bei chronischen Erkrankungen)?"
-    label_it: "Qual'è stato l'esito della Sua diagnosi di lesione renale acuta (solo episodio improvviso, escluse le condizioni croniche)"
+    label_it: "Qual è stato l’esito della Sua Lesione renale acuta (solo episodio improvviso, escluse le condizioni croniche)"
     label_es: "¿Cuál fue el resultado de su Lesión renal aguda (solo episodio repentino, sin incluir afecciones crónicas)?"
     type: radio
     page_number: 26
@@ -1532,13 +1533,13 @@ questions:
         label: "I recovered fully"
         label_ca: "Em vaig recuperar del tot"
         label_de: "Ich bin vollständig genesen"
-        label_it: "Sono guarito/a/a completamente"
+        label_it: "Sono guarito completamente"
         label_es: "Me he recuperado completamente"
       - value: "2"
         label: "I recovered, but with some lasting effects"
         label_ca: "Em vaig recuperar, però amb alguns efectes persistents"
         label_de: "Ich bin genesen, aber mit einigen bleibenden Wirkungen"
-        label_it: "Sono guarito/a, ma con alcuni effetti duraturi"
+        label_it: "Sono guarito, ma con alcuni effetti duraturi"
         label_es: "Me he recuperado, pero con algunos efectos duraderos"
       - value: "3"
         label: "I am recovering"
@@ -1564,7 +1565,7 @@ questions:
     label: "What was the outcome of your medical care for Acute liver injury (sudden episode only, not including chronic conditions)?"
     label_ca: "Quin resultat va tenir la seva atenció mèdica?"
     label_de: "Welches Ergebnis hatte Ihre medizinische Versorgung bei akuter Leberschädigung (nur bei plötzlichem Auftreten, nicht bei chronischen Erkrankungen)?"
-    label_it: "Qual'è stato l'esito della Sua diagnosi di lesione epatica acuta (solo episodio improvviso, escluse le condizioni croniche)"
+    label_it: "Qual è stato l’esito della Sua Lesioni epatiche acute (solo episodio improvviso, escluse le condizioni croniche)"
     label_es: "¿Cuál fue el resultado de su Lesión hepática aguda (solo episodio repentino, sin incluir afecciones crónicas)?"
     type: radio
     page_number: 26
@@ -1576,13 +1577,13 @@ questions:
         label: "I recovered fully"
         label_ca: "Em vaig recuperar del tot"
         label_de: "Ich bin vollständig genesen"
-        label_it: "Sono guarito/a completamente"
+        label_it: "Sono guarito completamente"
         label_es: "Me he recuperado completamente"
       - value: "2"
         label: "I recovered, but with some lasting effects"
         label_ca: "Em vaig recuperar, però amb alguns efectes persistents" 
         label_de: "Ich bin genesen, aber mit einigen bleibenden Wirkungen"
-        label_it: "Sono guarito/a, ma con alcuni effetti duraturi"
+        label_it: "Sono guarito, ma con alcuni effetti duraturi"
         label_es: "Me he recuperado, pero con algunos efectos duraderos"
       - value: "3"
         label: "I am recovering"
@@ -1620,13 +1621,13 @@ questions:
         label: "I recovered fully"
         label_ca: "Em vaig recuperar del tot" 
         label_de: "Ich bin vollständig genesen"
-        label_it: "Sono guarito/a completamente"
+        label_it: "Sono guarito completamente"
         label_es: "Me he recuperado completamente"
       - value: "2"
         label: "I recovered, but with some lasting effects"
         label_ca: "Em vaig recuperar, però amb alguns efectes persistents"
         label_de: "Ich bin genesen, aber mit einigen bleibenden Wirkungen"
-        label_it: "Sono guarito/a, ma con alcuni effetti duraturi"
+        label_it: "Sono guarito, ma con alcuni effetti duraturi"
         label_es: "Me he recuperado, pero con algunos efectos duraderos"
       - value: "3"
         label: "I am recovering"
@@ -1664,13 +1665,13 @@ questions:
         label: "I recovered fully"
         label_ca: "Em vaig recuperar del tot"
         label_de: "Ich bin vollständig genesen"
-        label_it: "Sono guarito/a completamente"
+        label_it: "Sono guarito completamente"
         label_es: "Me he recuperado completamente"
       - value: "2"
         label: "I recovered, but with some lasting effects"
         label_ca: "Em vaig recuperar, però amb alguns efectes persistents"
         label_de: "Ich bin genesen, aber mit einigen bleibenden Wirkungen"
-        label_it: "Sono guarito/a, ma con alcuni effetti duraturi"
+        label_it: "Sono guarito, ma con alcuni effetti duraturi"
         label_es: "Me he recuperado, pero con algunos efectos duraderos"
       - value: "3"
         label: "I am recovering"
@@ -1708,13 +1709,13 @@ questions:
         label: "I recovered fully"
         label_ca: "Em vaig recuperar del tot" 
         label_de: "Ich bin vollständig genesen"
-        label_it: "Sono guarito/a completamente"
+        label_it: "Sono guarito completamente"
         label_es: "Me he recuperado completamente"
       - value: "2"
         label: "I recovered, but with some lasting effects"
         label_ca: "Em vaig recuperar, però amb alguns efectes persistents"
         label_de: "Ich bin genesen, aber mit einigen bleibenden Wirkungen"
-        label_it: "Sono guarito/a, ma con alcuni effetti duraturi"
+        label_it: "Sono guarito, ma con alcuni effetti duraturi"
         label_es: "Me he recuperado, pero con algunos efectos duraderos"
       - value: "3"
         label: "I am recovering"
@@ -1740,7 +1741,7 @@ questions:
     label: "What was the outcome of your medical care for Chilblain-like lesions (painful and itchy swelling on the skin, usually on the hands and feet)?"
     label_ca: "Quin resultat va tenir la seva atenció mèdica?"
     label_de: Welches Ergebnis hatte Ihre medizinische Behandlung von Chilblain-ähnlichen Läsionen (schmerzhafte und juckende Schwellungen der Haut, meist an Händen und Füßen)?
-    label_it: "Qual'è stato l'esito delle Sue lesioni dovute a geloni (dolore, prurito e gonfiore sulla pelle, di solito sulle mani e piedi)"
+    label_it: "Qual è stato l’esito della Sua Chilblain-come lesioni (doloroso e prurito gonfiore sulla pelle, di solito sulle mani e piedi)"
     label_es: "¿Cuál fue el resultado de su Lesiones similares a la chilblaina (inflamación dolorosa y con picazón en la piel, generalmente en las manos y los pies)?"
     type: radio
     page_number: 26
@@ -1752,13 +1753,13 @@ questions:
         label: "I recovered fully"
         label_ca: "Em vaig recuperar del tot"
         label_de: "Ich bin vollständig genesen"
-        label_it: "Sono guarito/a completamente"
+        label_it: "Sono guarito completamente"
         label_es: "Me he recuperado completamente"
       - value: "2"
         label: "I recovered, but with some lasting effects"
         label_ca: "Em vaig recuperar, però amb alguns efectes persistents"
         label_de: "Ich bin genesen, aber mit einigen bleibenden Wirkungen"
-        label_it: "Sono guarito/a, ma con alcuni effetti duraturi"
+        label_it: "Sono guarito, ma con alcuni effetti duraturi"
         label_es: "Me he recuperado, pero con algunos efectos duraderos"
       - value: "3"
         label: "I am recovering"
@@ -1784,7 +1785,7 @@ questions:
     label: "What was the outcome of your medical care for Coronary artery disease?"
     label_ca: "Quin resultat va tenir la seva atenció mèdica?"
     label_de: "Welches Ergebnis hatte Ihre medizinische Versorgung bei koronarer Herzkrankheit?"
-    label_it: "Qual'è stato l'esito della Sua diagnosi per malattia coronarica?"
+    label_it: "Qual è stato l’esito della Sua cure mediche per la malattia coronarica"
     label_es: "¿Cuál fue el resultado de su atención médica para la enfermedad coronaria?"
     type: radio
     page_number: 26
@@ -1796,13 +1797,13 @@ questions:
         label: "I recovered fully"
         label_ca: "Em vaig recuperar del tot"
         label_de: "Ich bin vollständig genesen"
-        label_it: "Sono guarito/a completamente"
+        label_it: "Sono guarito completamente"
         label_es: "Me he recuperado completamente"
       - value: "2"
         label: "I recovered, but with some lasting effects"
         label_ca: "Em vaig recuperar, però amb alguns efectes persistents"
         label_de: "Ich bin genesen, aber mit einigen bleibenden Wirkungen"
-        label_it: "Sono guarito/a, ma con alcuni effetti duraturi"
+        label_it: "Sono guarito, ma con alcuni effetti duraturi"
         label_es: "Me he recuperado, pero con algunos efectos duraderos"
       - value: "3"
         label: "I am recovering"
@@ -1828,7 +1829,7 @@ questions:
     label: "What was the outcome of your medical care for Deep vein thrombosis (blood clot in a deep vein)?"
     label_ca: "Quin resultat va tenir la seva atenció mèdica?"
     label_de: "Welches Ergebnis hatte Ihre medizinische Versorgung bei einer tiefen Venenthrombose (Blutgerinnsel in einer tiefen Vene)?"
-    label_it: "Qual'è stato l'esito della Sua diagnosi di trombosi venosa profonda (coagulo di sangue in una vena profonda)"
+    label_it: "Qual è stato l’esito della Sua Trombosi venosa profonda (coagulo di sangue in una vena profonda)"
     label_es: "¿Cuál fue el resultado de su Trombosis venosa profunda (coágulo de sangre en una vena profunda)?"
     type: radio
     page_number: 26
@@ -1840,13 +1841,13 @@ questions:
         label: "I recovered fully"
         label_ca: "Em vaig recuperar del tot"
         label_de: "Ich bin vollständig genesen"
-        label_it: "Sono guarito/a completamente"
+        label_it: "Sono guarito completamente"
         label_es: "Me he recuperado completamente"
       - value: "2"
         label: "I recovered, but with some lasting effects"
         label_ca: "Em vaig recuperar, però amb alguns efectes persistents"
         label_de: "Ich bin genesen, aber mit einigen bleibenden Wirkungen"
-        label_it: "Sono guarito/a, ma con alcuni effetti duraturi"
+        label_it: "Sono guarito, ma con alcuni effetti duraturi"
         label_es: "Me he recuperado, pero con algunos efectos duraderos"
       - value: "3"
         label: "I am recovering"
@@ -1872,7 +1873,7 @@ questions:
     label: "What was the outcome of your medical care for Erythema multiforme (skin immune reaction)?"
     label_ca: "Quin resultat va tenir la seva atenció mèdica?"
     label_de: "Welches Ergebnis hatte Ihre medizinische Versorgung bei Erythema multiforme (Immunreaktion der Haut)?"
-    label_it: "Qual è stato l'esito della Sua diagnosi di Eritema multiforme (reazione immunitaria della pelle)"
+    label_it: "Eritema multiforme (reazione immunitaria della pelle)"
     label_es: "¿Cuál fue el resultado de su Eritema multiforme (reacción inmunitaria de la piel)?"
     type: radio
     page_number: 26
@@ -1884,13 +1885,13 @@ questions:
         label: "I recovered fully"
         label_ca: "Em vaig recuperar del tot"
         label_de: "Ich bin vollständig genesen"
-        label_it: "Sono guarito/a completamente"
+        label_it: "Sono guarito completamente"
         label_es: "Me he recuperado completamente"
       - value: "2"
         label: "I recovered, but with some lasting effects"
         label_ca: "Em vaig recuperar, però amb alguns efectes persistents"
         label_de: "Ich bin genesen, aber mit einigen bleibenden Wirkungen"
-        label_it: "Sono guarito/a, ma con alcuni effetti duraturi"
+        label_it: "Sono guarito, ma con alcuni effetti duraturi"
         label_es: "Me he recuperado, pero con algunos efectos duraderos"
       - value: "3"
         label: "I am recovering"
@@ -1916,7 +1917,7 @@ questions:
     label: "What was the outcome of your medical care for Hemorrhagic disease (bleeding disorder)?"
     label_ca: "Quin resultat va tenir la seva atenció mèdica?"
     label_de: "Welches Ergebnis hatte Ihre medizinische Versorgung bei einer hämorrhagischen Erkrankung (Blutungsstörung)?"
-    label_it: "Qual è stato l’esito della Sua Malattia emorragica?"
+    label_it: "Qual è stato l’esito della Sua Malattia emorragica (malattia emorragica)"
     label_es: "¿Cuál fue el resultado de su Enfermedad hemorrágica (trastorno hemorrágico)?"
     type: radio
     page_number: 26
@@ -1928,13 +1929,13 @@ questions:
         label: "I recovered fully"
         label_ca: "Em vaig recuperar del tot"
         label_de: "Ich bin vollständig genesen"
-        label_it: "Sono guarito/a completamente"
+        label_it: "Sono guarito completamente"
         label_es: "Me he recuperado completamente"
       - value: "2"
         label: "I recovered, but with some lasting effects"
         label_ca: "Em vaig recuperar, però amb alguns efectes persistents"
         label_de: "Ich bin genesen, aber mit einigen bleibenden Wirkungen"
-        label_it: "Sono guarito/a, ma con alcuni effetti duraturi"
+        label_it: "Sono guarito, ma con alcuni effetti duraturi"
         label_es: "Me he recuperado, pero con algunos efectos duraderos"
       - value: "3"
         label: "I am recovering"
@@ -1960,7 +1961,7 @@ questions:
     label: "What was the outcome of your medical care for Limb ischemia (reduced blood flow to a limb)?"
     label_ca: "Quin resultat va tenir la seva atenció mèdica?"
     label_de: "Welches Ergebnis hatte Ihre medizinische Versorgung bei Gliedmaßenischämie (verminderter Blutfluss in einer Gliedmaße)?"
-    label_it: "Qual'è stato l'esito della Sua diagnosi di ischemia degli arti (ridotto flusso di sangue ad un arto)"
+    label_it: "Qual è stato l’esito della Sua Ischemia degli arti (ridotto flusso di sangue ad un arto)"
     label_es: "¿Cuál fue el resultado de su Isquemia del miembro (disminución del flujo sanguíneo a un miembro?"
     type: radio
     page_number: 26
@@ -1972,13 +1973,13 @@ questions:
         label: "I recovered fully"
         label_ca: "Em vaig recuperar del tot"
         label_de: "Ich bin vollständig genesen"
-        label_it: "Sono guarito/a completamente"
+        label_it: "Sono guarito completamente"
         label_es: "Me he recuperado completamente"
       - value: "2"
         label: "I recovered, but with some lasting effects"
         label_ca: "Em vaig recuperar, però amb alguns efectes persistents"
         label_de: "Ich bin genesen, aber mit einigen bleibenden Wirkungen"
-        label_it: "Sono guarito/a, ma con alcuni effetti duraturi"
+        label_it: "Sono guarito, ma con alcuni effetti duraturi"
         label_es: "Me he recuperado, pero con algunos efectos duraderos"
       - value: "3"
         label: "I am recovering"
@@ -2004,7 +2005,7 @@ questions:
     label: "What was the outcome of your medical care for Pulmonary embolus/embolism (blood clot on the lung)?"
     label_ca: "Quin resultat va tenir la seva atenció mèdica?"
     label_de: "Welches Ergebnis hatte Ihre medizinische Versorgung bei Lungenembolie (Blutgerinnsel in der Lunge)?"
-    label_it: "Qual'è stato l'esito della Sua diagnosi per embolo/embolia polmonare (coagulo di sangue sul polmone)"
+    label_it: "Qual è stato l’esito della Sua assistenza medica per embolo/embolia polmonare (coagulo di sangue sul polmone)"
     label_es: "¿Cuál fue el resultado de su atención médica para Émbolo pulmonar/embolia (coágulo de sangre en el pulmón)?"
     type: radio
     page_number: 26
@@ -2016,13 +2017,13 @@ questions:
         label: "I recovered fully"
         label_ca: "Em vaig recuperar del tot"
         label_de: "Ich bin vollständig genesen"
-        label_it: "Sono guarito/a completamente"
+        label_it: "Sono guarito completamente"
         label_es: "Me he recuperado completamente"
       - value: "2"
         label: "I recovered, but with some lasting effects"
         label_ca: "Em vaig recuperar, però amb alguns efectes persistents"
         label_de: "Ich bin genesen, aber mit einigen bleibenden Wirkungen"
-        label_it: "Sono guarito/a, ma con alcuni effetti duraturi"
+        label_it: "Sono guarito, ma con alcuni effetti duraturi"
         label_es: "Me he recuperado, pero con algunos efectos duraderos"
       - value: "3"
         label: "I am recovering"
@@ -2048,7 +2049,7 @@ questions:
     label: "What was the outcome of your medical care for Rhabdomyolysis?"
     label_ca: "Quin resultat va tenir la seva atenció mèdica?"
     label_de: "Welches Ergebnis hatte Ihre medizinische Behandlung der Rhabdomyolyse?"
-    label_it: "Qual'è stato l'esito della Sua diagnosi di rabdomiolisi?"
+    label_it: "Qual è stato l’esito della Sua cure mediche per rabdomiolisi?"
     label_es: "¿Cuál fue el resultado de su atención médica para la Rabdomiólisis?"
     type: radio
     page_number: 26
@@ -2060,13 +2061,13 @@ questions:
         label: "I recovered fully"
         label_ca: "Em vaig recuperar del tot"
         label_de: "Ich bin vollständig genesen"
-        label_it: "Sono guarito/a completamente"
+        label_it: "Sono guarito completamente"
         label_es: "Me he recuperado completamente"
       - value: "2"
         label: "I recovered, but with some lasting effects"
         label_ca: "Em vaig recuperar, però amb alguns efectes persistents"
         label_de: "Ich bin genesen, aber mit einigen bleibenden Wirkungen"
-        label_it: "Sono guarito/a, ma con alcuni effetti duraturi"
+        label_it: "Sono guarito, ma con alcuni effetti duraturi"
         label_es: "Me he recuperado, pero con algunos efectos duraderos"
       - value: "3"
         label: "I am recovering"
@@ -2092,7 +2093,7 @@ questions:
     label: "What was the outcome of your medical care for Severe COVID-19 disease?"
     label_ca: "Quin resultat va tenir la seva atenció mèdica?"
     label_de: "Welches Ergebnis hatte Ihre medizinische Behandlung der schweren COVID-19-Krankheit?"
-    label_it: "Qual'è stato l'esito della Sua diagnosi di malattia grave COVID-19?"
+    label_it: "Qual è stato l’esito della Sua cure mediche per la malattia grave COVID-19?"
     label_es: "¿Cuál fue el resultado de su atención médica para la enfermedad grave COVID-19?"
     type: radio
     page_number: 26
@@ -2104,13 +2105,13 @@ questions:
         label: "I recovered fully"
         label_ca: "Em vaig recuperar del tot"
         label_de: "Ich bin vollständig genesen"
-        label_it: "Sono guarito/a completamente"
+        label_it: "Sono guarito completamente"
         label_es: "Me he recuperado completamente"
       - value: "2"
         label: "I recovered, but with some lasting effects"
         label_ca: "Em vaig recuperar, però amb alguns efectes persistents"
         label_de: "Ich bin genesen, aber mit einigen bleibenden Wirkungen"
-        label_it: "Sono guarito/a, ma con alcuni effetti duraturi"
+        label_it: "Sono guarito, ma con alcuni effetti duraturi"
         label_es: "Me he recuperado, pero con algunos efectos duraderos"
       - value: "3"
         label: "I am recovering"
@@ -2136,7 +2137,7 @@ questions:
     label: "What was the outcome of your medical care for Single organ cutaneous vasculitis?"
     label_ca: "Quin resultat va tenir la seva atenció mèdica?"
     label_de: "Welches Ergebnis hatte Ihre medizinische Versorgung bei kutaner Vaskulitis der einzelnen Organe?"
-    label_it: "Qual'è stato l'esito della Sua diagnosi di vasculite cutanea monoorgano?"
+    label_it: "Qual è stato l’esito della Sua cure mediche per la vasculite cutanea monoorgano?"
     label_es: "¿Cuál fue el resultado de su atención médica para la vasculitis cutánea de un solo órgano?"
     type: radio
     page_number: 26
@@ -2148,13 +2149,13 @@ questions:
         label: "I recovered fully"
         label_ca: "Em vaig recuperar del tot"
         label_de: "Ich bin vollständig genesen"
-        label_it: "Sono guarito/a completamente"
+        label_it: "Sono guarito completamente"
         label_es: "Me he recuperado completamente"
       - value: "2"
         label: "I recovered, but with some lasting effects"
         label_ca: "Em vaig recuperar, però amb alguns efectes persistents"
         label_de: "Ich bin genesen, aber mit einigen bleibenden Wirkungen" 
-        label_it: "Sono guarito/a, ma con alcuni effetti duraturi"
+        label_it: "Sono guarito, ma con alcuni effetti duraturi"
         label_es: "Me he recuperado, pero con algunos efectos duraderos"
       - value: "3"
         label: "I am recovering"
@@ -2180,7 +2181,7 @@ questions:
     label: "What was the outcome of your medical care for Stroke?"
     label_ca: "Quin resultat va tenir la seva atenció mèdica?"
     label_de: "Welches Ergebnis hatte Ihre medizinische Versorgung bei Schlaganfall?"
-    label_it: "Qual'è stato l'esito della Sua diagnosi di ictus?"
+    label_it: "Qual è stato l’esito della Sua Cure mediche per Stroke?"
     label_es: "¿Cuál fue el resultado de su atención médica para Stroke?"
     type: radio
     page_number: 26
@@ -2192,13 +2193,13 @@ questions:
         label: "I recovered fully"
         label_ca: "Em vaig recuperar del tot"
         label_de: "Ich bin vollständig genesen"
-        label_it: "Sono guarito/a completamente"
+        label_it: "Sono guarito completamente"
         label_es: "Me he recuperado completamente"
       - value: "2"
         label: "I recovered, but with some lasting effects"
         label_ca: "Em vaig recuperar, però amb alguns efectes persistents"
         label_de: "Ich bin genesen, aber mit einigen bleibenden Wirkungen"
-        label_it: "Sono guarito/a, ma con alcuni effetti duraturi"
+        label_it: "Sono guarito, ma con alcuni effetti duraturi"
         label_es: "Me he recuperado, pero con algunos efectos duraderos"
       - value: "3"
         label: "I am recovering"
@@ -2224,7 +2225,7 @@ questions:
     label: "What was the outcome of your medical care for Subacute thyroiditis (inflammatory disease of the thyroid)?"
     label_ca: "Quin resultat va tenir la seva atenció mèdica?"
     label_de: Welches Ergebnis hatte Ihre medizinische Versorgung bei subakuter Thyreoiditis (entzündliche Erkrankung der Schilddrüse)?
-    label_it: "Qual è stato l’esito della Sua tiroidite subacuta (malattia infiammatoria della tiroide)?"
+    label_it: "Qual è stato l’esito della Sua Tiroidite subacute (malattia infiammatoria della tiroide)?"
     label_es: "¿Cuál fue el resultado de su Tiroiditis subaguda (enfermedad inflamatoria de la tiroides)?"
     type: radio
     page_number: 26
@@ -2236,13 +2237,13 @@ questions:
         label: "I recovered fully"
         label_ca: "Em vaig recuperar del tot"
         label_de: "Ich bin vollständig genesen"
-        label_it: "Sono guarito/a completamente"
+        label_it: "Sono guarito completamente"
         label_es: "Me he recuperado completamente"
       - value: "2"
         label: "I recovered, but with some lasting effects"
         label_ca: "Em vaig recuperar, però amb alguns efectes persistents"
         label_de: "Ich bin genesen, aber mit einigen bleibenden Wirkungen"
-        label_it: "Sono guarito/a, ma con alcuni effetti duraturi"
+        label_it: "Sono guarito, ma con alcuni effetti duraturi"
         label_es: "Me he recuperado, pero con algunos efectos duraderos"
       - value: "3"
         label: "I am recovering"
@@ -2268,7 +2269,7 @@ questions:
     label: "What was the outcome of your medical care for Coagulation disorder (includes thrombotic disorders, bleeding disorders)?"
     label_ca: "Quin resultat va tenir la seva atenció mèdica?"
     label_de: "Welches Ergebnis hatte die medizinische Behandlung Ihrer Gerinnungsstörung (einschließlich thrombotischer Störungen, Blutungsstörungen)?"
-    label_it: "Qual'è stato l'esito della Sua diagnosi di disturbo della coagulazione (include disturbi trombotici, disturbi del sanguinamento)?"
+    label_it: "Qual è stato l’esito della Sua assistenza medica per il disturbo della coagulazione (include disturbi trombotici, disturbi del sanguinamento)?"
     label_es: "¿Cuál fue el resultado de su atención médica para el trastorno de coagulación (incluye trastornos trombóticos, trastornos hemorrágicos)?"
     type: radio
     page_number: 27
@@ -2280,13 +2281,13 @@ questions:
         label: "I recovered fully"
         label_ca: "Em vaig recuperar del tot"
         label_de: "Ich bin vollständig genesen"
-        label_it: "Sono guarito/a completamente"
+        label_it: "Sono guarito completamente"
         label_es: "Me he recuperado completamente"
       - value: "2"
         label: "I recovered, but with some lasting effects"
         label_ca: "Em vaig recuperar, però amb alguns efectes persistents"
         label_de: "Ich bin genesen, aber mit einigen bleibenden Wirkungen"
-        label_it: "Sono guarito/a, ma con alcuni effetti duraturi"
+        label_it: "Sono guarito, ma con alcuni effetti duraturi"
         label_es: "Me he recuperado, pero con algunos efectos duraderos"
       - value: "3"
         label: "I am recovering"
@@ -2312,7 +2313,7 @@ questions:
     label: "What was the outcome of your medical care for Disseminated intravascular coagulation (abnormal blood clotting)?"
     label_ca: "Quin resultat va tenir la seva atenció mèdica?"
     label_de: "Welches Ergebnis hatte Ihre medizinische Versorgung bei disseminierter intravaskulärer Koagulation (abnorme Blutgerinnung)?"
-    label_it: "Qual'è stato l'esito della Sua diagnosi di coagulazione intravascolare disseminata (coagulazione anomala del sangue)"
+    label_it: "Qual è stato l’esito della Sua cure mediche per coagulazione intravascolare disseminata (coagulazione anomala del sangue)"
     label_es: "¿Cuál fue el resultado de su Coagulación intravascular diseminada (coagulación sanguínea anormal)?"
     type: radio
     page_number: 27
@@ -2324,13 +2325,13 @@ questions:
         label: "I recovered fully"
         label_ca: "Em vaig recuperar del tot"
         label_de: "Ich bin vollständig genesen"
-        label_it: "Sono guarito/a completamente"
+        label_it: "Sono guarito completamente"
         label_es: "Me he recuperado completamente"
       - value: "2"
         label: "I recovered, but with some lasting effects"
         label_ca: "Em vaig recuperar, però amb alguns efectes persistents"
         label_de: "Ich bin genesen, aber mit einigen bleibenden Wirkungen"
-        label_it: "Sono guarito/a, ma con alcuni effetti duraturi"
+        label_it: "Sono guarito, ma con alcuni effetti duraturi"
         label_es: "Me he recuperado, pero con algunos efectos duraderos"
       - value: "3"
         label: "I am recovering"
@@ -2356,7 +2357,7 @@ questions:
     label: "What was the outcome of your medical care for Thrombocytopenia (low platelet count)?"
     label_ca: "Quin resultat va tenir la seva atenció mèdica?"
     label_de: "Welches Ergebnis hatte Ihre medizinische Versorgung bei Thrombozytopenie (niedrige Thrombozytenzahl)?"
-    label_it: "Qual'è stato l'esito della Sua diagnosi di trombocitopenia (basso numero di piastrine)?"
+    label_it: "Qual è stato l’esito della Sua cure mediche per trombocitopenia (basso numero di piastrine)?"
     label_es: "¿Cuál fue el resultado de su atención médica para la trombocitopenia (bajo conteo de plaquetas)?"
     type: radio
     page_number: 27
@@ -2368,13 +2369,13 @@ questions:
         label: "I recovered fully"
         label_ca: "Em vaig recuperar del tot"
         label_de: "Ich bin vollständig genesen"
-        label_it: "Sono guarito/a completamente"
+        label_it: "Sono guarito completamente"
         label_es: "Me he recuperado completamente"
       - value: "2"
         label: "I recovered, but with some lasting effects"
         label_ca: "Em vaig recuperar, però amb alguns efectes persistents"
         label_de: "Ich bin genesen, aber mit einigen bleibenden Wirkungen"
-        label_it: "Sono guarito/a, ma con alcuni effetti duraturi"
+        label_it: "Sono guarito, ma con alcuni effetti duraturi"
         label_es: "Me he recuperado, pero con algunos efectos duraderos"
       - value: "3"
         label: "I am recovering"
@@ -2400,7 +2401,7 @@ questions:
     label: "What was the outcome of your medical care for Anaphylaxis (life-threatening allergic reaction that requires urgent medical attention)?"
     label_ca: "Quin resultat va tenir la seva atenció mèdica?"
     label_de: "Welches Ergebnis hatte Ihre medizinische Versorgung bei Anaphylaxie (lebensbedrohliche allergische Reaktion, die dringend ärztliche Hilfe erfordert)?"
-    label_it: "Qual è stato l’esito della Sua Anafilassi (reazione allergica che richiede urgente assistenza medica)?"
+    label_it: "Qual è stato l’esito della Sua Anafilassi (minaccia di vita reazione allergica che richiede urgente assistenza medica)?"
     label_es: ¿Cuál fue el resultado de su Anafilaxia (reacción alérgica potencialmente mortal que requiere atención médica urgente)?
     type: radio
     page_number: 28
@@ -2412,13 +2413,13 @@ questions:
         label: "I recovered fully"
         label_ca: "Em vaig recuperar del tot"
         label_de: "Ich bin vollständig genesen"
-        label_it: "Sono guarito/a completamente"
+        label_it: "Sono guarito completamente"
         label_es: "Me he recuperado completamente"
       - value: "2"
         label: "I recovered, but with some lasting effects"
         label_ca: "Em vaig recuperar, però amb alguns efectes persistents"
         label_de: "Ich bin genesen, aber mit einigen bleibenden Wirkungen"
-        label_it: "Sono guarito/a, ma con alcuni effetti duraturi"
+        label_it: "Sono guarito, ma con alcuni effetti duraturi"
         label_es: "Me he recuperado, pero con algunos efectos duraderos"
       - value: "3"
         label: "I am recovering"
@@ -2444,7 +2445,7 @@ questions:
     label: "What was the outcome of your medical care for Arthritis and arthralgia (joint pain)?"
     label_ca: "Quin resultat va tenir la seva atenció mèdica?"
     label_de: "Welches Ergebnis hatte Ihre medizinische Versorgung bei Arthritis und Arthralgie (Gelenkschmerzen)?"
-    label_it: "Qual'è stato l'esito della Sua diagnosi di artrite e artralgia (dolori articolari)?"
+    label_it: "Qual è stato l’esito della Sua cure mediche per l'artrite e l'artralgia (dolori articolari)?"
     label_es: "¿Cuál fue el resultado de su atención médica para la artritis y la artralgia (dolor en las articulaciones)?"
     type: radio
     page_number: 28
@@ -2456,13 +2457,13 @@ questions:
         label: "I recovered fully"
         label_ca: "Em vaig recuperar del tot"
         label_de: "Ich bin vollständig genesen"
-        label_it: "Sono guarito/a completamente"
+        label_it: "Sono guarito completamente"
         label_es: "Me he recuperado completamente"
       - value: "2"
         label: "I recovered, but with some lasting effects"
         label_ca: "Em vaig recuperar, però amb alguns efectes persistents"
         label_de: "Ich bin genesen, aber mit einigen bleibenden Wirkungen"
-        label_it: "Sono guarito/a, ma con alcuni effetti duraturi"
+        label_it: "Sono guarito, ma con alcuni effetti duraturi"
         label_es: "Me he recuperado, pero con algunos efectos duraderos"
       - value: "3"
         label: "I am recovering"
@@ -2500,13 +2501,13 @@ questions:
         label: "I recovered fully"
         label_ca: "Em vaig recuperar del tot"
         label_de: "Ich bin vollständig genesen"
-        label_it: "Sono guarito/a completamente"
+        label_it: "Sono guarito completamente"
         label_es: "Me he recuperado completamente"
       - value: "2"
         label: "I recovered, but with some lasting effects"
         label_ca: "Em vaig recuperar, però amb alguns efectes persistents"
         label_de: "Ich bin genesen, aber mit einigen bleibenden Wirkungen"
-        label_it: "Sono guarito/a, ma con alcuni effetti duraturi"
+        label_it: "Sono guarito, ma con alcuni effetti duraturi"
         label_es: 'Me he recuperado, pero con algunos efectos duraderos'
       - value: "3"
         label: "I am recovering"
@@ -2532,7 +2533,7 @@ questions:
     label: "What was the outcome of your medical care for Fibromyalgia?"
     label_ca: "Quin resultat va tenir la seva atenció mèdica?"
     label_de: "Welches Ergebnis hatte Ihre medizinische Behandlung der Fibromyalgie?"
-    label_it: "Qual'è stato l'esito della Sua diagnosi di fibromialgia?"
+    label_it: "Qual è stato l’esito della Sua cure mediche per la fibromialgia?"
     label_es: "¿Cuál fue el resultado de su Atención médica para la fibromialgia?"
     type: radio
     page_number: 28
@@ -2544,13 +2545,13 @@ questions:
         label: "I recovered fully"
         label_ca: "Em vaig recuperar del tot"
         label_de: "Ich bin vollständig genesen"
-        label_it: "Sono guarito/a completamente"
+        label_it: "Sono guarito completamente"
         label_es: "Me he recuperado completamente"
       - value: "2"
         label: "I recovered, but with some lasting effects"
         label_ca: "Em vaig recuperar, però amb alguns efectes persistents"
         label_de: "Ich bin genesen, aber mit einigen bleibenden Wirkungen"
-        label_it: "Sono guarito/a, ma con alcuni effetti duraturi"
+        label_it: "Sono guarito, ma con alcuni effetti duraturi"
         label_es: "Me he recuperado, pero con algunos efectos duraderos"
       - value: "3"
         label: "I am recovering"
@@ -2576,7 +2577,7 @@ questions:
     label: "What was the outcome of your medical care for Kawasaki disease?"
     label_ca: "Quin resultat va tenir la seva atenció mèdica?"
     label_de: "Welches Ergebnis hatte die medizinische Behandlung der Kawasaki-Krankheit bei Ihnen?"
-    label_it: "Qual'è stato l'esito della Sua diagnosi di malattia di Kawasaki?"
+    label_it: "Qual è stato l’esito della Sua Cure mediche per la malattia di Kawasaki?"
     label_es: "¿Cuál fue el resultado de su Atención médica para la enfermedad de Kawasaki?"
     type: radio
     page_number: 28
@@ -2588,13 +2589,13 @@ questions:
         label: "I recovered fully"
         label_ca: "Em vaig recuperar del tot"
         label_de: "Ich bin vollständig genesen"
-        label_it: "Sono guarito/a completamente"
+        label_it: "Sono guarito completamente"
         label_es: "Me he recuperado completamente"
       - value: "2"
         label: "I recovered, but with some lasting effects"
         label_ca: "Em vaig recuperar, però amb alguns efectes persistents"
         label_de: "Ich bin genesen, aber mit einigen bleibenden Wirkungen"
-        label_it: "Sono guarito/a, ma con alcuni effetti duraturi"
+        label_it: "Sono guarito, ma con alcuni effetti duraturi"
         label_es: 'Me he recuperado, pero con algunos efectos duraderos'
       - value: "3"
         label: "I am recovering"
@@ -2620,7 +2621,7 @@ questions:
     label: "What was the outcome of your medical care for Multisystem inflammatory syndrome in adults (MIS-A)?"
     label_ca: "Quin resultat va tenir la seva atenció mèdica?"
     label_de: "Welches Ergebnis hatte Ihre medizinische Behandlung des Multisystemischen Entzündungssyndroms bei Erwachsenen (MIS-A)?"
-    label_it: "Qual'è stato l'esito della Sua diagnosi di sindrome infiammatoria multisistema negli adulti (MIS-A)"
+    label_it: "Qual è stato l’esito della Sua assistenza medica per la sindrome infiammatoria multisistema negli adulti (MIS-A)"
     label_es: "¿Cuál fue el resultado de su atención médica para el síndrome inflamatorio multisistémico en adultos (MIS-A)?"
     type: radio
     page_number: 28
@@ -2632,13 +2633,13 @@ questions:
         label: "I recovered fully"
         label_ca: "Em vaig recuperar del tot"
         label_de: "Ich bin vollständig genesen"
-        label_it: "Sono guarito/a completamente"
+        label_it: "Sono guarito completamente"
         label_es: "Me he recuperado completamente"
       - value: "2"
         label: "I recovered, but with some lasting effects"
         label_ca: "Em vaig recuperar, però amb alguns efectes persistents"
         label_de: "Ich bin genesen, aber mit einigen bleibenden Wirkungen"
-        label_it: "Sono guarito/a, ma con alcuni effetti duraturi"
+        label_it: "Sono guarito, ma con alcuni effetti duraturi"
         label_es: "Me he recuperado, pero con algunos efectos duraderos"
       - value: "3"
         label: "I am recovering"
@@ -2664,7 +2665,7 @@ questions:
     label: "What was the outcome of your medical care for Vasculitides (autoimmune disease, characterized by inflammation of blood vessels)?"
     label_ca: "Quin resultat va tenir la seva atenció mèdica?"
     label_de: "Welches Ergebnis hatte Ihre medizinische Versorgung bei Vaskulitiden (Autoimmunerkrankung, gekennzeichnet durch Entzündung der Blutgefäße)?"
-    label_it: "Qual'è stato l'esito della Sua diagnosi di vasculite (malattia autoimmune, caratterizzata da infiammazione dei vasi sanguigni)?"
+    label_it: "Qual è stato l’esito della Sua cure mediche per Vasculitides (malattia autoimmune, caratterizzata da infiammazione dei vasi sanguigni)?"
     label_es: "¿Cuál fue el resultado de su atención médica para Vasculitides (enfermedad autoinmune, caracterizada por inflamación de los vasos sanguíneos)?"
     type: radio
     page_number: 28
@@ -2676,13 +2677,13 @@ questions:
         label: "I recovered fully"
         label_ca: "Em vaig recuperar del tot"
         label_de: "Ich bin vollständig genesen"
-        label_it: "Sono guarito/a completamente"
+        label_it: "Sono guarito completamente"
         label_es: "Me he recuperado completamente"
       - value: "2"
         label: "I recovered, but with some lasting effects"
         label_ca: "Em vaig recuperar, però amb alguns efectes persistents"
         label_de: "Ich bin genesen, aber mit einigen bleibenden Wirkungen"
-        label_it: "Sono guarito/a, ma con alcuni effetti duraturi"
+        label_it: "Sono guarito, ma con alcuni effetti duraturi"
         label_es: "Me he recuperado, pero con algunos efectos duraderos"
       - value: "3"
         label: "I am recovering"
@@ -2708,7 +2709,7 @@ questions:
     label: "What was the outcome of your medical care for Acute disseminated encephalomyelitis?"
     label_ca: "Quin resultat va tenir la seva atenció mèdica?"
     label_de: "Welches Ergebnis hatte Ihre medizinische Behandlung der akuten disseminierten Enzephalomyelitis?"
-    label_it: "Qual'è stato l'esito della Sua diagnosi di encefalomielite acuta diffusa?"
+    label_it: "Qual è stato l’esito della Sua assistenza medica per l'encefalomielite acuta diffusa?"
     label_es: "¿Cuál fue el resultado de su atención médica para la encefalomielitis aguda diseminada?"
     type: radio
     page_number: 29
@@ -2720,13 +2721,13 @@ questions:
         label: "I recovered fully"
         label_ca: "Em vaig recuperar del tot"
         label_de: "Ich bin vollständig genesen"
-        label_it: "Sono guarito/a completamente"
+        label_it: "Sono guarito completamente"
         label_es: "Me he recuperado completamente"
       - value: "2"
         label: "I recovered, but with some lasting effects"
         label_ca: "Em vaig recuperar, però amb alguns efectes persistents"
         label_de: "Ich bin genesen, aber mit einigen bleibenden Wirkungen"
-        label_it: "Sono guarito/a, ma con alcuni effetti duraturi"
+        label_it: "Sono guarito, ma con alcuni effetti duraturi"
         label_es: "Me he recuperado, pero con algunos efectos duraderos"
       - value: "3"
         label: "I am recovering"
@@ -2764,13 +2765,13 @@ questions:
         label: "I recovered fully"
         label_ca: "Em vaig recuperar del tot"
         label_de: "Ich bin vollständig genesen"
-        label_it: "Sono guarito/a completamente"
+        label_it: "Sono guarito completamente"
         label_es: "Sigo teniendo síntomas, pero estoy mejorando"
       - value: "2"
         label: "I recovered, but with some lasting effects"
         label_ca: "Em vaig recuperar, però amb alguns efectes persistents"
         label_de: "Ich bin genesen, aber mit einigen bleibenden Wirkungen"
-        label_it: "Sono guarito/a, ma con alcuni effetti duraturi"
+        label_it: "Sono guarito, ma con alcuni effetti duraturi"
         label_es: "Me he recuperado, pero con algunos efectos duraderos"
       - value: "3"
         label: "I am recovering"
@@ -2796,7 +2797,7 @@ questions:
     label: "What was the outcome of your medical care for Bell’s palsy?"
     label_ca: "Quin resultat va tenir la seva atenció mèdica?"
     label_de: "Welches Ergebnis hatte Ihre medizinische Behandlung der Bellschen Lähmung?"
-    label_it: "Qual'è stato l'esito della Sua diagnosi di paralisi di Bell?"
+    label_it: "Qual è stato l’esito della Sua Cure mediche per la paralisi di Bell?"
     label_es: "¿Cuál fue el resultado de su atención médica para la parálisis de Bell?"
     type: radio
     page_number: 29
@@ -2808,13 +2809,13 @@ questions:
         label: "I recovered fully"
         label_ca: "Em vaig recuperar del tot"
         label_de: "Ich bin vollständig genesen"
-        label_it: "Sono guarito/a completamente"
+        label_it: "Sono guarito completamente"
         label_es: "Sigo teniendo síntomas, pero estoy mejorando"
       - value: "2"
         label: "I recovered, but with some lasting effects"
         label_ca: "Em vaig recuperar, però amb alguns efectes persistents"
         label_de: "Ich bin genesen, aber mit einigen bleibenden Wirkungen"
-        label_it: "Sono guarito/a, ma con alcuni effetti duraturi"
+        label_it: "Sono guarito, ma con alcuni effetti duraturi"
         label_es: "Me he recuperado, pero con algunos efectos duraderos"
       - value: "3"
         label: "I am recovering"
@@ -2852,13 +2853,13 @@ questions:
         label: "I recovered fully"
         label_ca: "Em vaig recuperar del tot"
         label_de: "Ich bin vollständig genesen"
-        label_it: "Sono guarito/a completamente"
+        label_it: "Sono guarito completamente"
         label_es: "Sigo teniendo síntomas, pero estoy mejorando"
       - value: "2"
         label: "I recovered, but with some lasting effects"
         label_ca: "Em vaig recuperar, però amb alguns efectes persistents"
         label_de: "Ich bin genesen, aber mit einigen bleibenden Wirkungen"
-        label_it: "Sono guarito/a, ma con alcuni effetti duraturi"
+        label_it: "Sono guarito, ma con alcuni effetti duraturi"
         label_es: "Me he recuperado, pero con algunos efectos duraderos"
       - value: "3"
         label: "I am recovering"
@@ -2884,7 +2885,7 @@ questions:
     label: "What was the outcome of your medical care for Generalized convulsion/ seizure (fit)?"
     label_ca: "Quin resultat va tenir la seva atenció mèdica?"
     label_de: "Welches Ergebnis hatte Ihre medizinische Versorgung bei Generalisierter Krampfanfall/ Anfall?"
-    label_it: "Qual'è stato l'esito delle Sue convulsioni/convulsioni generalizzate?"
+    label_it: "Qual è stato l’esito della Sua Convulsioni generalizzate/ convulsioni (fit)?"
     label_es: "¿Cuál fue el resultado de su Convulsión generalizada/ convulsión (en forma)?"
     type: radio
     page_number: 29
@@ -2896,13 +2897,13 @@ questions:
         label: "I recovered fully"
         label_ca: "Em vaig recuperar del tot"
         label_de: "Ich bin vollständig genesen"
-        label_it: "Sono guarito/a completamente"
+        label_it: "Sono guarito completamente"
         label_es: "Sigo teniendo síntomas, pero estoy mejorando"
       - value: "2"
         label: "I recovered, but with some lasting effects"
         label_ca: "Em vaig recuperar, però amb alguns efectes persistents"
         label_de: "Ich bin genesen, aber mit einigen bleibenden Wirkungen"
-        label_it: "Sono guarito/a, ma con alcuni effetti duraturi"
+        label_it: "Sono guarito, ma con alcuni effetti duraturi"
         label_es: "Me he recuperado, pero con algunos efectos duraderos"
       - value: "3"
         label: "I am recovering"
@@ -2928,7 +2929,7 @@ questions:
     label: "What was the outcome of your medical care for Guillain-Barré Syndrome (GBS)?"
     label_ca: "Quin resultat va tenir la seva atenció mèdica?"
     label_de: "Welches Ergebnis hatte die medizinische Behandlung des Guillain-Barré-Syndroms (GBS) bei Ihnen?"
-    label_it: "Qual'è stato l'esito della Sua diagnosi di sindrome di Guillain-Barré (GBS)?"
+    label_it: "Qual è stato l’esito della Sua assistenza medica per la sindrome di Guillain-Barré (GBS)?"
     label_es: "¿Cuál fue el resultado de su atención médica para el síndrome de Guillain-Barré (EGB)?"
     page_number: 29
     type: radio
@@ -2940,13 +2941,13 @@ questions:
         label: "I recovered fully"
         label_ca: "Em vaig recuperar del tot"
         label_de: "Ich bin vollständig genesen"
-        label_it: "Sono guarito/a completamente"
+        label_it: "Sono guarito completamente"
         label_es: "Sigo teniendo síntomas, pero estoy mejorando"
       - value: "2"
         label: "I recovered, but with some lasting effects"
         label_ca: "Em vaig recuperar, però amb alguns efectes persistents"
         label_de: "Ich bin genesen, aber mit einigen bleibenden Wirkungen"
-        label_it: "Sono guarito/a, ma con alcuni effetti duraturi"
+        label_it: "Sono guarito, ma con alcuni effetti duraturi"
         label_es: "Me he recuperado, pero con algunos efectos duraderos"
       - value: "3"
         label: "I am recovering"
@@ -2972,7 +2973,7 @@ questions:
     label: "What was the outcome of your medical care for Multiple sclerosis?"
     label_ca: "Quin resultat va tenir la seva atenció mèdica?"
     label_de: "Welches Ergebnis hatte Ihre medizinische Versorgung bei Multipler Sklerose?"
-    label_it: "Qual'è stato l'esito della Sua diagnosi di sclerosi multipla?"
+    label_it: "Qual è stato l’esito della Sua cure mediche per la sclerosi multipla?"
     label_es: "¿Cuál fue el resultado de su atención médica para la esclerosis múltiple?"
     type: radio
     page_number: 29
@@ -2984,13 +2985,13 @@ questions:
         label: "I recovered fully"
         label_ca: "Em vaig recuperar del tot"
         label_de: "Ich bin vollständig genesen"
-        label_it: "Sono guarito/a completamente"
+        label_it: "Sono guarito completamente"
         label_es: "Sigo teniendo síntomas, pero estoy mejorando"
       - value: "2"
         label: "I recovered, but with some lasting effects"
         label_ca: "Em vaig recuperar, però amb alguns efectes persistents"
         label_de: "Ich bin genesen, aber mit einigen bleibenden Wirkungen"
-        label_it: "Sono guarito/a, ma con alcuni effetti duraturi"
+        label_it: "Sono guarito, ma con alcuni effetti duraturi"
         label_es: "Me he recuperado, pero con algunos efectos duraderos"
       - value: "3"
         label: "I am recovering"
@@ -3016,7 +3017,7 @@ questions:
     label: "What was the outcome of your medical care for Optic neuritis (inflammation of the optic nerve)?"
     label_ca: "Quin resultat va tenir la seva atenció mèdica?"
     label_de: "Welches Ergebnis hatte Ihre medizinische Behandlung der Sehnervenentzündung (Opticus neuritis)?"
-    label_it: "Qual'è stato l'esito della Sua diagnosi di neurite ottica?"
+    label_it: "Qual è stato l’esito della Sua assistenza medica per la neurite ottica (infiammazione del nervo ottico)?"
     label_es: "¿Cuál fue el resultado de su atención médica para la neuritis óptica (inflamación del nervio óptico)?"
     type: radio
     page_number: 29
@@ -3028,13 +3029,13 @@ questions:
         label: "I recovered fully"
         label_ca: "Em vaig recuperar del tot"
         label_de: "Ich bin vollständig genesen"
-        label_it: "Sono guarito/a completamente"
+        label_it: "Sono guarito completamente"
         label_es: "Sigo teniendo síntomas, pero estoy mejorando"
       - value: "2"
         label: "I recovered, but with some lasting effects"
         label_ca: "Em vaig recuperar, però amb alguns efectes persistents"
         label_de: "Ich bin genesen, aber mit einigen bleibenden Wirkungen"
-        label_it: "Sono guarito/a, ma con alcuni effetti duraturi"
+        label_it: "Sono guarito, ma con alcuni effetti duraturi"
         label_es: "Me he recuperado, pero con algunos efectos duraderos"
       - value: "3"
         label: "I am recovering"
@@ -3060,7 +3061,7 @@ questions:
     label: "What was the outcome of your medical care for Other acute demyelinating diseases (i.e. other central nervous system (CNS) inflammatory disorder)?"
     label_ca: "Quin resultat va tenir la seva atenció mèdica?"
     label_de: "Welches Ergebnis hatte Ihre medizinische Versorgung bei anderen akuten demyelinisierenden Erkrankungen (d. h. anderen entzündlichen Erkrankungen des zentralen Nervensystems (ZNS))?"
-    label_it: "Qual'è stato l'esito della Sua diagnosi di altre malattie demielinizzanti acute (es. altri disturbi infiammatori del sistema nervoso centrale (SNC))?"
+    label_it: "Qual è stato l’esito della Sua cure mediche per altre malattie demielinizzanti acute (es. altri disturbi infiammatori del sistema nervoso centrale (SNC))?"
     label_es: "¿Cuál fue el resultado de su atención médica para otras enfermedades agudas desmielinizantes (i.e. otro trastorno inflamatorio del sistema nervioso central (SNC))?"
     type: radio
     page_number: 29
@@ -3072,13 +3073,13 @@ questions:
         label: "I recovered fully"
         label_ca: "Em vaig recuperar del tot"
         label_de: "Ich bin vollständig genesen"
-        label_it: "Sono guarito/a completamente"
+        label_it: "Sono guarito completamente"
         label_es: "Sigo teniendo síntomas, pero estoy mejorando"
       - value: "2"
         label: "I recovered, but with some lasting effects"
         label_ca: "Em vaig recuperar, però amb alguns efectes persistents"
         label_de: "Ich bin genesen, aber mit einigen bleibenden Wirkungen"
-        label_it: "Sono guarito/a, ma con alcuni effetti duraturi"
+        label_it: "Sono guarito, ma con alcuni effetti duraturi"
         label_es: "Me he recuperado, pero con algunos efectos duraderos"
       - value: "3"
         label: "I am recovering"
@@ -3104,7 +3105,7 @@ questions:
     label: "What was the outcome of your medical care for Transverse myelitis (inflammation of both sides of one section of the spinal cord)?"
     label_ca: "Quin resultat va tenir la seva atenció mèdica?"
     label_de: "Welches Ergebnis hatte Ihre medizinische Versorgung bei Transversaler Myelitis (Entzündung beider Seiten eines Abschnitts des Rückenmarks)?"
-    label_it: "Qual'è stato l'esito della Sua diagnosi di mielite trasversale (infiammazione di entrambi i lati di una sezione del midollo spinale)?"
+    label_it: "Qual è stato l’esito della Sua cure mediche per mielite trasversale (infiammazione di entrambi i lati di una sezione del midollo spinale)?"
     label_es: "¿Cuál fue el resultado de su atención médica para la mielitis transversal (inflamación de ambos lados de una sección de la médula espinal)?"
     type: radio
     page_number: 29
@@ -3116,13 +3117,13 @@ questions:
         label: "I recovered fully"
         label_ca: "Em vaig recuperar del tot"
         label_de: "Ich bin vollständig genesen"
-        label_it: "Sono guarito/a completamente"
+        label_it: "Sono guarito completamente"
         label_es: "Sigo teniendo síntomas, pero estoy mejorando"
       - value: "2"
         label: "I recovered, but with some lasting effects"
         label_ca: "Em vaig recuperar, però amb alguns efectes persistents"
         label_de: "Ich bin genesen, aber mit einigen bleibenden Wirkungen"
-        label_it: "Sono guarito/a, ma con alcuni effetti duraturi"
+        label_it: "Sono guarito, ma con alcuni effetti duraturi"
         label_es: "Me he recuperado, pero con algunos efectos duraderos"
       - value: "3"
         label: "I am recovering"
@@ -3148,7 +3149,7 @@ questions:
     label: "What was the outcome of your medical care for Narcolepsy and cataplexy?"
     label_ca: "Quin resultat va tenir la seva atenció mèdica?"
     label_de: "Welches Ergebnis hatte Ihre medizinische Versorgung bei Narkolepsie und Kataplexie?"
-    label_it: "Qual'è stato l'esito della Sua diagnosi di narcolessia e cataplessia?"
+    label_it: "Qual è stato l’esito della Sua Cure mediche per narcolessia e cataplessia?"
     label_es: "¿Cuál fue el resultado de su Atención médica para narcolepsia y cataplejía?"
     type: radio
     page_number: 30
@@ -3160,13 +3161,13 @@ questions:
         label: "I recovered fully"
         label_ca: "Em vaig recuperar del tot"
         label_de: "Ich bin vollständig genesen"
-        label_it: "Sono guarito/a completamente"
+        label_it: "Sono guarito completamente"
         label_es: "Sigo teniendo síntomas, pero estoy mejorando"
       - value: "2"
         label: "I recovered, but with some lasting effects"
         label_ca: "Em vaig recuperar, però amb alguns efectes persistents"
         label_de: "Ich bin genesen, aber mit einigen bleibenden Wirkungen"
-        label_it: "Sono guarito/a, ma con alcuni effetti duraturi"
+        label_it: "Sono guarito, ma con alcuni effetti duraturi"
         label_es: "Me he recuperado, pero con algunos efectos duraderos"
       - value: "3"
         label: "I am recovering"
@@ -3192,7 +3193,7 @@ questions:
     label: "What was the outcome of your medical care for Non-anaphylactic allergic reactions?"
     label_ca: "Quin resultat va tenir la seva atenció mèdica?"
     label_de: "Welches Ergebnis hatte Ihre medizinische Versorgung bei nicht-anaphylaktischen allergischen Reaktionen?"
-    label_it: "Quali sono stati gli esiti delle Sue cure mediche per le reazioni allergiche non anaftiliche?"
+    label_it: "Qual è stato l’esito della Sua cure mediche per le reazioni allergiche non naftiliche?"
     label_es: "¿Cuál fue el resultado de su Atención médica para las reacciones alérgicas no hipolácticas?"
     type: radio
     page_number: 30
@@ -3204,13 +3205,13 @@ questions:
         label: "I recovered fully"
         label_ca: "Em vaig recuperar del tot"
         label_de: "Ich bin vollständig genesen"
-        label_it: "Sono guarito/a completamente"
+        label_it: "Sono guarito completamente"
         label_es: "Sigo teniendo síntomas, pero estoy mejorando"
       - value: "2"
         label: "I recovered, but with some lasting effects"
         label_ca: "Em vaig recuperar, però amb alguns efectes persistents"
         label_de: "Ich bin genesen, aber mit einigen bleibenden Wirkungen"
-        label_it: "Sono guarito/a, ma con alcuni effetti duraturi"
+        label_it: "Sono guarito, ma con alcuni effetti duraturi"
         label_es: "Me he recuperado, pero con algunos efectos duraderos"
       - value: "3"
         label: "I am recovering"
@@ -3254,7 +3255,7 @@ questions:
     label: "How many other diagnoses that have not been previously mentioned did you receive?"
     label_ca: "Quants diagnòstics addicionals que no s’havien esmentat prèviament ha rebut?"
     label_de: "Wie viele andere, bisher nicht erwähnte Diagnosen haben Sie erhalten?"
-    label_it: "Quante altre diagnosi che non sono state menzionate in precedenza ha ricevuto?"
+    label_it: "Quante altre diagnosi che non sono state menzionate in precedenza hai ricevuto?"
     label_es: "¿Cuántos diagnósticos recibió que no se hayan mencionado anteriormente?"
     safety_alert_question: true
     page_number: 32
@@ -3304,7 +3305,7 @@ questions:
     label: "What was the outcome of your medical care for the first diagnosis?"
     label_ca: "Quin va ser el resultat de la seva atenció mèdica pel primer diagnòstic?"
     label_de: "Welches Ergebnis hatte Ihre medizinische Versorgung bei der ersten Diagnose?"
-    label_it: "Qual è stato l'esito delle Sue cure mediche per la prima diagnosi?"
+    label_it: "Qual è stato l'esito delle tue cure mediche per la prima diagnosi?"
     label_es: "¿Cuál fue el resultado de su atención médica para el primer diagnóstico?"
     type: radio
     page_number: 33
@@ -3313,13 +3314,13 @@ questions:
         label: "I recovered fully"
         label_ca: "Em vaig recuperar del tot"
         label_de: "Ich bin vollständig genesen"
-        label_it: "Sono guarito/a completamente"
+        label_it: "Sono guarito completamente"
         label_es: "Sigo teniendo síntomas, pero estoy mejorando"
       - value: "2"
         label: "I recovered, but with some lasting effects"
         label_ca: "Em vaig recuperar, però amb alguns efectes persistents"
         label_de: "Ich bin genesen, aber mit einigen bleibenden Wirkungen"
-        label_it: "Sono guarito/a, ma con alcuni effetti duraturi"
+        label_it: "Sono guarito, ma con alcuni effetti duraturi"
         label_es: "Me he recuperado, pero con algunos efectos duraderos"
       - value: "3"
         label: "I am recovering"
@@ -3367,7 +3368,7 @@ questions:
     label: "What was the outcome of your medical care for the second diagnosis?"
     label_ca: "Quin va ser el resultat de la seva atenció mèdica pel segon diagnòstic?"
     label_de: "Welches Ergebnis hatte Ihre medizinische Versorgung bei der zweiten Diagnose?"
-    label_it: "Qual è stato l'esito delle Sue cure mediche per la seconda diagnosi?"
+    label_it: "Qual è stato l'esito delle tue cure mediche per la seconda diagnosi?"
     label_es: "¿Cuál fue el resultado de su atención médica para el segundo diagnóstico?"
     type: radio
     page_number: 34
@@ -3376,13 +3377,13 @@ questions:
         label: "I recovered fully"
         label_ca: "Em vaig recuperar del tot"
         label_de: "Ich bin vollständig genesen"
-        label_it: "Sono guarito/a completamente"
+        label_it: "Sono guarito completamente"
         label_es: "Sigo teniendo síntomas, pero estoy mejorando"
       - value: "2"
         label: "I recovered, but with some lasting effects"
         label_ca: "Em vaig recuperar, però amb alguns efectes persistents"
         label_de: "Ich bin genesen, aber mit einigen bleibenden Wirkungen"
-        label_it: "Sono guarito/a, ma con alcuni effetti duraturi"
+        label_it: "Sono guarito, ma con alcuni effetti duraturi"
         label_es: "Me he recuperado, pero con algunos efectos duraderos"
       - value: "3"
         label: "I am recovering"
@@ -3430,7 +3431,7 @@ questions:
     label: "What was the outcome of your medical care for the third diagnosis?"
     label_ca: "Quin va ser el resultat de la seva atenció mèdica pel tercer diagnòstic?"
     label_de: "Welches Ergebnis hatte Ihre medizinische Versorgung bei der dritten Diagnose?"
-    label_it: "Qual è stato l'esito delle Sue cure mediche per la terza diagnosi?"
+    label_it: "Qual è stato l'esito delle tue cure mediche per la terza diagnosi?"
     label_es: "¿Cuál fue el resultado de su atención médica para el tercer diagnóstico?"
     type: radio
     page_number: 35
@@ -3439,13 +3440,13 @@ questions:
         label: "I recovered fully"
         label_ca: "Em vaig recuperar del tot"
         label_de: "Ich bin vollständig genesen"
-        label_it: "Sono guarito/a completamente"
+        label_it: "Sono guarito completamente"
         label_es: "Sigo teniendo síntomas, pero estoy mejorando"
       - value: "2"
         label: "I recovered, but with some lasting effects"
         label_ca: "Em vaig recuperar, però amb alguns efectes persistents"
         label_de: "Ich bin genesen, aber mit einigen bleibenden Wirkungen"
-        label_it: "Sono guarito/a, ma con alcuni effetti duraturi"
+        label_it: "Sono guarito, ma con alcuni effetti duraturi"
         label_es: "Me he recuperado, pero con algunos efectos duraderos"
       - value: "3"
         label: "I am recovering"
@@ -3669,8 +3670,8 @@ questions:
     label: This is the end of the questionnaire. If you need to fill in missing details, please close the questionnaire using the [x] at the top right and you can revisit the questionnaire at a later time. Otherwise, if you wish to submit a completed questionnaire, select the option below and press 'NEXT'.
     label_ca: "Ha arribat al final del qüestionari. Si ha d’introduir informació pendent, premi el símbol [x] a dalt a la dreta per tancar el qüestionari i tornar-hi a accedir més tard. Si no és el cas i vol enviar el qüestionari emplenat, seleccioni l’opció a continuació i premi 'SEGÜENT'."
     label_de: Dies ist das Ende des Fragebogens. Wenn Sie fehlende Angaben ergänzen müssen, schließen Sie den Fragebogen bitte mit dem [x] oben rechts und Sie können den Fragebogen zu einem späteren Zeitpunkt erneut aufrufen. Wenn Sie andernfalls einen ausgefüllten Fragebogen einreichen möchten, wählen Sie die unten stehende Option und drücken Sie 'WEITER'.
-    label_it: Fine del questionario. Se ha bisogno di compilare i dettagli mancanti, chiuda il questionario utilizzando la [x] in alto a destra e potrà riprendere il questionario in un secondo momento. In caso contrario, se desidera inviare il questionario compilato, selezioni l'opzione qui sotto e prema 'AVANTI'.
-    label_es: Este es el final del cuestionario. Si necesita completar los detalles que faltan, cierre el cuestionario usando la [x] en la parte superior derecha y podrá volver a revisar el cuestionario más adelante. De lo contrario, si desea enviar un cuestionario completado, seleccione la opción a continuación y pulse 'SIGUIENTE'.
+    label_it: Questa è la fine del questionario. Se avete bisogno di compilare i dettagli mancanti, chiudete il questionario utilizzando la [x] in alto a destra e potrete rivisitare il questionario in un secondo momento. In caso contrario, se si desidera inviare un questionario compilato, selezionare l'opzione qui sotto e premere 'AVANTI'.
+    label_es: Este es el final del cuestionario. Si necesita rellenar los detalles que faltan, cierre el cuestionario utilizando la [x] de la esquina superior derecha y puede volver a consultar el cuestionario más adelante. En caso contrario, si desea enviar un cuestionario cumplimentado, seleccione la opción a continuación y pulse 'SIGUIENTE'.
     type: radio
     page_number: 40
     choices:
@@ -3679,7 +3680,7 @@ questions:
         label_ca: "Confirmo que aquestes són les meves respostes definitives"
         label_de: "Ich bestätige, dass dies meine endgültigen Antworten sind"
         label_it: "Confermo che queste sono le mie risposte finali"
-        label_es: "Confirmo que estas son mis respuestas finales"
+        label_es: "Confirmo que estas son mis respuestas definitivas"
     db_write:
       table: AdditionalAppColumn
       column: subject_status
