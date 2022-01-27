@@ -1,0 +1,106 @@
+title: Admin Discontinuation
+title_de: "Abbruch"
+tilte_ca: "Interrupció"
+title_it: "Interruzione"
+title_es: "Retirada"
+header: "Sponsor: Pfizer, Study Name: VaxPath, Sponsor Study Number: C4591010, Protocol Version: 1, CRF Version: Version 2"
+size: large
+admin_emails:
+  - janie.gous@iqvia.com
+  - anke.bross@iqvia.com
+  - chandni.thakur@quintiles.com
+  - begona.gonzalez@quintiles.com
+  - theresa.roy@quintiles.com
+  - jared@selfcarecatalysts.com
+  - jacob@selfcarecatalysts.com
+  - shameni@selfcarecatalysts.com
+  - antonio.stefanov+vaxpath@quintiles.com
+  - martina.paciarotti+vaxpath@iqvia.com
+  - andja.gvozdenovic-tomasevski+vaxpath@iqvia.com
+  - anacarolina.silva+vaxpath@quintiles.com
+  - anke.bross+vaxpath@quintiles.com
+  - denitza.christova+vaxpath@iqvia.com
+questions:
+  pt_t0_dc_REASON:
+    label: "Reason for discontinuation"
+    label_de: "Grund für den Abbruch"
+    label_ca: "Motiu de la interrupció"
+    label_it: "Motivo dell’interruzione dello studio"
+    label_es: "Motivo de la retirada"
+    type: radio
+    choices:
+    - value: "1"  
+      label:  "Takes too much time"
+      label_de: "Zu zeitaufwendig"
+      label_ca: "Demana massa temps"
+      label_it: "Richiede troppo tempo"
+      label_es: "Tarda demasiado tiempo"
+    - value: "2"  
+      label:  "Too many calls from the call center"
+      label_de: "Zu viele Anrufe vom Callcenter"
+      label_ca: "Massa trucades del centre d’atenció telefònica"
+      label_it: "Troppe chiamate dal call center"
+      label_es: "Demasiadas llamadas del centro de llamadas"
+    - value: "3"
+      label:  "Not interested any more"
+      label_de: "Nicht mehr interessiert"
+      label_ca: "Ja no hi tinc interès"
+      label_it: "Non più interessato"
+      label_es: "Ya no está interesado"
+    - value: "4"
+      label: "The participant has died"
+      label_it: "Il partecipante è morto"
+      label_ca: "El participant ha mort"
+      label_de: "Der Teilnehmer ist gestorben"
+      label_es: "El participante ha muerto"
+    other:
+        other: true
+        other_label: "Please specify other values"
+        other_label_it: "Altro"
+        other_label_de: "Andere Ethnie"
+        other_label_es: "Otra"
+        other_label_ca: "Un altre (especifiqui’l)"
+    trigger:
+      type: safety_alert
+      operation: equal
+      value: "4"
+  pt_t0_dc_DEATHDATE:
+    label: "Date of death"
+    label_it: "Data di morte"
+    label_de: "Sterbedatum"
+    label_ca: "Data de la mort"
+    label_es: "Fecha de muerte"
+    safety_alert_question: true
+    type: date
+    max:
+      value: CURRENT_DATE
+    conditions:
+      - question: pt_t0_dc_REASON
+        operation: equal
+        value: "4"
+  pt_t0_dc_DEATHREASON:
+    label: "Cause of death"
+    label_it: "Causa di morte"
+    label_es: "Causa de la muerte"
+    label_ca: "Causa de mort"
+    label_de: "Todesursache"
+    safety_alert_question: true
+    type: text
+    conditions:
+      - question: pt_t0_dc_REASON
+        operation: equal
+        value: "4"
+  q_end: 
+    label:  "This is the end of the questionnaire. If you need to fill in missing details, please close the questionnaire using the [x] at the top right and you can revisit the questionnaire at a later time. Otherwise, if you wish to submit a completed questionnaire, select the option below and press 'NEXT'."
+    label_de: "Das ist das Ende des Fragebogens. Wenn Sie fehlende Daten ausfüllen müssen, schließen Sie bitte den Fragebogen mit dem [x] oben rechts und Sie können den Fragebogen zu einem späteren Zeitpunkt erneut aufrufen. Andernfalls, wenn Sie einen ausgefüllten Fragebogen einreichen möchten, wählen Sie die Option unten und drücken Sie 'NEXT'."
+    label_ca: "Aquest és el final del qüestionari. Si heu d'emplenar les dades que falten, tanqueu el qüestionari amb la x [que hi ha a la part superior dreta] i podreu tornar a visitar el qüestionari més endavant. En cas contrari, si voleu enviar un qüestionari completat, seleccioneu l'opció següent i premeu 'SEGÜENT'."
+    label_it: "Questa è la fine del questionario. Se avete bisogno di compilare i dettagli mancanti, chiudete il questionario utilizzando la [x] in alto a destra e potrete rivisitare il questionario in un secondo momento. In caso contrario, se si desidera inviare un questionario compilato, selezionare l'opzione qui sotto e premere 'AVANTI'."
+    label_es: Este es el final del cuestionario. Si necesita completar los detalles que faltan, cierre el cuestionario usando la [x] en la parte superior derecha y podrá volver a revisar el cuestionario más adelante. De lo contrario, si desea enviar un cuestionario completado, seleccione la opción a continuación y pulse 'SIGUIENTE'.
+    type: radio
+    choices:
+      - value: FINALIZED
+        label: "I confirm that these are my final answers"
+        label_de: "Ich bestätige, dass dies meine endgültigen Antworten sind"
+        label_ca: "Confirmo que aquestes són les meves respostes finals"
+        label_it: "Confermo che queste sono le mie risposte finali"
+        label_es: "Confirmo que estas son mis respuestas finales"
