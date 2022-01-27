@@ -1272,7 +1272,7 @@ questions:
     regex: "\\A[\\w+\\-.]+@[a-z\\d\\-]+(\\.[a-z\\d\\-]+)*\\.[a-z]+\\z"
     page_number: 26
     db_write:
-      table: User
+      table: AdditionalAppColumn
       column: email
   pt_t0_ci1_2NDCONTACT:
     label: "Secondary contact name"
