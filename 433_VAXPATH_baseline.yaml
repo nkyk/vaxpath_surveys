@@ -242,10 +242,10 @@ questions:
     label_ca: Quin és el seu país d’origen? 
     type: list
     list_id: 13
-    list_id_de: "11"
-    list_id_it: "10"
-    list_id_es: "20"
-    list_id_ca: "12"
+    list_id_de: "8"
+    list_id_it: "9"
+    list_id_es: "10"
+    list_id_ca: "11"
     page_number: 3
   pt_t0_dem_COUNTRY_OTHR:
     conditions: 
@@ -309,10 +309,10 @@ questions:
     type: list
     page_number: 5
     list_id: 6
-    list_id_de: 16
-    list_id_it: 17
+    list_id_de: 13
+    list_id_it: 14
     list_id_es: 15
-    list_id_ca: 14
+    list_id_ca: 12
     page_number: 5
   pt_t0_dem_OCCUP_1:
     conditions: 
