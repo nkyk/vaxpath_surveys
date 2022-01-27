@@ -652,7 +652,7 @@ questions:
     page_number: 110
     db_write:
       table: User
-      column: primary_contact_number
+      column: secondary_contact_number
   pt_t1_ci2_EMAIL:
     conditions:
       - question: pt_t1_ci2_CONTACTCHANGE
