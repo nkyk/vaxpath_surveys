@@ -165,9 +165,9 @@ questions:
     type: monthyear
     max:
       month:
-        value: 01
+        value: CURRENT_MONTH
       year:
-        value: 2004
+        value: CURRENT_YEAR
     db_write:
       table: AdditionalAppColumn
       column: age
@@ -1185,6 +1185,13 @@ questions:
     page_number: 25
     max:
       value: CURRENT_DATE
+    skip:
+      label: Uncertain
+      label_de: überspringen
+      label_it: Salta
+      label_es: Saltar
+      label_ca: Omet
+      value: skip
   pt_t0_vi1_VACCCENTER:
     conditions: 
       - question: pt_t0_vi1_VACCDOSE
@@ -1256,6 +1263,7 @@ questions:
     label_ca: Número de telèfon, indiqui si us plau el codi de país
     type: text
     regex: "\\A(\\+?\\d{1,4}[\\s.-]?)?\\(?\\d{3}\\)?[\\s.-]?\\d{3}[\\s.-]?\\d{4}\\z"
+    default_value: "{{User.primary_contact_number}}"
     page_number: 26
     db_write:
       table: User
@@ -1268,9 +1276,10 @@ questions:
     label_ca: Correu electrònic
     type: text
     regex: "\\A[\\w+\\-.]+@[a-z\\d\\-]+(\\.[a-z\\d\\-]+)*\\.[a-z]+\\z"
+    default_value: "{{User.email}}"
     page_number: 26
     db_write:
-      table: User
+      table: AdditionalAppColumn
       column: email
   pt_t0_ci1_2NDCONTACT:
     label: "Secondary contact name"
