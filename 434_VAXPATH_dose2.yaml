@@ -646,7 +646,7 @@ questions:
     label_es: Número de teléfono o móvil, indique por favor el codigo de país
     label_ca: Número de telèfon fix o mòbil, indiqui si us plau el codi de país
     type: text
-    regex: "\\A(\\+?\\d{1,2}[\\s.-]?)?\\(?\\d{3}\\)?[\\s.-]?\\d{3}[\\s.-]?\\d{4}\\z"
+    regex: "\\A(\\+?\\d{1,4}[\\s.-]?)?\\(?\\d{3}\\)?[\\s.-]?\\d{3}[\\s.-]?\\d{4,5}\\z"
     default_survey_reference: VAXPATH_BASELINE
     default_question_keyword: pt_t0_ci1_PHONENUM
     page_number: 110
@@ -721,7 +721,7 @@ questions:
     type: text
     default_survey_reference: VAXPATH_BASELINE
     default_question_keyword: pt_t0_ci1_2NDCONTACTPHONE
-    regex: "\\A(\\+?\\d{1,2}[\\s.-]?)?\\(?\\d{3}\\)?[\\s.-]?\\d{3}[\\s.-]?\\d{4}\\z"
+    regex: "\\A(\\+?\\d{1,4}[\\s.-]?)?\\(?\\d{3}\\)?[\\s.-]?\\d{3}[\\s.-]?\\d{4,5}\\z"
     page_number: 120
     db_write:
       table: AdditionalAppColumn
@@ -781,7 +781,7 @@ questions:
     label_es: "Número de teléfono del médico de atención primaria, indique por favor el codigo de país"
     label_ca: "Número de telèfon del metge d’atenció primària, indiqui si us plau el codi de país"
     type: text
-    regex: "\\A(\\+?\\d{1,2}[\\s.-]?)?\\(?\\d{3}\\)?[\\s.-]?\\d{3}[\\s.-]?\\d{4}\\z"
+    regex: "\\A(\\+?\\d{1,4}[\\s.-]?)?\\(?\\d{3}\\)?[\\s.-]?\\d{3}[\\s.-]?\\d{4,5}\\z"
     default_survey_reference: VAXPATH_BASELINE
     default_question_keyword: pt_t0_ci1_PCPCONTACTPHONE
     skip:
